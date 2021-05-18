@@ -18,17 +18,6 @@ timeline
     .to(".main-content", 10, { top: "0%" }, "-=10");
 
 
-// .to(".model-container", 3.5, { x: 25 }, "-=10")
-// .to(".model-container", 3.5, { y: -100 }, "-=10")
-
-
-// .to(".street-container", 3.5, { x: -25 }, "-=8")
-// .to(".street-container", 3.5, { y: -100 }, "-=8")
-
-
-// .to(".motion-container", 3.5, { y: -150 }, "-=2");
-
-
 let scene = new ScrollMagic.Scene({
     triggerElement: ".image-container",
 //   HOW FAST SCENE HAPPENS (PERCENT OR PIXELS)
@@ -37,6 +26,7 @@ let scene = new ScrollMagic.Scene({
     triggerHook: 0,
 })
 .setTween(timeline)
+// .setPin(".image-container")
 .addTo(controller);
 
 
@@ -44,7 +34,7 @@ let scene = new ScrollMagic.Scene({
 
 //   MODEL AND STREET 
 
-timeline
+// timeline
 // .to(".model-container", 3.5, { y: -100 }, "-=10");
 // .fromTo(".model-container", { opacity: 0 }, { opacity: 1, duration: 3 });
 // .fromTo(".model-container", 5, { y: 200 }, { y: -50, duration: 5 } , "-=10");
@@ -59,5 +49,11 @@ timeline
 
 // fromTo(".motion-container", { x: 600 }, { x: 0, duration: 3.5 }, "+=6")
 
-
+let scene2 = new ScrollMagic.Scene({
+  triggerElement: "#trigger1",
+  duration: 500,
+  triggerHook: 0.1,
+})
+.setPin("#mosaic-container")
+.addTo(controller);
 
