@@ -125,10 +125,10 @@
             <div class="main-content">
                 <div class="main-coloumn">
 
-                    <!-- <h1 class="test">Parallax test</h1> -->
-
                     <div class="portrait-container">
-                        <div class="portrait-column portrait-column--non-reverse model-container">
+
+                        <div id="model-trigger" class="spacer-trigger"></div>
+                        <div id="model-container" class="portrait-column portrait-column--non-reverse model-container">
                             <div class="portrait-img-container category-img-container">
                                 <div class="img-hover-zoom img-hover-zoom--portrait">
                                     <img src="./images/model-card-1.jpg" alt="" class="portrait-showcase-img-1 portrait-style category-img">
@@ -149,7 +149,9 @@
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae tenetur asperiores saepe illo quod magni.
                             </div>
                         </div>
-                        <div class="portrait-column portrait-column--reverse street-container">
+                        <!-- NOT IN USE -->
+                        <!-- <div id="street-trigger" class="spacer-trigger"></div> -->
+                        <div id="street-container" class="portrait-column portrait-column--reverse street-container">
                             <div class="portrait-img-container category-img-container">
                                 <div class="img-hover-zoom img-hover-zoom--portrait">
                                     <img src="./images/street-card-3.jpeg" alt="" class="street-showcase-img-1 portrait-style category-img">
@@ -172,8 +174,8 @@
                         </div>
                     </div>
 
-
-                    <div class="landscape-container motion-container">
+                    <div id="motion-trigger" class="spacer-trigger"></div>
+                    <div id="motion-container" class="landscape-container motion-container">
                         <div class="landscape-img-container category-img-container">
                             <div class="img-hover-zoom img-hover-zoom--landscape">
                                 <img src="./images/motion-card-1.jpg" alt="" class="motion-showcase-img-1 landscape-style category-img">
@@ -196,7 +198,7 @@
                     </div>
 
 
-                    <div id="trigger1" class="spacer s0"></div>
+                    <div id="mosaic-trigger" class="spacer-trigger"></div>
                     <div id="mosaic-container" class="mosaic-container">
                         <!-- <img src="./images/mosaic-wide.png" alt=""> -->
                     </div>
@@ -341,8 +343,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
 
-    <script src="parallax.js" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>
+    <script src="parallax.js" type="text/javascript"></script>
     
 </body>
 </html>
