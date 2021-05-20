@@ -1,7 +1,7 @@
 // PARALLAX 
 // !!!!! HAS TO BE UP TOP !!!!!
 
-let controller = new ScrollMagic.Controller();
+const controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax()
 
 // LANDING PAGE AND TITLE DIV PARALLAX
@@ -34,11 +34,11 @@ let timeline = new TimelineMax()
 
 
 let scene = new ScrollMagic.Scene({
-    // triggerElement: ".image-container",
+    triggerElement: ".image-container",
 //   HOW FAST SCENE HAPPENS (PERCENT OR PIXELS)
     duration: "300%",
 //   duration: 500,
-    triggerHook: 1,
+    triggerHook: 0,
 })
 .setTween(timeline)
 // .setPin(".image-container")
@@ -50,7 +50,7 @@ let scene = new ScrollMagic.Scene({
 
 let scene2 = new ScrollMagic.Scene({
   triggerElement: "#mosaic-trigger",
-  duration: 500,
+  duration: 200,
   triggerHook: 0.1,
 })
 .setPin("#mosaic-container")
@@ -58,47 +58,32 @@ let scene2 = new ScrollMagic.Scene({
 
 
 
-// SLIDE IN MODEL AND STREET
 
-// timeline
-// .fromTo("#model-container", 4, { y: 200 }, { y: -50 } , "-=10.5")
-// .fromTo("#street-container", 10, { y: 200 }, { y: -850 } , "-=7")
-// // .fromTo("#motion-container", 6, { y: 200 }, { y: -50, duration: 4 } , "+=9");
-// .fromTo("#motion-container", 4, { y: 100 }, { y: -150 } , "-=1.7");
+const controller2 = new ScrollMagic.Controller();
+let timeline3 = new TimelineMax()
 
-// let scene3 = new ScrollMagic.Scene({
-//     triggerElement: "#model-trigger",
-//     duration: 250,
-//     // offset: -320,
-//     triggerHook: 1
-//   })
-// //   .setPin("#model-img-container")
-//     // .setTween(timelineTest)
-//     .addTo(controller);
+// LANDING PAGE AND TITLE DIV PARALLAX
+
+    .fromTo("#portrait-container", 10, { y: "10vh" }, { y: "-2vh" }, "-=10")
+    .fromTo("#portrait-container", 5, { opacity: 0 }, { opacity: 1 }, "-=10 ")
+
+    .fromTo("#abstract-container", 10, { y: "10vh" }, { y: "-1vh" } , "-=10")
+    .fromTo("#abstract-container", 10, { x: "5vw" }, { x: "-1vw" } , "-=10")
+    .fromTo("#abstract-container", 12, { opacity: 0 }, { opacity: 1 } , "-=10")
+
+    .fromTo("#nature-container", 10, { x: "-50vw" }, { x: "-1vw" } , "-=3")
+    .fromTo("#nature-container", 10, { y: "-20vh" }, { y: "0vh" } , "-=2");
+    // .fromTo("#nature-container", 10, { opacity: 0 }, { opacity: 1 } , "-=6");
 
 
-// SLIDE IN MOTION
 
-    // timeline
-    // .fromTo("#motion-container", 6, { y: 500 }, { y: -50, duration: 2 } , "+=1");
-    
-    // let scene4 = new ScrollMagic.Scene({
-    //     triggerElement: "#motion-trigger",
-    //     duration: 1000,
-    //     offset: -720,
-    //     triggerHook: 0.1,
-    //   })
-    // //   .setPin("#model-img-container")
-    //     // .setTween(timelineTest)
-    //     .addTo(controller);   
-
-    // new ScrollMagic.Scene({
-    //     triggerElement: "#motion-trigger",
-    //     duration: 250,
-    //     triggerHook: 0
-    // })
-    // // .fromTo("#motion-container", 6, { y: 500 }, { y: -50, duration: 4 } , "-=5")
-	// 				.addTo(controller);
-
-        // timeline
-        // .fromTo("#motion-container", 6, { y: 100 }, { y: -150 } , "-=1.7");
+let scene3 = new ScrollMagic.Scene({
+    triggerElement: "#portrait-trigger",
+//   HOW FAST SCENE HAPPENS (PERCENT OR PIXELS)
+    duration: "120%",
+//   duration: 500,
+    offset: 300,
+    triggerHook: 0.2,
+})
+.setTween(timeline3)
+.addTo(controller);

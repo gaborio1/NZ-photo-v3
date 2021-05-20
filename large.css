@@ -548,6 +548,11 @@ h2.photography {
 
 /* PORTRAIT CONTAINER */
 
+/* 
+#portrait-container {
+    border: 3px solid forestgreen;
+} */
+
 .portrait-container {
     width: var(--max-width);
     height: 1200px;
@@ -718,11 +723,36 @@ img.landscape-style {
 }
 
 
+
+
+
+
 /* MOSAIC CONTAINER */
+
+#mosaic-trigger {
+    width: var(--main-content-1400);
+    /* border: 3px solid #55ACEE; */
+}
+
+
+
+
+
+#portrait-trigger {
+    width: var(--main-content-1400);
+    margin: 250px auto;
+    /* border: 3px solid #55ACEE; */
+}
+
+
+
+
+
 .mosaic-container {
     background-image: url("./images/mosaic-wide.png");
     background-size: cover;
     width: 100vw;
+
    
     /* !!! THIS WORKS FINE !!! */
     height: 50vh;
@@ -734,6 +764,7 @@ img.landscape-style {
     /* border: 5px solid black; */
     border-top: 45px solid grey;
     border-bottom: 5px solid grey;
+
     margin: 90px 0px 90px 0px;
 }
 
