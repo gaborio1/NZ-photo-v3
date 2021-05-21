@@ -93,6 +93,9 @@ new ScrollMagic.Scene({
 
 
 
+
+
+
 let timelineMotion = new TimelineMax()
 
     .fromTo("#motion-container", 1, { y: "-20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
@@ -110,16 +113,25 @@ new ScrollMagic.Scene({
 .addTo(controller);
 
 
-let timelineMosaic = new TimelineMax()
+
+
+
+
+
+
+
+
+
+
+let timelineMosaicContainer = new TimelineMax()
 
     .fromTo("#mosaic-container", 1, { y: "-10vh" }, { y: "-2vh", ease: "linear" }, "-=1")
-    .fromTo("#mosaic-container", 1, { x: "5vw" }, { x: "-5vw", ease: "linear" }, "-=1")
+    // .fromTo("#mosaic-container", 1, { x: "5vw" }, { x: "-5vw", ease: "linear" }, "-=1")
     .fromTo("#mosaic-container", 0.5, { opacity: 0 }, { opacity: 1 } , "-=1")
 
-    // .fromTo("#mosaic-container", 1, { y: "-2vh" }, { y: "10vh", ease: "linear" })
-    // .fromTo("#mosaic-container", 1, { x: "-0vw" }, { x: "-5vw", ease: "linear" }, "-=0");
-    // .fromTo("#mosaic-container", 1, { opacity: 1 }, { opacity: 0 }, "-=1")
+    // .fromTo("#mosaic-container-slice-1", 2, { x: "5vw" }, { x: "-2vw", ease: "linear" }, "-=1")
 
+   
 new ScrollMagic.Scene({
     triggerElement: "#mosaic-trigger",
     duration: "150%",
@@ -127,8 +139,31 @@ new ScrollMagic.Scene({
     // offset: 50,					
     triggerHook: 0.95,
 })
-.setTween(timelineMosaic)
+.setTween(timelineMosaicContainer)
 .addTo(controller);
+
+
+let timelineMosaicFirst = new TimelineMax()
+
+    .fromTo(".mosaic-slice-container-1", 1, { x: "5vw" }, { x: "-5vw", ease: "linear" }, "-=1")
+    .fromTo(".mosaic-slice-container-2", 1, { x: "3vw" }, { x: "-3vw", ease: "linear" }, "-=1")
+    .fromTo(".mosaic-slice-container-3", 1, { x: "1.5vw" }, { x: "-1.5vw", ease: "linear" }, "-=1")
+   
+new ScrollMagic.Scene({
+    triggerElement: ".mosaic-slice-container-1",
+    duration: "150%",
+    // reverse: true,
+    // offset: 50,					
+    triggerHook: 0.95,
+})
+.setTween(timelineMosaicFirst)
+.addTo(controller);
+
+
+
+
+
+
 
 
 let timelinePortrait = new TimelineMax()

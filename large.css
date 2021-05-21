@@ -740,7 +740,7 @@ img.landscape-style {
 /* MOSAIC CONTAINER */
 
 .mosaic-container {
-    background-image: url("./images/mosaic-wide.png");
+    /* background-image: url("./images/mosaic-wide.png"); */
     background-size: cover;
     /* width: 100vw; */
     /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
@@ -759,6 +759,62 @@ img.landscape-style {
     border-bottom: 5px solid grey;
 
     margin: 120px 0px 40px 0px;
+}
+
+/* MOSAIC SLICES */
+
+.mosaic-slice-container-1 {
+    background-image: url("./images/mosaic-wide-slice-1.png");
+    background-size: cover;
+    /* width: 100vw; */
+    /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+    width: 120vw;
+
+   
+    height: 33.33%;
+    /* min-height: 180px; */
+   
+    /* border: 5px solid black; */
+    /* border-top: 45px solid grey;
+    border-bottom: 5px solid grey;
+
+    margin: 120px 0px 40px 0px; */
+}
+
+.mosaic-slice-container-2 {
+    background-image: url("./images/mosaic-wide-slice-2.png");
+    background-size: cover;
+    /* width: 100vw; */
+    /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+    width: 120vw;
+
+   
+    height: 33.33%;
+    /* min-height: 550px;  */
+
+    /* border: 5px solid black; */
+    /* border-top: 45px solid grey;
+    border-bottom: 5px solid grey;
+
+    margin: 120px 0px 40px 0px; */
+}
+
+.mosaic-slice-container-3 {
+    background-image: url("./images/mosaic-wide-slice-3.png");
+    background-size: cover;
+    /* width: 100vw; */
+    /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+    width: 120vw;
+
+   
+    height: 33.33%;
+    /* min-height: 550px; */
+
+    /* border: 5px solid black; */
+    /* border-top: 45px solid grey;
+    border-bottom: 5px solid grey;
+
+    margin: 120px 0px 40px 0px; */
 }
 
 
