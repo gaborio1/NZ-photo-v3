@@ -7,11 +7,11 @@
 const controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax()
 
-    // .to(".mountain-crop-1", 10, { y: -600 })
-    // .to(".mountain-crop-2", 10, { y: -400 }, "-=10")
-    // .to(".mountain-crop-3", 10, { y: -250 }, "-=10")
-    // .to(".mountain-crop-4", 10, { y: -75 }, "-=10") 
-    // .to(".mountain-crop-5", 10, { y: -20 }, "-=10")
+    .to(".mountain-crop-1", 10, { y: -600 })
+    .to(".mountain-crop-2", 10, { y: -400 }, "-=10")
+    .to(".mountain-crop-3", 10, { y: -250 }, "-=10")
+    .to(".mountain-crop-4", 10, { y: -75 }, "-=10") 
+    .to(".mountain-crop-5", 10, { y: -20 }, "-=10")
     .to(".mountain-full", 10, { y: 5 }, "-=10")
 
     .to(".title-div", 10, { top: "-120%" }, "-=10")
@@ -110,6 +110,27 @@ new ScrollMagic.Scene({
 .addTo(controller);
 
 
+let timelineMosaic = new TimelineMax()
+
+    .fromTo("#mosaic-container", 1, { y: "-10vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+    .fromTo("#mosaic-container", 1, { x: "5vw" }, { x: "-5vw", ease: "linear" }, "-=1")
+    .fromTo("#mosaic-container", 0.5, { opacity: 0 }, { opacity: 1 } , "-=1")
+
+    // .fromTo("#mosaic-container", 1, { y: "-2vh" }, { y: "10vh", ease: "linear" })
+    // .fromTo("#mosaic-container", 1, { x: "-0vw" }, { x: "-5vw", ease: "linear" }, "-=0");
+    // .fromTo("#mosaic-container", 1, { opacity: 1 }, { opacity: 0 }, "-=1")
+
+new ScrollMagic.Scene({
+    triggerElement: "#mosaic-trigger",
+    duration: "150%",
+    // reverse: true,
+    // offset: 50,					
+    triggerHook: 0.95,
+})
+.setTween(timelineMosaic)
+.addTo(controller);
+
+
 let timelinePortrait = new TimelineMax()
     .fromTo("#portrait-container", 1, { y: "5vh" }, { y: "-2vh", ease: "linear"})
     // .fromTo("#model-container", { y: "20vh" }, { y: "-0vh", duration: 1, ease: "cubic-bezier(1, 1, 1, 0.1)"})
@@ -142,6 +163,11 @@ new ScrollMagic.Scene({
 })
 .setTween(timelineAbstract)
 .addTo(controller);
+
+
+
+
+
 
 
 let timelineNature = new TimelineMax()
