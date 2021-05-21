@@ -545,6 +545,12 @@ h2.photography {
     /* border: 3px solid orange; */
 }
 
+.spacer-trigger {
+    width: 100%;
+    height: 10px;
+    background: rgb(255, 194, 71);
+    /* border: 3px solid rgb(1, 84, 95); */
+}
 
 /* PORTRAIT CONTAINER */
 
@@ -667,7 +673,11 @@ img.portrait-style {
 .portrait-reverse .portrait-img-container {
     margin-top: 100px;
 }
-
+/* 
+#model-trigger {
+    width: inherit;
+    border: 3px solid steelblue;
+} */
 
 
 /* LANDSCAPE CONTAINER */
@@ -728,21 +738,6 @@ img.landscape-style {
 
 
 /* MOSAIC CONTAINER */
-
-#mosaic-trigger {
-    width: var(--main-content-1400);
-    /* border: 3px solid #55ACEE; */
-}
-
-
-
-
-
-#portrait-trigger {
-    width: var(--main-content-1400);
-    margin: 250px auto;
-    /* border: 3px solid #55ACEE; */
-}
 
 
 
