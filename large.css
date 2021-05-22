@@ -40,38 +40,6 @@ p {
     font-weight: 100;
 }
 
-/* !!! HEIGHT IS IMPORTANT !!! */
-.container {
-  /* color: white; */
-  /* border: 5px solid orange; */
-  /* height: 100vh; */
-  align-items: center;
-}
-
-.image-container {
-    
-    /* display: flex; */
-    /* justify-content: center; */
-    height: 100vh;
-    width: 100%;
-    /* background: black; */
-
-    /* !!! THIS IS WORKING !!! */
-    /* https://www.w3schools.com/html/html_images_background.asp */
-
-    /* background-image: url('./images/showcase-3.jpg'); */
-    /* background-image: url("./images/motion-card-1.jpg"); */
-    /* background-repeat: no-repeat; */
-    /* !!! THIS WILL PREVENT IT FROM SCROLLING !!! */
-    /* background-attachment: fixed;   */
-
-    /* background-size: cover; */
-}
-
-
-
-
-
 /* ===== PARALLAX IMAGE LAYERS ===== */
 
 img.mountain-full {
@@ -137,7 +105,6 @@ img.mountain-crop-5 {
 }
 
 
-
 /* STICKY NAVBAR */
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -166,6 +133,7 @@ img.mountain-crop-5 {
 header {
     z-index: 3;
     position: absolute;
+    display: flex;
     /* top: 10px; */
     /* margin-top: 22.5px; */
 
@@ -173,11 +141,13 @@ header {
     width: var(--max-width);
     /* background-color: rgba(0, 0, 0, 0.644); */
     background-color: rgba(0, 0, 0, 0.836);
+
+    /* border: 1px solid rgba(255, 166, 0, 0.944); */
 }
     
 .header-content {
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     align-items: center;
     max-width: var(--main-content-1400);
 
@@ -188,6 +158,8 @@ header {
     height: 45px;
     margin-left: auto;
     margin-right: auto;
+
+    /* border: 1px solid rgb(47, 255, 0); */
 }
     
 .logo-container--4, .nav-links, .search-container {
@@ -205,6 +177,8 @@ header {
      /* LOGO ONLY */
     justify-content: flex-end;
     justify-content: center;
+
+    /* border: 1px solid rgb(255, 42, 0); */
 }
     
 .block-row---4 {
@@ -250,6 +224,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* border: 1px solid rgb(255, 42, 0); */
 }
 
     
@@ -295,7 +271,6 @@ nav {
     border-bottom: 1px solid white;
 }
     
-
 
 /* DROPDOWN  */
 
@@ -384,6 +359,8 @@ nav {
     justify-content: center;
     align-items: center;
     /* border-left: 1px solid black; */
+
+    /* border: 1px solid rgb(255, 42, 0); */
 }
     
 button {
@@ -421,6 +398,27 @@ input[type=text] {
     /* color: red; */
     margin: 0px 0px 0px 10px;
   }
+
+
+  .image-container {
+    
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 100vh;
+    width: 100%;
+    /* background: black; */
+
+    /* !!! THIS IS WORKING !!! */
+    /* https://www.w3schools.com/html/html_images_background.asp */
+
+    /* background-image: url('./images/showcase-3.jpg'); */
+    /* background-image: url("./images/motion-card-1.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* !!! THIS WILL PREVENT IT FROM SCROLLING !!! */
+    /* background-attachment: fixed;   */
+
+    /* background-size: cover; */
+}
 
   
   /* TITLE DIV */
@@ -501,9 +499,6 @@ h2.photography {
 
 
 
-
-
-
 /* ========== MAIN CONTENT ========== */
 
 /* DESIGN 2 */
@@ -524,7 +519,6 @@ h2.photography {
 
     /* !!!!! THIS PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
     overflow: hidden;
-
 
     /* border: 3px solid red; */
 }
@@ -558,6 +552,38 @@ h2.photography {
 #portrait-container {
     border: 3px solid forestgreen;
 } */
+
+/* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
+/* [1] The container */
+.img-hover-zoom {
+    border-radius: 3px;
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+
+.img-hover-zoom--portrait {
+    width: 400px;
+    height: 600px;
+}
+
+
+.img-hover-zoom--landscape {
+    width: 750px;
+    height: 500px;
+    
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+    transition: transform 1s ease;
+   }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    transform: scale(1.2);
+}
+
+
+
 
 .portrait-container {
     width: var(--max-width);
@@ -594,7 +620,10 @@ h2.photography {
 
 .portrait-column--reverse {
     flex-direction: column-reverse;
+    /* flex-direction: row; */
     margin: 150px 10px 10px 10px;
+
+    /* border: 3px solid aqua; */
 }
 
 .portrait-img-container, .portrait-text-container {
@@ -612,41 +641,6 @@ h2.photography {
 
     /* border: 3px solid black; */
 }
-
-
-
-
-/* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
-/* [1] The container */
-.img-hover-zoom {
-    border-radius: 3px;
-    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-  }
-
-.img-hover-zoom--portrait {
-    width: 400px;
-    height: 600px;
-}
-
-
-.img-hover-zoom--landscape {
-    width: 750px;
-    height: 500px;
-    
-}
-
-/* [2] Transition property for smooth transformation of images */
-.img-hover-zoom img {
-    transition: transform 1s ease;
-   }
-  
-  /* [3] Finally, transforming the image when container gets hovered */
-  .img-hover-zoom:hover img {
-    transform: scale(1.2);
-}
-
-
-
 
 
 .portrait-text-container {
@@ -731,10 +725,6 @@ img.landscape-style {
     /* border: 1px solid rgba(0, 0, 0, 0.286); */
     border-radius: 3px;
 }
-
-
-
-
 
 
 /* MOSAIC CONTAINER */
