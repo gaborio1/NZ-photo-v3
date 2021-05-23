@@ -882,6 +882,10 @@ img.landscape-style {
 .footer {
     /* z-index: 1; */
 
+    /* !!!!! FIX THIS !!!!! */
+    position: relative;
+    top: 3700px;
+
     /* width: var(--max-width); */
     width: 100vw;
     background: rgba(0, 0, 0, 0.848);
@@ -899,7 +903,7 @@ img.landscape-style {
 }
 
 .footer-top-img {
-    z-index: 1;
+    /* z-index: 1; */
     background-image: url("./images/footer-img-crop-1.jpg");
     background-size: cover;
     /* border: 1px solid red; */
