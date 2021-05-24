@@ -44,7 +44,7 @@ let scene = new ScrollMagic.Scene({
 
 // MODEL
 let timelineModel = new TimelineMax()
-    .fromTo("#model-img-container", 1, { y: "5vh" }, { y: "-2vh", ease: "linear"})
+    .fromTo("#model-img-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear"})
     .fromTo("#model-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 new ScrollMagic.Scene({
     triggerElement: "#model-img-trigger",
@@ -61,7 +61,7 @@ let timelineModelText = new TimelineMax()
     .fromTo("#model-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.3");
 new ScrollMagic.Scene({
     triggerElement: "#model-text-trigger",
-    duration: "10%",
+    duration: "20%",
     offset: -30,					
     triggerHook: 0.95,
 })
@@ -78,7 +78,7 @@ let timelineStreetText = new TimelineMax()
     .fromTo("#street-text-container", 0.3, { opacity: 0 }, { opacity: 1 } , "-=0.3")
 new ScrollMagic.Scene({
     triggerElement: "#street-text-trigger",
-    duration: "10%",
+    duration: "20%",
     offset: -30,					
     triggerHook: 0.95,
 })
@@ -92,7 +92,7 @@ let timelineStreet = new TimelineMax()
 new ScrollMagic.Scene({
     triggerElement: "#street-img-trigger",
     duration: "50%",
-    offset: -200,					
+    offset: -150,					
     triggerHook: 0.95,
 })
 .setTween(timelineStreet)
@@ -105,18 +105,41 @@ new ScrollMagic.Scene({
 
 
 
+
+// MOTION
 let timelineMotion = new TimelineMax()
-    .fromTo("#motion-container", 1, { y: "-20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
-    .fromTo("#motion-container", 1, { x: "-5vw" }, { x: "-0vw", ease: "linear" }, "-=1")
-    .fromTo("#motion-container", 1, { opacity: 0 }, { opacity: 1 } , "-=1")
+    .fromTo("#motion-img-container", 1, { y: "-20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+    .fromTo("#motion-img-container", 1, { x: "-5vw" }, { x: "-0vw", ease: "linear" }, "-=1")
+    .fromTo("#motion-img-container", 1, { opacity: 0 }, { opacity: 1 } , "-=1")
 new ScrollMagic.Scene({
-    triggerElement: "#motion-trigger",
+    triggerElement: "#motion-img-trigger",
     duration: "50%",
-    offset: -50,					
+    // offset: -50,					
     triggerHook: 0.95,
 })
 .setTween(timelineMotion)
 .addTo(controller);
+
+let timelineMotionText = new TimelineMax()
+    .fromTo("#motion-text-container", 0.3, { y: "-10vh" }, { y: "-10vh", ease: "linear" })
+    .fromTo("#motion-text-container", 0.3, { x: "5vw" }, { x: "-0vw", ease: "linear" }, "-=0.3")
+    .fromTo("#motion-text-container", 0.3, { opacity: 0 }, { opacity: 1 } , "-=0.3")
+new ScrollMagic.Scene({
+    triggerElement: "#motion-text-trigger",
+    duration: "20%",
+    // offset: 300,					
+    triggerHook: 0.95,
+})
+.setTween(timelineMotionText)
+.addTo(controller);
+
+
+
+
+
+
+
+
 
 
 let timelineMosaicContainer = new TimelineMax()
