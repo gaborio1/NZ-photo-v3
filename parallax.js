@@ -42,11 +42,12 @@ let scene = new ScrollMagic.Scene({
 
 // ========== ANIMATING CATEGORIES ONE BY ONE WITHOUT TIMELINE ==========
 
+// MODEL
 let timelineModel = new TimelineMax()
-    .fromTo("#model-container", 1, { y: "5vh" }, { y: "-2vh", ease: "linear"})
-    .fromTo("#model-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
+    .fromTo("#model-img-container", 1, { y: "5vh" }, { y: "-2vh", ease: "linear"})
+    .fromTo("#model-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 new ScrollMagic.Scene({
-    triggerElement: "#model-trigger",
+    triggerElement: "#model-img-trigger",
     duration: "50%",
     // offset: 50,					
     triggerHook: 0.95,
@@ -55,19 +56,53 @@ new ScrollMagic.Scene({
 .setTween(timelineModel)
 .addTo(controller);
 
+let timelineModelText = new TimelineMax()
+    .fromTo("#model-text-container", 0.3, { y: "2vh" }, { y: "-2vh", ease: "linear"})
+    .fromTo("#model-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.3");
+new ScrollMagic.Scene({
+    triggerElement: "#model-text-trigger",
+    duration: "10%",
+    offset: -30,					
+    triggerHook: 0.95,
+})
+// .setClassToggle("visible") 
+.setTween(timelineModelText)
+.addTo(controller);
+
+
+
+// STREET
+let timelineStreetText = new TimelineMax()
+    .fromTo("#street-text-container", 0.3, { y: "-5vh" }, { y: "-2vh", ease: "linear" }, "-=0.3")
+    // .fromTo("#street-text-container", 0.3, { x: "5vw" }, { x: "-0vw", ease: "linear" }, "-=0.3")
+    .fromTo("#street-text-container", 0.3, { opacity: 0 }, { opacity: 1 } , "-=0.3")
+new ScrollMagic.Scene({
+    triggerElement: "#street-text-trigger",
+    duration: "10%",
+    offset: -30,					
+    triggerHook: 0.95,
+})
+.setTween(timelineStreetText)
+.addTo(controller);
 
 let timelineStreet = new TimelineMax()
-    .fromTo("#street-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
-    .fromTo("#street-container", 1, { x: "5vw" }, { x: "-0vw", ease: "linear" }, "-=1")
-    .fromTo("#street-container", 1, { opacity: 0 }, { opacity: 1 } , "-=1")
+    .fromTo("#street-img-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+    .fromTo("#street-img-container", 1, { x: "5vw" }, { x: "-0vw", ease: "linear" }, "-=1")
+    .fromTo("#street-img-container", 1, { opacity: 0 }, { opacity: 1 } , "-=1")
 new ScrollMagic.Scene({
-    triggerElement: "#street-trigger",
+    triggerElement: "#street-img-trigger",
     duration: "50%",
-    // offset: 50,					
+    offset: -200,					
     triggerHook: 0.95,
 })
 .setTween(timelineStreet)
 .addTo(controller);
+
+
+
+
+
+
 
 
 let timelineMotion = new TimelineMax()

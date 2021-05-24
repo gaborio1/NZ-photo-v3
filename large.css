@@ -541,8 +541,8 @@ h2.photography {
 
 .spacer-trigger {
     width: 100%;
-    /* height: 10px; */
-    /* background: rgb(255, 194, 71); */
+    height: 10px;
+    background: rgb(255, 194, 71);
     /* border: 3px solid rgb(1, 84, 95); */
 }
 
