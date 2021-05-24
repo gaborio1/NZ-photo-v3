@@ -113,7 +113,13 @@ img.mountain-crop-5 {
     /* width: 100%; */
     width: var(--max-width);
 }
-  
+ 
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+
 .hidden {
     display: none;
 }
@@ -125,22 +131,19 @@ img.mountain-crop-5 {
     filter: grayscale(.25) blur(1px) opacity(0.75);  
 }
 
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
-
 header {
     z-index: 3;
     position: absolute;
+    /* display: none; */
     display: flex;
-    /* top: 10px; */
+    /* top: 22.5px; */
     /* margin-top: 22.5px; */
 
     /* width: 100%; */
     width: var(--max-width);
-    /* background-color: rgba(0, 0, 0, 0.644); */
-    background-color: rgba(0, 0, 0, 0.836);
+
+    /* !!!!! BACKGROUND IS CONTROLLED BY SCROLLMAGIC fromTo 0.85 -> 0.95 !!!!! */
+    /* background-color: rgba(0, 0, 0, 0.85); */
 
     /* border: 1px solid rgba(255, 166, 0, 0.944); */
 }
@@ -162,13 +165,13 @@ header {
     /* border: 1px solid rgb(47, 255, 0); */
 }
     
-.logo-container--4, .nav-links, .search-container {
+.logo-container, .nav-links, .search-container {
     display: flex;
 }
     
     /* ===== LOGO =====  */
     
-.logo-container--4 {
+.logo-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -181,11 +184,11 @@ header {
     /* border: 1px solid rgb(255, 42, 0); */
 }
     
-.block-row---4 {
+.logo__block-row {
     display: flex;
 }
     
-.block--4 {
+.logo__block {
     width: .5rem;
     height: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.108);
@@ -193,28 +196,20 @@ header {
     margin: .1rem;
 }
     
-.block--4--1 {
+.logo__block-1 {
     background-color: #62959c;
     border-bottom-left-radius: .6rem;
 }
     
-.block--4--2 {
+.logo__block-2 {
     background-color: #c19277;
 }
     
-.block--4--3 {
+.logo__block-3 {
     background-color: #e1bc91;
     border-top-right-radius: .6rem;
 }
     
-/* ENZEE PHOTOGRAPHT */
-.text--4 {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: .08rem;
-    color: white;
-    /* color: black; */
-}
    
 /* ===== NAV ===== */
     
