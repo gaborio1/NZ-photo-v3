@@ -23,6 +23,7 @@ body {
     background: var(--main-background);
 }
 
+
 h1 {
     font-size: 45px;
     font-weight: 100;
@@ -418,6 +419,21 @@ input[type=text] {
   
   /* TITLE DIV */
 
+  .title-div {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .title-div {
 /* !!! !!! */
     z-index: 0;
@@ -454,6 +470,7 @@ input[type=text] {
     display: flex;
     justify-content: space-between;
 
+
     /* border: 3px solid orange; */
 }
 
@@ -481,6 +498,10 @@ h1 span.enzee {
     letter-spacing: .05rem;
     text-shadow: 1px 1px rgba(113, 113, 113, 0.683);
 
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
     /* text-shadow: 2px 2px rgba(113, 113, 113, 0.683), 4px 4px rgba(113, 113, 113, 0.361); */
     /* border: 1px solid red; */
 } 
@@ -490,6 +511,11 @@ h2.photography {
     letter-spacing: 1rem;
     color: var(--sub-title-orange);
     margin: 85px 0px 0px 0px;
+
+    animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
 }
 
 
@@ -537,7 +563,7 @@ h2.photography {
 .spacer-trigger {
     width: 100%;
     height: 10px;
-    background: rgb(255, 194, 71);
+    /* background: rgb(255, 194, 71); */
     /* border: 3px solid rgb(1, 84, 95); */
 }
 
@@ -883,9 +909,8 @@ img.landscape-style {
 
     /* width: var(--max-width); */
     width: 100vw;
-    background: rgba(0, 0, 0, 0.848);
-    /* background: rgba(0, 0, 0, 0.923); */
-    /* background: #2f2f35; */
+    /* background: rgba(0, 0, 0, 0.85); */
+    background: rgba(0, 0, 0, 0.95);
     color: white;
     display: flex;
     flex-direction: column;
