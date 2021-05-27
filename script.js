@@ -108,6 +108,34 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+// ANIMATE "photography" IN TITLE DIV
+
+const letters = document.getElementsByClassName("photography__letter");
+
+window.addEventListener("load", function() {
+  console.log("page is loaded");
+  console.log(letters);
+  fadeInSequence(letters);
+});
+
+const fadeInSequence = (arr) => {
+  const letters = arr;
+  let delay = 50;
+  for (let i = 0; i < letters.length; i++) {
+      // letters[i].classList.add("hidden");
+      setTimeout(() => {
+          letters[i].classList.remove("hidden");
+          letters[i].classList.add("flash-fadein");
+          letters[i].style.display = "inline-block";
+      }, delay)
+      delay+=75;
+  }
+}
+
+
+
+
+
 // CATEGORY GALLERY
 
 const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
