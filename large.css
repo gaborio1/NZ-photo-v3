@@ -23,6 +23,10 @@ body {
     background: var(--main-background);
 }
 
+.hidden {
+    display: none;
+}
+
 
 h1 {
     font-size: 45px;
@@ -42,32 +46,62 @@ p {
 }
 
 /* ===== PARALLAX IMAGE LAYERS ===== */
+.image-container {
+    
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 100vh;
+    width: 100%;
+    /* background: black; */
+
+    /* !!! THIS IS WORKING !!! */
+    /* https://www.w3schools.com/html/html_images_background.asp */
+
+    /* background-image: url('./images/showcase-3.jpg'); */
+    /* background-image: url("./images/motion-card-1.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* !!! IF fixed, IMAGE WILL NOT SCROLL AS DEFINED IN PARALLAX !!! */
+    /* background-attachment: fixed;   */
+
+    /* !!! IMPORTANT !!! */
+    background-size: cover;
+    background-position: center;
+}
+
 
 img.mountain-full {
     z-index: -6;
-    /* position: relative; */
-    position: absolute;
+    /* !!! WORKS BEST WITH relative !!!*/
+    position: relative;
+    /* !!! absolute WILL MESS UP TITLE DIV WHEN RESIZING WINDOW !!! */
+    /* position: absolute; */
     width: 100%;
     /* width: fit-content; */
     height: 100vh;
     object-fit: cover;
+    background-position: center;
     
 }
 
+/* !!! absolute ON LAYERS !!! */
 img.mountain-crop-1 {
     z-index: -1;
     position: absolute;
+    /* position: relative; */
     /* height: 100vh; */
     width: 100%;
    
-    left: 0px;
     bottom: 0px;
-    object-fit: cover;
+    left: 0px;
+    
+    /* ?????????????????????? */
+    /* object-fit: cover; */
 }
 
 img.mountain-crop-2 {
     z-index: -2;
     position: absolute;
+    /* position: relative; */
     /* height: 50%; */
     width: 100%;
     /* top: 735px; */
@@ -78,6 +112,7 @@ img.mountain-crop-2 {
 img.mountain-crop-3 {
     z-index: -3;
     position: absolute;
+    /* position: relative; */
     /* height: 50%; */
     width: 100%;
     /* top: 735px; */
@@ -88,6 +123,7 @@ img.mountain-crop-3 {
 img.mountain-crop-4 {
     z-index: -4;
     position: absolute;
+    /* position: relative; */
     /* height: 50%; */
     width: 100%;
     /* top: 735px; */
@@ -98,6 +134,7 @@ img.mountain-crop-4 {
 img.mountain-crop-5 {
     z-index: -5;
     position: absolute;
+    /* position: relative; */
     /* height: 50%; */
     width: 100%;
     /* top: 735px; */
@@ -118,11 +155,6 @@ img.mountain-crop-5 {
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
     padding-top: 60px;
-}
-
-
-.hidden {
-    display: none;
 }
 
 /* BLUR LANDING PAGE IMG WHEN SEARCH BAR IS ACTIVE  */
@@ -395,27 +427,6 @@ input[type=text] {
     margin: 0px 0px 0px 10px;
   }
 
-
-  .image-container {
-    
-    /* display: flex; */
-    /* justify-content: center; */
-    height: 100vh;
-    width: 100%;
-    /* background: black; */
-
-    /* !!! THIS IS WORKING !!! */
-    /* https://www.w3schools.com/html/html_images_background.asp */
-
-    /* background-image: url('./images/showcase-3.jpg'); */
-    /* background-image: url("./images/motion-card-1.jpg"); */
-    /* background-repeat: no-repeat; */
-    /* !!! THIS WILL PREVENT IT FROM SCROLLING !!! */
-    /* background-attachment: fixed;   */
-
-    /* background-size: cover; */
-}
-
   
   /* TITLE DIV */
 
@@ -442,7 +453,6 @@ input[type=text] {
         opacity: 0.05;
     }
     
-
     75% {
         opacity: 0.75;
         text-shadow: 1px 1px 2px var(--sub-title-orange), -1px -1px 2px var(--sub-title-orange);
@@ -466,7 +476,9 @@ input[type=text] {
 /* !!! !!! */
     z-index: 0;
     position: absolute;
+    /* position: relative; */
     bottom: 45px;
+    /* bottom: 5%; */
 
     /* width: 100%; */
     width: var(--max-width);
