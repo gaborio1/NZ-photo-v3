@@ -867,6 +867,7 @@ h2.photography {
 
 /*  LIGHTBOX W3S */
 
+/* ===== GALLERY IMAGES ===== */
 img.hover-shadow {
     width: 100%;
     margin: 10px;
@@ -893,7 +894,7 @@ img.hover-shadow {
     display: none;
     position: fixed;
     z-index: 2;
-    padding-top: 100px;
+    padding-top: 22.5px;
 
     left: 0;
     /* left: 50%; */
@@ -909,9 +910,15 @@ img.hover-shadow {
 
     overflow: auto;
     background-color: black;
+    background-color: rgba(0, 0, 0, 0.95);
+
+    border: 3px solid lightsalmon;
   }
 
+
+
   img.modal-img {
+      /* !!! width IS SET INLINE !!! */
       height: 50%;
   }
   
@@ -922,11 +929,13 @@ img.hover-shadow {
 
     position: relative;
     background-color: #fefefe;
-    background-color: #3aeff922;
+    /* background-color: #3aeff922; */
     margin: auto;
     padding: 0;
     width: 90%;
     max-width: 1200px;
+
+    border: 3px solid rgb(128, 0, 43);
   }
   
   /* The Close Button */
@@ -946,9 +955,13 @@ img.hover-shadow {
     cursor: pointer;
   }
   
+  /* ===== MODAL IMG CONTAIMERS ===== */
   /* Hide the slides by default */
   .mySlides {
     display: none;
+    /* overflow: scroll; */
+    /* max-height: 600px; */
+    border: 3px solid orange;
   }
   
   /* Next & previous buttons */
@@ -956,7 +969,7 @@ img.hover-shadow {
   .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40%;
     /* width: auto; */
     padding: 16px;
     margin-top: -50px;
@@ -1003,15 +1016,23 @@ img.hover-shadow {
   }
 
   .thumbnail-container {
-    display: flex;
-    height: 120px;
-    overflow: scroll;
-    border: 1px solid green;
+    /* display: block; */
+    height: 200px;
+    /* height: 50%; */
+    width: 100%;
+    /* !!! MAKE x-scroll WORK !!! */
+    overflow-x: scroll;
+
+    border: 3px solid rgb(27, 196, 27);
   }
 
+  /* ===== THUMBNAIL IMAGES ===== */
   img.demo {
     width: 100%;
+    /* margin: 2px; */
     opacity: 0.6;
+
+    /* border: 3px solid firebrick; */
   }
   
   .active,
