@@ -918,7 +918,7 @@ img.hover-shadow {
   /* Modal Content */
   .modal-content {
 
-text-align: center;
+  text-align: center;
 
     position: relative;
     background-color: #fefefe;
@@ -957,7 +957,7 @@ text-align: center;
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
+    /* width: auto; */
     padding: 16px;
     margin-top: -50px;
     color: white;
@@ -969,6 +969,10 @@ text-align: center;
     -webkit-user-select: none;
   }
   
+  .prev {
+    left: 0;
+  }
+
   /* Position the "next button" to the right */
   .next {
     right: 0;
@@ -997,9 +1001,16 @@ text-align: center;
     padding: 2px 16px;
     color: white;
   }
-  
+
+  .thumbnail-container {
+    display: flex;
+    height: 120px;
+    overflow: scroll;
+    border: 1px solid green;
+  }
+
   img.demo {
-    width: 75%;
+    width: 100%;
     opacity: 0.6;
   }
   
