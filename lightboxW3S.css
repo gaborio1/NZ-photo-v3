@@ -480,6 +480,10 @@ h2.photography {
 
 
 
+
+
+
+
 /* ========== MAIN CONTENT ========== */
 
 /* DESIGN 2 */
@@ -491,7 +495,7 @@ h2.photography {
     width: var(--max-width);
     height: fit-content;
 
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .main-coloumn {
@@ -507,12 +511,12 @@ h2.photography {
     margin-bottom: 200px;
     margin-top: 100px;
 
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
 }
 
 .category-title-container {
     margin: 45px 0px 90px 0px;
-    border: 3px solid cyan;
+    /* border: 3px solid cyan; */
 }
 
 .category-title-container h1 {
@@ -524,8 +528,12 @@ h2.photography {
     /* display: flex; */
     /* float: left; */
     width: 1200px;
-    height: 100vh;
-    border: 3px solid rgb(0, 255, 140);
+
+    /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
+    /* height: 100vh; */
+
+
+    /* border: 3px solid rgb(0, 255, 140); */
 }
 
 /* .portrait-img-container {
@@ -886,8 +894,9 @@ img.hover-shadow {
   /* Create four equal columns that floats next to eachother */
   .column {
     float: left;
-    width: 25%;
+    width: 50%;
   }
+
   
   /* The Modal (background) */
   .modal {
@@ -910,9 +919,9 @@ img.hover-shadow {
 
     overflow: auto;
     background-color: black;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.85);
 
-    border: 3px solid lightsalmon;
+    /* border: 3px solid lightsalmon; */
   }
 
 
@@ -929,13 +938,13 @@ img.hover-shadow {
 
     position: relative;
     background-color: #fefefe;
-    /* background-color: #3aeff922; */
+    background-color: #15191921;
     margin: auto;
     padding: 0;
     width: 90%;
     max-width: 1200px;
 
-    border: 3px solid rgb(128, 0, 43);
+    /* border: 3px solid rgb(128, 0, 43); */
   }
   
   /* The Close Button */
@@ -961,7 +970,7 @@ img.hover-shadow {
     display: none;
     /* overflow: scroll; */
     /* max-height: 600px; */
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
   }
   
   /* Next & previous buttons */
@@ -1023,14 +1032,19 @@ img.hover-shadow {
     /* !!! MAKE x-scroll WORK !!! */
     overflow-x: scroll;
 
-    border: 3px solid rgb(27, 196, 27);
+    /* border: 3px solid rgb(27, 196, 27); */
+  }
+
+  .thumbnail-container .column {
+    width: 25%;
+    /* border: 3px solid yellow; */
   }
 
   /* ===== THUMBNAIL IMAGES ===== */
   img.demo {
     width: 100%;
     /* margin: 2px; */
-    opacity: 0.6;
+    opacity: 0.75;
 
     /* border: 3px solid firebrick; */
   }
