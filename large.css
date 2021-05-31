@@ -1018,8 +1018,12 @@ img.landscape-style {
     /* opacity: 1; */
 }
 
+/* FADE OUT / SLIDE INFO DIV */
 .category-img-container:hover  .info-div {
-    opacity: 0.8;
+    opacity: 0;
+
+    /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+    width: 500px;
 }
 
 /* CATEGORY DIVS */
@@ -1037,14 +1041,11 @@ img.landscape-style {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.622), rgba(0, 0, 0, 0));   
     border-radius: 5px;
 
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.622), rgba(0, 0, 0, 0)); */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.622)); */
-    /* left: -400px; */
-
-    -ms-transform: rotate(20deg); /* IE 9 */
+    -ms-transform: rotate(-90deg); /* IE 9 */
     transform: rotate(-90deg);
 
-    /* transition: transform 1s ease; */
+    /* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
+    transition: opacity 1s ease, width ease 1s;
 
     /* border: 1px solid rgba(255, 166, 0, 0.861); */
     /* border: 1px solid rgba(163, 163, 163, 0.759); */
@@ -1058,14 +1059,6 @@ img.landscape-style {
     cursor: pointer;
 }
 
-.vertical .info-div {
-    width: 650px;
-    left: -225px;
-    top: -320px;
-    /* border-bottom: 1px solid black; */
-    /* border-bottom: 1px solid rgb(255, 255, 255); */
-    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.622), rgba(0, 0, 0, 0));    */
-}
 
 .info-div-content span.category {
     margin-left: 2rem;
