@@ -533,7 +533,7 @@ h2.photography {
     /* height: 100vh; */
 
 
-    /* border: 3px solid rgb(0, 255, 140); */
+    border: 3px solid rgb(0, 255, 140);
 }
 
 /* .portrait-img-container {
@@ -921,7 +921,7 @@ img.hover-shadow {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.85);
 
-    /* border: 3px solid lightsalmon; */
+    border: 3px solid lightsalmon;
   }
 
 
@@ -944,7 +944,7 @@ img.hover-shadow {
     width: 90%;
     max-width: 1200px;
 
-    /* border: 3px solid rgb(128, 0, 43); */
+    border: 3px solid rgb(128, 0, 43);
   }
   
   /* The Close Button */
@@ -970,7 +970,7 @@ img.hover-shadow {
     display: none;
     /* overflow: scroll; */
     /* max-height: 600px; */
-    /* border: 3px solid orange; */
+    border: 3px solid rgb(254, 170, 13);
   }
   
   /* Next & previous buttons */
@@ -1032,12 +1032,12 @@ img.hover-shadow {
     /* !!! MAKE x-scroll WORK !!! */
     overflow-x: scroll;
 
-    /* border: 3px solid rgb(27, 196, 27); */
+    border: 3px solid rgb(27, 196, 27);
   }
 
   .thumbnail-container .column {
     width: 25%;
-    /* border: 3px solid yellow; */
+    border: 3px solid yellow;
   }
 
   /* ===== THUMBNAIL IMAGES ===== */
