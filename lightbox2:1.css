@@ -533,7 +533,7 @@ h2.photography {
     /* height: 100vh; */
 
 
-    border: 3px solid rgb(0, 255, 140);
+    /* border: 3px solid rgb(0, 255, 140); */
 }
 
 /* .portrait-img-container {
@@ -903,7 +903,7 @@ img.hover-shadow {
     display: none;
     position: fixed;
     z-index: 2;
-    padding-top: 22.5px;
+    /* padding-top: 22.5px; */
 
     left: 0;
     /* left: 50%; */
@@ -921,7 +921,7 @@ img.hover-shadow {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.85);
 
-    border: 3px solid lightsalmon;
+    /* border: 3px solid rgb(250, 125, 75); */
   }
 
 
@@ -934,17 +934,17 @@ img.hover-shadow {
   /* Modal Content */
   .modal-content {
 
-  text-align: center;
+  /* text-align: center; */
 
     position: relative;
     background-color: #fefefe;
     background-color: #15191921;
-    margin: auto;
+    margin: 3.5% auto;
     padding: 0;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
 
-    border: 3px solid rgb(128, 0, 43);
+    /* border: 3px solid rgb(128, 0, 43); */
   }
   
   /* The Close Button */
@@ -970,7 +970,7 @@ img.hover-shadow {
     display: none;
     /* overflow: scroll; */
     /* max-height: 600px; */
-    border: 3px solid rgb(254, 170, 13);
+    /* border: 3px solid rgb(254, 170, 13); */
   }
   
   /* Next & previous buttons */
@@ -978,7 +978,7 @@ img.hover-shadow {
   .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 43%;
     /* width: auto; */
     padding: 16px;
     margin-top: -50px;
@@ -1026,18 +1026,17 @@ img.hover-shadow {
 
   .thumbnail-container {
     /* display: block; */
-    height: 200px;
-    /* height: 50%; */
+    height: 150px;
     width: 100%;
     /* !!! MAKE x-scroll WORK !!! */
     overflow-x: scroll;
 
-    border: 3px solid rgb(27, 196, 27);
+    /* border: 3px solid rgb(27, 196, 27); */
   }
 
   .thumbnail-container .column {
     width: 25%;
-    border: 3px solid yellow;
+    /* border: 3px solid rgb(255, 255, 19); */
   }
 
   /* ===== THUMBNAIL IMAGES ===== */
