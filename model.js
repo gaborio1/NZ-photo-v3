@@ -108,27 +108,38 @@ const createGalleryDivs = () => {
     const galleryDivImg = document.createElement("img");
     galleryDivImg.className = ("hover-shadow");
     galleryDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
-    galleryDivImg.addEventListener("click", openModal, currentSlide);
+    // galleryDivImg.addEventListener("click", openModal, currentSlide);
+    // galleryDivImg.addEventListener("click", openModal);
     galleryDiv.appendChild(galleryDivImg);
+    // galleryDivImg.addEventListener("click", openModal, currentSlide);
+    galleryDiv.onclick = openModal;
+    // galleryDiv.onclick = currentSlide(Number(index));
+    
+
+    // galleryDiv.onclick = currentSlide(Number(index));
   }
 }
 
 createGalleryDivs();
 
-// CREATE MODAL DIVS WITH IMAGES
+// CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES
 const modalContent = document.querySelector(".modal-content");
 
 const createModalDivs = () => {
     for(let index of imagesTest) {
-      // console.log("hello");
       const modalDiv = document.createElement("div");
       modalDiv.className = "mySlides";
       modalContent.appendChild(modalDiv);
+
+      const numberText = document.createElement("div");
+      numberText.className = ("numbertext");
+      numberText.textContent = index + " / " + imagesTest.length;
+      modalDiv.appendChild(numberText);
   
       const modalDivImg = document.createElement("img");
       modalDivImg.className = ("modal-img");
       modalDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
-      modalDivImg.style.width = "30%";
+    //   modalDivImg.style.width = "40%";
     //   modalDivImg.style.width = "200px";
     //   modalDivImg.addEventListener("click", createModalDivs);
       modalDiv.appendChild(modalDivImg);
@@ -137,13 +148,51 @@ const createModalDivs = () => {
 
   createModalDivs();
 
+// CREATE THUMBNAIL DIVS WITH IMAGES
+
+// const thumbnailContainer = document.querySelector(".thumbnail-container");
+
+
+const hello = (idx) => {
+    console.log("hello " + idx);
+    console.log(typeof(Number(idx)));
+}
+
+const createThumbnailDivs = () => {
+    const thumbnailContainer = document.createElement("div");
+    thumbnailContainer.className = ("thumbnail-container");
+    modalContent.appendChild(thumbnailContainer);
+
+    for(let index of imagesTest) {
+      const thumbnailDiv = document.createElement("div");
+      thumbnailDiv.className = "column";
+      thumbnailContainer.appendChild(thumbnailDiv);
+  
+      const thumbnailDivImg = document.createElement("img");
+      thumbnailDivImg.className = ("demo");
+      thumbnailDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
+    //   thumbnailDivImg.onclick = currentSlide(Number(index));
+    //   thumbnailDivImg.style.width = "30%";
+    //   thumbnailDivImg.addEventListener("click", currentSlide(Number(index)));
+    //   thumbnailDivImg.addEventListener("click", currentSlide(2));
+      
+      thumbnailDiv.appendChild(thumbnailDivImg);
+      thumbnailDivImg.addEventListener("click", function() { console.log("thumbnail img clicked") });
+      thumbnailDivImg.addEventListener("click", hello(Number(index)));
+    }
+  }
+
+  createThumbnailDivs();
+
+
 
 // MODAL
+
 
 // Open the Modal
 function openModal() {
     document.getElementById("myModal").style.display = "block";
-    // console.log("gallery img clicked");
+    console.log("gallery img clicked");
   }
   
   // Close the Modal
@@ -151,7 +200,9 @@ function openModal() {
     document.getElementById("myModal").style.display = "none";
   }
   
+//   DEFAULT SLIDE INDEX
   var slideIndex = 1;
+
   showSlides(slideIndex);
   
   // Next/previous controls
@@ -162,13 +213,14 @@ function openModal() {
   // Thumbnail image controls
   function currentSlide(n) {
     showSlides(slideIndex = n);
+    // console.log("thumbnail img clicked");
   }
   
   function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
+    // var captionText = document.getElementById("caption");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -179,5 +231,5 @@ function openModal() {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    // captionText.innerHTML = dots[slideIndex-1].alt;
   }
