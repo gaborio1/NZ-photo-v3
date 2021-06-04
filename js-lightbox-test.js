@@ -1,14 +1,9 @@
 // STICKY NAVBAR W3SCHOOLS
 
-// When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
-
-// Get the navbar
 const navbar = document.getElementById("header");
-
 // Get the offset position of the navbar
 const sticky = navbar.offsetTop;
-
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset >= sticky) {
@@ -52,21 +47,14 @@ closeButton.addEventListener("click", function() {
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("myDIV");
-var btns = document.getElementsByClassName("select-able");
-for (var i = 0; i < btns.length; i++) {
-  console.log(btns[i]);
+const btns = document.getElementsByClassName("select-able");
+for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
+  const current = document.getElementsByClassName("active");
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
   });
 }
-
-
-
-
-
-
 
 
 
@@ -76,8 +64,9 @@ const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9"
 // , "10", "11", "12"
 ];
 
-const galleryContainer = document.querySelector(".gallery-container");
+// ORIGINAL LAYOUT WJITHOUT LIGHTBOX:
 
+// const galleryContainer = document.querySelector(".gallery-container");
 // const createDivs = () => {
 //   for(let index of imagesTest) {
 //     console.log("hello");
@@ -97,7 +86,6 @@ const galleryContainerRow = document.querySelector(".row");
 
 const createGalleryDivs = () => {
   for(let index of imagesTest) {
-    // console.log("hello");
     const galleryDiv = document.createElement("div");
     galleryDiv.className = "column";
     galleryContainerRow.appendChild(galleryDiv);
@@ -107,37 +95,49 @@ const createGalleryDivs = () => {
     galleryDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
    
     galleryDiv.appendChild(galleryDivImg);
-
-    // galleryDivImg.addEventListener("click", openModal, false);
-    // galleryDivImg.addEventListener("click", currentSlide(Number(index)), false);
-
-    // galleryDivImg.setAttribute("onclick", "openModal()");
-    // galleryDivImg.setAttribute("onclick", currentSlide(Number(index)));
-    
-
-    // galleryDiv.onclick = currentSlide(Number(index));
   }
 }
 
 createGalleryDivs();
 
+// !!!!!!!!!! THESE DONT WORK IN CREATEDIV LOOPS !!!!!!!!!!
+
+//   thumbnailDivImg.onclick = currentSlide(Number(index));
+//   thumbnailDivImg.addEventListener("click", currentSlide(Number(index)));
+
+// !!!!!!!!!! SOLUTION !!!!!!!!!!
+
+// How to properly pass argument in loop to multiple event handlers? CREATE A CLOSURE
 // https://stackoverflow.com/questions/12330607/how-to-properly-pass-argument-in-loop-to-multiple-event-handlers
 
-function addImageListener(){
-  const images = document.getElementsByClassName("hover-shadow");
+// eventName: String that specifies the name of the event to listen for. This parameter is case sensitive!
+// function: Represents the event listener function to be called when the event occurs. When an event occurs, an event object is initialized and passed to the event handler as the first parameter. The type of the event object depends on the current event.
+// useCapture: Boolean that specifies whether the event needs to be captured or not. One of the following values:
 
-  for (let i = 0; i < images.length; i++) {
+// false -> Register the event handler for the bubbling phase. 
+// true -> Register the event handler for the capturing phase.
+// Bubbling and Capturing Phases:
 
-    images[i].addEventListener("click", openModal, false);
-      images[i].addEventListener('click', function(index) { 
-          return function () {
-              currentSlide(Number(index + 1));
-          };
-      }(i), true);
+// bubbling: the event object propagates through the target's ancestors in reverse order, starting with the target's parent and ending with the defaultView. This phase is also known as the bubbling phase. Event listeners registered for this phase must handle the event after it has reached its target.
+
+// capturing: the event object must propagate through the target's ancestors from the defaultView to the target's parent. This phase is also known as the capturing phase. Event listeners registered for this phase must handle the event before it reaches its target.
+
+
+// ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">)
+function addListenerGalleryImg(){
+  const galleryImages = document.getElementsByClassName("hover-shadow");
+
+  for (let i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].addEventListener("click", openModal, false);
+    galleryImages[i].addEventListener('click', function(index) { 
+      return function () {
+        currentSlide(Number(index + 1));
+      };
+    }(i), true);
   }
 }
 
-addImageListener();
+addListenerGalleryImg();
 
 
 
@@ -158,25 +158,22 @@ const createModalDivs = () => {
       const modalDivImg = document.createElement("img");
       modalDivImg.className = ("modal-img");
       modalDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
-    //   modalDivImg.style.width = "40%";
-    //   modalDivImg.style.width = "200px";
-    //   modalDivImg.addEventListener("click", createModalDivs);
+  
       modalDiv.appendChild(modalDivImg);
     }
   }
 
   createModalDivs();
 
+
+// TEST
+
+// const hello = (idx) => {
+//     console.log("hello " + idx);
+//     console.log(typeof(Number(idx)));
+// }
+
 // CREATE THUMBNAIL DIVS WITH IMAGES
-
-// const thumbnailContainer = document.querySelector(".thumbnail-container");
-
-
-const hello = (idx) => {
-    console.log("hello " + idx);
-    console.log(typeof(Number(idx)));
-}
-
 const createThumbnailDivs = () => {
     const thumbnailContainer = document.createElement("div");
     thumbnailContainer.className = ("thumbnail-container");
@@ -191,17 +188,32 @@ const createThumbnailDivs = () => {
       thumbnailDivImg.className = ("demo");
       thumbnailDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
     //   thumbnailDivImg.onclick = currentSlide(Number(index));
-    //   thumbnailDivImg.style.width = "30%";
     //   thumbnailDivImg.addEventListener("click", currentSlide(Number(index)));
-    //   thumbnailDivImg.addEventListener("click", currentSlide(2));
       
       thumbnailDiv.appendChild(thumbnailDivImg);
-      thumbnailDivImg.addEventListener("click", function() { console.log("thumbnail img clicked") });
-      thumbnailDivImg.addEventListener("click", hello(Number(index)));
+      // thumbnailDivImg.addEventListener("click", function() { console.log("thumbnail img clicked") });
+      // thumbnailDivImg.addEventListener("click", hello(Number(index)));
     }
   }
 
   createThumbnailDivs();
+
+
+  // ADD currentslide(n) TO THUMBNAIL IMAGES
+  function addListenerThumbnailImg(){
+    const thumbnailImages = document.getElementsByClassName("demo");
+  
+    for (let i = 0; i < thumbnailImages.length; i++) {
+      // thumbnailImages[i].addEventListener("click", function() { console.log("thumbnail img clicked") });
+      thumbnailImages[i].addEventListener('click', function(index) { 
+        return function () {
+          currentSlide(Number(index + 1));
+        };
+      }(i), true);
+    }
+  }
+  
+  addListenerThumbnailImg();
 
 
 
@@ -211,7 +223,7 @@ const createThumbnailDivs = () => {
 // Open the Modal
 function openModal() {
     document.getElementById("myModal").style.display = "block";
-    console.log("gallery img clicked");
+    // console.log("gallery img clicked");
   }
   
   // Close the Modal
