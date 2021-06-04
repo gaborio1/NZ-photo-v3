@@ -72,7 +72,9 @@ for (var i = 0; i < btns.length; i++) {
 
 // CATEGORY GALLERY
 
-const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9"
+// , "10", "11", "12"
+];
 
 const galleryContainer = document.querySelector(".gallery-container");
 
@@ -98,22 +100,19 @@ const createGalleryDivs = () => {
     // console.log("hello");
     const galleryDiv = document.createElement("div");
     galleryDiv.className = "column";
-    // imgDiv.innerText = index;
-    // imgDiv.style.backgroundImage = "url("`./images/portrait/portrait-${index}`")"
-    // imgDiv.style.backgroundImage = "url(../images/portrait/portrait-" + index + ".jpg)"
-
-    // galleryDiv.style.backgroundImage = "url(../images/portrait/portrait-" + index + ".jpg)";
     galleryContainerRow.appendChild(galleryDiv);
 
     const galleryDivImg = document.createElement("img");
     galleryDivImg.className = ("hover-shadow");
     galleryDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
-    // galleryDivImg.addEventListener("click", openModal, currentSlide);
-    // galleryDivImg.addEventListener("click", openModal);
+   
     galleryDiv.appendChild(galleryDivImg);
-    // galleryDivImg.addEventListener("click", openModal, currentSlide);
-    galleryDiv.onclick = openModal;
-    // galleryDiv.onclick = currentSlide(Number(index));
+
+    // galleryDivImg.addEventListener("click", openModal, false);
+    // galleryDivImg.addEventListener("click", currentSlide(Number(index)), false);
+
+    // galleryDivImg.setAttribute("onclick", "openModal()");
+    // galleryDivImg.setAttribute("onclick", currentSlide(Number(index)));
     
 
     // galleryDiv.onclick = currentSlide(Number(index));
@@ -121,6 +120,26 @@ const createGalleryDivs = () => {
 }
 
 createGalleryDivs();
+
+// https://stackoverflow.com/questions/12330607/how-to-properly-pass-argument-in-loop-to-multiple-event-handlers
+
+function addImageListener(){
+  const images = document.getElementsByClassName("hover-shadow");
+
+  for (let i = 0; i < images.length; i++) {
+
+    images[i].addEventListener("click", openModal, false);
+      images[i].addEventListener('click', function(index) { 
+          return function () {
+              currentSlide(Number(index + 1));
+          };
+      }(i), true);
+  }
+}
+
+addImageListener();
+
+
 
 // CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES
 const modalContent = document.querySelector(".modal-content");
