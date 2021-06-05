@@ -142,13 +142,15 @@ addListenerGalleryImg();
 
 
 // CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES
-const modalContent = document.querySelector(".modal-content");
+// const modalContent = document.querySelector(".modal-content");
+const modalImgContainer = document.querySelector(".modal-img-container");
 
 const createModalDivs = () => {
     for(let index of imagesTest) {
       const modalDiv = document.createElement("div");
       modalDiv.className = "mySlides";
-      modalContent.appendChild(modalDiv);
+      // modalContent.appendChild(modalDiv);
+      modalImgContainer.appendChild(modalDiv);
 
       const numberText = document.createElement("div");
       numberText.className = ("numbertext");
@@ -175,9 +177,9 @@ const createModalDivs = () => {
 
 // CREATE THUMBNAIL DIVS WITH IMAGES
 const createThumbnailDivs = () => {
-    const thumbnailContainer = document.createElement("div");
-    thumbnailContainer.className = ("thumbnail-container");
-    modalContent.appendChild(thumbnailContainer);
+    const thumbnailContainer = document.querySelector(".thumbnail-container");
+    // thumbnailContainer.className = ("thumbnail-container");
+    // modalContent.appendChild(thumbnailContainer);
 
     for(let index of imagesTest) {
       const thumbnailDiv = document.createElement("div");
@@ -222,7 +224,7 @@ const createThumbnailDivs = () => {
 
 // Open the Modal
 function openModal() {
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("myModal").style.display = "flex";
     // console.log("gallery img clicked");
   }
   
