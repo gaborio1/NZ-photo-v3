@@ -26,9 +26,7 @@
                             <div class="block--4 block--4--1"></div>
                             <div class="block--4 block--4--2"></div>
                             <div class="block--4 block--4--3"></div>
-                            <!-- <div class="block--4 block--4--4"></div>
-                            <div class="block--4 block--4--5"></div> -->
-                            </div>
+                        </div>
                             <!-- <div class="enzee-row--4 text--4 enzee--4">enzee</div>
                             <div class="photo-row--4 text--4 photo--4">photography</div> -->
                         </div>
@@ -106,7 +104,8 @@
                     </div>
                     <div class="gallery-container">
 
-                        <!-- Images used to open the lightbox -->
+                        <!-- GALLERY IMAGES (Images used to open the lightbox) -->
+                        <!--  div.row's CONTENT IS DYNAMICALLY CREATED BY js-lightbox.js AS SEEN BELOW IN COMMENTS-->
                         <div class="row">
                             <!-- <div class="column">
                                 <img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
@@ -114,6 +113,7 @@
                         </div>
                         
                         <!-- The Modal/Lightbox -->
+                        <!--  div.modal-content's CONTENT IS DYNAMICALLY CREATED BY js-lightbox.js AS SEEN BELOW IN COMMENTS-->
                         <div id="myModal" class="modal">
                             <span class="close cursor" onclick="closeModal()">&times;</span>
                             <div class="modal-content">
@@ -121,28 +121,26 @@
                                 <!-- <div class="mySlides">
                                     <div class="numbertext">1 / 7</div>
                                     <img class="modal-img" src="../images/nature-1.jpg" style="width:75%">
-                                </div>
+                                </div> -->
 
-
-                            
-                                <!-- Next/previous controls -->
+                                <!-- CONTROL ARROWS (Next/previous controls) -->
                                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                             
-                                <!-- Caption text -->
+                                <!-- CAPTION TEXT (Caption text) -->
+                                <!-- ONLY CONTAINER DIV IS USED AS A SPACER BETWEEN MODAL AND THUMBNAILS -->
                                 <div class="caption-container">
-                                    <p id="caption"></p>
+                                    <!-- <p id="caption"></p> -->
                                 </div>
                             
-                                <!-- Thumbnail image controls -->
+                                <!-- THUMBNAIL GALLERY (Thumbnail image controls) -->
+                                <!--  div.thumbnail-container's CONTENT IS DYNAMICALLY CREATED BY js-lightbox.js AS SEEN BELOW IN COMMENTS-->
 
                                 <!-- <div class="thumbnail-container"> -->
                                     <!-- <div class="column">
                                         <img class="demo" src="../images/nature-1.jpg" onclick="currentSlide(1)" alt="Nature">
                                     </div>
-                                <!-- </div> -->
-                                
-
+                                 </div> -->
                             </div>
                         </div>
 
