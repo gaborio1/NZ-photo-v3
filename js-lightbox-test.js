@@ -1,4 +1,4 @@
-// STICKY NAVBAR W3SCHOOLS
+// ========== STICKY NAVBAR W3SCHOOLS ==========
 
 window.onscroll = function() {myFunction()};
 const navbar = document.getElementById("header");
@@ -13,7 +13,7 @@ function myFunction() {
   }
 }
 
-// SEARCH BAR
+// ========== SEARCH BAR ==========
 
 const defaultButton = document.getElementById("default-btn");
 const submitButton = document.getElementById("submit-btn");
@@ -43,7 +43,7 @@ closeButton.addEventListener("click", function() {
     searchInput.style.width = "0px";
 })
 
-// ACTIVE NAV-LINK
+// ========== ACTIVE NAV-LINK ==========
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("myDIV");
@@ -57,12 +57,50 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 
+// ==================== MY JAVASCRIPT MODAL ====================
 
-// CATEGORY GALLERY
+// OPEN MODAL
+const openModal = () => {
+  document.getElementById("modal").style.display = "flex";
+}
 
-const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9"
-// , "10", "11", "12"
-];
+// CLOSE MODAL
+const closeModal = () => {
+  document.getElementById("modal").style.display = "none";
+}
+
+//   SLIDE INDEX
+let slideIndex = 1;
+
+// NEXT / PREV ARROWS
+const plusSlides = (n) => {
+  showSlides(slideIndex += n);
+}
+
+const currentSlide = (n) => {
+  showSlides(slideIndex = n);
+}
+
+const showSlides = (n) => {
+  let i;
+  const modalImageDivs = document.getElementsByClassName("modal-img-div");
+  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
+  // var captionText = document.getElementById("caption");
+  if (n > modalImageDivs.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = modalImageDivs.length}
+  for (i = 0; i < modalImageDivs.length; i++) {
+    modalImageDivs[i].style.display = "none";
+  }
+  for (i = 0; i < thumbnailImages.length; i++) {
+    thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
+  }
+  modalImageDivs[slideIndex-1].style.display = "block";
+  thumbnailImages[slideIndex-1].className += " active";
+  // captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
 
 // ORIGINAL LAYOUT WJITHOUT LIGHTBOX:
 
@@ -81,18 +119,20 @@ const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9"
 // createDivs()
 
 
+// ========== CATEGORY GALLERY ==========
+
 // CREATE GALLERY DIVS WITH IMAGES
-const galleryContainerRow = document.querySelector(".row");
+const galleryImgContainer = document.querySelector(".gallery-img-container");
 
 const createGalleryDivs = () => {
   for(let index of imagesTest) {
     const galleryDiv = document.createElement("div");
-    galleryDiv.className = "column";
-    galleryContainerRow.appendChild(galleryDiv);
+    galleryDiv.className = "gallery-div";
+    galleryImgContainer.appendChild(galleryDiv);
 
     const galleryDivImg = document.createElement("img");
     galleryDivImg.className = ("hover-shadow");
-    galleryDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
+    galleryDivImg.src = `../images/portrait/portrait-${index}.jpg`;
    
     galleryDiv.appendChild(galleryDivImg);
   }
@@ -123,8 +163,8 @@ createGalleryDivs();
 // capturing: the event object must propagate through the target's ancestors from the defaultView to the target's parent. This phase is also known as the capturing phase. Event listeners registered for this phase must handle the event before it reaches its target.
 
 
-// ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">)
-function addListenerGalleryImg(){
+// ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
+const addListenerGalleryImg = () => {
   const galleryImages = document.getElementsByClassName("hover-shadow");
 
   for (let i = 0; i < galleryImages.length; i++) {
@@ -139,130 +179,115 @@ function addListenerGalleryImg(){
 
 addListenerGalleryImg();
 
-
-
-// CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES
+// ========== CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES ==========
 // const modalContent = document.querySelector(".modal-content");
 const modalImgContainer = document.querySelector(".modal-img-container");
 
 const createModalDivs = () => {
-    for(let index of imagesTest) {
-      const modalDiv = document.createElement("div");
-      modalDiv.className = "mySlides";
-      // modalContent.appendChild(modalDiv);
-      modalImgContainer.appendChild(modalDiv);
+  for(let index of imagesTest) {
+    const modalDiv = document.createElement("div");
+    modalDiv.className = "modal-img-div";
+    modalImgContainer.appendChild(modalDiv);
 
-      const numberText = document.createElement("div");
-      numberText.className = ("numbertext");
-      numberText.textContent = index + " / " + imagesTest.length;
-      modalDiv.appendChild(numberText);
+    const numberText = document.createElement("div");
+    numberText.className = ("numbertext");
+    numberText.textContent = index + " / " + imagesTest.length;
+    modalDiv.appendChild(numberText);
   
-      const modalDivImg = document.createElement("img");
-      modalDivImg.className = ("modal-img");
-      modalDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
+    const modalDivImg = document.createElement("img");
+    modalDivImg.className = ("modal-img");
+    modalDivImg.src = `../images/portrait/portrait-${index}.jpg`;
   
-      modalDiv.appendChild(modalDivImg);
-    }
+    modalDiv.appendChild(modalDivImg);
   }
+}
 
-  createModalDivs();
+createModalDivs();
 
-
-// TEST
-
-// const hello = (idx) => {
-//     console.log("hello " + idx);
-//     console.log(typeof(Number(idx)));
-// }
-
-// CREATE THUMBNAIL DIVS WITH IMAGES
+// ========== CREATE THUMBNAIL DIVS WITH IMAGES ==========
 const createThumbnailDivs = () => {
-    const thumbnailContainer = document.querySelector(".thumbnail-container");
-    // thumbnailContainer.className = ("thumbnail-container");
-    // modalContent.appendChild(thumbnailContainer);
-
-    for(let index of imagesTest) {
-      const thumbnailDiv = document.createElement("div");
-      thumbnailDiv.className = "column";
-      thumbnailContainer.appendChild(thumbnailDiv);
+  const thumbnailContainer = document.querySelector(".thumbnail-container");
+    
+  for(let index of imagesTest) {
+    const thumbnailDiv = document.createElement("div");
+    thumbnailDiv.className = "gallery-div";
+    thumbnailContainer.appendChild(thumbnailDiv);
   
-      const thumbnailDivImg = document.createElement("img");
-      thumbnailDivImg.className = ("demo");
-      thumbnailDivImg.src = "../images/portrait/portrait-" + index + ".jpg";
-    //   thumbnailDivImg.onclick = currentSlide(Number(index));
-    //   thumbnailDivImg.addEventListener("click", currentSlide(Number(index)));
-      
-      thumbnailDiv.appendChild(thumbnailDivImg);
-      // thumbnailDivImg.addEventListener("click", function() { console.log("thumbnail img clicked") });
-      // thumbnailDivImg.addEventListener("click", hello(Number(index)));
-    }
+    const thumbnailDivImg = document.createElement("img");
+    thumbnailDivImg.className = ("thumbnail-image");
+    thumbnailDivImg.src = `../images/portrait/portrait-${index}.jpg`;
+   
+    thumbnailDiv.appendChild(thumbnailDivImg);
   }
+}
 
-  createThumbnailDivs();
+createThumbnailDivs();
 
-
-  // ADD currentslide(n) TO THUMBNAIL IMAGES
-  function addListenerThumbnailImg(){
-    const thumbnailImages = document.getElementsByClassName("demo");
+// ========== ADD currentslide(n) TO THUMBNAIL IMAGES ==========
+function addListenerThumbnailImg(){
+  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
   
-    for (let i = 0; i < thumbnailImages.length; i++) {
-      // thumbnailImages[i].addEventListener("click", function() { console.log("thumbnail img clicked") });
-      thumbnailImages[i].addEventListener('click', function(index) { 
-        return function () {
-          currentSlide(Number(index + 1));
-        };
-      }(i), true);
-    }
+  for (let i = 0; i < thumbnailImages.length; i++) {
+    thumbnailImages[i].addEventListener('click', function(index) { 
+      return function () {
+        currentSlide(Number(index + 1));
+      };
+    }(i), true);
   }
+}
   
-  addListenerThumbnailImg();
+addListenerThumbnailImg();
+
+showSlides(slideIndex);
 
 
 
-// MODAL
+
+
+// ========== ORIGINAL W3S MODAL CODE ==========
 
 
 // Open the Modal
-function openModal() {
-    document.getElementById("myModal").style.display = "flex";
-    // console.log("gallery img clicked");
-  }
+// function openModal() {
+//     document.getElementById("modal").style.display = "flex";
+//   }
   
   // Close the Modal
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
+  // function closeModal() {
+  //   document.getElementById("modal").style.display = "none";
+  // }
   
-//   DEFAULT SLIDE INDEX
-  var slideIndex = 1;
+//   SLIDE INDEX
+// let slideIndex = 1;
 
-  showSlides(slideIndex);
+  // showSlides(slideIndex);
   
   // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
+  // function plusSlides(n) {
+  //   showSlides(slideIndex += n);
+  // }
+
   // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-    // console.log("thumbnail img clicked");
-  }
+  // function currentSlide(n) {
+  //   showSlides(slideIndex = n);
+  // }
   
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    // var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    // captionText.innerHTML = dots[slideIndex-1].alt;
-  }
+  // function showSlides(n) {
+  //   var i;
+  //   var slides = document.getElementsByClassName("mySlides");
+  //   var dots = document.getElementsByClassName("demo");
+  //   // var captionText = document.getElementById("caption");
+  //   if (n > slides.length) {slideIndex = 1}
+  //   if (n < 1) {slideIndex = slides.length}
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //   slides[slideIndex-1].style.display = "block";
+  //   dots[slideIndex-1].className += " active";
+  //   // captionText.innerHTML = dots[slideIndex-1].alt;
+  // }
+
+  
