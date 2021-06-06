@@ -590,6 +590,13 @@ img.hover-shadow {
 
 
 /* The Modal (background) */
+
+/* FADE IN AMIMATION FOR MODAL AND MODAL IMGS */
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -612,14 +619,14 @@ img.hover-shadow {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.97);
-
+/* FADE IN MODAL */
+  animation: fadeIn .5s;
   /* border: 3px solid rgb(212, 91, 43); */
 }
 
-
-
 img.modal-img {
     width: 75%;
+    animation: fadeIn .5s;
     /* height: 50%; */
 }
 
