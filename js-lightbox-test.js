@@ -66,7 +66,16 @@ const openModal = () => {
 
 // CLOSE MODAL
 const closeModal = () => {
-  document.getElementById("modal").style.display = "none";
+  const modal = document.getElementById("modal");
+  modal.classList.add("fade-out");
+
+  setTimeout(function () {
+    modal.classList.remove("fade-out");
+        modal.style.display = "none";
+
+      }, 700);
+
+  // console.log("close clicked");
 }
 
 //   SLIDE INDEX

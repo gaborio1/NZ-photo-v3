@@ -593,8 +593,17 @@ img.hover-shadow {
 
 /* FADE IN AMIMATION FOR MODAL AND MODAL IMGS */
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  /* 0% { display: flex; } */
+  /* 0% { visibility: visible; } */
+  100% { opacity: 0; }
+  /* 100% { display: none; } */
+  /* 100% { visibility: hidden; } */
 }
 
 .modal {
@@ -620,8 +629,12 @@ img.hover-shadow {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.97);
 /* FADE IN MODAL */
-  animation: fadeIn .5s;
+  animation: fadeIn .7s;
   /* border: 3px solid rgb(212, 91, 43); */
+}
+
+.modal.fade-out {
+  animation: fadeOut .75s;
 }
 
 img.modal-img {
