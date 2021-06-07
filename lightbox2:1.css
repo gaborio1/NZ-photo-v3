@@ -555,7 +555,7 @@ h2.photography {
 .gallery-img-container .gallery-div {
 /* !!! float:left NOT ALIGNING IMAGES PROPERLY !!! */
 display: inline-block;
-width: 32%;
+width: 49%;
 /* width: 375px; */
 margin: 5px;
 /* border: 3px solid rgb(86, 86, 249); */
@@ -618,7 +618,7 @@ background-color: black;
 background-color: rgba(0, 0, 0, 0.97);
 /* FADE IN MODAL */
 animation: fadeIn .7s;
-border: 3px solid rgb(212, 91, 43);
+/* border: 3px solid rgb(212, 91, 43); */
 }
 
 .modal.fade-out {
@@ -643,11 +643,11 @@ text-align: center;
 position: relative;
 background-color: #fefefe;
 background-color: #15191921;
-margin: 1% auto;
+margin: 2% auto;
 width: 100%;
 max-width: 1200px;
 
-border: 3px solid rgb(128, 0, 43);
+/* border: 3px solid rgb(128, 0, 43); */
 }
 
 /* The Close Button */
@@ -672,11 +672,11 @@ cursor: pointer;
 .modal-img-div {
 display: none;
 width: 100%;
-margin: auto;
+margin: 0px auto;
 
 /* overflow: scroll; */
 /* max-height: 600px; */
-border: 3px solid rgb(254, 176, 31);
+/* border: 3px solid rgb(254, 176, 31); */
 }
 
 .modal-img-div.fade-out {
@@ -688,7 +688,7 @@ animation: fadeOut .75s;
 .next {
 cursor: pointer;
 position: absolute;
-top: 45%;
+top: 38%;
 /* width: auto; */
 padding: 16px;
 margin-top: -50px;
@@ -728,36 +728,37 @@ top: 0;
 
 /* Caption text */
 .caption-container {
-height: 20px;
-height: 1%;
+width: 100%;
+/* height: 20px; */
+height: 3%;
 text-align: center;
 background-color: black;
 padding: 2px 16px;
 color: white;
 
-border: 3px solid rgb(255, 218, 149);
+/* border: 3px solid rgb(255, 218, 149); */
 }
 
 .thumbnail-container {
 /* display: block; */
 /* height: fit-content; */
-/* height: 200px; */
-width: 75%;
+height: 200px;
+width: 100%;
 margin: auto;
 /* !!! MAKE x-scroll WORK !!! */
 overflow: scroll;
 
-border: 3px solid rgb(27, 196, 27);
+/* border: 3px solid rgb(27, 196, 27); */
 }
 
 /* Create 3 equal columns that floats next to eachother */
 .thumbnail-container .gallery-div {
 /* float: left; */
 display: inline-block;
-width: 10%;
+width: 33%;
 margin: 0px 1px;
 /* height: 100%; */
-border: 3px solid rgb(238, 238, 31);
+/* border: 3px solid rgb(238, 238, 31); */
 }
 
 /* ===== THUMBNAIL IMAGES ===== */
@@ -766,7 +767,7 @@ width: 100%;
 /* margin: 2px; */
 opacity: 0.6;
 
-border: 3px solid rgb(219, 34, 34);
+/* border: 3px solid rgb(219, 34, 34); */
 }
 
 .active,
