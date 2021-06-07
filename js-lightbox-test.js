@@ -68,7 +68,7 @@ const openModal = () => {
 const closeModal = () => {
   const modal = document.getElementById("modal");
   modal.classList.add("fade-out");
-
+  // FADE OUT AND HIDE WHEN TRANSPARENT
   setTimeout(function () {
     modal.classList.remove("fade-out");
         modal.style.display = "none";
@@ -99,6 +99,16 @@ const showSlides = (n) => {
   if (n < 1) {slideIndex = modalImageDivs.length}
   for (i = 0; i < modalImageDivs.length; i++) {
     modalImageDivs[i].style.display = "none";
+
+
+    // modalImageDivs[i].classList.add("fade-out");
+    // console.log("change");
+    // setTimeout(function () {
+    //   modalImageDivs[i].classList.remove("fade-out");
+    //   modalImageDivs[i].style.display = "none";
+    // }, 700);
+
+
   }
   for (i = 0; i < thumbnailImages.length; i++) {
     thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
