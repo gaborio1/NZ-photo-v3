@@ -311,4 +311,39 @@ showSlides(slideIndex);
   //   // captionText.innerHTML = dots[slideIndex-1].alt;
   // }
 
+
+
+//  RETREIVE IMAGE FOLDER NAME AND IMAGE NAME FROM CATEGORY TITLE
+const category = document.querySelector(".category-title").innerHTML;
+console.log(category);
+
+// CREATE IMAGES AND SET SOURCE BASED ON CATEGORY
+const getCategoryImages = (n) => {
+    const galleryDiv = document.querySelector(".gallery-div");
+    const testImage = document.createElement("img");
+    // testImage.src = `../images/nature/nature-${n}.jpg`;
+    testImage.src = `../images/${category}/${category}-${n}.jpg`;
+    // DELETE IMAGES WITH INVALID SOURCE
+    testImage.onerror = function () {
+        console.log('error loading ' + this.src);
+        // this.style.display = "none";
+        this.remove();
+        // place your error.png image instead
+        // this.src = 'error.png'; 
+    };
+    testImage.style.width = "100px";
+    galleryDiv.appendChild(testImage);
+}
+
+let index = 1;
+//   LOOP WILL CHECK FOR maxIndex NUMBER OF IMAGES IN FOLDER
+const maxIndex = 10;
+while (index < maxIndex + 1) {
+    console.log(index);
+    getCategoryImages(index);
+    index++;
+}
+
+//   imageCounter();
+
   
