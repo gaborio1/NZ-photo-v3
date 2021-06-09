@@ -232,7 +232,7 @@ const createThumbnailDivs = () => {
     
   for(let index of imagesTest) {
     const thumbnailDiv = document.createElement("div");
-    thumbnailDiv.className = "gallery-div";
+    thumbnailDiv.className = "thumbnail-div";
     thumbnailContainer.appendChild(thumbnailDiv);
   
     const thumbnailDivImg = document.createElement("img");
@@ -361,7 +361,9 @@ const createGalleryDivs = (n) => {
     galleryDivImg.onerror = function () {
         console.log('error loading ' + this.src);
         // this.style.display = "none";
-        this.remove();
+        this.parentElement.remove();
+        // this.className = "invalid-img-source";
+        // this.remove();
         // place your error.png image instead
         // this.src = 'error.png'; 
     };
@@ -376,6 +378,8 @@ const addListenerGalleryImg = () => {
 
   for (let i = 0; i < galleryImages.length; i++) {
     galleryImages[i].addEventListener("click", openModal, false);
+    // COUNT NUMBER OF GALLERY IMAGES/DIVS IN GALLERY
+    galleryImages[i].addEventListener("click", getNumberOfImages, false);
     galleryImages[i].addEventListener('click', function(index) { 
       return function () {
         currentSlide(Number(index + 1));
@@ -430,6 +434,20 @@ while (index < maxIndex + 1) {
     index++;
 }
 
+// COUNT NUMBER OF GALLERY IMAGES/DIVS IN GALLERY
+// CALLED IN addListenerGalleryImg() AFTER GALLERY IMAGES HAVE BEEN RENDERED
+const getNumberOfImages = () => {
+  
+  const galleryDivs = document.getElementsByClassName("gallery-div");
+
+  // !!!!!!!! THIS IS TOTAL IMAGES COUNT FOR NUMBERTEXT DISPLAY !!!!!!!!!!
+  console.log(galleryDivs.length);
+  console.log(galleryDivs);
+  }
+
+// getNumberOfImages();
+
+
 
 const showSlides = (n) => {
   let i;
@@ -464,4 +482,3 @@ showSlides(slideIndex);
 addListenerGalleryImg();
 //   imageCounter();
 
-  
