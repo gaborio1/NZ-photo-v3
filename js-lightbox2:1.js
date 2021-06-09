@@ -90,33 +90,33 @@ const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
 
-const showSlides = (n) => {
-  let i;
-  const modalImageDivs = document.getElementsByClassName("modal-img-div");
-  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
-  // var captionText = document.getElementById("caption");
-  if (n > modalImageDivs.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = modalImageDivs.length}
-  for (i = 0; i < modalImageDivs.length; i++) {
-    modalImageDivs[i].style.display = "none";
+// const showSlides = (n) => {
+//   let i;
+//   const modalImageDivs = document.getElementsByClassName("modal-img-div");
+//   const thumbnailImages = document.getElementsByClassName("thumbnail-image");
+//   // var captionText = document.getElementById("caption");
+//   if (n > modalImageDivs.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = modalImageDivs.length}
+//   for (i = 0; i < modalImageDivs.length; i++) {
+//     modalImageDivs[i].style.display = "none";
 
 
-    // modalImageDivs[i].classList.add("fade-out");
-    // console.log("change");
-    // setTimeout(function () {
-    //   modalImageDivs[i].classList.remove("fade-out");
-    //   modalImageDivs[i].style.display = "none";
-    // }, 700);
+//     // modalImageDivs[i].classList.add("fade-out");
+//     // console.log("change");
+//     // setTimeout(function () {
+//     //   modalImageDivs[i].classList.remove("fade-out");
+//     //   modalImageDivs[i].style.display = "none";
+//     // }, 700);
 
 
-  }
-  for (i = 0; i < thumbnailImages.length; i++) {
-    thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
-  }
-  modalImageDivs[slideIndex-1].style.display = "block";
-  thumbnailImages[slideIndex-1].className += " active";
-  // captionText.innerHTML = dots[slideIndex-1].alt;
-}
+//   }
+//   for (i = 0; i < thumbnailImages.length; i++) {
+//     thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
+//   }
+//   modalImageDivs[slideIndex-1].style.display = "block";
+//   thumbnailImages[slideIndex-1].className += " active";
+//   // captionText.innerHTML = dots[slideIndex-1].alt;
+// }
 
 const imagesTest = ["1", "2", "3", "4"
 // , "5", "6", "7", "8", "9"
@@ -202,28 +202,29 @@ const imagesTest = ["1", "2", "3", "4"
 
 // ========== CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES ==========
 // const modalContent = document.querySelector(".modal-content");
-const modalImgContainer = document.querySelector(".modal-img-container");
 
-const createModalDivs = () => {
-  for(let index of imagesTest) {
-    const modalDiv = document.createElement("div");
-    modalDiv.className = "modal-img-div";
-    modalImgContainer.appendChild(modalDiv);
+// const modalImgContainer = document.querySelector(".modal-img-container");
 
-    const numberText = document.createElement("div");
-    numberText.className = ("numbertext");
-    numberText.textContent = index + " / " + imagesTest.length;
-    modalDiv.appendChild(numberText);
+// const createModalDivs = () => {
+//   for(let index of imagesTest) {
+//     const modalDiv = document.createElement("div");
+//     modalDiv.className = "modal-img-div";
+//     modalImgContainer.appendChild(modalDiv);
+
+//     // const numberText = document.createElement("div");
+//     // numberText.className = ("numbertext");
+//     // numberText.textContent = index + " / " + imagesTest.length;
+//     // modalDiv.appendChild(numberText);
   
-    const modalDivImg = document.createElement("img");
-    modalDivImg.className = ("modal-img");
-    modalDivImg.src = `../images/nature/nature-${index}.jpg`;
+//     const modalDivImg = document.createElement("img");
+//     modalDivImg.className = ("modal-img");
+//     modalDivImg.src = `../images/nature/nature-${index}.jpg`;
   
-    modalDiv.appendChild(modalDivImg);
-  }
-}
+//     modalDiv.appendChild(modalDivImg);
+//   }
+// }
 
-createModalDivs();
+// createModalDivs();
 
 // ========== CREATE THUMBNAIL DIVS WITH IMAGES ==========
 const createThumbnailDivs = () => {
@@ -259,7 +260,7 @@ function addListenerThumbnailImg(){
   
 addListenerThumbnailImg();
 
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 
 
@@ -358,7 +359,6 @@ const createGalleryDivs = (n) => {
     galleryDivImg.src = `../images/${category}/${category}-${n}.jpg`;
 
     galleryDivImg.onerror = function () {
-      // let isFound = undefined;
         console.log('error loading ' + this.src);
         // this.style.display = "none";
         this.remove();
@@ -369,8 +369,6 @@ const createGalleryDivs = (n) => {
     galleryDiv.appendChild(galleryDivImg);
   // }
 }
-
-// createGalleryDivs();
 
 // ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
 const addListenerGalleryImg = () => {
@@ -386,6 +384,39 @@ const addListenerGalleryImg = () => {
   }
 }
 
+// ========== CREATE MODAL DIVS WITH (NUMBERTEXT) AND IMAGES ==========
+
+const modalImgContainer = document.querySelector(".modal-img-container");
+
+const createModalDivs = (n) => {
+    const modalDiv = document.createElement("div");
+    modalDiv.className = "modal-img-div";
+    modalImgContainer.appendChild(modalDiv);
+
+    // !!! NUMBERTEXT CURRENLY NOT IN USE !!!
+    // const numberText = document.createElement("div");
+    // numberText.className = ("numbertext");
+    // numberText.textContent = index + " / " + imagesTest.length;
+    // modalDiv.appendChild(numberText);
+  
+    const modalDivImg = document.createElement("img");
+    modalDivImg.className = ("modal-img");
+    modalDivImg.src = `../images/${category}/${category}-${n}.jpg`;
+
+    modalDivImg.onerror = function () {
+        console.log('error loading ' + this.src);
+        // this.style.display = "none";
+        this.remove();
+        // place your error.png image instead
+        // this.src = 'error.png'; 
+    };
+  
+    modalDiv.appendChild(modalDivImg);
+}
+
+// createModalDivs();
+
+
 
 let index = 1;
 //   LOOP WILL CHECK FOR maxIndex NUMBER OF IMAGES IN FOLDER
@@ -393,11 +424,42 @@ const maxIndex = 6;
 while (index < maxIndex + 1) {
     console.log(index);
     createGalleryDivs(index);
+    createModalDivs(index);
     // TEST:
     // getCategoryImages(index);
     index++;
 }
 
+
+const showSlides = (n) => {
+  let i;
+  const modalImageDivs = document.getElementsByClassName("modal-img-div");
+  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
+  // var captionText = document.getElementById("caption");
+  if (n > modalImageDivs.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = modalImageDivs.length}
+  for (i = 0; i < modalImageDivs.length; i++) {
+    modalImageDivs[i].style.display = "none";
+
+
+    // modalImageDivs[i].classList.add("fade-out");
+    // console.log("change");
+    // setTimeout(function () {
+    //   modalImageDivs[i].classList.remove("fade-out");
+    //   modalImageDivs[i].style.display = "none";
+    // }, 700);
+
+
+  }
+  for (i = 0; i < thumbnailImages.length; i++) {
+    thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
+  }
+  modalImageDivs[slideIndex-1].style.display = "block";
+  thumbnailImages[slideIndex-1].className += " active";
+  // captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+showSlides(slideIndex);
 
 addListenerGalleryImg();
 //   imageCounter();
