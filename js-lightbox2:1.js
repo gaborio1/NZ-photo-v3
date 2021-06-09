@@ -143,23 +143,23 @@ const imagesTest = ["1", "2", "3", "4"
 // ========== CATEGORY GALLERY ==========
 
 // CREATE GALLERY DIVS WITH IMAGES
-const galleryImgContainer = document.querySelector(".gallery-img-container");
+// const galleryImgContainer = document.querySelector(".gallery-img-container");
 
-const createGalleryDivs = () => {
-  for(let index of imagesTest) {
-    const galleryDiv = document.createElement("div");
-    galleryDiv.className = "gallery-div";
-    galleryImgContainer.appendChild(galleryDiv);
+// const createGalleryDivs = () => {
+//   for(let index of imagesTest) {
+//     const galleryDiv = document.createElement("div");
+//     galleryDiv.className = "gallery-div";
+//     galleryImgContainer.appendChild(galleryDiv);
 
-    const galleryDivImg = document.createElement("img");
-    galleryDivImg.className = ("hover-shadow");
-    galleryDivImg.src = `../images/nature/nature-${index}.jpg`;
+//     const galleryDivImg = document.createElement("img");
+//     galleryDivImg.className = ("hover-shadow");
+//     galleryDivImg.src = `../images/nature/nature-${index}.jpg`;
    
-    galleryDiv.appendChild(galleryDivImg);
-  }
-}
+//     galleryDiv.appendChild(galleryDivImg);
+//   }
+// }
 
-createGalleryDivs();
+// createGalleryDivs();
 
 // !!!!!!!!!! THESE DONT WORK IN CREATEDIV LOOPS !!!!!!!!!!
 
@@ -185,20 +185,20 @@ createGalleryDivs();
 
 
 // ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
-const addListenerGalleryImg = () => {
-  const galleryImages = document.getElementsByClassName("hover-shadow");
+// const addListenerGalleryImg = () => {
+//   const galleryImages = document.getElementsByClassName("hover-shadow");
 
-  for (let i = 0; i < galleryImages.length; i++) {
-    galleryImages[i].addEventListener("click", openModal, false);
-    galleryImages[i].addEventListener('click', function(index) { 
-      return function () {
-        currentSlide(Number(index + 1));
-      };
-    }(i), true);
-  }
-}
+//   for (let i = 0; i < galleryImages.length; i++) {
+//     galleryImages[i].addEventListener("click", openModal, false);
+//     galleryImages[i].addEventListener('click', function(index) { 
+//       return function () {
+//         currentSlide(Number(index + 1));
+//       };
+//     }(i), true);
+//   }
+// }
 
-addListenerGalleryImg();
+// addListenerGalleryImg();
 
 // ========== CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES ==========
 // const modalContent = document.querySelector(".modal-content");
@@ -318,32 +318,88 @@ const category = document.querySelector(".category-title").innerHTML;
 console.log(category);
 
 // CREATE IMAGES AND SET SOURCE BASED ON CATEGORY
-const getCategoryImages = (n) => {
-    const galleryDiv = document.querySelector(".gallery-div");
-    const testImage = document.createElement("img");
-    // testImage.src = `../images/nature/nature-${n}.jpg`;
-    testImage.src = `../images/${category}/${category}-${n}.jpg`;
-    // DELETE IMAGES WITH INVALID SOURCE
-    testImage.onerror = function () {
+// TEST:
+// const getCategoryImages = (n) => {
+//     const galleryDiv = document.querySelector(".gallery-div");
+//     const testImage = document.createElement("img");
+//     // testImage.src = `../images/nature/nature-${n}.jpg`;
+//     testImage.src = `../images/${category}/${category}-${n}.jpg`;
+//     // DELETE IMAGES WITH INVALID SOURCE
+//     testImage.onerror = function () {
+//       // let isFound = undefined;
+//         console.log('error loading ' + this.src);
+//         // this.style.display = "none";
+//         this.remove();
+//         // place your error.png image instead
+//         // this.src = 'error.png'; 
+//     };
+//     testImage.style.width = "100px";
+//     galleryDiv.appendChild(testImage);
+// }
+
+
+
+
+
+
+// ========== CATEGORY GALLERY ==========
+
+// CREATE GALLERY DIVS WITH IMAGES
+const galleryImgContainer = document.querySelector(".gallery-img-container");
+
+const createGalleryDivs = (n) => {
+  // for(let index of imagesTest) {
+    const galleryDiv = document.createElement("div");
+    galleryDiv.className = "gallery-div";
+    galleryImgContainer.appendChild(galleryDiv);
+
+    const galleryDivImg = document.createElement("img");
+    galleryDivImg.className = ("hover-shadow");
+    galleryDivImg.src = `../images/${category}/${category}-${n}.jpg`;
+
+    galleryDivImg.onerror = function () {
+      // let isFound = undefined;
         console.log('error loading ' + this.src);
         // this.style.display = "none";
         this.remove();
         // place your error.png image instead
         // this.src = 'error.png'; 
     };
-    testImage.style.width = "100px";
-    galleryDiv.appendChild(testImage);
+   
+    galleryDiv.appendChild(galleryDivImg);
+  // }
 }
+
+// createGalleryDivs();
+
+// ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
+const addListenerGalleryImg = () => {
+  const galleryImages = document.getElementsByClassName("hover-shadow");
+
+  for (let i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].addEventListener("click", openModal, false);
+    galleryImages[i].addEventListener('click', function(index) { 
+      return function () {
+        currentSlide(Number(index + 1));
+      };
+    }(i), true);
+  }
+}
+
 
 let index = 1;
 //   LOOP WILL CHECK FOR maxIndex NUMBER OF IMAGES IN FOLDER
-const maxIndex = 10;
+const maxIndex = 6;
 while (index < maxIndex + 1) {
     console.log(index);
-    getCategoryImages(index);
+    createGalleryDivs(index);
+    // TEST:
+    // getCategoryImages(index);
     index++;
 }
 
+
+addListenerGalleryImg();
 //   imageCounter();
 
   
