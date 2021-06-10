@@ -617,18 +617,19 @@ overflow: auto;
 background-color: black;
 background-color: rgba(0, 0, 0, 0.97);
 /* FADE IN MODAL */
-animation: fadeIn .7s;
+animation: fadeIn 1s;
 /* border: 3px solid rgb(212, 91, 43); */
 }
 
+/* !!!!! FADE OUT / HIDE IS DONE WITH closeModal() !!!!! */
 .modal.fade-out {
-animation: fadeOut .75s;
+animation: fadeOut 1s;
 }
 
 img.modal-img {
   width: 100%;
-  animation: fadeIn .5s;
-  /* height: 50%; */
+  /* NOT IN USE */
+  /* animation: fadeIn .5s; */
 }
 
 /* Modal Content */
@@ -679,9 +680,10 @@ margin: 0px auto;
 /* border: 3px solid rgb(254, 176, 31); */
 }
 
-.modal-img-div.fade-out {
+/* NOT WORKING */
+/* .modal-img-div.fade-out {
 animation: fadeOut .75s;
-}
+} */
 
 /* Next & previous buttons */
 .prev,
