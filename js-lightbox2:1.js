@@ -90,76 +90,166 @@ const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
 
-// const showSlides = (n) => {
-//   let i;
-//   const modalImageDivs = document.getElementsByClassName("modal-img-div");
-//   const thumbnailImages = document.getElementsByClassName("thumbnail-image");
-//   // var captionText = document.getElementById("caption");
-//   if (n > modalImageDivs.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = modalImageDivs.length}
-//   for (i = 0; i < modalImageDivs.length; i++) {
-//     modalImageDivs[i].style.display = "none";
 
-
-//     // modalImageDivs[i].classList.add("fade-out");
-//     // console.log("change");
-//     // setTimeout(function () {
-//     //   modalImageDivs[i].classList.remove("fade-out");
-//     //   modalImageDivs[i].style.display = "none";
-//     // }, 700);
-
-
-//   }
-//   for (i = 0; i < thumbnailImages.length; i++) {
-//     thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
-//   }
-//   modalImageDivs[slideIndex-1].style.display = "block";
-//   thumbnailImages[slideIndex-1].className += " active";
-//   // captionText.innerHTML = dots[slideIndex-1].alt;
-// }
-
-const imagesTest = ["1", "2", "3", "4"
-// , "5", "6", "7", "8", "9"
-];
-
-
-// ORIGINAL LAYOUT WJITHOUT LIGHTBOX:
-
-// const galleryContainer = document.querySelector(".gallery-container");
-// const createDivs = () => {
-//   for(let index of imagesTest) {
-//     console.log("hello");
-//     const imgDiv = document.createElement("div");
-//     imgDiv.className = "portrait-img-container";
-//     // imgDiv.innerText = index;
-//     // imgDiv.style.backgroundImage = "url("`./images/portrait/portrait-${index}`")"
-//     imgDiv.style.backgroundImage = "url(../images/portrait/portrait-" + index + ".jpg)"
-//     galleryContainer.appendChild(imgDiv);
-//   }
-// }
-// createDivs()
+//  RETREIVE IMAGE FOLDER NAME AND IMAGE NAME FROM CATEGORY TITLE
+const getCategoryName = () => {
+  return document.querySelector(".category-title").innerHTML;
+}
 
 
 // ========== CATEGORY GALLERY ==========
 
 // CREATE GALLERY DIVS WITH IMAGES
-// const galleryImgContainer = document.querySelector(".gallery-img-container");
+const galleryImgContainer = document.querySelector(".gallery-img-container");
 
-// const createGalleryDivs = () => {
-//   for(let index of imagesTest) {
-//     const galleryDiv = document.createElement("div");
-//     galleryDiv.className = "gallery-div";
-//     galleryImgContainer.appendChild(galleryDiv);
+const createGalleryDivs = (n) => {
+  const galleryDiv = document.createElement("div");
+  galleryDiv.className = "gallery-div";
+  galleryImgContainer.appendChild(galleryDiv);
 
-//     const galleryDivImg = document.createElement("img");
-//     galleryDivImg.className = ("hover-shadow");
-//     galleryDivImg.src = `../images/nature/nature-${index}.jpg`;
+  const galleryDivImg = document.createElement("img");
+  galleryDivImg.className = ("hover-shadow");
+  galleryDivImg.src = `../images/${getCategoryName()}/${getCategoryName()}-${n}.jpg`;
+
+  galleryDivImg.onerror = function () {
+    console.log('error loading ' + this.src);
+    // this.style.display = "none";
+    this.parentElement.remove();
+    // this.className = "invalid-img-source";
+    // this.remove();
+    // place your error.png image instead
+    // this.src = 'error.png'; 
+    };
+   galleryDiv.appendChild(galleryDivImg);
+}
+
+// ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
+const addListenerGalleryImg = () => {
+  const galleryImages = document.getElementsByClassName("hover-shadow");
+
+  for (let i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].addEventListener("click", openModal, false);
+    // COUNT NUMBER OF GALLERY IMAGES/DIVS IN GALLERY
+    galleryImages[i].addEventListener("click", getNumberOfFoundImages, false);
+    galleryImages[i].addEventListener('click', function(index) { 
+      return function () {
+        currentSlide(Number(index + 1));
+      };
+    }(i), true);
+  }
+}
+
+// ========== CREATE MODAL DIVS WITH IMAGE-COUNTER AND IMAGES ==========
+
+// COUNT NUMBER OF FOUND GALLERY IMAGES/DIVS IN GALLERY
+// CALLED IN addListenerGalleryImg() AFTER GALLERY IMAGES HAVE BEEN RENDERED
+const getNumberOfFoundImages = () => {
+  const galleryDivs = document.getElementsByClassName("gallery-div");
+  // !!!!!!!! THIS IS TOTAL IMAGES COUNT FOR NUMBERTEXT DISPLAY !!!!!!!!!!
+  // console.log(galleryDivs.length);
+  return galleryDivs.length;
+}
+
+const createModalDivs = (n) => {
+  const numberOfFoundImages = getNumberOfFoundImages();
+  const modalImgContainer = document.querySelector(".modal-img-container");
+    const modalDiv = document.createElement("div");
+    modalDiv.className = "modal-img-div";
+    modalImgContainer.appendChild(modalDiv);
+
+    const imageCounterDiv = document.createElement("div");
+    imageCounterDiv.className = ("image-counter-div");
+    imageCounterDiv.textContent = index + " / " + numberOfFoundImages;
+    modalDiv.appendChild(imageCounterDiv);
+  
+    const modalDivImg = document.createElement("img");
+    modalDivImg.className = ("modal-img");
+    modalDivImg.src = `../images/${getCategoryName()}/${getCategoryName()}-${n}.jpg`;
+
+    modalDivImg.onerror = function () {
+        console.log('error loading ' + this.src);
+        // this.style.display = "none";
+        this.remove();
+        // place your error.png image instead
+        // this.src = 'error.png'; 
+    };
+  
+    modalDiv.appendChild(modalDivImg);
+}
+
+
+// ========== CREATE THUMBNAIL DIVS WITH IMAGES ==========
+const createThumbnailDivs = (n) => {
+  const thumbnailContainer = document.querySelector(".thumbnail-container");
+    
+    const thumbnailDiv = document.createElement("div");
+    thumbnailDiv.className = "thumbnail-div";
+    thumbnailContainer.appendChild(thumbnailDiv);
+  
+    const thumbnailDivImg = document.createElement("img");
+    thumbnailDivImg.className = ("thumbnail-image");
+    thumbnailDivImg.src = `../images/${getCategoryName()}/${getCategoryName()}-${n}.jpg`;
    
-//     galleryDiv.appendChild(galleryDivImg);
-//   }
-// }
+    thumbnailDivImg.onerror = function () {
+      console.log('error loading ' + this.src);
+      // this.style.display = "none";
+      this.parentElement.remove();
+      // this.className = "invalid-img-source";
+      // this.remove();
+      // place your error.png image instead
+      // this.src = 'error.png'; 
+  };
 
-// createGalleryDivs();
+    thumbnailDiv.appendChild(thumbnailDivImg);
+  }
+
+
+// ========== ADD currentslide(n) TO THUMBNAIL IMAGES ==========
+function addListenerThumbnailImg(){
+  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
+  
+  for (let i = 0; i < thumbnailImages.length; i++) {
+    thumbnailImages[i].addEventListener('click', function(index) { 
+      return function () {
+        currentSlide(Number(index + 1));
+      };
+    }(i), true);
+  }
+}
+
+//  ========== LOOP WILL CHECK FOR maxIndex NUMBER OF IMAGES IN FOLDER ==========
+let index = 1;
+const maxIndex = 6;
+while (index < maxIndex + 1) {
+    console.log(index);
+    createGalleryDivs(index);
+    createModalDivs(index);
+    createThumbnailDivs(index);
+    index++;
+}
+
+
+const showSlides = (n) => {
+  let i;
+  const modalImageDivs = document.getElementsByClassName("modal-img-div");
+  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
+  // var captionText = document.getElementById("caption");
+  if (n > modalImageDivs.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = modalImageDivs.length}
+  for (i = 0; i < modalImageDivs.length; i++) {
+    modalImageDivs[i].style.display = "none";
+  }
+  for (i = 0; i < thumbnailImages.length; i++) {
+    thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
+  }
+  modalImageDivs[slideIndex-1].style.display = "block";
+  thumbnailImages[slideIndex-1].className += " active";
+  // captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+showSlides(slideIndex);
+addListenerGalleryImg();
+addListenerThumbnailImg();
 
 // !!!!!!!!!! THESE DONT WORK IN CREATEDIV LOOPS !!!!!!!!!!
 
@@ -199,286 +289,3 @@ const imagesTest = ["1", "2", "3", "4"
 // }
 
 // addListenerGalleryImg();
-
-// ========== CREATE MODAL DIVS WITH NUMBERTEXT AND IMAGES ==========
-// const modalContent = document.querySelector(".modal-content");
-
-// const modalImgContainer = document.querySelector(".modal-img-container");
-
-// const createModalDivs = () => {
-//   for(let index of imagesTest) {
-//     const modalDiv = document.createElement("div");
-//     modalDiv.className = "modal-img-div";
-//     modalImgContainer.appendChild(modalDiv);
-
-//     // const numberText = document.createElement("div");
-//     // numberText.className = ("numbertext");
-//     // numberText.textContent = index + " / " + imagesTest.length;
-//     // modalDiv.appendChild(numberText);
-  
-//     const modalDivImg = document.createElement("img");
-//     modalDivImg.className = ("modal-img");
-//     modalDivImg.src = `../images/nature/nature-${index}.jpg`;
-  
-//     modalDiv.appendChild(modalDivImg);
-//   }
-// }
-
-// createModalDivs();
-
-// ========== CREATE THUMBNAIL DIVS WITH IMAGES ==========
-const createThumbnailDivs = () => {
-  const thumbnailContainer = document.querySelector(".thumbnail-container");
-    
-  for(let index of imagesTest) {
-    const thumbnailDiv = document.createElement("div");
-    thumbnailDiv.className = "thumbnail-div";
-    thumbnailContainer.appendChild(thumbnailDiv);
-  
-    const thumbnailDivImg = document.createElement("img");
-    thumbnailDivImg.className = ("thumbnail-image");
-    thumbnailDivImg.src = `../images/nature/nature-${index}.jpg`;
-   
-    thumbnailDiv.appendChild(thumbnailDivImg);
-  }
-}
-
-createThumbnailDivs();
-
-// ========== ADD currentslide(n) TO THUMBNAIL IMAGES ==========
-function addListenerThumbnailImg(){
-  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
-  
-  for (let i = 0; i < thumbnailImages.length; i++) {
-    thumbnailImages[i].addEventListener('click', function(index) { 
-      return function () {
-        currentSlide(Number(index + 1));
-      };
-    }(i), true);
-  }
-}
-  
-addListenerThumbnailImg();
-
-// showSlides(slideIndex);
-
-
-
-
-
-// ========== ORIGINAL W3S MODAL CODE ==========
-
-
-// Open the Modal
-// function openModal() {
-//     document.getElementById("modal").style.display = "flex";
-//   }
-  
-  // Close the Modal
-  // function closeModal() {
-  //   document.getElementById("modal").style.display = "none";
-  // }
-  
-//   SLIDE INDEX
-// let slideIndex = 1;
-
-  // showSlides(slideIndex);
-  
-  // Next/previous controls
-  // function plusSlides(n) {
-  //   showSlides(slideIndex += n);
-  // }
-
-  // Thumbnail image controls
-  // function currentSlide(n) {
-  //   showSlides(slideIndex = n);
-  // }
-  
-  // function showSlides(n) {
-  //   var i;
-  //   var slides = document.getElementsByClassName("mySlides");
-  //   var dots = document.getElementsByClassName("demo");
-  //   // var captionText = document.getElementById("caption");
-  //   if (n > slides.length) {slideIndex = 1}
-  //   if (n < 1) {slideIndex = slides.length}
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
-  //   slides[slideIndex-1].style.display = "block";
-  //   dots[slideIndex-1].className += " active";
-  //   // captionText.innerHTML = dots[slideIndex-1].alt;
-  // }
-
-
-
-//  RETREIVE IMAGE FOLDER NAME AND IMAGE NAME FROM CATEGORY TITLE
-const category = document.querySelector(".category-title").innerHTML;
-console.log(category);
-
-// CREATE IMAGES AND SET SOURCE BASED ON CATEGORY
-// TEST:
-// const getCategoryImages = (n) => {
-//     const galleryDiv = document.querySelector(".gallery-div");
-//     const testImage = document.createElement("img");
-//     // testImage.src = `../images/nature/nature-${n}.jpg`;
-//     testImage.src = `../images/${category}/${category}-${n}.jpg`;
-//     // DELETE IMAGES WITH INVALID SOURCE
-//     testImage.onerror = function () {
-//       // let isFound = undefined;
-//         console.log('error loading ' + this.src);
-//         // this.style.display = "none";
-//         this.remove();
-//         // place your error.png image instead
-//         // this.src = 'error.png'; 
-//     };
-//     testImage.style.width = "100px";
-//     galleryDiv.appendChild(testImage);
-// }
-
-
-
-
-
-
-// ========== CATEGORY GALLERY ==========
-
-// CREATE GALLERY DIVS WITH IMAGES
-const galleryImgContainer = document.querySelector(".gallery-img-container");
-
-const createGalleryDivs = (n) => {
-  // for(let index of imagesTest) {
-    const galleryDiv = document.createElement("div");
-    galleryDiv.className = "gallery-div";
-    galleryImgContainer.appendChild(galleryDiv);
-
-    const galleryDivImg = document.createElement("img");
-    galleryDivImg.className = ("hover-shadow");
-    galleryDivImg.src = `../images/${category}/${category}-${n}.jpg`;
-
-    galleryDivImg.onerror = function () {
-        console.log('error loading ' + this.src);
-        // this.style.display = "none";
-        this.parentElement.remove();
-        // this.className = "invalid-img-source";
-        // this.remove();
-        // place your error.png image instead
-        // this.src = 'error.png'; 
-    };
-   
-    galleryDiv.appendChild(galleryDivImg);
-  // }
-}
-
-// ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
-const addListenerGalleryImg = () => {
-  const galleryImages = document.getElementsByClassName("hover-shadow");
-
-  for (let i = 0; i < galleryImages.length; i++) {
-    galleryImages[i].addEventListener("click", openModal, false);
-    // COUNT NUMBER OF GALLERY IMAGES/DIVS IN GALLERY
-    galleryImages[i].addEventListener("click", getNumberOfImages, false);
-    galleryImages[i].addEventListener('click', function(index) { 
-      return function () {
-        currentSlide(Number(index + 1));
-      };
-    }(i), true);
-  }
-}
-
-// ========== CREATE MODAL DIVS WITH (NUMBERTEXT) AND IMAGES ==========
-
-const modalImgContainer = document.querySelector(".modal-img-container");
-
-const createModalDivs = (n) => {
-    const modalDiv = document.createElement("div");
-    modalDiv.className = "modal-img-div";
-    modalImgContainer.appendChild(modalDiv);
-
-    // !!! NUMBERTEXT CURRENLY NOT IN USE !!!
-    // const numberText = document.createElement("div");
-    // numberText.className = ("numbertext");
-    // numberText.textContent = index + " / " + imagesTest.length;
-    // modalDiv.appendChild(numberText);
-  
-    const modalDivImg = document.createElement("img");
-    modalDivImg.className = ("modal-img");
-    modalDivImg.src = `../images/${category}/${category}-${n}.jpg`;
-
-    modalDivImg.onerror = function () {
-        console.log('error loading ' + this.src);
-        // this.style.display = "none";
-        this.remove();
-        // place your error.png image instead
-        // this.src = 'error.png'; 
-    };
-  
-    modalDiv.appendChild(modalDivImg);
-}
-
-// createModalDivs();
-
-
-
-let index = 1;
-//   LOOP WILL CHECK FOR maxIndex NUMBER OF IMAGES IN FOLDER
-const maxIndex = 6;
-while (index < maxIndex + 1) {
-    console.log(index);
-    createGalleryDivs(index);
-    createModalDivs(index);
-    // TEST:
-    // getCategoryImages(index);
-    index++;
-}
-
-// COUNT NUMBER OF GALLERY IMAGES/DIVS IN GALLERY
-// CALLED IN addListenerGalleryImg() AFTER GALLERY IMAGES HAVE BEEN RENDERED
-const getNumberOfImages = () => {
-  
-  const galleryDivs = document.getElementsByClassName("gallery-div");
-
-  // !!!!!!!! THIS IS TOTAL IMAGES COUNT FOR NUMBERTEXT DISPLAY !!!!!!!!!!
-  console.log(galleryDivs.length);
-  console.log(galleryDivs);
-  }
-
-// getNumberOfImages();
-
-
-
-const showSlides = (n) => {
-  let i;
-  const modalImageDivs = document.getElementsByClassName("modal-img-div");
-  const thumbnailImages = document.getElementsByClassName("thumbnail-image");
-  // var captionText = document.getElementById("caption");
-  if (n > modalImageDivs.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = modalImageDivs.length}
-  for (i = 0; i < modalImageDivs.length; i++) {
-    modalImageDivs[i].style.display = "none";
-
-
-    // modalImageDivs[i].classList.add("fade-out");
-    // console.log("change");
-    // setTimeout(function () {
-    //   modalImageDivs[i].classList.remove("fade-out");
-    //   modalImageDivs[i].style.display = "none";
-    // }, 700);
-
-
-  }
-  for (i = 0; i < thumbnailImages.length; i++) {
-    thumbnailImages[i].className = thumbnailImages[i].className.replace(" active", "");
-  }
-  modalImageDivs[slideIndex-1].style.display = "block";
-  thumbnailImages[slideIndex-1].className += " active";
-  // captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-showSlides(slideIndex);
-
-addListenerGalleryImg();
-//   imageCounter();
-
