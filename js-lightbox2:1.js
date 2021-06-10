@@ -88,6 +88,18 @@ const plusSlides = (n) => {
 
 const currentSlide = (n) => {
   showSlides(slideIndex = n);
+
+  // !!!!! TEMPORARY FIX FOR imageCounterDivs.textContent: !!!!!
+  const imageCounterDivs = document.getElementsByClassName("image-counter-div");
+  trimmedString = "";
+  for (let i = 0; i < imageCounterDivs.length; i++) {
+    // console.log(imageCounterDivs[i].textContent.substring(0,4));
+    // 1 / 4444444  => 1 /
+    trimmedString = imageCounterDivs[i].textContent.substring(0,4);
+    // 1 /   + NUMBER OF GALLERY IMAGES  => 1 / 4
+    imageCounterDivs[i].textContent = trimmedString.concat(numberOfFoundImages);
+
+  }
 }
 
 
@@ -102,10 +114,11 @@ const getCategoryName = () => {
 // CREATE GALLERY DIVS WITH IMAGES
 const galleryImgContainer = document.querySelector(".gallery-img-container");
 
-const createGalleryDivs = (n) => {
+const createGallery = (n) => {
   const galleryDiv = document.createElement("div");
   galleryDiv.className = "gallery-div";
   galleryImgContainer.appendChild(galleryDiv);
+  // createGalleryDivs();
 
   const galleryDivImg = document.createElement("img");
   galleryDivImg.className = ("hover-shadow");
@@ -113,8 +126,9 @@ const createGalleryDivs = (n) => {
 
   galleryDivImg.onerror = function () {
     console.log('error loading ' + this.src);
-    // this.style.display = "none";
+    // !!!!! HAVE TO REMOVE PARENT (CONTAINER DIV) !!!!!
     this.parentElement.remove();
+    // this.style.display = "none";
     // this.className = "invalid-img-source";
     // this.remove();
     // place your error.png image instead
@@ -123,14 +137,16 @@ const createGalleryDivs = (n) => {
    galleryDiv.appendChild(galleryDivImg);
 }
 
+
+
 // ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
 const addListenerGalleryImg = () => {
   const galleryImages = document.getElementsByClassName("hover-shadow");
 
   for (let i = 0; i < galleryImages.length; i++) {
     galleryImages[i].addEventListener("click", openModal, false);
-    // COUNT NUMBER OF GALLERY IMAGES/DIVS IN GALLERY
-    galleryImages[i].addEventListener("click", getNumberOfFoundImages, false);
+    // !!!!! NO NEED FOR THIS: !!!!!
+    // galleryImages[i].addEventListener("click", getNumberOfImages, false);
     galleryImages[i].addEventListener('click', function(index) { 
       return function () {
         currentSlide(Number(index + 1));
@@ -141,35 +157,58 @@ const addListenerGalleryImg = () => {
 
 // ========== CREATE MODAL DIVS WITH IMAGE-COUNTER AND IMAGES ==========
 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!! THIS IS WORKING IN CONSOLE BUT IN createModal ITS RETURN VALUE IS undefined !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // COUNT NUMBER OF FOUND GALLERY IMAGES/DIVS IN GALLERY
-// CALLED IN addListenerGalleryImg() AFTER GALLERY IMAGES HAVE BEEN RENDERED
-const getNumberOfFoundImages = () => {
+// CALLED IN currentSlide() AFTER GALLERY IMAGES HAVE BEEN RENDERED
+
+
+let numberOfFoundImages = 0;
+console.log("initial value: " + numberOfFoundImages);
+const getNumberOfImages = () => {
+  console.log("gallery clicked");
   const galleryDivs = document.getElementsByClassName("gallery-div");
   // !!!!!!!! THIS IS TOTAL IMAGES COUNT FOR NUMBERTEXT DISPLAY !!!!!!!!!!
-  // console.log(galleryDivs.length);
-  return galleryDivs.length;
+  numberOfFoundImages = galleryDivs.length;
+  console.log("FOUND IMAGES: " + numberOfFoundImages);
+  return numberOfFoundImages;
 }
+// console.log("FOUND IMAGES: " + getNumberOfImages());
+// getNumberOfFoundImages();
 
-const createModalDivs = (n) => {
-  const numberOfFoundImages = getNumberOfFoundImages();
+window.onload = getNumberOfImages;
+
+const createModal = (n) => {
+  // const numberOfFoundImages = getNumberOfImages();
+  // console.log(getNumberOfImages());
   const modalImgContainer = document.querySelector(".modal-img-container");
+
     const modalDiv = document.createElement("div");
     modalDiv.className = "modal-img-div";
     modalImgContainer.appendChild(modalDiv);
 
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const imageCounterDiv = document.createElement("div");
     imageCounterDiv.className = ("image-counter-div");
-    imageCounterDiv.textContent = index + " / " + numberOfFoundImages;
+    // !!!!! THESE DON'T WORK !!!!!
+    // imageCounterDiv.textContent = index + " / " + numberOfFoundImages;
+    // imageCounterDiv.textContent = n + " / " + numberOfFoundImages;
+
+    // !!!!! TEMPORARY FIX: CONCAT NUMBER OF GALLERY IMAGES TO END OF STRING IN currentSlide() !!!!!
+    imageCounterDiv.textContent = n + " / ";
     modalDiv.appendChild(imageCounterDiv);
-  
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     const modalDivImg = document.createElement("img");
     modalDivImg.className = ("modal-img");
     modalDivImg.src = `../images/${getCategoryName()}/${getCategoryName()}-${n}.jpg`;
 
     modalDivImg.onerror = function () {
         console.log('error loading ' + this.src);
-        // this.style.display = "none";
-        this.remove();
+        this.style.display = "none";
+        // !!!!! HAVE TO REMOVE PARENT (CONTAINER DIV) !!!!!
+        this.parentElement.remove();
+        // this.remove();
         // place your error.png image instead
         // this.src = 'error.png'; 
     };
@@ -177,9 +216,10 @@ const createModalDivs = (n) => {
     modalDiv.appendChild(modalDivImg);
 }
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // ========== CREATE THUMBNAIL DIVS WITH IMAGES ==========
-const createThumbnailDivs = (n) => {
+const createThumbnail = (n) => {
   const thumbnailContainer = document.querySelector(".thumbnail-container");
     
     const thumbnailDiv = document.createElement("div");
@@ -208,6 +248,8 @@ const createThumbnailDivs = (n) => {
 function addListenerThumbnailImg(){
   const thumbnailImages = document.getElementsByClassName("thumbnail-image");
   
+
+
   for (let i = 0; i < thumbnailImages.length; i++) {
     thumbnailImages[i].addEventListener('click', function(index) { 
       return function () {
@@ -219,12 +261,12 @@ function addListenerThumbnailImg(){
 
 //  ========== LOOP WILL CHECK FOR maxIndex NUMBER OF IMAGES IN FOLDER ==========
 let index = 1;
-const maxIndex = 6;
+const maxIndex = 5;
 while (index < maxIndex + 1) {
     console.log(index);
-    createGalleryDivs(index);
-    createModalDivs(index);
-    createThumbnailDivs(index);
+    createGallery(index);
+    createModal(index);
+    createThumbnail(index);
     index++;
 }
 
@@ -250,6 +292,9 @@ const showSlides = (n) => {
 showSlides(slideIndex);
 addListenerGalleryImg();
 addListenerThumbnailImg();
+
+
+// window.onload = getNumberOfImages;
 
 // !!!!!!!!!! THESE DONT WORK IN CREATEDIV LOOPS !!!!!!!!!!
 
@@ -289,3 +334,6 @@ addListenerThumbnailImg();
 // }
 
 // addListenerGalleryImg();
+
+
+
