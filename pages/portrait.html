@@ -11,7 +11,7 @@
         <!-- FONT AWEESOME ICONS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="../lightboxW3S.css">
+        <link rel="stylesheet" href="../modal-portrait.css">
         <title>NZ-photo-v3</title>
     </head>
     <body>
@@ -26,9 +26,7 @@
                             <div class="block--4 block--4--1"></div>
                             <div class="block--4 block--4--2"></div>
                             <div class="block--4 block--4--3"></div>
-                            <!-- <div class="block--4 block--4--4"></div>
-                            <div class="block--4 block--4--5"></div> -->
-                            </div>
+                        </div>
                             <!-- <div class="enzee-row--4 text--4 enzee--4">enzee</div>
                             <div class="photo-row--4 text--4 photo--4">photography</div> -->
                         </div>
@@ -44,14 +42,14 @@
                                 <!-- <i class="fa fa-caret-down"></i> -->
                                 </button>
                                 <div class="dropdown-content">
-                                <a href="portrait.html">portrait</a>
-                                <!-- <a href="#">lightboxW3S</a> -->
-                                <a href="lightbox2:1.html">lightbox2:1</a>
-                                <a href="#">model</a>
-                                <a href="#">nature</a>
-                                <a href="#">street</a>
-                                <a href="#">motion</a>
-                                <a href="#">abstract</a>
+                                    <a href="model.html">model</a>
+                                    <a href="portrait.html">portrait</a>
+                                    <a href="nature.html">nature</a>
+                                    <a href="#">! street !</a>
+                                    <a href="#">! motion !</a>
+                                    <a href="#">! abstract !</a>
+                                    <a href="pages/js-lightbox-test.html">lightbox js 3:2</a>
+                                    <a href="pages/lightbox2:1.html">lightbox js 2:1</a>
                                 </div>
                             </div> 
 
@@ -102,119 +100,48 @@
             <div class="main-content">
                 <div class="main-coloumn">
                     <div class="category-title-container">
-                        <h1>lightbox 3:2 test</h1>
+                        <h1 class="category-title">portrait</h1>
                     </div>
                     <div class="gallery-container">
 
-                        <!-- Images used to open the lightbox -->
-                        <div class="row">
-                            <div class="column">
-                            <img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-                            </div>
-                            <div class="column">
-                            <img src="../images/nature-card-1.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-                            </div>
-                            <div class="column">
-                            <img src="../images/street-card-2.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-                            </div>
-                            <div class="column">
-                            <img src="../images/building-1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-                            </div>
-                            <div class="column">
-                                <img src="../images/nature-1.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-                                </div>
-                            <div class="column">
-                                <img src="../images/building-1.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
-                                </div>
-                                <div class="column">
-                                    <img src="../images/street-card-2.jpeg" onclick="openModal();currentSlide(7)" class="hover-shadow">
-                                    </div>
+                        <!-- GALLERY IMAGES (Images used to open the lightbox) -->
+                        <!--  div.row's CONTENT IS DYNAMICALLY CREATED BY js-lightbox.js AS SEEN BELOW IN COMMENTS-->
+                        <div class="gallery-img-container">
+                            <!-- <div class="column">
+                                <img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                            </div> -->
                         </div>
                         
                         <!-- The Modal/Lightbox -->
-                        <div id="myModal" class="modal">
+                        <!--  div.modal-content's CONTENT IS DYNAMICALLY CREATED BY js-lightbox.js AS SEEN BELOW IN COMMENTS-->
+                        <div id="modal" class="modal">
                             <span class="close cursor" onclick="closeModal()">&times;</span>
                             <div class="modal-content">
+                                <div class="modal-img-container"></div>
                             
-                                <div class="mySlides">
+                                <!-- <div class="mySlides">
                                     <div class="numbertext">1 / 7</div>
                                     <img class="modal-img" src="../images/nature-1.jpg" style="width:75%">
-                                </div>
-                            
-                                <div class="mySlides">
-                                    <div class="numbertext">2 / 7</div>
-                                    <img class="modal-img" src="../images/nature-card-1.jpg" style="width:75%">
-                                </div>
-                            
-                                <div class="mySlides">
-                                    <div class="numbertext">3 / 7</div>
-                                    <img class="modal-img" src="../images/street-card-2.jpeg" style="width:75%">
-                                </div>
-                            
-                                <div class="mySlides">
-                                    <div class="numbertext">4 / 7</div>
-                                    <img class="modal-img" src="../images/building-1.jpg" style="width:75%">
-                                </div>
+                                </div> -->
 
-                                <div class="mySlides">
-                                    <div class="numbertext">5 / 7</div>
-                                    <img class="modal-img" src="../images/nature-1.jpg" style="width:75%">
-                                </div>
-
-                                <div class="mySlides">
-                                    <div class="numbertext">6 / 7</div>
-                                    <img class="modal-img" src="../images/building-1.jpg" style="width:75%">
-                                </div>
-
-                                <div class="mySlides">
-                                    <div class="numbertext">7 / 7</div>
-                                    <img class="modal-img" src="../images/street-card-2.jpeg" style="width:75%">
-                                </div>
-
-
-
-                            
-                                <!-- Next/previous controls -->
+                                <!-- CONTROL ARROWS (Next/previous controls) -->
                                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                             
-                                <!-- Caption text -->
+                                <!-- CAPTION TEXT (Caption text) -->
+                                <!-- ONLY CONTAINER DIV IS USED AS A SPACER BETWEEN MODAL AND THUMBNAILS -->
                                 <div class="caption-container">
-                                    <p id="caption"></p>
+                                    <!-- <p id="caption"></p> -->
                                 </div>
                             
-                                <!-- Thumbnail image controls -->
+                                <!-- THUMBNAIL GALLERY (Thumbnail image controls) -->
+                                <!--  div.thumbnail-container's CONTENT IS DYNAMICALLY CREATED BY js-lightbox.js AS SEEN BELOW IN COMMENTS-->
+
                                 <div class="thumbnail-container">
-                                    <div class="column">
+                                     <!-- <div class="column">
                                         <img class="demo" src="../images/nature-1.jpg" onclick="currentSlide(1)" alt="Nature">
-                                    </div>
-                            
-                                    <div class="column">
-                                        <img class="demo" src="../images/nature-card-1.jpg" onclick="currentSlide(2)" alt="Snow">
-                                    </div>
-                            
-                                    <div class="column">
-                                        <img class="demo" src="../images/street-card-2.jpeg" onclick="currentSlide(3)" alt="Mountains">
-                                    </div>
-                            
-                                    <div class="column">
-                                        <img class="demo" src="../images/building-1.jpg" onclick="currentSlide(4)" alt="Lights">
-                                    </div>
-
-                                    <div class="column">
-                                        <img class="demo" src="../images/nature-1.jpg" onclick="currentSlide(5)" alt="Nature">
-                                    </div>
-
-                                    <div class="column">
-                                        <img class="demo" src="../images/building-1.jpg" onclick="currentSlide(6)" alt="Lights">
-                                    </div>
-
-                                    <div class="column">
-                                        <img class="demo" src="../images/street-card-2.jpeg" onclick="currentSlide(7)" alt="Mountains">
-                                    </div>
-                                </div>
-                                
-
+                                    </div> -->
+                                 </div> 
                             </div>
                         </div>
 
@@ -269,6 +196,7 @@
             </footer>
                 
         </div>
-        <script src="../lightboxW3S.js" type="text/javascript"></script>
+        <!-- <script src="../lightboxW3S.js" type="text/javascript"></script> -->
+        <script src="../portfolio.js" type="text/javascript"></script>
     </body>
 </html>
