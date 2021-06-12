@@ -606,7 +606,7 @@ img.hover-shadow {
 .modal {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   left: 0;
   top: 0;
 
@@ -621,8 +621,9 @@ img.hover-shadow {
   /* border: 3px solid rgb(212, 91, 43); */
 }
 
+/* !!!!! FADE OUT / HIDE IS DONE WITH closeModal() !!!!! */
 .modal.fade-out {
-  animation: fadeOut .75s;
+  animation: fadeOut 1s;
 }
 
 img.modal-img {
