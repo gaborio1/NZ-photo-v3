@@ -1,3 +1,5 @@
+console.log('HELLO FROM NAVBAR LOGIC JS');
+
 // STICKY NAVBAR W3SCHOOLS
 
 // When the user scrolls the page, execute myFunction
