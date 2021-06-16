@@ -3,3 +3,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 50vw;
+    height: 40vh;
+    /* border: 3px solid rgb(222, 76, 98); */
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.img-container-before, .img-container-after {
+    position: absolute;
+    width: 50vw;
+    height: 40vh;
+}
+
+.img-container-before {
+    width: 25vw; 
+    overflow: hidden;
+}
+
+img {
+    width: 50vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.img-text {
+    position: absolute;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.img-container-after .img-text {
+    right: 1rem;
+    top: .5rem;
+}
+
+.img-container-before .img-text {
+    left: 1rem;
+    top: .5rem;
+}
+
+.slider {
+    position: absolute;
+    z-index: 2;
+    width: 0.25rem;
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: rgb(0, 0, 0);
+    pointer-events: none;
+}
