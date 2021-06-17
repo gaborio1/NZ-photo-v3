@@ -507,12 +507,13 @@ h2.photography {
     align-items: center;
     justify-content: space-around;
 
-    /* border: 3px solid rgb(0, 106, 255); */
     /* background: rgba(0, 0, 0, 0.204); */
     /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.211), rgba(0, 0, 0, 0)); */
     /* border-left: 15px solid rgba(0, 0, 0, 0.218); */
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     margin-top: 100px;
+
+    /* border: 3px solid rgb(0, 106, 255); */
 }
 
 .about-container {
@@ -581,6 +582,75 @@ h1.about-enzee {
     font-weight: 400;
     color: rgba(0, 0, 0, 0.724);
 }
+
+
+
+
+/* ===== IMAGE SLIDER ===== */
+/* 
+.slider-container {
+    position: relative;
+    width: 50vw;
+    height: 40vh;
+    border: 3px solid rgb(222, 76, 98);
+}
+
+.slider-container:hover {
+    cursor: pointer;
+}
+
+.img-container-before, .img-container-after {
+    position: absolute;
+    width: 50vw;
+    height: 40vh;
+}
+
+.img-container-before {
+    width: 25vw; 
+    overflow: hidden;
+}
+
+img {
+    width: 50vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.img-text {
+    position: absolute;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.img-container-after .img-text {
+    right: 1rem;
+    top: .5rem;
+}
+
+.img-container-before .img-text {
+    left: 1rem;
+    top: .5rem;
+}
+
+.slider {
+    position: absolute;
+    z-index: 2;
+    width: 0.25rem;
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: rgb(0, 0, 0);
+    pointer-events: none;
+}
+ */
+
+
+
+
+
+
 
 
 

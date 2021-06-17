@@ -6,57 +6,122 @@
 
 body {
     display: flex;
+    flex-direction: column
+    ;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.slider-container--landscape-style {
     position: relative;
     width: 50vw;
     height: 40vh;
+    margin: 25px;
     /* border: 3px solid rgb(222, 76, 98); */
 }
 
-.container:hover {
+.slider-container--landscape-style:hover {
     cursor: pointer;
 }
 
-.img-container-before, .img-container-after {
+.img-container-before--landscape-style, .img-container-after--landscape-style {
     position: absolute;
     width: 50vw;
     height: 40vh;
 }
 
-.img-container-before {
+.img-container-before--landscape-style {
     width: 25vw; 
     overflow: hidden;
 }
 
-img {
+.slider-container--landscape-style img {
     width: 50vw;
     height: 40vh;
     object-fit: cover;
 }
 
-.img-text {
+.img-text--landscape-style {
     position: absolute;
     font-size: 30px;
     color: rgb(0, 0, 0);
 }
 
-.img-container-after .img-text {
+.img-container-after--landscape-style .img-text--landscape-style {
     right: 1rem;
     top: .5rem;
 }
 
-.img-container-before .img-text {
+.img-container-before--landscape-style .img-text--landscape-style {
     left: 1rem;
     top: .5rem;
 }
 
-.slider {
+.slider--landscape-style {
+    position: absolute;
+    z-index: 2;
+    width: 0.25rem;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: rgb(255, 254, 254);
+    pointer-events: none;
+}
+
+
+
+
+
+.slider-container--portrait-style {
+    position: relative;
+    width: 25vw;
+    height: 75vh;
+    margin: 25px;
+    /* border: 3px solid rgb(222, 76, 98); */
+}
+
+.slider-container--portrait-style:hover {
+    cursor: pointer;
+}
+
+.img-container-before--portrait-style, .img-container-after--portrait-style {
+    position: absolute;
+    width:25vw;
+    height: 75vh;
+}
+
+.img-container-before--portrait-style {
+    width: 12.5vw; 
+    overflow: hidden;
+}
+
+.slider-container--portrait-style img {
+    width: 25vw;
+    height: 75vh;
+    object-fit: cover;
+}
+
+.img-text--portrait-style {
+    position: absolute;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.img-container-after--portrait-style .img-text--portrait-style {
+    right: 1rem;
+    top: .5rem;
+}
+
+.img-container-before--portrait-style .img-text--portrait-style {
+    left: 1rem;
+    top: .5rem;
+}
+
+.slider--portrait-style {
     position: absolute;
     z-index: 2;
     width: 0.25rem;

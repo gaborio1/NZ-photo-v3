@@ -1,23 +1,46 @@
-const slider = document.querySelector(".slider");
-const before = document.querySelector(".img-container-before");
-const after = document.querySelector("img-container-after");
-const container = document.querySelector(".container");
+const sliderLandscapeStyle = document.querySelector(".slider--landscape-style");
+const beforeLandscapeStyle = document.querySelector(".img-container-before--landscape-style");
+const afterLandscapeStyle = document.querySelector("img-container-after--landscape-style");
+const sliderContainerLandscapeStyle = document.querySelector(".slider-container--landscape-style");
 
-const slideDiv = (event) => {
+const slideDivLandscapeStyle = (event) => {
     let xPos = event.layerX;
-    let size = container.offsetWidth;
-    before.style.width = xPos + "px";
-    slider.style.left = xPos + "px";
+    let size = sliderContainerLandscapeStyle.offsetWidth;
+    beforeLandscapeStyle.style.width = xPos + "px";
+    sliderLandscapeStyle.style.left = xPos + "px";
     if (xPos < 10) {
-        before.style.width = 0;
-        slider.style.left = 0;
+        beforeLandscapeStyle.style.width = 0;
+        sliderLandscapeStyle.style.left = 0;
     }
     if(xPos + 10 > size) {
-        before.style.width = size + "px";
-        slider.style.left = size + "px";
+        beforeLandscapeStyle.style.width = size + "px";
+        sliderLandscapeStyle.style.left = size + "px";
     }
 }
 
-container.addEventListener("mousemove", slideDiv);
+sliderContainerLandscapeStyle.addEventListener("mousemove", slideDivLandscapeStyle);
 
-// VID: 21:16
+
+
+
+const sliderPortraitStyle = document.querySelector(".slider--portrait-style");
+const beforePortraitStyle = document.querySelector(".img-container-before--portrait-style");
+const afterPortraitStyle = document.querySelector("img-container-after--portrait-style");
+const sliderContainerPortraitStyle = document.querySelector(".slider-container--portrait-style");
+
+const slideDivPortraitStyle = (event) => {
+    let xPos = event.layerX;
+    let size = sliderContainerPortraitStyle.offsetWidth;
+    beforePortraitStyle.style.width = xPos + "px";
+    sliderPortraitStyle.style.left = xPos + "px";
+    if (xPos < 10) {
+        beforePortraitStyle.style.width = 0;
+        sliderPortraitStyle.style.left = 0;
+    }
+    if(xPos + 10 > size) {
+        beforePortraitStyle.style.width = size + "px";
+        sliderPortraitStyle.style.left = size + "px";
+    }
+}
+
+sliderContainerPortraitStyle.addEventListener("mousemove", slideDivPortraitStyle);
