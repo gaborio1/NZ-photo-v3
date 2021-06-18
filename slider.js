@@ -10,12 +10,13 @@ const slideDivLandscapeStyle = (event) => {
     sliderLandscapeStyle.style.left = xPos + "px";
     if (xPos < 10) {
         beforeLandscapeStyle.style.width = 0;
-        sliderLandscapeStyle.style.left = 0;
+        sliderLandscapeStyle.style.left = "-2px";
     }
     if(xPos + 10 > size) {
         beforeLandscapeStyle.style.width = size + "px";
-        sliderLandscapeStyle.style.left = size + "px";
+        sliderLandscapeStyle.style.left = size + 2 + "px"; 
     }
+   
 }
 
 sliderContainerLandscapeStyle.addEventListener("mousemove", slideDivLandscapeStyle);
@@ -35,11 +36,11 @@ const slideDivPortraitStyle = (event) => {
     sliderPortraitStyle.style.left = xPos + "px";
     if (xPos < 10) {
         beforePortraitStyle.style.width = 0;
-        sliderPortraitStyle.style.left = 0;
+        sliderPortraitStyle.style.left = "-2px";
     }
     if(xPos + 10 > size) {
         beforePortraitStyle.style.width = size + "px";
-        sliderPortraitStyle.style.left = size + "px";
+        sliderPortraitStyle.style.left = size + 2 + "px";
     }
 }
 

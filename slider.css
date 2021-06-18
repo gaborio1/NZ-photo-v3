@@ -6,18 +6,22 @@
 
 body {
     display: flex;
-    flex-direction: column
-    ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
 
+/* LANDSCAPE STYLE */
 .slider-container--landscape-style {
     position: relative;
     width: 50vw;
     height: 40vh;
+
+    width: 600px;
+    height: 300px;
+
     margin: 25px;
     /* border: 3px solid rgb(222, 76, 98); */
 }
@@ -30,16 +34,26 @@ body {
     position: absolute;
     width: 50vw;
     height: 40vh;
+
+    width: 600px;
+    height: 300px;
 }
 
 .img-container-before--landscape-style {
     width: 25vw; 
+
+    width: 200px;
+    width: 33.33%;
     overflow: hidden;
 }
 
 .slider-container--landscape-style img {
     width: 50vw;
     height: 40vh;
+
+    width: 600px;
+    height: 300px;
+
     object-fit: cover;
 }
 
@@ -66,20 +80,25 @@ body {
     width: 2px;
     height: 100%;
     top: 0;
-    left: 50%;
+    left: 33.33%;
     transform: translate(-50%, 0%);
-    background: rgb(255, 254, 254);
+    background: rgb(255, 255, 255);
+    /* background: rgb(0, 0, 0); */
     pointer-events: none;
 }
 
 
 
 
-
+/* PORTRAIT STYLE */
 .slider-container--portrait-style {
     position: relative;
     width: 25vw;
     height: 75vh;
+
+    width: 400px;
+    height: 600px;
+
     margin: 25px;
     /* border: 3px solid rgb(222, 76, 98); */
 }
@@ -92,16 +111,26 @@ body {
     position: absolute;
     width:25vw;
     height: 75vh;
+
+    width: 400px;
+    height: 600px;
 }
 
 .img-container-before--portrait-style {
     width: 12.5vw; 
+
+    width: 200px;
+    width: 33.33%;
     overflow: hidden;
 }
 
 .slider-container--portrait-style img {
     width: 25vw;
     height: 75vh;
+
+    width: 400px;
+    height: 600px;
+
     object-fit: cover;
 }
 
@@ -125,11 +154,11 @@ body {
     position: absolute;
     z-index: 2;
     width: 0.25rem;
-    width: 3px;
+    width: 2px;
     height: 100%;
     top: 0;
-    left: 50%;
+    left: 33.33%;
     transform: translate(-50%, 0%);
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     pointer-events: none;
 }
