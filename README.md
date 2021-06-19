@@ -1,3 +1,11 @@
+SOURCES OF CODE I USED:
+
+HOME PAGE PARALLAX: https://www.youtube.com/watch?v=Nt70Ld0dJCM&t=192s&ab_channel=DevEdDevEdVerified BY DEV ED
+MODAL GALLERY: https://www.w3schools.com/howto/howto_js_lightbox.asp BY w3schools
+BEFORE/AFTER SLIDER:  https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV ED
+
+
+
 todos:
     animated search button/field
 
