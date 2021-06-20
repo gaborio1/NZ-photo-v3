@@ -13,53 +13,54 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* LANDSCAPE STYLE */
 
 /* !!! width/height SHOULD BE THE SAME ON ALL CONTAINERS AND IMAGES !!! */
-.landscape-style.container {
+.container {
     position: relative;
-    /* BOTH vw/h AND px WORK */
-    /* width: 50vw;
-    height: 40vh; */
-
-    width: 600px;
-    height: 300px;
-
     margin: 25px;
     /* border: 3px solid rgb(222, 76, 98); */
 }
 
-.landscape-style.container:hover {
+.container:hover {
     cursor: pointer;
 }
 
-.landscape-style.before, .landscape-style.after {
-    /* CONTAINERS STACKED ON TOP OF EACH OTHER */
-    position: absolute;
+/* ALL LANDSCAPE STYLE CONTAINERS AND IMAGES, BOTH after AND before */
+.landscape-style {
+     /* BOTH vw/h AND px WORK */
     /* width: 50vw;
     height: 40vh; */
-
     width: 600px;
     height: 300px;
 }
 
-.landscape-style.before {
-    /* width: 25vw; 
-    width: 200px; */
+/* ALL PORTRAIT STYLE CONTAINERS AND IMAGES, BOTH after AND before */
+.portrait-style {
+     /* width: 25vw;
+    height: 75vh; */
+    width: 400px;
+    height: 600px;
+}
+
+.img-container {
+    /*  IMG-CONTAINERS STACKED ON TOP OF EACH OTHER */
+    position: absolute;
+}
+
+
+/* HIDE CONTENT THAT IS NOT VISIBLE WHEN CHANGING WIDTH. BOTH landscape AND portrait */
+.img-container.before {
+    /* width HAS TO MATCH .slider { left: 33.33% } */
     width: 33.33%;
-    /* HIDE CONTENT THAT IS NOT VISIBLE WHEN CHANGING WIDTH */
     overflow: hidden;
 }
 
-.landscape-style img {
-    /* width: 50vw;
-    height: 40vh; */
 
-    width: 600px;
-    height: 300px;
-
+/* ALL IMAGES */
+.container img {
     object-fit: cover;
 }
+
 
 .img-text {
     position: absolute;
@@ -96,48 +97,3 @@ body {
 }
 
 
-
-
-/* PORTRAIT STYLE */
-.portrait-style.container {
-    position: relative;
-    width: 25vw;
-    height: 75vh;
-
-    width: 400px;
-    height: 600px;
-
-    margin: 25px;
-    /* border: 3px solid rgb(222, 76, 98); */
-}
-
-.portrait-style.container:hover {
-    cursor: pointer;
-}
-
-.portrait-style.before, .portrait-style.after {
-    position: absolute;
-    width:25vw;
-    height: 75vh;
-
-    width: 400px;
-    height: 600px;
-}
-
-.portrait-style.before {
-    width: 12.5vw; 
-
-    width: 200px;
-    width: 33.33%;
-    overflow: hidden;
-}
-
-.portrait-style img {
-    width: 25vw;
-    height: 75vh;
-
-    width: 400px;
-    height: 600px;
-
-    object-fit: cover;
-}
