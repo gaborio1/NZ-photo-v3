@@ -7,15 +7,15 @@
 const sliders = document.querySelectorAll(".slider");
 const befores = document.querySelectorAll(".before");
 // const afters = document.querySelectorAll(".after");
-const sliderDivs = document.getElementsByClassName("slider-div");
+const containers = document.getElementsByClassName("container");
 
-for (let i = 0; i < sliderDivs.length; i++) {
+for (let i = 0; i < containers.length; i++) {
 
-    sliderDivs[i].addEventListener("mousemove", function(event) {
+    containers[i].addEventListener("mousemove", function(event) {
         // CURSOR X POSITION IN DIV BEING HOVERED
         let xPos = event.layerX;
         // WIDTH OF DIV BEING HOVERED
-        let size = sliderDivs[i].offsetWidth;
+        let size = containers[i].offsetWidth;
         // ACCESS before AND slider IN CURRENT sliderDiv:
         // DYNAMICALLY RESIZE before WIDTH AS CURSOR MOVES WITHIN CONTAINER DIV
         befores[i].style.width = xPos + "px";
@@ -24,12 +24,12 @@ for (let i = 0; i < sliderDivs.length; i++) {
         // IF CURSOR IS NEAR LEFT/RIGHT EDGE, MAKE SLIDER AND before JUMP TO MIN AND MAX WIDTH
         if (xPos < 10) {
             befores[i].style.width = 0;
-            // !!! TEMPORARY FIX FOR HIDING SLIDER !!!
+            // !!! -2px TEMPORARY FIX FOR HIDING SLIDER !!!
             sliders[i].style.left = "-2px";
         }
         if(xPos + 10 > size) {
             befores[i].style.width = size + "px";
-            // !!! TEMPORARY FIX FOR HIDING SLIDER !!!
+            // !!! +2px TEMPORARY FIX FOR HIDING SLIDER !!!
             sliders[i].style.left = size + 2 + "px";
         }
     }, false);

@@ -16,7 +16,7 @@ body {
 /* LANDSCAPE STYLE */
 
 /* !!! width/height SHOULD BE THE SAME ON ALL CONTAINERS AND IMAGES !!! */
-.slider-container--landscape-style {
+.landscape-style.container {
     position: relative;
     /* BOTH vw/h AND px WORK */
     /* width: 50vw;
@@ -29,11 +29,11 @@ body {
     /* border: 3px solid rgb(222, 76, 98); */
 }
 
-.slider-container--landscape-style:hover {
+.landscape-style.container:hover {
     cursor: pointer;
 }
 
-.img-container-before--landscape-style, .img-container-after--landscape-style {
+.landscape-style.before, .landscape-style.after {
     /* CONTAINERS STACKED ON TOP OF EACH OTHER */
     position: absolute;
     /* width: 50vw;
@@ -43,7 +43,7 @@ body {
     height: 300px;
 }
 
-.img-container-before--landscape-style {
+.landscape-style.before {
     /* width: 25vw; 
     width: 200px; */
     width: 33.33%;
@@ -51,7 +51,7 @@ body {
     overflow: hidden;
 }
 
-.slider-container--landscape-style img {
+.landscape-style img {
     /* width: 50vw;
     height: 40vh; */
 
@@ -61,25 +61,25 @@ body {
     object-fit: cover;
 }
 
-.img-text--landscape-style {
+.img-text {
     position: absolute;
     font-size: 30px;
     color: rgb(0, 0, 0);
 }
 
 /* TOP LEFT TEXT */
-.img-container-after--landscape-style .img-text--landscape-style {
+.after .img-text {
     right: 1rem;
     top: .5rem;
 }
 
 /* TOP RIGHT TEXT */
-.img-container-before--landscape-style .img-text--landscape-style {
+.before .img-text {
     left: 1rem;
     top: .5rem;
 }
 
-.slider--landscape-style {
+.slider {
     position: absolute;
     z-index: 2;
     width: 2px;
@@ -99,7 +99,7 @@ body {
 
 
 /* PORTRAIT STYLE */
-.slider-container--portrait-style {
+.portrait-style.container {
     position: relative;
     width: 25vw;
     height: 75vh;
@@ -111,11 +111,11 @@ body {
     /* border: 3px solid rgb(222, 76, 98); */
 }
 
-.slider-container--portrait-style:hover {
+.portrait-style.container:hover {
     cursor: pointer;
 }
 
-.img-container-before--portrait-style, .img-container-after--portrait-style {
+.portrait-style.before, .portrait-style.after {
     position: absolute;
     width:25vw;
     height: 75vh;
@@ -124,7 +124,7 @@ body {
     height: 600px;
 }
 
-.img-container-before--portrait-style {
+.portrait-style.before {
     width: 12.5vw; 
 
     width: 200px;
@@ -132,7 +132,7 @@ body {
     overflow: hidden;
 }
 
-.slider-container--portrait-style img {
+.portrait-style img {
     width: 25vw;
     height: 75vh;
 
@@ -140,33 +140,4 @@ body {
     height: 600px;
 
     object-fit: cover;
-}
-
-.img-text--portrait-style {
-    position: absolute;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-}
-
-.img-container-after--portrait-style .img-text--portrait-style {
-    right: 1rem;
-    top: .5rem;
-}
-
-.img-container-before--portrait-style .img-text--portrait-style {
-    left: 1rem;
-    top: .5rem;
-}
-
-.slider--portrait-style {
-    position: absolute;
-    z-index: 2;
-    width: 0.25rem;
-    width: 2px;
-    height: 100%;
-    top: 0;
-    left: 33.33%;
-    transform: translate(-50%, 0%);
-    background: rgb(255, 255, 255);
-    pointer-events: none;
 }
