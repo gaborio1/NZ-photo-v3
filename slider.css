@@ -13,8 +13,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-/* !!! width/height SHOULD BE THE SAME ON ALL CONTAINERS AND IMAGES !!! */
 .container {
     position: relative;
     margin: 25px;
@@ -24,6 +22,8 @@ body {
 .container:hover {
     cursor: pointer;
 }
+
+/* !!! width/height SHOULD BE THE SAME ON ALL CONTAINERS AND IMAGES !!! */
 
 /* ALL LANDSCAPE STYLE CONTAINERS AND IMAGES, BOTH after AND before */
 .landscape-style {
@@ -47,7 +47,6 @@ body {
     position: absolute;
 }
 
-
 /* HIDE CONTENT THAT IS NOT VISIBLE WHEN CHANGING WIDTH. BOTH landscape AND portrait */
 .img-container.before {
     /* width HAS TO MATCH .slider { left: 33.33% } */
@@ -55,12 +54,10 @@ body {
     overflow: hidden;
 }
 
-
 /* ALL IMAGES */
 .container img {
     object-fit: cover;
 }
-
 
 .img-text {
     position: absolute;
@@ -90,7 +87,7 @@ body {
     left: 33.33%;
     /* SLIDER BAR WILL BE CENTERED PERFECTLY REGARDLESS OF WIDTH */
     transform: translate(-50%, 0%);
-    background: rgb(255, 255, 255);
+    background: rgb(173, 6, 6);
     /* !!! The element does not react to pointer events LIKE hover, click !!! */
     /* THIS IS TO PREVENT IMG FORM FLICKERING WHEN BAR IS HOVERED */
     pointer-events: none;
