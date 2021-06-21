@@ -21,16 +21,18 @@ for (let i = 0; i < containers.length; i++) {
     containers[i].addEventListener("mousemove", (event) => {
         let xPos = event.layerX;
         let divWidth = containers[i].offsetWidth;
-        changeWidth(befores[i], xPos);
+        let currentDiv = befores[i];
+        let currentSlider = sliders[i];
+        changeWidth(currentDiv, xPos);
 
         sliders[i].style.left = xPos + "px";
         if (xPos < 10) {
-            changeWidth(befores[i], 0);
-            changeLeftPosition(sliders[i], divWidth, (-10-divWidth));
+            changeWidth(currentDiv, 0);
+            changeLeftPosition(currentSlider, divWidth, (-10-divWidth));
         }
         if(xPos + 10 > divWidth) {
-            changeWidth(befores[i], divWidth);
-            changeLeftPosition(sliders[i], divWidth, 10);
+            changeWidth(currentDiv, divWidth);
+            changeLeftPosition(currentSlider, divWidth, 10);
         }
     }, false);
 }

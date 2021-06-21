@@ -87,7 +87,7 @@ body {
     left: 33.33%;
     /* SLIDER BAR WILL BE CENTERED PERFECTLY REGARDLESS OF WIDTH */
     transform: translate(-50%, 0%);
-    background: rgb(173, 6, 6);
+    background: rgb(0, 0, 0);
     /* !!! The element does not react to pointer events LIKE hover, click !!! */
     /* THIS IS TO PREVENT IMG FORM FLICKERING WHEN BAR IS HOVERED */
     pointer-events: none;
