@@ -5,8 +5,8 @@
 }
 
 h1 {
-    font-size: 45px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
@@ -94,16 +94,16 @@ body {
      /* BOTH vw/h AND px WORK */
     /* width: 50vw;
     height: 40vh; */
-    width: 700px;
-    height: 350px;
+    width: 650px;
+    height: 325px;
 }
 
 /* ALL PORTRAIT STYLE CONTAINERS AND IMAGES, BOTH after AND before */
 .portrait-style {
      /* width: 25vw;
     height: 75vh; */
-    width: 500px;
-    height: 750px;
+    width: 467px;
+    height: 700px;
 }
 
 .img-container {
