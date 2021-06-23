@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.title-container p {
+    margin: 5px;
+    letter-spacing: .3rem;
+    color: orange;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -24,24 +41,35 @@ body {
 
 .main-column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     
     width: 90%;
+    max-width: 1400px;
+    /* border: 3px solid orange; */
+}
+
+.title-container {
+    text-align: center;
+    /* border: 3px solid gray; */
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;    
+    width: 100%;
     max-width: 1400px;
     /* border: 3px solid blue; */
 }
 
 .column {
+    margin: 15px;
     /* border: 3px solid green; */
 }
 
-.left-column {
-    flex: 1;
-}
-
 .right-column {
-    flex: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +79,7 @@ body {
 
 .container {
     position: relative;
-    margin: 25px;
+    margin: 10px;
     /* border: 3px solid rgb(222, 76, 98); */
 }
 
@@ -98,7 +126,9 @@ body {
 .img-text {
     position: absolute;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    font-weight: 300;
+    /* color: rgb(0, 0, 0); */
+    color: rgb(255, 255, 255);
 }
 
 /* TOP LEFT TEXT */
@@ -123,7 +153,8 @@ body {
     left: 33.33%;
     /* SLIDER BAR WILL BE CENTERED PERFECTLY REGARDLESS OF WIDTH */
     transform: translate(-50%, 0%);
-    background: rgb(0, 0, 0);
+    /* background: rgb(0, 0, 0); */
+    background: rgb(255, 255, 255);
     /* !!! The element does not react to pointer events LIKE hover, click !!! */
     /* THIS IS TO PREVENT IMG FORM FLICKERING WHEN BAR IS HOVERED */
     pointer-events: none;

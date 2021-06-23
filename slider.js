@@ -28,11 +28,11 @@ for (let i = 0; i < containers.length; i++) {
         sliders[i].style.left = xPos + "px";
         if (xPos < 10) {
             changeWidth(currentDiv, 0);
-            changeLeftPosition(currentSlider, divWidth, (-10-divWidth));
+            changeLeftPosition(currentSlider, divWidth, (-1-divWidth));
         }
         if(xPos + 10 > divWidth) {
             changeWidth(currentDiv, divWidth);
-            changeLeftPosition(currentSlider, divWidth, 10);
+            changeLeftPosition(currentSlider, divWidth, 1);
         }
     }, false);
 }
