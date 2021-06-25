@@ -908,7 +908,9 @@ img.demo {
 .footer-contact-button {
   width: fit-content;
   padding: .5rem;
-  border: 1px solid white;
+  color: rgb(255, 255, 255);
+  /* border: 1px solid rgba(255, 255, 255, 0.779); */
+  background: rgba(0, 0, 0, 0.211);
 
   /* color: black;
   border: 1px solid black; */
@@ -916,6 +918,12 @@ img.demo {
   border-radius: 3px;
   margin-top: 1rem;
   /* margin-left: 7rem; */
+}
+
+.footer-contact-button:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.498);
+  
 }
 
 /* CLEAR DIV-2 */
