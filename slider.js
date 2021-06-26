@@ -6,7 +6,7 @@
 
 const sliders = document.querySelectorAll(".slider");
 const befores = document.querySelectorAll(".before");
-const containers = document.getElementsByClassName("container");
+const containers = document.getElementsByClassName("img-slider-container");
 
 const changeWidth = (element, newWidth) => {
     element.style.width = newWidth + "px";
