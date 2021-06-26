@@ -8,6 +8,9 @@ BEFORE/AFTER SLIDER:  https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV
 
 todos:
     animated search button/field
+    portrait style modal has a fade in animation while landscape style has not!
+    delete createdivs() from script.js as this is now done with portfolio.js
+    ??? navbar-content/logic.js ???
 
 
 

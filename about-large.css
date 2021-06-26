@@ -48,26 +48,6 @@ p {
   align-items: center;
 }
 
-/* .mySlides {display:none;} */
-
-.image-container {
-    
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-
-    /* !!! THIS IS WORKING !!! */
-    /* https://www.w3schools.com/html/html_images_background.asp */
-
-    /* background-image: url('./images/showcase-3 copy.jpg'); */
-    background-image: url('./images/showcase-3.jpg');
-    /* background-image: url("./images/motion-card-1.jpg"); */
-    /* background-repeat: no-repeat; */
-    /* !!! THIS WILL PREVENT IT FROM SCROLLING !!! */
-    /* background-attachment: fixed;   */
-    background-size: cover;
-}
-
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
   .sticky {
     position: fixed;
@@ -80,21 +60,6 @@ p {
     display: none;
 }
 
-/* GRAYSCALE + BLUR */
-.blurred {
-    /* filter: blur(5px); */
-    /* -webkit-filter: blur(5px); */
-    /* backdrop-filter: grayscale(1);   */
-
-    /* CAN LEAVE backdrop OUT */
-    filter: grayscale(.5) blur(2px);  
-    filter: grayscale(.25) blur(1px) opacity(0.75);  
-}
-
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
 
 
 header {
@@ -398,90 +363,6 @@ input[type=text] {
     margin: 0px 0px 0px 10px;
   }
 
-  /* input[type=text]:focus {
-    width: 140px;
-  } */
-
-.title-div {
-/* !!! !!! */
-    z-index: 1;
-    position: absolute;
-    bottom: 45px;
-
-    /* width: 100%; */
-    width: var(--max-width);
-    height: fit-content;
-    height: 125px;
-    height: 135px;
-    margin: auto;
-
-   background: rgba(0, 0, 0, 0.192);
-    /* background: #56d2e213; */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)); */
-    /* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.601), rgba(0, 0, 0, 0.8), rgb(0, 0, 0)); */
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    
-    border-top: 1px solid rgba(255, 255, 255, 0.519);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.519);
-
-    /* border-top: 2px solid #fdae8181;
-    border-bottom: 2px solid #fdae8184; */
-          
-}
-
-.title-div-content {
-    width: 95%;
-    height: inherit;
-    /* border: 3px solid orange; */
-    display: flex;
-    justify-content: space-between;
-}
-
-/* .title-div h2 {
-    color: rgba(255, 255, 255, 0.842);
-    color: #e1bc91cb;
-    color: #ffc786;
-    color: #fdae81;
-
-    font-size: 20px;
-    font-weight: 300;
-    text-transform: capitalize;
-    margin: 80px 0px 0px 0px;
-    letter-spacing: .4rem;
-} */
-
-      
-h1 span.enzee {
-    color: var(--title-blue);
-    text-transform: capitalize;
-    font-weight: 900;
-    font-size: 120px;
-    /* RESPONSIVE TEXT */
-    /* font-size: 12vw; */
-    letter-spacing: .05rem;
-    text-shadow: 1px 1px rgba(113, 113, 113, 0.683);
-
-    /* text-shadow: 2px 2px rgba(113, 113, 113, 0.683), 4px 4px rgba(113, 113, 113, 0.361); */
-    /* border: 1px solid red; */
-} 
-
-h2.photography {
-    font-size: 30px;
-    letter-spacing: 1rem;
-    color: var(--sub-title-orange);
-    margin: 85px 0px 0px 0px;
-}
-
-
-
-
-
 
 /* ========== MAIN CONTENT ========== */
 
@@ -494,7 +375,7 @@ h2.photography {
     width: var(--max-width);
     height: fit-content;
 
-    /* border: 3px solid red; */
+    border: 3px solid red;
 }
 
 .main-coloumn {
@@ -513,7 +394,7 @@ h2.photography {
     margin-bottom: 100px;
     margin-top: 100px;
 
-    /* border: 3px solid rgb(0, 106, 255); */
+    border: 3px solid rgb(0, 106, 255);
 }
 
 .about-container {
@@ -523,12 +404,12 @@ h2.photography {
     display: flex;
     justify-content: start;
 
-    /* border: 3px solid rgb(98, 197, 45); */
+    border: 3px solid rgb(98, 197, 45);
 }
 
 .about-enzee-container {
     margin: 45px 0px 90px 0px;
-    /* border: 3px solid tomato; */
+    border: 3px solid tomato;
 }
 
 h1.about-enzee {
@@ -543,7 +424,7 @@ h1.about-enzee {
     background-image: url(./images/about/about-1.jpg);
     background-size: cover;
 
-    /* border: 3px solid goldenrod; */
+    border: 3px solid goldenrod;
 }
 
 
@@ -558,7 +439,7 @@ h1.about-enzee {
 
     margin-left: 70px;
 
-    /* border: 3px solid goldenrod; */
+    border: 3px solid goldenrod;
 }
 
 .about-text-row {
@@ -566,7 +447,7 @@ h1.about-enzee {
     /* height: 105px; */
 
     padding-left: 1rem;
-    /* border: 3px solid fuchsia; */
+    border: 3px solid fuchsia;
     /* border-left: 1px solid rgba(0, 0, 0, 0.724); */
     border-left: 2px solid rgba(0, 0, 0, 0.272);
     
@@ -582,73 +463,6 @@ h1.about-enzee {
     font-weight: 400;
     color: rgba(0, 0, 0, 0.724);
 }
-
-
-
-
-/* ===== IMAGE SLIDER ===== */
-/* 
-.slider-container {
-    position: relative;
-    width: 50vw;
-    height: 40vh;
-    border: 3px solid rgb(222, 76, 98);
-}
-
-.slider-container:hover {
-    cursor: pointer;
-}
-
-.img-container-before, .img-container-after {
-    position: absolute;
-    width: 50vw;
-    height: 40vh;
-}
-
-.img-container-before {
-    width: 25vw; 
-    overflow: hidden;
-}
-
-img {
-    width: 50vw;
-    height: 40vh;
-    object-fit: cover;
-}
-
-.img-text {
-    position: absolute;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-}
-
-.img-container-after .img-text {
-    right: 1rem;
-    top: .5rem;
-}
-
-.img-container-before .img-text {
-    left: 1rem;
-    top: .5rem;
-}
-
-.slider {
-    position: absolute;
-    z-index: 2;
-    width: 0.25rem;
-    width: 3px;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background: rgb(0, 0, 0);
-    pointer-events: none;
-}
- */
-
-
-
-
 
 
 
