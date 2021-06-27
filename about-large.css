@@ -375,7 +375,7 @@ input[type=text] {
     width: var(--max-width);
     height: fit-content;
 
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .main-coloumn {
@@ -394,7 +394,7 @@ input[type=text] {
     margin-bottom: 100px;
     margin-top: 100px;
 
-    border: 3px solid rgb(0, 106, 255);
+    /* border: 3px solid rgb(0, 106, 255); */
 }
 
 .about-container {
@@ -402,14 +402,14 @@ input[type=text] {
     height: 600px;
 
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
 
-    border: 3px solid rgb(98, 197, 45);
+    /* border: 3px solid rgb(21, 255, 0); */
 }
 
 .about-enzee-container {
     margin: 45px 0px 90px 0px;
-    border: 3px solid tomato;
+    /* border: 3px solid tomato; */
 }
 
 h1.about-enzee {
@@ -424,7 +424,7 @@ h1.about-enzee {
     background-image: url(./images/about/about-1.jpg);
     background-size: cover;
 
-    border: 3px solid goldenrod;
+    /* border: 3px solid goldenrod; */
 }
 
 
@@ -439,7 +439,7 @@ h1.about-enzee {
 
     margin-left: 70px;
 
-    border: 3px solid goldenrod;
+    /* border: 3px solid goldenrod; */
 }
 
 .about-text-row {
@@ -447,10 +447,10 @@ h1.about-enzee {
     /* height: 105px; */
 
     padding-left: 1rem;
-    border: 3px solid fuchsia;
     /* border-left: 1px solid rgba(0, 0, 0, 0.724); */
     border-left: 2px solid rgba(0, 0, 0, 0.272);
-    
+
+    /* border: 3px solid fuchsia; */
 }
 
 .about-text__title {

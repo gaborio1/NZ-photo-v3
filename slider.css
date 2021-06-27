@@ -1,3 +1,16 @@
+:root {
+    /* --main-background: #75bdc16f; */
+    --main-background: #ffffff;
+    --title-blue: #56d2e2;
+    --sub-title-orange: #fdae81;
+    --category-grey: #d6d6d6cf;
+    /* --category-grey: #56d2e2; */
+
+    --max-width: 100%;
+    --main-content-1400: 1400px;
+  }
+
+
 *  {
     margin: 0;
     padding: 0;
@@ -15,27 +28,29 @@ h2 {
     font-weight: 300;
 }
 
-.title-container p {
+/* .title-container p {
     margin: 5px;
     letter-spacing: .3rem;
     color: orange;
-}
+} */
 
 
 
 .gallery-container {
     display: flex;
-    justify-content: center;    
-    width: 100%;
-    max-width: 1400px;
+    justify-content: space-between;    
+    /* width: 1400px;
+    max-width: var(--main-content-1400); */
+    width: 90%;
 
+    margin-top: 100px;
     margin-bottom: 100px;
-    border: 3px solid blue;
+    /* border: 3px solid rgb(21, 255, 0); */
 }
 
 .column {
-    margin: 15px;
-    border: 3px solid green;
+    /* margin: 15px; */
+    /* border: 3px solid goldenrod; */
 }
 
 .right-column {
@@ -48,12 +63,12 @@ h2 {
 
 .img-slider-container {
     position: relative;
-    margin: 10px;
+    /* margin: 10px; */
     /* border: 3px solid rgb(222, 76, 98); */
 }
 
 .img-slider-container:hover {
-    cursor: pointer;
+    cursor: ew-resize;
 }
 
 /* !!! width/height SHOULD BE THE SAME ON ALL CONTAINERS AND IMAGES !!! */
