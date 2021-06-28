@@ -419,6 +419,7 @@ h1.about-enzee {
 
 .about-image-container {
     width: 400px;
+    /* height: 700px; */
     /* height: 600px; */
 
     background-image: url(./images/about/about-1.jpg);
@@ -429,7 +430,7 @@ h1.about-enzee {
 
 
 .about-text-container {
-    width: 700px;
+    width: 750px;
     /* height: 600px; */
 
     display: flex;
@@ -443,7 +444,7 @@ h1.about-enzee {
 }
 
 .about-text-row {
-    width: 95%;
+    width: 100%;
     /* height: 105px; */
 
     padding-left: 1rem;

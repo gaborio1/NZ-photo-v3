@@ -34,7 +34,14 @@ h2 {
     color: orange;
 } */
 
+.slider-title-container {
+    margin: 100px 0px 100px 0px;
+    /* border: 3px solid tomato; */
+}
 
+h1.slider-title {
+    font-weight: 400;
+}
 
 .gallery-container {
     display: flex;
@@ -43,7 +50,7 @@ h2 {
     max-width: var(--main-content-1400); */
     width: 90%;
 
-    margin-top: 100px;
+    /* margin-top: 100px; */
     margin-bottom: 100px;
     /* border: 3px solid rgb(21, 255, 0); */
 }
@@ -78,16 +85,16 @@ h2 {
      /* BOTH vw/h AND px WORK */
     /* width: 50vw;
     height: 40vh; */
-    width: 650px;
-    height: 325px;
+    width: 750px;
+    height: 270px;
 }
 
 /* ALL PORTRAIT STYLE CONTAINERS AND IMAGES, BOTH after AND before */
 .portrait-style {
      /* width: 25vw;
     height: 75vh; */
-    width: 467px;
-    height: 700px;
+    width: 400px;
+    height: 600px;
 }
 
 .img-container {
