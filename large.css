@@ -27,23 +27,39 @@ body {
     display: none;
 }
 
-
+/* TITLE: Enzee */
 h1 {
-    font-size: 45px;
+    /* font-size: 45px; */
+
+    font-size: 120px;
+
     font-weight: 100;
+    font-weight: 700;
 }
 
-h1.brand-h1 {
+.brand-color {
     font-weight: 700;
     color: var(--title-blue);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.683);
 }
 
+/* CATEGORY TITLE: model etc, AND FOOTER SLOGAN */
 h2 {
-    font-size: 30px;
-    font-weight: 200;
+    font-size: 60px;
+    /* font-weight: 700; */
 }
 
-/* h3 {} */
+/* SUB-TITLE: photography AND FOOTER SLOGAN: you're in the right place */
+h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--sub-title-orange);
+}
+
+/* CATEGORY INFO */
+h4 {
+    font-size: 20px;
+}
 
 p {
     font-size: 15px;
@@ -599,12 +615,9 @@ h1.enzee__letter:nth-of-type(5) {
     /* border: 1px solid orange; */
 }
 
-h2.photography__letter {
+h3.photography__letter {
     /* display: inline-block; */
-    font-size: 30px;
     letter-spacing: 1.2rem;
-    color: var(--sub-title-orange);
-    /* color: transparent; */
     margin: 90px 0px 0px 0px;
 
     /* animation: flashAnimation ease 1s; */
@@ -843,11 +856,24 @@ h2 span.photography__letter:nth-of-type(11) {
     margin-left: 1rem;
 }
 
-h3.category-info-title {
+
+
+
+
+
+h4.category-info-title {
     color: black;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
+
+
+
+
+
+
+
+
 
 img.portrait-style {
     /* width: 100%; */
@@ -1065,7 +1091,7 @@ img.landscape-style {
 }
 
 
-.info-div-content h1.category {
+.info-div-content h2.category {
     margin-left: 2rem;
     margin-right: 1rem;
     font-size: 60px;
@@ -1202,37 +1228,27 @@ img.landscape-style {
     /* border: 1px solid  #56d2e2;  */
 }
 
-.footer-info-container-1 h1 {
-    font-size: 60px;
-    /* font-size: 70px; */
-    /* font-weight: 100; */
-    letter-spacing: .05rem;
-
-    /* margin-bottom: 10px; */
-
-    /* color: var(--title-blue); */
-    
-    /* border: 1px solid yellow; */
-    /* text-shadow: 1px 1px rgb(107, 107, 107); */
-   
-}
 
 .footer-info-container-1 h1::first-letter {
     text-transform: capitalize;
 }
 
+/* Need a good photographer? */
 .footer-info-container-1 h2 {
-    font-weight: 300;
-    letter-spacing: .15rem;
-    /* color: #fdae81; */
-    color: var(--sub-title-orange);
+    letter-spacing: .05rem;
     /* color: #ffffff; */
     /* color: #000000;  */
     /* text-shadow: 1px 1px rgba(0, 0, 0, 0.683); */
+    /* border: 1px solid yellow; */
 }
 
 .footer-info-container-1 h2::first-letter {
     text-transform: capitalize;
+}
+
+/* you're in the right place */
+.footer-info-container-1 h3 {
+    letter-spacing: .15rem;
 }
 
 .footer-contact-button {
