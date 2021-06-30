@@ -62,7 +62,7 @@ h4 {
 }
 
 p {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 100;
 }
 
@@ -847,33 +847,25 @@ h2 span.photography__letter:nth-of-type(11) {
     /* border: 3px solid black; */
 }
 
+p.category-info-text {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.724);
+}
+
 
 .portrait-text-container {
     text-align: left;
-    color: rgba(0, 0, 0, 0.724);
+    /* color: rgba(0, 0, 0, 0.724); */
     border-left: 2px solid rgba(0, 0, 0, 0.272);
     padding: 1rem;
     margin-left: 1rem;
 }
-
-
-
-
-
 
 h4.category-info-title {
     color: black;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
-
-
-
-
-
-
-
-
 
 img.portrait-style {
     /* width: 100%; */
