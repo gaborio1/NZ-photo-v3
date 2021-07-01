@@ -944,7 +944,7 @@ img.portrait-style {
     color: rgba(0, 0, 0, 0.724);
     border-left: 2px solid rgba(0, 0, 0, 0.279);
 
-    border: 3px solid black;
+    /* border: 3px solid black; */
 }
 
 img.landscape-style {

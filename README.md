@@ -29,3 +29,5 @@ UPDATES:
     navbar, footer:
         index,about,contact.html
         index,about,slider,contact.css
+        navbar-content.js, navbar.css (for lightbox 2:1 test)
+        footer.js, footer.css (for lightbox 2:1 test)
