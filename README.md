@@ -24,3 +24,8 @@ problems:
     navbar.js does not include the navbar opnacity scroll TIMELINE from parallax.js
     navbar opacity onscroll is only active on home page, trigger el: .image-container
     
+
+UPDATES:
+    navbar, footer:
+        index,about,contact.html
+        index,about,slider,contact.css
