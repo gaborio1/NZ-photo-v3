@@ -62,11 +62,24 @@
                             <button type="submit" id="submit-btn" class="submit-btn hidden">
                                 <i class="fa fa-search"></i>
                             </button>
-                            <input type="text" placeholder="Search enzee.com" name="search" id="search-input" class="hidden" required>
-                            <button type="" id="default-btn" class="default-btn">
+                            <input type="text" onkeyup="filterFunction()" placeholder="Search enzee.com" name="search" id="search-input" class="hidden" required>
+
+                            <div  id="my-dropdown" class="search-dropdown-content">
+                                <a href="#about">About</a>
+                                <a href="#contact">Contact</a>
+                                <a href="#privacypolicy">Privacy policy</a>
+                                <a href="#reviews">Reviews</a>
+                                <a href="#clients">Clients</a>
+                                <a href="#products">Products</a>
+                                <a href="#portrait">Portrait</a>
+                                <a href="#model">Model</a>
+                                <a href="#nature">Nature</a>
+                            </div>
+                            
+                            <button type="" onclick="showDropdown()" id="default-btn" class="default-btn">
                                 <i class="fa fa-search"></i>
                             </button>
-                            <button type="" id="close-btn" class="close-btn hidden">X
+                            <button type="" onclick="hideDropdown()" id="close-btn" class="close-btn hidden">X
                             <!-- <i class="fa fa-times"></i> -->
                             </button>
                         </form>
@@ -344,6 +357,37 @@
 
             <script src="script.js" type="text/javascript"></script>
             <script src="parallax.js" type="text/javascript"></script>
+
+            <script>
+                /* When the user clicks on the button,
+                toggle between hiding and showing the dropdown content */
+                function showDropdown() {
+                //   document.getElementById("my-dropdown").classList.toggle("show");
+                  document.getElementById("my-dropdown").classList.add("show");
+                }
+                
+                function hideDropdown() {
+                    document.getElementById("my-dropdown").classList.remove("show");
+                }
+
+                function filterFunction() {
+                  var input, filter, ul, li, a, i;
+                  input = document.getElementById("search-input");
+                  filter = input.value.toUpperCase();
+                  div = document.getElementById("my-dropdown");
+                  a = div.getElementsByTagName("a");
+                  for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      a[i].style.display = "";
+                    } else {
+                      a[i].style.display = "none";
+                    }
+                  }
+                }
+                </script>
+
+
         </div>     
     </body>
 </html>
