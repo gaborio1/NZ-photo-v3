@@ -72,16 +72,32 @@ const defaultButton = document.getElementById("default-btn");
 const submitButton = document.getElementById("submit-btn");
 const closeButton = document.getElementById("close-btn");
 const searchInput = document.getElementById("search-input");
+const searchDropdownContent = document.getElementById("search-dropdown-content");
+const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
 
 const imageContainer = document.getElementById("image-container");
 
 // SHOW/HIDE DROPDOWN CONTENT
-const showDropdown = () => {
+const showSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.add("show");
 }
 
-const hideDropdown = () => {
+const hideSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.remove("show");
+}
+
+// SEARCH BAR FILTER (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
+const filterFunction = () => {
+  const filter = searchInput.value.toUpperCase();
+
+  for (let i = 0; i < searchDropdownLinks.length; i++) {
+    txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      searchDropdownLinks[i].style.display = "";
+    } else {
+      searchDropdownLinks[i].style.display = "none";
+    }
+  }
 }
 
 defaultButton.addEventListener("click", function() {
@@ -92,7 +108,7 @@ defaultButton.addEventListener("click", function() {
     closeButton.classList.remove("hidden");
     imageContainer.classList.add("blurred");
     searchInput.style.width = "140px";
-    showDropdown();
+    showSearchDropdown();
 })
 
 closeButton.addEventListener("click", function() {
@@ -102,32 +118,13 @@ closeButton.addEventListener("click", function() {
     closeButton.classList.add("hidden");
     imageContainer.classList.remove("blurred");
     searchInput.style.width = "0px";
-    hideDropdown();
+    hideSearchDropdown();
 })
 
-// SEARCH BAR FILTER (W3SCHOOLS)
+searchInput.addEventListener("keyup", filterFunction);
 
 
-const filterFunction = () => {
-const input = document.getElementById("search-input");
-const filter = input.value.toUpperCase();
-const searchDropdownContent = document.getElementById("search-dropdown-content");
-const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
-for (let i = 0; i < searchDropdownLinks.length; i++) {
-  txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
-  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      searchDropdownLinks[i].style.display = "";
-  } else {
-      searchDropdownLinks[i].style.display = "none";
-  }
-}
-}
-
-
-
-
-
-// ACTIVE NAV-LINK
+// ACTIVE NAV-LINK BORDER BOTTOM
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("myDIV");
@@ -140,12 +137,6 @@ for (var i = 0; i < btns.length; i++) {
   this.className += " active";
   });
 }
-
-
-
-
-
-
 
 // ANIMATE "photography" IN TITLE DIV
 
