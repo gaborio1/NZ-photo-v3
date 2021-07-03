@@ -74,6 +74,8 @@ const closeButton = document.getElementById("close-btn");
 const searchInput = document.getElementById("search-input");
 const searchDropdownContent = document.getElementById("search-dropdown-content");
 const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
+const mainContent = document.querySelector(".main-content");
+const footer = document.querySelector(".footer");
 
 const imageContainer = document.getElementById("image-container");
 
@@ -107,6 +109,8 @@ defaultButton.addEventListener("click", function() {
     // searchInput.focus();
     closeButton.classList.remove("hidden");
     imageContainer.classList.add("blurred");
+    mainContent.classList.add("blurred");
+    footer.classList.add("blurred");
     searchInput.style.width = "140px";
     showSearchDropdown();
 })
@@ -117,6 +121,9 @@ closeButton.addEventListener("click", function() {
     searchInput.classList.add("hidden");
     closeButton.classList.add("hidden");
     imageContainer.classList.remove("blurred");
+    mainContent.classList.remove("blurred");
+    footer.classList.remove("blurred");
+    
     searchInput.style.width = "0px";
     hideSearchDropdown();
 })
