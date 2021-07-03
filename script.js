@@ -31,8 +31,10 @@
  
  // STICKY NAVBAR W3SCHOOLS
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+// When user scrolls the page, execute stickyNav()
+window.onscroll = () => {
+  stickyNav()
+};
 
 // Get the navbar
 const navbar = document.getElementById("header");
@@ -41,7 +43,7 @@ const navbar = document.getElementById("header");
 const sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+const stickyNav = () => {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
@@ -73,6 +75,15 @@ const searchInput = document.getElementById("search-input");
 
 const imageContainer = document.getElementById("image-container");
 
+// SHOW/HIDE DROPDOWN CONTENT
+const showDropdown = () => {
+  document.getElementById("search-dropdown-content").classList.add("show");
+}
+
+const hideDropdown = () => {
+  document.getElementById("search-dropdown-content").classList.remove("show");
+}
+
 defaultButton.addEventListener("click", function() {
     defaultButton.classList.add("hidden");
     submitButton.classList.remove("hidden");
@@ -80,8 +91,8 @@ defaultButton.addEventListener("click", function() {
     // searchInput.focus();
     closeButton.classList.remove("hidden");
     imageContainer.classList.add("blurred");
-
     searchInput.style.width = "140px";
+    showDropdown();
 })
 
 closeButton.addEventListener("click", function() {
@@ -90,9 +101,31 @@ closeButton.addEventListener("click", function() {
     searchInput.classList.add("hidden");
     closeButton.classList.add("hidden");
     imageContainer.classList.remove("blurred");
-    
     searchInput.style.width = "0px";
+    hideDropdown();
 })
+
+// SEARCH BAR FILTER (W3SCHOOLS)
+
+
+const filterFunction = () => {
+const input = document.getElementById("search-input");
+const filter = input.value.toUpperCase();
+const searchDropdownContent = document.getElementById("search-dropdown-content");
+const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
+for (let i = 0; i < searchDropdownLinks.length; i++) {
+  txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
+  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      searchDropdownLinks[i].style.display = "";
+  } else {
+      searchDropdownLinks[i].style.display = "none";
+  }
+}
+}
+
+
+
+
 
 // ACTIVE NAV-LINK
 
@@ -107,6 +140,12 @@ for (var i = 0; i < btns.length; i++) {
   this.className += " active";
   });
 }
+
+
+
+
+
+
 
 // ANIMATE "photography" IN TITLE DIV
 
