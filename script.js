@@ -1,37 +1,11 @@
 
-// PARALLAX 
-// !!!!! HAS TO BE UP TOP !!!!!
+// !!!!! PARALLAX HAS TO BE UP TOP !!!!!
+// PARALLAX IS NOW DONE WITH parallax.js
+ 
+ // ========== STICKY NAVBAR (W3SCHOOLS) ========== 
+//  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
-// let controller = new ScrollMagic.Controller();
-// let timeline = new TimelineMax();
-
-// timeline.to(".test", 3, { x: 300 }); 
-// timeline.to(".mountain-crop-1", 5, { y: -200 })
-// .to(".mountain-crop-2", 5, { y: -150 }, "-=5")
-// .to(".mountain-crop-3", 5, { y: -110 }, "-=5")
-// .to(".mountain-crop-4", 5, { y: -50 }, "-=5") 
-// .to(".mountain-crop-5", 5, { y: -20 }, "-=5")
-// .to(".mountain-full", 5, { y: 10 }, "-=5")
-// .to(".title-div", 5, { y: -250 }, "-=5")
-// .to(".main-content", 15, { top: "0%" }, "-=9");
-// // .to(".main-content", 5, { y: -500 }, "-=5");
-
- 
-// let scene = new ScrollMagic.Scene({
-//   triggerElement: ".image-container",
-//   duration: "200%",
-//   triggerHook: 0,
-// })
-//   .setTween(timeline)
-//   .setPin(".image-container")
-//   .addTo(controller);
- 
- 
- 
- 
- // STICKY NAVBAR W3SCHOOLS
-
-// When user scrolls the page, execute stickyNav()
+// When user scrolls page, execute stickyNav()
 window.onscroll = () => {
   stickyNav()
 };
@@ -51,22 +25,7 @@ const stickyNav = () => {
   }
 }
 
-// NOT IN USE:
-
-// FADE IN/OUT GALLERY
-// let current = 0,
-// slides = document.querySelector(".mySlides");
-
-// setInterval(function() {
-//   for (let i = 0; i < slides.length; i++) {
-//     slides[i].style.opacity = 0;
-//   }
-//   current = (current != slides.length - 1) ? current + 1 : 0;
-//   slides[current].style.opacity = 1;
-// }, 2000);
-
-
-// SEARCH BAR
+// ========== SEARCH BAR ==========
 
 const defaultButton = document.getElementById("default-btn");
 const submitButton = document.getElementById("submit-btn");
@@ -74,10 +33,10 @@ const closeButton = document.getElementById("close-btn");
 const searchInput = document.getElementById("search-input");
 const searchDropdownContent = document.getElementById("search-dropdown-content");
 const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
+// !!! MAKE A CSS CLASS FOR THESE 3 !!!
+const imageContainer = document.getElementById("image-container");
 const mainContent = document.querySelector(".main-content");
 const footer = document.querySelector(".footer");
-
-const imageContainer = document.getElementById("image-container");
 
 // SHOW/HIDE DROPDOWN CONTENT
 const showSearchDropdown = () => {
@@ -88,10 +47,37 @@ const hideSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.remove("show");
 }
 
+const showSearchBar = () => {
+  defaultButton.classList.add("hidden");
+    submitButton.classList.remove("hidden");
+    searchInput.classList.remove("hidden");
+    closeButton.classList.remove("hidden");
+    searchInput.style.width = "140px";
+}
+
+const hideSearchBar = () => {
+  defaultButton.classList.remove("hidden");
+    submitButton.classList.add("hidden");
+    searchInput.classList.add("hidden");
+    closeButton.classList.add("hidden");
+    searchInput.style.width = "0px";
+}
+
+const blurElements = () => {
+  imageContainer.classList.add("blurred");
+    mainContent.classList.add("blurred");
+    footer.classList.add("blurred");
+}
+
+const unBlurElements = () => {
+  imageContainer.classList.remove("blurred");
+    mainContent.classList.remove("blurred");
+    footer.classList.remove("blurred");
+}
+
 // SEARCH BAR FILTER (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
 const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
-
   for (let i = 0; i < searchDropdownLinks.length; i++) {
     txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -102,36 +88,24 @@ const filterFunction = () => {
   }
 }
 
+// OPEN SEARCH BAR
 defaultButton.addEventListener("click", function() {
-    defaultButton.classList.add("hidden");
-    submitButton.classList.remove("hidden");
-    searchInput.classList.remove("hidden");
-    // searchInput.focus();
-    closeButton.classList.remove("hidden");
-    imageContainer.classList.add("blurred");
-    mainContent.classList.add("blurred");
-    footer.classList.add("blurred");
-    searchInput.style.width = "140px";
+    showSearchBar();
     showSearchDropdown();
+    blurElements();
 })
 
+// CLOSE SEARCH BAR
 closeButton.addEventListener("click", function() {
-    defaultButton.classList.remove("hidden");
-    submitButton.classList.add("hidden");
-    searchInput.classList.add("hidden");
-    closeButton.classList.add("hidden");
-    imageContainer.classList.remove("blurred");
-    mainContent.classList.remove("blurred");
-    footer.classList.remove("blurred");
-    
-    searchInput.style.width = "0px";
+    hideSearchBar();
     hideSearchDropdown();
+    unBlurElements();
 })
 
 searchInput.addEventListener("keyup", filterFunction);
 
 
-// ACTIVE NAV-LINK BORDER BOTTOM
+// ========== ACTIVE NAV-LINK BORDER BOTTOM ==========
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("myDIV");
@@ -145,7 +119,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-// ANIMATE "photography" IN TITLE DIV
+// ========== ANIMATE "photography" IN TITLE DIV ==========
 
 const letters = document.getElementsByClassName("photography__letter");
 
