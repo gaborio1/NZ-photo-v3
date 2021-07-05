@@ -463,7 +463,8 @@ input[type=text] {
 
 /* W3SCHOOLS SEARCH/FILTER DROPDOWN */
   .search-dropdown-content {
-    display: none;
+    /* display: none; */
+    /* display: block; */
     position: absolute;
     top: 45px;
     /* left: 0px; */
@@ -488,7 +489,7 @@ input[type=text] {
   
   .search-dropdown-content a:hover {background-color: #ddd;}
   
-  .show {display: block;}
+  /* .show {display: block;} */
 
 
 /* TITLE DIV */

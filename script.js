@@ -40,11 +40,11 @@ const footer = document.querySelector(".footer");
 
 // SHOW/HIDE DROPDOWN CONTENT
 const showSearchDropdown = () => {
-  document.getElementById("search-dropdown-content").classList.add("show");
+  document.getElementById("search-dropdown-content").classList.remove("hidden");
 }
 
 const hideSearchDropdown = () => {
-  document.getElementById("search-dropdown-content").classList.remove("show");
+  document.getElementById("search-dropdown-content").classList.add("hidden");
 }
 
 const showSearchBar = () => {
@@ -74,6 +74,21 @@ const unBlurElements = () => {
     mainContent.classList.remove("blurred");
     footer.classList.remove("blurred");
 }
+
+
+// const blurElements = () => {
+//   for (let i = 0; i < searchBlurElements.length; i++) {
+//     searchBlurElements[i].classList.add("blurred");
+//   }
+// }
+
+// const unBlurElements = () => {
+//   for (let i = 0; i < searchBlurElements.length; i++) {
+//     searchBlurElements[i].classList.remove("blurred");
+//   }
+// }
+
+
 
 // SEARCH BAR FILTER (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
 const filterFunction = () => {
@@ -119,7 +134,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-// ========== ANIMATE "photography" IN TITLE DIV ==========
+// ========== ANIMATE "photography" IN TITLE DIV
 
 const letters = document.getElementsByClassName("photography__letter");
 
