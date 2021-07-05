@@ -33,12 +33,10 @@ const closeButton = document.getElementById("close-btn");
 const searchInput = document.getElementById("search-input");
 const searchDropdownContent = document.getElementById("search-dropdown-content");
 const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
-// !!! MAKE A CSS CLASS FOR THESE 3 !!!
-const imageContainer = document.getElementById("image-container");
-const mainContent = document.querySelector(".main-content");
-const footer = document.querySelector(".footer");
+// imageContainer, mainContent AND footer (ALL ELEMENTS EXCEPT NAVBAR)
+const searchBlurElements = document.getElementsByClassName("search-blur");
 
-// SHOW/HIDE DROPDOWN CONTENT
+// SHOW/HIDE SEARCH DROPDOWN CONTENT
 const showSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.remove("hidden");
 }
@@ -47,6 +45,7 @@ const hideSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.add("hidden");
 }
 
+// SHOW/HIDE SEARCH BAR
 const showSearchBar = () => {
   defaultButton.classList.add("hidden");
     submitButton.classList.remove("hidden");
@@ -63,34 +62,21 @@ const hideSearchBar = () => {
     searchInput.style.width = "0px";
 }
 
+// BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR
 const blurElements = () => {
-  imageContainer.classList.add("blurred");
-    mainContent.classList.add("blurred");
-    footer.classList.add("blurred");
+  for (let i = 0; i < searchBlurElements.length; i++) {
+    searchBlurElements[i].classList.add("blurred");
+  }
 }
 
 const unBlurElements = () => {
-  imageContainer.classList.remove("blurred");
-    mainContent.classList.remove("blurred");
-    footer.classList.remove("blurred");
+  for (let i = 0; i < searchBlurElements.length; i++) {
+    searchBlurElements[i].classList.remove("blurred");
+  }
 }
 
-
-// const blurElements = () => {
-//   for (let i = 0; i < searchBlurElements.length; i++) {
-//     searchBlurElements[i].classList.add("blurred");
-//   }
-// }
-
-// const unBlurElements = () => {
-//   for (let i = 0; i < searchBlurElements.length; i++) {
-//     searchBlurElements[i].classList.remove("blurred");
-//   }
-// }
-
-
-
-// SEARCH BAR FILTER (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
+// FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT
+// (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
 const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
   for (let i = 0; i < searchDropdownLinks.length; i++) {
