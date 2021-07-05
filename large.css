@@ -34,11 +34,12 @@ h1 {
     font-size: 120px;
 
     font-weight: 100;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .brand-color {
     font-weight: 700;
+    /* font-weight: 100; */
     color: var(--title-blue);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.683);
 }
@@ -603,10 +604,6 @@ input[type=text] {
 }
 
 h1.enzee__letter {
-    /* color: var(--title-blue); */
-    /* text-transform: capitalize; */
-    /* font-weight: 100; */
-    font-size: 120px;
     /* RESPONSIVE TEXT */
     /* font-size: 12vw; */
     letter-spacing: 0.2rem;
