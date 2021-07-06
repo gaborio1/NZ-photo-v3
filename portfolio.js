@@ -19,38 +19,90 @@ const defaultButton = document.getElementById("default-btn");
 const submitButton = document.getElementById("submit-btn");
 const closeButton = document.getElementById("close-btn");
 const searchInput = document.getElementById("search-input");
+const searchDropdownContent = document.getElementById("search-dropdown-content");
+const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
+// imageContainer, mainContent AND footer (ALL ELEMENTS EXCEPT NAVBAR)
+const searchBlurElements = document.getElementsByClassName("search-blur");
 
-const imageContainer = document.getElementById("image-container");
+// SHOW/HIDE SEARCH DROPDOWN CONTENT
+const showSearchDropdown = () => {
+  document.getElementById("search-dropdown-content").classList.remove("hidden");
+}
 
-defaultButton.addEventListener("click", function() {
-    defaultButton.classList.add("hidden");
+const hideSearchDropdown = () => {
+  document.getElementById("search-dropdown-content").classList.add("hidden");
+}
+
+// SHOW/HIDE SEARCH BAR
+const showSearchBar = () => {
+  defaultButton.classList.add("hidden");
     submitButton.classList.remove("hidden");
     searchInput.classList.remove("hidden");
-    // searchInput.focus();
     closeButton.classList.remove("hidden");
-    imageContainer.classList.add("blurred");
-
     searchInput.style.width = "140px";
-})
+}
 
-closeButton.addEventListener("click", function() {
-    defaultButton.classList.remove("hidden");
+const hideSearchBar = () => {
+  defaultButton.classList.remove("hidden");
     submitButton.classList.add("hidden");
     searchInput.classList.add("hidden");
     closeButton.classList.add("hidden");
-    imageContainer.classList.remove("blurred");
-    
     searchInput.style.width = "0px";
+}
+
+// BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR
+const blurElements = () => {
+  for (let i = 0; i < searchBlurElements.length; i++) {
+    searchBlurElements[i].classList.add("blurred");
+  }
+}
+
+const unBlurElements = () => {
+  for (let i = 0; i < searchBlurElements.length; i++) {
+    searchBlurElements[i].classList.remove("blurred");
+  }
+}
+
+// FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT
+// (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
+const filterFunction = () => {
+  const filter = searchInput.value.toUpperCase();
+  for (let i = 0; i < searchDropdownLinks.length; i++) {
+    txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      searchDropdownLinks[i].style.display = "";
+    } else {
+      searchDropdownLinks[i].style.display = "none";
+    }
+  }
+}
+
+// OPEN SEARCH BAR
+defaultButton.addEventListener("click", function() {
+    showSearchBar();
+    showSearchDropdown();
+    blurElements();
 })
 
-// ========== ACTIVE NAV-LINK ==========
+// CLOSE SEARCH BAR
+closeButton.addEventListener("click", function() {
+    hideSearchBar();
+    hideSearchDropdown();
+    unBlurElements();
+})
+
+searchInput.addEventListener("keyup", filterFunction);
+
+
+// ========== ACTIVE NAV-LINK BORDER BOTTOM ==========
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("myDIV");
-const btns = document.getElementsByClassName("select-able");
-for (let i = 0; i < btns.length; i++) {
+var btns = document.getElementsByClassName("select-able");
+for (var i = 0; i < btns.length; i++) {
+  console.log(btns[i]);
   btns[i].addEventListener("click", function() {
-  const current = document.getElementsByClassName("active");
+  var current = document.getElementsByClassName("active");
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
   });
