@@ -20,21 +20,6 @@ function myFunction() {
   }
 }
 
-// NOT IN USE:
-
-// FADE IN/OUT GALLERY
-// let current = 0,
-// slides = document.querySelector(".mySlides");
-
-// setInterval(function() {
-//   for (let i = 0; i < slides.length; i++) {
-//     slides[i].style.opacity = 0;
-//   }
-//   current = (current != slides.length - 1) ? current + 1 : 0;
-//   slides[current].style.opacity = 1;
-// }, 2000);
-
-
 // ========== SEARCH BAR ==========
 
 const defaultButton = document.getElementById("default-btn");

@@ -412,48 +412,41 @@ input[type=text] {
     align-items: center;
     justify-content: space-around;
 
-    /* border: 3px solid rgb(0, 106, 255); */
     /* background: rgba(0, 0, 0, 0.204); */
     /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.211), rgba(0, 0, 0, 0)); */
     /* border-left: 15px solid rgba(0, 0, 0, 0.218); */
     margin-bottom: 200px;
     margin-top: 100px;
+
+    /* border: 3px solid rgb(0, 106, 255); */
 }
 
-.contact-container {
+.products-title-container {
+    /* border: 3px solid tomato; */
+}
+
+.products-container {
     width: 90%;
     height: 600px;
 
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-
-    /* border: 3px solid rgb(98, 197, 45); */
-}
-
-.about-enzee-container {
     margin: 45px 0px 90px 0px;
     /* border: 3px solid tomato; */
+    /* border: 3px solid rgb(58, 197, 45); */
 }
 
-h1.about-enzee {
+
+h2.products {
     font-size: 60px;
     font-weight: 400;
 }
 
-.contact-image-container {
-    width: 400px;
-    /* height: 600px; */
-
-    background-image: url(./images/about/about-1.jpg);
-    background-size: cover;
-
-    /* border: 3px solid goldenrod; */
-}
 
 
-.contact-text-container {
-    width: 700px;
+.products-text-container {
+    width: 100%;
     /* height: 600px; */
 
     display: flex;
@@ -466,30 +459,27 @@ h1.about-enzee {
     /* border: 3px solid goldenrod; */
 }
 
-.contact-text-row {
+.products-text-row {
+
     width: 100%;
     display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    padding-left: 1rem;
+    /* border-left: 1px solid rgba(0, 0, 0, 0.724); */
+    border-left: 2px solid rgba(0, 0, 0, 0.272);
 
     /* border: 3px solid aquamarine; */
 }
 
-.contact-text-block {
-    width: 95%;
-    /* height: 105px; */
 
-    padding: 10px 10px 10px 15px;
-
-    /* border: 3px solid fuchsia; */
-    border-left: 2px solid rgba(0, 0, 0, 0.272);
-}
-
-
-.contact-text__title {
+.products-text__title {
     margin: 0px 0px 8px 0px;
     text-transform: uppercase;
 }
 
-.contact-text__text {
+.products-text__text {
     font-size: 15px;
     font-weight: 400;
     /* color:  rgba(173, 32, 32, 0.724); */
