@@ -510,7 +510,7 @@ h2.products {
 
 .footer-top-img {
     /* z-index: 1; */
-    background-image: url("./images/footer-img-crop-1.jpg");
+    /* background-image: url("../../images/footer-img-crop-1.jpg"); */
     background-size: cover;
     /* border: 1px solid red; */
     /* width: 100%; */

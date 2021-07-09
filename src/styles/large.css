@@ -1022,7 +1022,7 @@ img.landscape-style {
 /* MOSAIC SLICES */
 
 .mosaic-slice-container-1 {
-    background-image: url("./images/mosaic-wide-slice-1.png");
+    background-image: url("../../images/mosaic-wide-slice-1.png");
     background-size: cover;
     /* width: 100vw; */
     /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
@@ -1040,7 +1040,7 @@ img.landscape-style {
 }
 
 .mosaic-slice-container-2 {
-    background-image: url("./images/mosaic-wide-slice-2.png");
+    background-image: url("../../images/mosaic-wide-slice-2.png");
     background-size: cover;
     /* width: 100vw; */
     /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
@@ -1058,7 +1058,7 @@ img.landscape-style {
 }
 
 .mosaic-slice-container-3 {
-    background-image: url("./images/mosaic-wide-slice-3.png");
+    background-image: url("../../images/mosaic-wide-slice-3.png");
     background-size: cover;
     /* width: 100vw; */
     /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
@@ -1178,7 +1178,7 @@ img.landscape-style {
 
 .footer-top-img {
     /* z-index: 1; */
-    background-image: url("./images/footer-img-crop-1.jpg");
+    background-image: url("../../images/footer-img-crop-1.jpg");
     background-size: cover;
     /* border: 1px solid red; */
     /* width: 100%; */

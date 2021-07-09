@@ -76,7 +76,7 @@ p {
   
   .footer-top-img {
     z-index: 1;
-    background-image: url("./images/footer-img-crop-1.jpg");
+    background-image: url("../../images/footer-img-crop-1.jpg");
     background-size: cover;
     /* width: 100%; */
     width: var(--max-width);
