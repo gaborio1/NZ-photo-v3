@@ -819,7 +819,7 @@ img.thumbnail-image {
     /* border: 1px solid  #56d2e2;  */
 }
 
-.footer-info-container-1 h1 {
+.footer-info-container-1 h2 {
     font-size: 60px;
     /* font-size: 70px; */
     font-weight: 700;
@@ -834,11 +834,11 @@ img.thumbnail-image {
    
 }
 
-.footer-info-container-1 h1::first-letter {
+.footer-info-container-1 h2::first-letter {
     text-transform: capitalize;
 }
 
-.footer-info-container-1 h2 {
+.footer-info-container-1 h3 {
     font-weight: 300;
     letter-spacing: .15rem;
     /* color: #fdae81; */
