@@ -106,19 +106,72 @@ closeButton.addEventListener("click", function() {
 searchInput.addEventListener("keyup", filterFunction);
 
 
+
+
+
+
+
 // ========== ACTIVE NAV-LINK BORDER BOTTOM ==========
 
 // Add active class to the current button (highlight it)
-// var header = document.getElementById("myDIV");
-var btns = document.getElementsByClassName("select-able");
-for (var i = 0; i < btns.length; i++) {
-  console.log(btns[i]);
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
+// const selectables = document.getElementsByClassName("select-able");
+// for (let i = 0; i < selectables.length; i++) {
+//   console.log(selectables[i]);
+//   selectables[i].style.color = "orange";
+//   selectables[i].addEventListener("click", function() {
+//     console.log("clicked");
+//     // selectables[i].style.color = "orange";
+//   var current = document.getElementsByClassName("active");
+//   // current[0].className = current[0].className.replace("active", "");
+//   // this.className += " active";
+//   if (current.length > 0) { 
+//     current[0].className = current[0].className.replace(" active", "");
+//   }
+//   this.className += " active";
+//   console.log(this);
+//   });
+// }
+
+const getCurrentUrl = () => {
+
 }
+// GET CURRENT URL OF PAGE
+const currentUrl = window.location.href;
+console.log(window.location.href);
+// GET NAVBAR LINKS
+const homeLink = document.getElementById("navbar__home");
+const aboutLink = document.getElementById("navbar__about");
+const portfolioLink = document.getElementById("navbar__portfolio");
+const productsLink = document.getElementById("navbar__products");
+const contactLink = document.getElementById("navbar__contact");
+// ADD active-link CLASS TO CURRENT PAGE
+if (currentUrl.includes("index")) {
+  // console.log("index");
+  homeLink.classList.add("active-link");
+  // homeLink.style.color = "orange";
+} else if (currentUrl.includes("about")) {
+  // console.log("about");
+  // aboutLink.style.color = "orange";
+  aboutLink.classList.add("active-link");
+} else if (currentUrl.includes("model")
+//  || currentUrl.includes("portrait") 
+//  || currentUrl.includes("nature")
+ ) {
+  console.log("portfolio link!")
+  portfolioLink.classList.add("active-link");
+  // portfolioLink.style.color = "orange";
+} else if (currentUrl.includes("products")) {
+  productsLink.classList.add("active-link");
+  // productsLink.style.color = "orange";
+} else if (currentUrl.includes("contact")) {
+  contactLink.classList.add("active-link");
+  // contactLink.style.color = "orange";
+}
+
+
+
+
+
 
 // ========== ANIMATE "photography" IN TITLE DIV
 
@@ -126,7 +179,7 @@ const letters = document.getElementsByClassName("photography__letter");
 
 window.addEventListener("load", function() {
   console.log("page is loaded");
-  console.log(letters);
+  // console.log(letters);
   fadeInSequence(letters);
 });
 

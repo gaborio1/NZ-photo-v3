@@ -276,11 +276,12 @@ button.dropbtn.nav-link-text {
 }
 
 /* ACTIVE NAVBAR LINK TEXT */
-a.nav-link.nav-link-text.active,
-button.dropbtn.nav-link-text.active {
+a.nav-link.nav-link-text.active-link,
+button.dropbtn.nav-link-text.active-link {
     /* color: var(--title-blue); */
-    border-bottom: 1px solid var(--title-blue);
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid var(--title-blue); */
+    border-bottom: 1px solid orange;
+    color: orange;
     /* color: rgba(255, 255, 255, 0.594); */
 }
 
@@ -327,12 +328,8 @@ nav {
     color: white;
 }
 
-/* ACTIVE NAVLINK */
-.select-able.active {
-    border-bottom: 1px solid white;
-    /* color: white; */
-}
-    
+
+
 
 /* DROPDOWN  */
 
