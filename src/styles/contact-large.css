@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* filter: grayscale(.05); */
 }
 
 body {
@@ -29,8 +28,6 @@ body {
 
 /* TITLE: Enzee */
 h1 {
-    /* font-size: 45px; */
-
     font-size: 120px;
 
     font-weight: 100;
@@ -69,8 +66,6 @@ p {
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
   .sticky {
     position: fixed;
-    /* top: 22.5px; */
-    /* width: 100%; */
     width: var(--max-width);
   }
   
@@ -88,10 +83,6 @@ p {
     position: absolute;
     /* display: none; */
     display: flex;
-    /* top: 22.5px; */
-    /* margin-top: 22.5px; */
-
-    /* width: 100%; */
     width: var(--max-width);
 
     /* !!!!! BACKGROUND IS CONTROLLED BY SCROLLMAGIC fromTo 0.85 -> 0.95 !!!!! */
@@ -105,10 +96,6 @@ p {
     /* align-items: flex-end; */
     align-items: center;
     max-width: var(--main-content-1400);
-
-    /* !!! */
-    /* background-color: rgba(165, 77, 77, 0.231); */
-
     width: 80%;
     height: 45px;
     margin-left: auto;
@@ -208,16 +195,6 @@ nav {
     border-bottom: 1px solid transparent;
 }
 
-/* .nav-link.active {
-    border-bottom: 1px solid white;
-    color: rgba(255, 255, 255, 0.753);
-} */
-
-/* .nav-link.active:hover {
-    border-bottom: 1px solid white;
-    color: white;
-} */
-
 /* NAV LINK HOVER */
 .nav-link.nav-link-text:hover {
     border-bottom: 1px solid white;
@@ -310,7 +287,6 @@ nav {
 /* SEARCH BAR */
 
 .search-container {
-    /* background: rgba(227, 113, 93, 0.425); */
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -318,8 +294,6 @@ nav {
     justify-content: flex-end;
     justify-content: center;
     align-items: center;
-    /* border-left: 1px solid black; */
-
     /* border: 1px solid rgb(255, 42, 0); */
 }
     
@@ -340,7 +314,7 @@ button.submit-btn, button.close-btn {
 } */
 
 input[type=text] {
-    /* border: yellowgreen; */
+    border: yellowgreen;
     /* width: 140px; */
 
     -webkit-transition: width .5s ease-in-out;
@@ -362,8 +336,6 @@ input[type=text] {
 
 /* W3SCHOOLS SEARCH/FILTER DROPDOWN */
   .search-dropdown-content {
-    /* display: none; */
-    /* display: block; */
     position: absolute;
     top: 45px;
     /* left: 0px; */
@@ -381,7 +353,6 @@ input[type=text] {
     /* width: 100%; */
     color: black;
     padding: 12px 16px;
-    /* margin-left: 10px; */
     text-decoration: none;
     display: block;
   }

@@ -392,38 +392,3 @@ addListenerThumbnailImg();
 
 // addListenerGalleryImg();
 
-
-// GET CURRENT URL OF PAGE
-const currentUrl = window.location.href;
-console.log(window.location.href);
-// GET NAVBAR LINKS
-const homeLink = document.getElementById("navbar__home");
-const aboutLink = document.getElementById("navbar__about");
-const portfolioLink = document.getElementById("navbar__portfolio");
-const productsLink = document.getElementById("navbar__products");
-const contactLink = document.getElementById("navbar__contact");
-// ADD active-link CLASS TO CURRENT PAGE
-if (currentUrl.includes("index")) {
-  // console.log("index");
-  homeLink.classList.add("active-link");
-  // homeLink.style.color = "orange";
-} else if (currentUrl.includes("about")) {
-  // console.log("about");
-  // aboutLink.style.color = "orange";
-  aboutLink.classList.add("active-link");
-} else if (currentUrl.includes("model")
- || currentUrl.includes("portrait") 
- || currentUrl.includes("nature")
- || currentUrl.includes("lightbox")
- ) {
-  console.log("portfolio link!")
-  portfolioLink.classList.add("active-link");
-  // portfolioLink.style.color = "orange";
-} else if (currentUrl.includes("products")) {
-  productsLink.classList.add("active-link");
-  // productsLink.style.color = "orange";
-} else if (currentUrl.includes("contact")) {
-  contactLink.classList.add("active-link");
-  // contactLink.style.color = "orange";
-}
-
