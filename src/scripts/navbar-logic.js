@@ -100,16 +100,34 @@ closeButton.addEventListener("click", function() {
 
 searchInput.addEventListener("keyup", filterFunction);
 
-// ACTIVE NAV-LINK
+// ========== ACTIVE NAVLINKS HIGHLIGHT/BORDER BOTTOM ==========
 
-// Add active class to the current button (highlight it)
-// var header = document.getElementById("myDIV");
-var btns = document.getElementsByClassName("select-able");
-for (var i = 0; i < btns.length; i++) {
-  console.log(btns[i]);
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
+// GET CURRENT URL OF PAGE
+const currentUrl = window.location.href;
+// GRAB NAVBAR LINKS
+const homeLink = document.getElementById("navbar__home");
+const aboutLink = document.getElementById("navbar__about");
+const portfolioLink = document.getElementById("navbar__portfolio");
+const productsLink = document.getElementById("navbar__products");
+const contactLink = document.getElementById("navbar__contact");
+
+const addActiveClass = (el) => {
+  el.classList.add("active-link");
+}
+// ADD active-link CLASS TO CURRENT PAGE
+if (currentUrl.includes("index")) {
+  addActiveClass(homeLink);
+} else if (currentUrl.includes("about")) {
+  addActiveClass(aboutLink);
+} else if (currentUrl.includes("model")
+  || currentUrl.includes("portrait") 
+  || currentUrl.includes("nature")
+ ) {
+  addActiveClass(portfolioLink);
+} else if (currentUrl.includes("products")) {
+  addActiveClass(productsLink);
+  } else if (currentUrl.includes("contact")) {
+  addActiveClass(contactLink);
+} else {
+  console.log("page not found");
 }

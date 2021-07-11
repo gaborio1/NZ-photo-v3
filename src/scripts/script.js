@@ -25,7 +25,7 @@ const stickyNav = () => {
   }
 }
 
-// ========== SEARCH BAR ==========
+// ==================== SEARCH BAR ====================
 
 const defaultButton = document.getElementById("default-btn");
 const submitButton = document.getElementById("submit-btn");
@@ -36,7 +36,7 @@ const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
 // imageContainer, mainContent AND footer (ALL ELEMENTS EXCEPT NAVBAR)
 const searchBlurElements = document.getElementsByClassName("search-blur");
 
-// SHOW/HIDE SEARCH DROPDOWN CONTENT
+// ========== SHOW/HIDE SEARCH DROPDOWN CONTENT ==========
 const showSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.remove("hidden");
 }
@@ -45,7 +45,7 @@ const hideSearchDropdown = () => {
   document.getElementById("search-dropdown-content").classList.add("hidden");
 }
 
-// SHOW/HIDE SEARCH BAR
+// ========== SHOW/HIDE SEARCH BAR ==========
 const showSearchBar = () => {
   defaultButton.classList.add("hidden");
     submitButton.classList.remove("hidden");
@@ -62,7 +62,7 @@ const hideSearchBar = () => {
     searchInput.style.width = "0px";
 }
 
-// BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR
+// ========== BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR ==========
 const blurElements = () => {
   for (let i = 0; i < searchBlurElements.length; i++) {
     searchBlurElements[i].classList.add("blurred");
@@ -75,7 +75,7 @@ const unBlurElements = () => {
   }
 }
 
-// FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT
+// ========== FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT ==========
 // (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
 const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
@@ -106,74 +106,39 @@ closeButton.addEventListener("click", function() {
 searchInput.addEventListener("keyup", filterFunction);
 
 
+// ========== ACTIVE NAVLINKS HIGHLIGHT/BORDER BOTTOM ==========
 
-
-
-
-
-// ========== ACTIVE NAV-LINK BORDER BOTTOM ==========
-
-// Add active class to the current button (highlight it)
-// const selectables = document.getElementsByClassName("select-able");
-// for (let i = 0; i < selectables.length; i++) {
-//   console.log(selectables[i]);
-//   selectables[i].style.color = "orange";
-//   selectables[i].addEventListener("click", function() {
-//     console.log("clicked");
-//     // selectables[i].style.color = "orange";
-//   var current = document.getElementsByClassName("active");
-//   // current[0].className = current[0].className.replace("active", "");
-//   // this.className += " active";
-//   if (current.length > 0) { 
-//     current[0].className = current[0].className.replace(" active", "");
-//   }
-//   this.className += " active";
-//   console.log(this);
-//   });
-// }
-
-const getCurrentUrl = () => {
-
-}
 // GET CURRENT URL OF PAGE
 const currentUrl = window.location.href;
-console.log(window.location.href);
-// GET NAVBAR LINKS
+// GRAB NAVBAR LINKS
 const homeLink = document.getElementById("navbar__home");
 const aboutLink = document.getElementById("navbar__about");
 const portfolioLink = document.getElementById("navbar__portfolio");
 const productsLink = document.getElementById("navbar__products");
 const contactLink = document.getElementById("navbar__contact");
+
+const addActiveClass = (el) => {
+  el.classList.add("active-link");
+}
 // ADD active-link CLASS TO CURRENT PAGE
 if (currentUrl.includes("index")) {
-  // console.log("index");
-  homeLink.classList.add("active-link");
-  // homeLink.style.color = "orange";
+  addActiveClass(homeLink);
 } else if (currentUrl.includes("about")) {
-  // console.log("about");
-  // aboutLink.style.color = "orange";
-  aboutLink.classList.add("active-link");
+  addActiveClass(aboutLink);
 } else if (currentUrl.includes("model")
-//  || currentUrl.includes("portrait") 
-//  || currentUrl.includes("nature")
+  || currentUrl.includes("portrait") 
+  || currentUrl.includes("nature")
  ) {
-  console.log("portfolio link!")
-  portfolioLink.classList.add("active-link");
-  // portfolioLink.style.color = "orange";
+  addActiveClass(portfolioLink);
 } else if (currentUrl.includes("products")) {
-  productsLink.classList.add("active-link");
-  // productsLink.style.color = "orange";
-} else if (currentUrl.includes("contact")) {
-  contactLink.classList.add("active-link");
-  // contactLink.style.color = "orange";
+  addActiveClass(productsLink);
+  } else if (currentUrl.includes("contact")) {
+  addActiveClass(contactLink);
+} else {
+  console.log("page not found");
 }
 
-
-
-
-
-
-// ========== ANIMATE "photography" IN TITLE DIV
+// ========== ANIMATE "photography" IN TITLE DIV ==========
 
 const letters = document.getElementsByClassName("photography__letter");
 
