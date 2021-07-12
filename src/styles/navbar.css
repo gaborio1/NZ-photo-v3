@@ -241,7 +241,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.848);
     color: white;
     color: var(--sub-title-orange);
-    color: var(--title-blue);
+    /* color: var(--title-blue); */
   }
   
   .dropdown:hover .dropdown-content {
