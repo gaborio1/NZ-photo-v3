@@ -115,6 +115,7 @@ if (currentUrl.includes("index")) {
 } else if (currentUrl.includes("model")
   || currentUrl.includes("portrait") 
   || currentUrl.includes("nature")
+  || currentUrl.includes("lightbox21")
  ) {
   addActiveClass(portfolioLink);
 } else if (currentUrl.includes("products")) {

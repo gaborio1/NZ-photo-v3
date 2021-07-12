@@ -15,7 +15,6 @@ todos:
 
 
 bugs:
-    active navlink border-bottom now working
     parallax layers act funny when resizing browser window
     title div moves away from position when resizing 
     "photography" animation not smooth enough, try without making container flexbox

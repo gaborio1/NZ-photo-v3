@@ -104,6 +104,7 @@ searchInput.addEventListener("keyup", filterFunction);
 
 // GET CURRENT URL OF PAGE
 const currentUrl = window.location.href;
+console.log(currentUrl);
 // GRAB NAVBAR LINKS
 const homeLink = document.getElementById("navbar__home");
 const aboutLink = document.getElementById("navbar__about");
@@ -122,6 +123,7 @@ if (currentUrl.includes("index")) {
 } else if (currentUrl.includes("model")
   || currentUrl.includes("portrait") 
   || currentUrl.includes("nature")
+  || currentUrl.includes("lightbox21")
  ) {
   addActiveClass(portfolioLink);
 } else if (currentUrl.includes("products")) {
