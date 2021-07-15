@@ -19,9 +19,9 @@ const sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const stickyNav = () => {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+	navbar.classList.add("sticky")
   } else {
-    navbar.classList.remove("sticky");
+	navbar.classList.remove("sticky");
   }
 }
 
@@ -48,30 +48,30 @@ const hideSearchDropdown = () => {
 // ========== SHOW/HIDE SEARCH BAR ==========
 const showSearchBar = () => {
   defaultButton.classList.add("hidden");
-    submitButton.classList.remove("hidden");
-    searchInput.classList.remove("hidden");
-    closeButton.classList.remove("hidden");
-    searchInput.style.width = "140px";
+	submitButton.classList.remove("hidden");
+	searchInput.classList.remove("hidden");
+	closeButton.classList.remove("hidden");
+	searchInput.style.width = "140px";
 }
 
 const hideSearchBar = () => {
   defaultButton.classList.remove("hidden");
-    submitButton.classList.add("hidden");
-    searchInput.classList.add("hidden");
-    closeButton.classList.add("hidden");
-    searchInput.style.width = "0px";
+	submitButton.classList.add("hidden");
+	searchInput.classList.add("hidden");
+	closeButton.classList.add("hidden");
+	searchInput.style.width = "0px";
 }
 
 // ========== BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR ==========
 const blurElements = () => {
   for (let i = 0; i < searchBlurElements.length; i++) {
-    searchBlurElements[i].classList.add("blurred");
+	searchBlurElements[i].classList.add("blurred");
   }
 }
 
 const unBlurElements = () => {
   for (let i = 0; i < searchBlurElements.length; i++) {
-    searchBlurElements[i].classList.remove("blurred");
+	searchBlurElements[i].classList.remove("blurred");
   }
 }
 
@@ -80,31 +80,30 @@ const unBlurElements = () => {
 const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
   for (let i = 0; i < searchDropdownLinks.length; i++) {
-    txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      searchDropdownLinks[i].style.display = "";
-    } else {
-      searchDropdownLinks[i].style.display = "none";
-    }
+	txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
+	if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	  searchDropdownLinks[i].style.display = "";
+	} else {
+	  searchDropdownLinks[i].style.display = "none";
+	}
   }
 }
 
 // OPEN SEARCH BAR
 defaultButton.addEventListener("click", function() {
-    showSearchBar();
-    showSearchDropdown();
-    blurElements();
+	showSearchBar();
+	showSearchDropdown();
+	blurElements();
 })
 
 // CLOSE SEARCH BAR
 closeButton.addEventListener("click", function() {
-    hideSearchBar();
-    hideSearchDropdown();
-    unBlurElements();
+	hideSearchBar();
+	hideSearchDropdown();
+	unBlurElements();
 })
 
 searchInput.addEventListener("keyup", filterFunction);
-
 
 // ========== ACTIVE NAVLINKS HIGHLIGHT/BORDER BOTTOM ==========
 
@@ -153,13 +152,13 @@ const fadeInSequence = (arr) => {
   const letters = arr;
   let delay = 50;
   for (let i = 0; i < letters.length; i++) {
-      // letters[i].classList.add("hidden");
-      setTimeout(() => {
-          letters[i].classList.remove("hidden");
-          letters[i].classList.add("flash-fadein");
-          letters[i].style.display = "inline-block";
-      }, delay)
-      delay+=75;
+	  // letters[i].classList.add("hidden");
+	  setTimeout(() => {
+		  letters[i].classList.remove("hidden");
+		  letters[i].classList.add("flash-fadein");
+		  letters[i].style.display = "inline-block";
+	  }, delay)
+	  delay+=75;
   }
 }
 
