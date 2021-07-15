@@ -1,60 +1,3 @@
-// // ========== STICKY NAVBAR W3SCHOOLS ==========
-
-// window.onscroll = function() {myFunction()};
-// const navbar = document.getElementById("header");
-// // Get the offset position of the navbar
-// const sticky = navbar.offsetTop;
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
-
-// // ========== SEARCH BAR ==========
-
-// const defaultButton = document.getElementById("default-btn");
-// const submitButton = document.getElementById("submit-btn");
-// const closeButton = document.getElementById("close-btn");
-// const searchInput = document.getElementById("search-input");
-
-// const imageContainer = document.getElementById("image-container");
-
-// defaultButton.addEventListener("click", function() {
-//     defaultButton.classList.add("hidden");
-//     submitButton.classList.remove("hidden");
-//     searchInput.classList.remove("hidden");
-//     // searchInput.focus();
-//     closeButton.classList.remove("hidden");
-//     imageContainer.classList.add("blurred");
-
-//     searchInput.style.width = "140px";
-// })
-
-// closeButton.addEventListener("click", function() {
-//     defaultButton.classList.remove("hidden");
-//     submitButton.classList.add("hidden");
-//     searchInput.classList.add("hidden");
-//     closeButton.classList.add("hidden");
-//     imageContainer.classList.remove("blurred");
-    
-//     searchInput.style.width = "0px";
-// })
-
-// // ========== ACTIVE NAV-LINK ==========
-
-// // Add active class to the current button (highlight it)
-// // var header = document.getElementById("myDIV");
-// const btns = document.getElementsByClassName("select-able");
-// for (let i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//   const current = document.getElementsByClassName("active");
-//   current[0].className = current[0].className.replace(" active", "");
-//   this.className += " active";
-//   });
-// }
 
 
 // ==================== DYNAMIC MODAL BASED ON W3SCHOOLS: https://www.w3schools.com/howto/howto_js_lightbox.asp ====================
@@ -160,13 +103,13 @@ const addListenerGalleryImg = () => {
 // CALLED IN currentSlide() AFTER GALLERY IMAGES HAVE BEEN RENDERED
 
 let numberOfFoundImages = 0;
-console.log("initial value: " + numberOfFoundImages);
+// console.log("initial value: " + numberOfFoundImages);
 const getNumberOfImages = () => {
-  console.log("gallery clicked");
+  // console.log("gallery clicked");
   const galleryDivs = document.getElementsByClassName("gallery-div");
   // !!!!!!!! THIS IS TOTAL IMAGES COUNT FOR NUMBERTEXT DISPLAY, NOT WORKING IN createModal() !!!!!!!!!!
   numberOfFoundImages = galleryDivs.length;
-  console.log("FOUND IMAGES: " + numberOfFoundImages);
+  // console.log("FOUND IMAGES: " + numberOfFoundImages);
   return numberOfFoundImages;
 }
 
@@ -252,7 +195,7 @@ function addListenerThumbnailImg(){
 let index = 1;
 const maxIndex = 5;
 while (index < maxIndex + 1) {
-  console.log(index);
+  // console.log(index);
   createGallery(index);
   createModal(index);
   createThumbnail(index);

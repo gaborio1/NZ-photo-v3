@@ -143,7 +143,7 @@ if (currentUrl.includes("index")) {
 const letters = document.getElementsByClassName("photography__letter");
 
 window.addEventListener("load", function() {
-  console.log("page is loaded");
+  // console.log("page is loaded");
   // console.log(letters);
   fadeInSequence(letters);
 });
@@ -162,45 +162,3 @@ const fadeInSequence = (arr) => {
   }
 }
 
-
-
-// !!!!!!!!!!!!!!!!!!!!! LOOK INTO THIS AS GALLERIES ARE DONE WITH PORTFOLIO.JS !!!!!!!!!!!!!!!!!!!!!
-
-// CATEGORY GALLERY
-
-// const imagesTest = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-
-// const galleryContainer = document.querySelector(".gallery-container");
-
-// // const createDivs = () => {
-// //   for(let index of imagesTest) {
-// //     console.log("hello");
-// //     const imgDiv = document.createElement("div");
-// //     imgDiv.className = "portrait-img-container";
-// //     // imgDiv.innerText = index;
-// //     // imgDiv.style.backgroundImage = "url("`./images/portrait/portrait-${index}`")"
-// //     imgDiv.style.backgroundImage = "url(../images/portrait/portrait-" + index + ".jpg)"
-// //     galleryContainer.appendChild(imgDiv);
-// //   }
-// // }
-
-
-// const createGalleryDivs = () => {
-//   for(let index of imagesTest) {
-//     // console.log("hello");
-//     const galleryDiv = document.createElement("div");
-//     galleryDiv.className = "column";
-//     // imgDiv.innerText = index;
-//     // imgDiv.style.backgroundImage = "url("`./images/portrait/portrait-${index}`")"
-//     // imgDiv.style.backgroundImage = "url(../images/portrait/portrait-" + index + ".jpg)"
-//     galleryContainer.appendChild(galleryDiv);
-
-//     const galleryDivImg = document.createElement("img");
-//     galleryDivImg.src = "url(../images/portrait/portrait-" + index + ".jpg)"
-//     galleryDiv.appendChild(galleryDivImg);
-//   }
-// }
-
-// createGalleryDivs();
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!V!!!!!!!!!!!!!!!!!!!!!
