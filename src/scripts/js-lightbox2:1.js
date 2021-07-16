@@ -207,6 +207,7 @@ const showSlides = (n) => {
   const modalImageDivs = document.getElementsByClassName("modal-img-div");
   const thumbnailImages = document.getElementsByClassName("thumbnail-image");
   // var captionText = document.getElementById("caption");
+
   if (n > modalImageDivs.length) {slideIndex = 1}
   if (n < 1) {slideIndex = modalImageDivs.length}
   for (i = 0; i < modalImageDivs.length; i++) {

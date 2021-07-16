@@ -16,8 +16,11 @@ const sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeNavbarSticky = () => {
-	window.pageYOffset >= sticky ? navbar.classList.add("sticky")
-	: navbar.classList.remove("sticky");
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+		} else {
+		navbar.classList.remove("sticky");
+		}
 }
 
 
@@ -77,8 +80,11 @@ const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
   for (let i = 0; i < searchDropdownLinks.length; i++) {
 	txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
-  txtValue.toUpperCase().indexOf(filter) > -1 ? searchDropdownLinks[i].style.display = ""
-  : searchDropdownLinks[i].style.display = "none";
+	if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	  searchDropdownLinks[i].style.display = "";
+	} else {
+	  searchDropdownLinks[i].style.display = "none";
+	}
   }
 }
 
@@ -115,15 +121,23 @@ const addActiveClass = (el) => {
 }
 // ADD active-link CLASS TO CURRENT PAGE'S LINK
 const addActiveClassToCurrrent = () => {
-	currentUrl.includes("index") ? addActiveClass(homeLink)
-	: currentUrl.includes("about") ? addActiveClass(aboutLink)
-	:	currentUrl.includes("model")
+	if (currentUrl.includes("index")) {
+		addActiveClass(homeLink);
+	} else if (currentUrl.includes("about")) {
+		addActiveClass(aboutLink);
+	} else if (currentUrl.includes("model")
 		|| currentUrl.includes("portrait") 
 		|| currentUrl.includes("nature")
-		|| currentUrl.includes("lightbox21") ? addActiveClass(portfolioLink)
-	: currentUrl.includes("products") ? addActiveClass(productsLink)
-	: currentUrl.includes("contact") ? addActiveClass(contactLink)
-	:console.log("page not found");
+		|| currentUrl.includes("lightbox21")
+	 ) {
+		addActiveClass(portfolioLink);
+	} else if (currentUrl.includes("products")) {
+		addActiveClass(productsLink);
+		} else if (currentUrl.includes("contact")) {
+		addActiveClass(contactLink);
+	} else {
+		console.log("page not found");
+	}
 }
 
 addActiveClassToCurrrent();
