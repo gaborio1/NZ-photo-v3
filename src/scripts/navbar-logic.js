@@ -2,7 +2,7 @@
 // STICKY NAVBAR W3SCHOOLS
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {makeNavbarSticky()};
 
 // Get the navbar
 const navbar = document.getElementById("header");
@@ -11,13 +11,12 @@ const navbar = document.getElementById("header");
 const sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
+const makeNavbarSticky = () => {
+	window.pageYOffset >= sticky ? navbar.classList.add("sticky")
+	: navbar.classList.remove("sticky");
 }
+
+
 
 // ========== SEARCH BAR ==========
 
