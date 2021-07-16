@@ -111,24 +111,39 @@ const portfolioLink = document.getElementById("navbar__portfolio");
 const productsLink = document.getElementById("navbar__products");
 const contactLink = document.getElementById("navbar__contact");
 
+// ADD active-link CLASS TO LINK
 const addActiveClass = (el) => {
   el.classList.add("active-link");
 }
-// ADD active-link CLASS TO CURRENT PAGE
-if (currentUrl.includes("index")) {
-  addActiveClass(homeLink);
-} else if (currentUrl.includes("about")) {
-  addActiveClass(aboutLink);
-} else if (currentUrl.includes("model")
-  || currentUrl.includes("portrait") 
-  || currentUrl.includes("nature")
-  || currentUrl.includes("lightbox21")
- ) {
-  addActiveClass(portfolioLink);
-} else if (currentUrl.includes("products")) {
-  addActiveClass(productsLink);
-  } else if (currentUrl.includes("contact")) {
-  addActiveClass(contactLink);
-} else {
-  console.log("page not found");
+// ADD active-link CLASS TO CURRENT PAGE'S LINK
+const addActiveClassToCurrrent = () => {
+	currentUrl.includes("index") ? addActiveClass(homeLink)
+	: currentUrl.includes("about") ? addActiveClass(aboutLink)
+	:	currentUrl.includes("model")
+		|| currentUrl.includes("portrait") 
+		|| currentUrl.includes("nature")
+		|| currentUrl.includes("lightbox21") ? addActiveClass(portfolioLink)
+	: currentUrl.includes("products") ? addActiveClass(productsLink)
+	: currentUrl.includes("contact") ? addActiveClass(contactLink)
+	:console.log("page not found");
 }
+
+addActiveClassToCurrrent();
+
+// if (currentUrl.includes("index")) {
+//   addActiveClass(homeLink);
+// } else if (currentUrl.includes("about")) {
+//   addActiveClass(aboutLink);
+// } else if (currentUrl.includes("model")
+//   || currentUrl.includes("portrait") 
+//   || currentUrl.includes("nature")
+//   || currentUrl.includes("lightbox21")
+//  ) {
+//   addActiveClass(portfolioLink);
+// } else if (currentUrl.includes("products")) {
+//   addActiveClass(productsLink);
+//   } else if (currentUrl.includes("contact")) {
+//   addActiveClass(contactLink);
+// } else {
+//   console.log("page not found");
+// }
