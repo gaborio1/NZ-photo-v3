@@ -2,7 +2,7 @@
 // STICKY NAVBAR W3SCHOOLS
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {makeNavbarSticky()};
+window.onscroll = () => {makeNavbarSticky()};
 
 // Get the navbar
 const navbar = document.getElementById("header");
@@ -73,12 +73,9 @@ const unBlurElements = () => {
 const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
   for (let i = 0; i < searchDropdownLinks.length; i++) {
-    txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      searchDropdownLinks[i].style.display = "";
-    } else {
-      searchDropdownLinks[i].style.display = "none";
-    }
+	txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
+  txtValue.toUpperCase().indexOf(filter) > -1 ? searchDropdownLinks[i].style.display = ""
+  : searchDropdownLinks[i].style.display = "none";
   }
 }
 

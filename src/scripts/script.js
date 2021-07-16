@@ -6,7 +6,7 @@
 //  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 // When user scrolls page, execute stickyNav()
-window.onscroll = function() {makeNavbarSticky()};
+window.onscroll = () => {makeNavbarSticky()};
 
 // Get the navbar
 const navbar = document.getElementById("header");
@@ -77,11 +77,8 @@ const filterFunction = () => {
   const filter = searchInput.value.toUpperCase();
   for (let i = 0; i < searchDropdownLinks.length; i++) {
 	txtValue = searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
-	if (txtValue.toUpperCase().indexOf(filter) > -1) {
-	  searchDropdownLinks[i].style.display = "";
-	} else {
-	  searchDropdownLinks[i].style.display = "none";
-	}
+  txtValue.toUpperCase().indexOf(filter) > -1 ? searchDropdownLinks[i].style.display = ""
+  : searchDropdownLinks[i].style.display = "none";
   }
 }
 
