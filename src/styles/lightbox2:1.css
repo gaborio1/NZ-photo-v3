@@ -13,7 +13,6 @@
 }
 
 .main-coloumn {
-  /* z-index: -1; */
   width: 90%;
   max-width: var(--main-content-1400);
 

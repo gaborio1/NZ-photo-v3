@@ -15,7 +15,6 @@
   }
   
   .main-coloumn {
-    /* z-index: -1; */
     width: 90%;
     max-width: var(--main-content-1400);
   
@@ -92,18 +91,6 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
   }
-  
-  
-  /* .row > .column {
-  padding: 0 8px;
-  } */
-  
-  /* 
-  .row:after {
-  content: "";
-  display: table;
-  clear: both;
-  } */
   
   
   /* The Modal (background) */
