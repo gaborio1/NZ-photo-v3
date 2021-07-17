@@ -20,6 +20,9 @@ const makeNavbarSticky = () => {
 }
 
 
+
+
+
 // ========== SEARCH BAR ==========
 
 const defaultButton = document.getElementById("default-btn");
@@ -99,6 +102,10 @@ closeButton.addEventListener("click", function() {
 })
 
 searchInput.addEventListener("keyup", filterFunction);
+
+
+
+
 
 // ========== ACTIVE NAVLINKS HIGHLIGHT/BORDER BOTTOM ==========
 

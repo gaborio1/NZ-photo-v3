@@ -43,11 +43,13 @@ const currentSlide = (n) => {
   }
 }
 
-
 //  RETREIVE IMAGE FOLDER NAME AND IMAGE NAME FROM CATEGORY TITLE
 const getCategoryName = () => {
   return document.querySelector(".category-title").innerHTML;
 }
+
+
+
 
 
 // ========== CATEGORY GALLERY ==========
@@ -77,8 +79,6 @@ const createGallery = (n) => {
    galleryDiv.appendChild(galleryDivImg);
 }
 
-
-
 // ========== ADD openModal() and currentSlide(n) TO GALLERY IMAGES (<img src="../images/nature-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">) ==========
 const addListenerGalleryImg = () => {
   const galleryImages = document.getElementsByClassName("hover-shadow");
@@ -95,8 +95,11 @@ const addListenerGalleryImg = () => {
   }
 }
 
-// ========== CREATE MODAL DIVS WITH IMAGE-COUNTER AND IMAGES ==========
 
+
+
+
+// ========== CREATE MODAL DIVS WITH IMAGE-COUNTER AND IMAGES ==========
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!! THIS IS WORKING IN CONSOLE BUT IN createModal ITS RETURN VALUE IS undefined !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // COUNT NUMBER OF FOUND GALLERY IMAGES/DIVS IN GALLERY
@@ -151,7 +154,11 @@ const createModal = (n) => {
   modalDiv.appendChild(modalDivImg);
 }
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
 
 // ========== CREATE THUMBNAIL DIVS WITH IMAGES ==========
 const createThumbnail = (n) => {
@@ -176,7 +183,6 @@ const createThumbnail = (n) => {
   };
   thumbnailDiv.appendChild(thumbnailDivImg);
 }
-
 
 // ========== ADD currentslide(n) TO THUMBNAIL IMAGES ==========
 function addListenerThumbnailImg(){

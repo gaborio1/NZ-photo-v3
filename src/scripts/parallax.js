@@ -6,7 +6,7 @@
 
 const controller = new ScrollMagic.Controller();
 
-// CONTROL NAVBAR OPACITY WITH SCROLL
+// !!! CONTROL NAVBAR OPACITY WITH SCROLL, THIS ONLY WORKS ON HOMEPAGE !!!
 let timelineNav = new TimelineMax()
     // REVEAL NAVBAR ON SCROLL display: none -> flex
     // .to("header", 1, { display: "flex" })
