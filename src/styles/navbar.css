@@ -121,34 +121,25 @@ header {
    
 /* ===== NAV ===== */
     
-
-
-
-
-
-.dropbtn.nav-link-text:hover {
-  cursor: pointer;
-}
-
-
-
-
-
-/* DEFAULT NAVBAR LINK TEXT */
+/* NAVLINK & NAVLINK-DROPDOWN */
 a.nav-link.nav-link-text,
 button.dropbtn.nav-link-text {
-    /* color: var(--title-blue); */
     color: rgba(255, 255, 255, 0.753);
+    /* border: 2px solid green; */
+}
+
+/* NAVLINK */
+a.nav-link.nav-link-text:hover {
+    /* color: rgba(223, 32, 32, 0.753); */
+    border-bottom: 1px solid white;
+    color: white;
 }
 
 /* ACTIVE NAVBAR LINK TEXT */
 a.nav-link.nav-link-text.active-link,
 button.dropbtn.nav-link-text.active-link {
-    /* color: var(--title-blue); */
-    /* border-bottom: 1px solid var(--title-blue); */
     border-bottom: 1px solid orange;
     color: orange;
-    /* color: rgba(255, 255, 255, 0.594); */
 }
 
 
@@ -175,20 +166,10 @@ nav {
     margin-top: 16px;
     padding: 0px 20px 10px 20px;
     border-bottom: 1px solid transparent;
+    /* border: 3px solid yellow; */
 }
 
-
-/* NAV LINK HOVER */
-.nav-link.nav-link-text:hover {
-    border-bottom: 1px solid white;
-    /* border-bottom: 1px solid var(--title-blue); */
-    color: white;
-    cursor: pointer;
-}
-
-    
-
-/* DROPDOWN  */
+/* NAVLINK-DROPDOWN  */
 
    .navbar a {
     float: left;
@@ -199,12 +180,12 @@ nav {
     text-decoration: none;
   }
   
-  .dropdown {
+  .nav-link--dropdown {
     float: left;
     overflow: hidden;
   }
   
-  .dropdown .dropbtn {
+  .nav-link--dropdown .dropbtn {
     width: 130px;
     text-align: center;
     font-size: 15px;  
@@ -220,14 +201,16 @@ nav {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    /* border: 3px solid rgb(85, 175, 16); */
   }
 
-  /* DROPDOWN HOVER */
-  .dropdown .dropbtn:hover {
+/* NAVLINK-DROPDOWN */
+button.dropbtn.nav-link-text:hover {
+    /* color: rgba(223, 32, 32, 0.753); */
     border-bottom: 1px solid white;
-    /* border-bottom: 1px solid var(--title-blue); */
     color: white;
-  }
+    cursor: pointer;
+}
 
   .dropdown-content {
     display: none;
@@ -253,12 +236,12 @@ nav {
   
   .dropdown-content a:hover {
     background-color: rgba(0, 0, 0, 0.848);
-    color: white;
+    /* color: white; */
     color: var(--sub-title-orange);
-    /* color: var(--title-blue); */
   }
   
-  .dropdown:hover .dropdown-content {
+  /* MAKE DROPDOWN LINKS VISIBLE ON HOVER */
+  .nav-link--dropdown:hover .dropdown-content {
     display: block;
   }
 
