@@ -14,7 +14,7 @@ let timelineNav = new TimelineMax()
     .fromTo("header", 1, { background: "rgba(0, 0, 0, 0.85)" }, { background: "rgba(0, 0, 0, 0.95)" }, "-=0");
 new ScrollMagic.Scene({
     triggerElement: ".image-container",
-    duration: "100%",
+    duration: "250%",
     triggerHook: 0,
 })  
 .setTween(timelineNav)
