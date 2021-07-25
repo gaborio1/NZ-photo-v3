@@ -92,14 +92,11 @@ img.mountain-crop-5 {
   bottom: 0px;
 }
 
-/* STICKY NAVBAR */
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   width: var(--max-width);
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
 }
@@ -272,7 +269,6 @@ button.dropbtn.nav-link-text:hover {
   /* color: rgba(223, 32, 32, 0.753); */
   border-bottom: 1px solid white;
   color: white;
-  cursor: pointer;
 }
 
 .dropdown-content {
@@ -902,15 +898,18 @@ img.landscape-style {
 
 .category-img-container:hover .category-img {
   filter: grayscale(0) blur(0px) opacity(1);
-  cursor: pointer;
 }
 
 /* FADE OUT / SLIDE INFO DIV */
 .category-img-container:hover .info-div {
-  opacity: 0;
-
+  opacity: 0.4;
   /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
   width: 500px;
+}
+
+.category-img-container:hover .info-div--landscape {
+  /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+  width: 400px;
 }
 
 /* CATEGORY DIVS */
@@ -922,9 +921,17 @@ img.landscape-style {
   position: relative;
   top: -300px;
   left: -200px;
+  /* top: -250px;
+  left: -150px; */
 
-  background-color: rgba(0, 0, 0, 0.115);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.622), rgba(0, 0, 0, 0));
+  /* background-color: rgba(0, 0, 0, 0.115); */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.622),
+    rgba(0, 0, 0, 0.272),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
   border-radius: 5px;
 
   -ms-transform: rotate(-90deg); /* IE 9 */
@@ -936,8 +943,11 @@ img.landscape-style {
   /* border: 1px solid rgba(255, 166, 0, 0.861); */
 }
 
-.info-div:hover {
-  cursor: pointer;
+.landscape-img-container .info-div {
+  width: 500px;
+
+  top: -250px;
+  left: -150px;
 }
 
 .info-div-content h2.category {
@@ -1101,7 +1111,6 @@ img.landscape-style {
 }
 
 .footer-contact-button:hover {
-  cursor: pointer;
   background: rgba(0, 0, 0, 0.498);
 }
 
@@ -1148,22 +1157,6 @@ img.landscape-style {
 
   /* border: 1px solid  #56d2e2;  */
 }
-/* 
-.footer-info-container-2 .logo-container--4 {
-    flex: 0;
-    border: 1px solid rgb(23, 219, 23);
-} */
-
-/* .social-media-icon-container {
-    border: 1px solid  #56d2e2; 
-    margin-right: 1rem;
-} */
-
-/* 
-.footer-img {
-    width: 100%;
-    max-height: 400px;
-} */
 
 .footer-bottom {
   height: 90px;
@@ -1178,13 +1171,6 @@ img.landscape-style {
   /* border: 1px solid green; */
   /* border-top: 5px solid rgba(189, 187, 187, 0.766); */
 }
-
-/* .footer hr {
-    width: 90%;
-    max-width: 1500px;
-    border: none;
-    border-top: 1px solid white;
-} */
 
 .footer p {
   display: inline-block;
