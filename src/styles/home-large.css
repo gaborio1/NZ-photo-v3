@@ -667,7 +667,8 @@ h2 span.photography__letter:nth-of-type(11) {
 /* [1] The container */
 .img-hover-zoom {
   border-radius: 3px;
-  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  /* [1.2] Hide the overflowing of child elements */
+  overflow: hidden;
 
   /* border: 3px solid tomato; */
 }
@@ -675,9 +676,13 @@ h2 span.photography__letter:nth-of-type(11) {
 .img-hover-zoom--portrait {
   /* width: 400px;
   height: 590px; */
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   width: 100%;
+  max-width: 500px;
+  max-height: 590px;
+
   /* !!! */
-  max-height: 600px;
+  /* max-height: 600px; */
 }
 
 .img-hover-zoom--landscape {
@@ -718,7 +723,8 @@ h2 span.photography__letter:nth-of-type(11) {
 }
 
 .portrait-column {
-  width: 50%;
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  width: 35%;
   height: 900px;
   /* height: 80%; */
 
@@ -727,7 +733,7 @@ h2 span.photography__letter:nth-of-type(11) {
   align-items: center;
   justify-content: space-around;
 
-  margin: 10px 10px 150px 10px;
+  margin: 10px 5px 150px 5px;
 
   border: 3px solid olive;
 }
@@ -738,7 +744,7 @@ h2 span.photography__letter:nth-of-type(11) {
 
 .portrait-column--reverse {
   flex-direction: column-reverse;
-  margin: 150px 10px 10px 10px;
+  margin: 150px 5px 10px 5px;
 
   border: 3px solid aqua;
 }
@@ -748,9 +754,9 @@ h2 span.photography__letter:nth-of-type(11) {
   /* ??? */
   position: relative;
 
-  width: 400px;
-
-  width: 70%;
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  width: 100%;
+  max-width: 500px;
 
   border: 3px solid black;
 }
@@ -805,6 +811,7 @@ img.portrait-style {
   align-items: center;
   justify-content: space-around;
   margin: 75px;
+  padding: 5%;
   border: 3px solid rgb(59, 72, 190);
 }
 
