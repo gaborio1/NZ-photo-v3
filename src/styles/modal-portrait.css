@@ -1,52 +1,49 @@
-
-  /* ========== MAIN CONTENT ========== */
-
+/* ========== MAIN CONTENT ========== */
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: var(--max-width);
-    height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--max-width);
+  height: fit-content;
 
-    /* border: 3px solid red; */
+  /* border: 3px solid red; */
 }
 
 .main-coloumn {
-    width: 90%;
-    max-width: var(--main-content-1400);
+  width: 90%;
+  max-width: var(--main-content-1400);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    
-    margin-bottom: 200px;
-    margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
-    /* border: 3px solid orange; */
+  margin-bottom: 200px;
+  margin-top: 100px;
+
+  /* border: 3px solid orange; */
 }
 
 .category-title-container {
-    margin: 45px 0px 90px 0px;
-    /* border: 3px solid cyan; */
+  margin: 45px 0px 90px 0px;
+  /* border: 3px solid cyan; */
 }
 
 .category-title-container h1 {
-    font-size: 60px;
-    font-weight: 400;
+  font-size: 60px;
+  font-weight: 400;
 }
 
 .gallery-container {
-    /* display: flex; */
-    /* float: left; */
-    width: 1200px;
+  /* display: flex; */
+  /* float: left; */
+  width: 1200px;
 
-    /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
-    /* height: 100vh; */
+  /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
+  /* height: 100vh; */
 
-
-    /* border: 3px solid rgb(0, 255, 140); */
+  /* border: 3px solid rgb(0, 255, 140); */
 }
 
 /* .portrait-img-container {
@@ -57,10 +54,6 @@
     background-size: cover;
     border: 3px solid green;
 } */
-
-
-
-
 
 /*  ========== LIGHTBOX W3S ========== */
 
@@ -87,20 +80,27 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
 }
 
 /* The Modal (background) */
 
 /* FADE IN AMIMATION FOR MODAL AND MODAL IMGS */
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .modal {
@@ -116,8 +116,8 @@ img.hover-shadow {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.97);
-/* FADE IN MODAL */
-  animation: fadeIn .7s;
+  /* FADE IN MODAL */
+  animation: fadeIn 0.7s;
   /* border: 3px solid rgb(212, 91, 43); */
 }
 
@@ -127,9 +127,9 @@ img.hover-shadow {
 }
 
 img.modal-img {
-    width: 75%;
-    animation: fadeIn .5s;
-    /* height: 50%; */
+  width: 75%;
+  animation: fadeIn 0.5s;
+  /* height: 50%; */
 }
 
 /* Modal Content */
@@ -165,7 +165,6 @@ img.modal-img {
 .close:focus {
   color: #999;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* ===== MODAL IMG CONTAIMERS ===== */
@@ -181,7 +180,7 @@ img.modal-img {
 }
 
 .modal-img-div.fade-out {
-  animation: fadeOut .75s;
+  animation: fadeOut 0.75s;
 }
 
 /* Next & previous buttons */
@@ -235,7 +234,7 @@ img.modal-img {
   background-color: black;
   padding: 2px 16px;
   color: white;
-  
+
   /* border: 3px solid rgb(255, 218, 149); */
 }
 
@@ -273,16 +272,4 @@ img.thumbnail-image {
 .active,
 .thumbnail-image:hover {
   opacity: 1;
-  cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
