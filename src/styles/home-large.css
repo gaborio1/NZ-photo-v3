@@ -467,19 +467,6 @@ input[type="text"] {
   /* border: 3px solid orange; */
 }
 
-/* .title-div h2 {
-    color: rgba(255, 255, 255, 0.842);
-    color: #e1bc91cb;
-    color: #ffc786;
-    color: #fdae81;
-
-    font-size: 20px;
-    font-weight: 300;
-    text-transform: capitalize;
-    margin: 80px 0px 0px 0px;
-    letter-spacing: .4rem;
-} */
-
 .title-div__enzee-container {
   display: flex;
   width: fit-content;
@@ -628,7 +615,7 @@ h2 span.photography__letter:nth-of-type(11) {
   /* !!!!! THIS PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
   overflow: hidden;
 
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 
 .main-coloumn {
@@ -642,7 +629,7 @@ h2 span.photography__letter:nth-of-type(11) {
   justify-content: space-around;
   margin-top: 50px;
 
-  border: 3px solid orange;
+  /* border: 3px solid orange; */
 }
 
 .spacer-trigger {
@@ -715,13 +702,13 @@ h2 span.photography__letter:nth-of-type(11) {
   justify-content: space-around;
   margin: 20px;
 
-  border: 3px solid rgb(19, 104, 110);
+  /* border: 3px solid rgb(19, 104, 110); */
 }
 
 .portrait-column {
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   width: 35%;
-  height: 900px;
+  height: 850px;
   /* height: 80%; */
 
   display: flex;
@@ -731,7 +718,7 @@ h2 span.photography__letter:nth-of-type(11) {
 
   margin: 10px 5px 150px 5px;
 
-  border: 3px solid olive;
+  /* border: 3px solid olive; */
 }
 
 /* .portrait-column--non-reverse {
@@ -742,7 +729,11 @@ h2 span.photography__letter:nth-of-type(11) {
   flex-direction: column-reverse;
   margin: 150px 5px 10px 5px;
 
-  border: 3px solid aqua;
+  /* border: 3px solid aqua; */
+}
+
+.portrait-column--reverse .portrait-text-container {
+  margin-bottom: 20px;
 }
 
 .portrait-img-container,
@@ -754,7 +745,15 @@ h2 span.photography__letter:nth-of-type(11) {
   width: 100%;
   max-width: 500px;
 
-  border: 3px solid black;
+  /* border: 3px solid black; */
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* TEMPORARY FIX, FIT CONTENT NOT WORKING */
+.portrait-img-container {
+  height: 73%;
+  /* height: fit-content; */
+  /* height: auto; */
 }
 
 p.category-info-text {
@@ -766,7 +765,6 @@ p.category-info-text {
   text-align: left;
   border-left: 2px solid rgba(0, 0, 0, 0.272);
   padding: 1rem;
-  margin-left: 1rem;
 }
 
 /* FIRST 3 CATEGORIES */
@@ -808,7 +806,7 @@ img.portrait-style {
   justify-content: space-around;
   margin: 75px;
   padding: 5%;
-  border: 3px solid rgb(59, 72, 190);
+  /* border: 3px solid rgb(59, 72, 190); */
 }
 
 .landscape-img-container {
@@ -816,7 +814,7 @@ img.portrait-style {
 
   width: 60%;
   /* height: fit-content; */
-  border: 3px solid black;
+  /* border: 3px solid black; */
 }
 
 /* THIS INCLUDES IMAGE + INFO DIV */
@@ -833,14 +831,14 @@ img.portrait-style {
   color: rgba(0, 0, 0, 0.724);
   border-left: 2px solid rgba(0, 0, 0, 0.279);
 
-  border: 3px solid black;
+  /* border: 3px solid black; */
 }
 
 img.landscape-style {
   width: 100%;
   /* width: var(--max-width); */
   border-radius: 3px;
-  border: 3px solid rgb(106, 235, 8);
+  /* border: 3px solid rgb(106, 235, 8); */
 }
 
 /* MOSAIC CONTAINER */
