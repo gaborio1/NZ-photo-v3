@@ -619,7 +619,6 @@ h2 span.photography__letter:nth-of-type(11) {
 }
 
 .main-coloumn {
-  /* z-index: -1; */
   width: 90%;
   max-width: var(--main-content-1400);
 
@@ -634,8 +633,7 @@ h2 span.photography__letter:nth-of-type(11) {
 
 .spacer-trigger {
   width: 100%;
-  height: 10px;
-  /* background: rgb(255, 194, 71); */
+  /* height: 10px; */
   /* border: 3px solid rgb(1, 84, 95); */
 }
 
@@ -652,7 +650,6 @@ h2 span.photography__letter:nth-of-type(11) {
   border-radius: 3px;
   /* [1.2] Hide the overflowing of child elements */
   overflow: hidden;
-
   /* border: 3px solid tomato; */
 }
 
@@ -662,16 +659,7 @@ h2 span.photography__letter:nth-of-type(11) {
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   width: 100%;
   max-width: 500px;
-  max-height: 590px;
-
-  /* !!! */
-  /* max-height: 600px; */
-}
-
-.img-hover-zoom--landscape {
-  /* width: 750px; */
-  width: 100%;
-  /* height: 490px; */
+  max-height: 600px;
 }
 
 /* [2] Transition property for smooth transformation of images */
@@ -680,13 +668,6 @@ h2 span.photography__letter:nth-of-type(11) {
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
-/* !!! ONLY INCLUDE IMG + INFO DIV !!! */
-
-/* !!! THIS ONLY INCLUDES IMAGE !!! */
-/* .img-hover-zoom:hover img {
-    transform: scale(1.1);
-} */
-
 /* THIS INCLUDES IMAGE + INFO DIV */
 .portrait-img-container:hover img {
   transform: scale(1.025);
@@ -694,7 +675,6 @@ h2 span.photography__letter:nth-of-type(11) {
 
 .portrait-container {
   width: var(--max-width);
-  /* height: 1200px; */
 
   display: flex;
   flex-direction: row;
@@ -707,23 +687,18 @@ h2 span.photography__letter:nth-of-type(11) {
 
 .portrait-column {
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  width: 35%;
-  height: 850px;
-  /* height: 80%; */
+  width: 30%;
+  height: 800px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
   margin: 10px 5px 150px 5px;
 
   /* border: 3px solid olive; */
 }
-
-/* .portrait-column--non-reverse {
-  padding: 3rem 0px 4rem 0px;
-} */
 
 .portrait-column--reverse {
   flex-direction: column-reverse;
@@ -732,28 +707,43 @@ h2 span.photography__letter:nth-of-type(11) {
   /* border: 3px solid aqua; */
 }
 
-.portrait-column--reverse .portrait-text-container {
-  margin-bottom: 20px;
-}
-
-.portrait-img-container,
-.portrait-text-container {
+.portrait-img-container {
   /* ??? */
-  position: relative;
+  /* position: relative; */
 
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   width: 100%;
   max-width: 500px;
+  /* !!! ALLOW AN EXTRA 50PX HEIGHT TO CONTAIN TITLE DIV STICKING OUT */
+  max-height: 650px;
+  /* border: 3px solid yellow; */
 
   /* border: 3px solid black; */
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* TEMPORARY FIX, FIT CONTENT NOT WORKING */
-.portrait-img-container {
-  height: 73%;
-  /* height: fit-content; */
-  /* height: auto; */
+/* CATEGORY TEXT CONTAINERS */
+
+.category-text-container {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.724);
+  padding-left: 1rem;
+  border-left: 2px solid rgba(0, 0, 0, 0.272);
+}
+
+.portrait-text-container {
+  width: 90%;
+  margin-top: 2rem;
+  /* border: 3px solid burlywood; */
+}
+
+.landscape-text-container {
+  width: 30%;
+  margin-top: 8rem;
+  /* border: 3px solid burlywood; */
+}
+
+.portrait-column--reverse .portrait-text-container {
+  margin-bottom: 3rem;
 }
 
 p.category-info-text {
@@ -761,23 +751,15 @@ p.category-info-text {
   color: rgba(0, 0, 0, 0.724);
 }
 
-.portrait-text-container {
-  text-align: left;
-  border-left: 2px solid rgba(0, 0, 0, 0.272);
-  padding: 1rem;
-}
-
 /* FIRST 3 CATEGORIES */
 h3.category-info-title {
-  color: black;
   color: var(--sub-title-orange);
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* LAST 3 CATEGORIES */
 h4.category-info-title {
-  color: black;
   color: var(--sub-title-orange);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -793,10 +775,6 @@ img.portrait-style {
   margin-top: 100px;
 }
 /* 
-#model-trigger {
-    width: inherit;
-    border: 3px solid steelblue;
-} */
 
 /* LANDSCAPE CONTAINER */
 .landscape-container {
@@ -813,7 +791,7 @@ img.portrait-style {
   width: 750px;
 
   width: 60%;
-  /* height: fit-content; */
+  max-height: 550px;
   /* border: 3px solid black; */
 }
 
@@ -822,21 +800,16 @@ img.portrait-style {
   transform: scale(1.025);
 }
 
-.landscape-text-container {
-  width: 300px;
-  height: fit-content;
-  padding: 1rem;
-  margin-left: 1rem;
-  margin-top: 8rem;
-  color: rgba(0, 0, 0, 0.724);
-  border-left: 2px solid rgba(0, 0, 0, 0.279);
-
-  /* border: 3px solid black; */
+.img-hover-zoom--landscape {
+  /* width: 750px; */
+  width: 100%;
+  max-width: 750px;
+  max-height: 490px;
+  /* border: 3px solid red; */
 }
 
 img.landscape-style {
-  width: 100%;
-  /* width: var(--max-width); */
+  width: var(--max-width);
   border-radius: 3px;
   /* border: 3px solid rgb(106, 235, 8); */
 }
@@ -910,15 +883,16 @@ img.landscape-style {
   width: 400px;
 }
 
-/* CATEGORY DIVS */
+/* CATEGORY INFO DIVS */
 .info-div {
   /* WHEN HORIZINTAL */
   /* width: 100%; */
   width: 600px;
-  height: 80px;
+  height: 65px;
+  /* height: 10%; */
   position: relative;
   top: -300px;
-  left: -200px;
+  left: -215px;
   /* top: -250px;
   left: -150px; */
 
@@ -943,9 +917,8 @@ img.landscape-style {
 
 .landscape-img-container .info-div {
   width: 500px;
-
   top: -250px;
-  left: -150px;
+  left: -165px;
 }
 
 .info-div-content h2.category {
