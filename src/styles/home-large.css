@@ -631,10 +631,57 @@ h2 span.photography__letter:nth-of-type(11) {
   /* border: 3px solid orange; */
 }
 
+/* DIV WITH NO HEIGHT, TRIGGERS SCROLL ANIMATION ON ITS SIBLING */
 .spacer-trigger {
   width: 100%;
-  /* height: 10px; */
   /* border: 3px solid rgb(1, 84, 95); */
+}
+
+.portrait-column {
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  /* width CONTROLS CATEGORY IMG WIDTH */
+  width: 30%;
+  height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px 5px 150px 5px;
+
+  /* border: 3px solid olive; */
+}
+
+.portrait-container {
+  width: var(--max-width);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+
+  /* border: 3px solid rgb(19, 104, 110); */
+}
+
+/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN */
+.portrait-column--reverse {
+  flex-direction: column-reverse;
+  margin: 150px 5px 10px 5px;
+
+  /* border: 3px solid aqua; */
+}
+
+.portrait-img-container {
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  /* BOTH % AND px WORK */
+  width: 100%;
+  /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
+  max-height: 640px;
+  /* border: 3px solid yellow; */
+
+  /* border: 3px solid black; */
 }
 
 /* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
@@ -664,54 +711,6 @@ h2 span.photography__letter:nth-of-type(11) {
 /* THIS INCLUDES IMAGE + INFO DIV */
 .portrait-img-container:hover img {
   transform: scale(1.025);
-}
-
-.portrait-container {
-  width: var(--max-width);
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin: 20px;
-
-  /* border: 3px solid rgb(19, 104, 110); */
-}
-
-.portrait-column {
-  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  width: 30%;
-  height: 800px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  margin: 10px 5px 150px 5px;
-
-  /* border: 3px solid olive; */
-}
-
-.portrait-column--reverse {
-  flex-direction: column-reverse;
-  margin: 150px 5px 10px 5px;
-
-  /* border: 3px solid aqua; */
-}
-
-.portrait-img-container {
-  /* ??? */
-  /* position: relative; */
-
-  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  width: 100%;
-  max-width: 500px;
-  /* !!! ALLOW AN EXTRA 50PX HEIGHT TO CONTAIN TITLE DIV STICKING OUT */
-  max-height: 650px;
-  /* border: 3px solid yellow; */
-
-  /* border: 3px solid black; */
 }
 
 /* CATEGORY TEXT CONTAINERS */
@@ -781,11 +780,11 @@ img.portrait-style {
 }
 
 .landscape-img-container {
-  width: 750px;
-
+  /* BOTH % AND px WORK */
   width: 60%;
-  max-height: 550px;
-  /* border: 3px solid black; */
+  /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
+  max-height: 530px;
+  /* border: 3px solid yellow; */
 }
 
 /* THIS INCLUDES IMAGE + INFO DIV */
@@ -796,7 +795,7 @@ img.portrait-style {
 .img-hover-zoom--landscape {
   /* width: 750px; */
   width: 100%;
-  max-width: 750px;
+  /* max-width: 750px; */
   max-height: 490px;
   /* border: 3px solid red; */
 }
