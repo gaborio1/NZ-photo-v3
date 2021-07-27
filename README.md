@@ -4,22 +4,25 @@ HOME PAGE PARALLAX: https://www.youtube.com/watch?v=Nt70Ld0dJCM&t=192s&ab_channe
 MODAL GALLERY: https://www.w3schools.com/howto/howto_js_lightbox.asp BY w3schools
 BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV ED
 
-todos:
-animated search button/field
-portrait style modal has a fade in animation while landscape style has not!
-delete createdivs() from script.js as this is now done with portfolio.js
-??? navbar-content/logic.js ???
+===== TODOS: =====
 
-bugs:
-category img divs don't fit img height => messing with :hover
+✅ animated search button/field
+✅ portrait style modal has a fade in animation while landscape style has not!
+✅ delete createdivs() from script.js as this is now done with portfolio.js
+✅ ??? navbar/footer-content/logic.js ??? (content is done with: document.write)
+
+===== BUGS: =====
+
 parallax layers act funny when resizing browser window
 title div moves away from position when resizing
-"photography" animation not smooth enough, try without making container flexbox
-footer not visible when placed outside of .main-content div (temp fix: absolute position)
+✅ category img divs don't fit img height => messing with :hover
+✅ "photography" animation not smooth enough, try without making container flexbox
+✅ footer not visible when placed outside of .main-content div (temp fix: placed inside main content)
 
-problems:
-navbar.js does not include the navbar opnacity scroll TIMELINE from parallax.js
-navbar opacity onscroll is only active on home page, trigger el: .image-container
+===== PROBLEMS: =====
+
+✅ navbar.js does not include the navbar opacity scroll TIMELINE from parallax.js
+✅ navbar opacity onscroll is only active on home page, trigger el: .image-container
 
 UPDATES:
 navbar, footer:
