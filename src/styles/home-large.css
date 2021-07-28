@@ -476,7 +476,7 @@ input[type="text"] {
 h1.enzee__letter {
   /* RESPONSIVE TEXT */
   /* font-size: 12vw; */
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.4rem;
   /* text-shadow: 1px 1px rgba(113, 113, 113, 0.683); */
 
   /* ANIMATING Enzee at once */
@@ -527,7 +527,7 @@ h1.enzee__letter:nth-of-type(5) {
 h3.photography__letter {
   /* display: inline-block; */
   /* text-transform: uppercase; */
-  letter-spacing: 1.5rem;
+  letter-spacing: 1.3rem;
   margin: 90px 0px 0px 0px;
   /* border: 1px solid lime; */
 
@@ -815,8 +815,8 @@ img.landscape-style {
   /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
   width: 120vw;
   /* !!! THIS WORKS FINE !!! */
-  height: 50vh;
-  min-height: 550px;
+  height: 45vh;
+  min-height: 500px;
 
   filter: grayscale(0.5) contrast(150%);
   /* filter: grayscale(.25) blur(.1px) opacity(0.90);   */
@@ -920,12 +920,6 @@ img.landscape-style {
 
 /* ========== FOOTER ========== */
 
-.test {
-  width: 100%;
-  height: 100px;
-  background: chocolate;
-}
-
 .footer {
   /* z-index: 99; */
 
@@ -966,7 +960,6 @@ img.landscape-style {
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
-  justify-content: center;
   justify-content: space-between;
   /* top: -400px; */
   /* width: 100%; */

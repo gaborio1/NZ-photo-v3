@@ -30,3 +30,13 @@ index,about,contact.html
 index,about,slider,contact.css
 navbar-content.js, navbar.css (for lightbox 2:1 test)
 footer.js, footer.css (for lightbox 2:1 test)
+
+===== MEDIUM SIZE CHANGES: =====
+
+homepage:
+Enzee/photography smaller letter-spacing
+mosaic div smaller height/max-height
+footer-top-img smaller height, justify-content: space between
+footer-top-img-cover justify-content: space around
+footer-content--full-width smaller margin top to fit clear div in
+footer-bottom smaller height
