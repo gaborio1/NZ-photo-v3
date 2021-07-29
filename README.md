@@ -35,6 +35,7 @@ footer.js, footer.css (for lightbox 2:1 test)
 
 homepage:
 Enzee/photography smaller letter-spacing
+category images larger width (overall size)
 mosaic div smaller height/max-height
 footer-top-img smaller height, justify-content: space between
 footer-top-img-cover justify-content: space around

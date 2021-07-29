@@ -641,8 +641,9 @@ h2 span.photography__letter:nth-of-type(11) {
   .portrait-column {
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     /* width CONTROLS CATEGORY IMG WIDTH */
-    width: 30%;
-    height: 800px;
+    /* width: 30%; */
+    width: 35%;
+    /* height: 800px; */
 
     display: flex;
     flex-direction: column;
@@ -781,8 +782,11 @@ h2 span.photography__letter:nth-of-type(11) {
   }
 
   .landscape-img-container {
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    /* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
     /* BOTH % AND px WORK */
     width: 60%;
+    width: 70%;
     /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
     max-height: 530px;
     /* border: 3px solid yellow; */
