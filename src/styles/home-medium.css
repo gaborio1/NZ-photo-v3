@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) and (max-width: 1400px) {
+@media only screen and (min-width: 768px) and (max-width: 1399px) {
   /* ===== PARALLAX IMAGE LAYERS ===== */
   .image-container {
     /* display: flex; */
@@ -786,7 +786,7 @@ h2 span.photography__letter:nth-of-type(11) {
     /* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
     /* BOTH % AND px WORK */
     width: 60%;
-    width: 70%;
+    width: 65%;
     /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
     max-height: 530px;
     /* border: 3px solid yellow; */
