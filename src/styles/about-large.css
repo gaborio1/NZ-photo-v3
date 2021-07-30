@@ -49,7 +49,7 @@
   }
 
   .about-image-container {
-    width: 400px;
+    /* width: 400px; */
     width: 33.33%;
     /* max-height: 100%; */
     border: 3px solid rgb(218, 162, 32);
@@ -61,7 +61,7 @@
   }
 
   .about-text-container {
-    width: 750px;
+    /* width: 750px; */
     width: 66%;
     max-height: 90%;
     /* max-height: 600px; */
