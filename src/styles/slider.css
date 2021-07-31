@@ -14,8 +14,6 @@
   /* width: 1400px;
     max-width: var(--main-content-1400); */
   width: 90%;
-
-  /* margin-top: 100px; */
   margin-bottom: 100px;
   /* border: 3px solid rgb(21, 255, 0); */
 }
@@ -32,12 +30,11 @@
   display: none;
 }
 
-.column {
-  /* display: flex;
-  justify-content: center; */
-  /* margin: 5%; */
-  /* border: 3px solid goldenrod; */
-}
+/* .column {
+  display: flex;
+  justify-content: center;
+  border: 3px solid goldenrod;
+} */
 
 .right-column {
   display: flex;
