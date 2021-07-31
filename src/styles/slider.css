@@ -17,14 +17,26 @@
 
   /* margin-top: 100px; */
   margin-bottom: 100px;
-  border: 3px solid rgb(21, 255, 0);
+  /* border: 3px solid rgb(21, 255, 0); */
+}
+
+.spacer-column-div {
+  /* display: none; */
+  width: 24%;
+  text-align: center;
+  padding-top: 50px;
+  /* background: rgba(255, 99, 71, 0.32); */
+}
+
+.spacer-column-div p {
+  display: none;
 }
 
 .column {
   /* display: flex;
   justify-content: center; */
-  margin: 5%;
-  border: 3px solid goldenrod;
+  /* margin: 5%; */
+  /* border: 3px solid goldenrod; */
 }
 
 .right-column {
@@ -40,7 +52,7 @@
   width: 30vw;
   height: auto;
 
-  border: 3px solid rgb(76, 210, 222);
+  /* border: 3px solid rgb(76, 210, 222); */
 }
 
 .img-slider-container.portrait-style {
@@ -50,20 +62,23 @@
   height: 600px;
   max-height: 600px;
 
-  border: 3px solid rgb(236, 78, 16);
+  /* border: 3px solid rgb(236, 78, 16); */
 }
 
 .img-slider-container.landscape-style {
-  /* display: flex; */
-  /* justify-content: start; */
+  /* !!! flex MESSES UP SLIDER !!! */
+  /* display: flex;
+  justify-content: flex-end; */
   /* !!!!!!!!!!!!!!!! */
   width: 35vw;
   /* width: 550px; */
-  max-width: 600px;
+
+  max-width: 540px;
+
   height: 300px;
   max-height: 280px;
 
-  border: 3px solid rgb(207, 222, 76);
+  /* border: 3px solid rgb(207, 222, 76); */
 }
 
 .img-slider-container:hover {
@@ -81,7 +96,7 @@
   /* width: 750px;
   height: 270px; */
   /* !!!!!!!!!!!!!!!!!!! */
-  width: 40vw;
+  width: 35vw;
   max-width: 540px;
   height: auto;
   max-height: 270px;

@@ -8,7 +8,7 @@
     width: var(--max-width);
     height: fit-content;
 
-    border: 3px solid red;
+    /* border: 3px solid red; */
   }
 
   .main-coloumn {
@@ -25,7 +25,7 @@
     margin-bottom: 100px;
     margin-top: 100px;
 
-    border: 3px solid rgb(0, 106, 255);
+    /* border: 3px solid rgb(0, 106, 255); */
   }
 
   .about-container {
@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-between;
 
-    border: 3px solid rgb(21, 255, 0);
+    /* border: 3px solid rgb(21, 255, 0); */
   }
 
   .about-enzee-container {
@@ -52,7 +52,7 @@
     /* width: 400px; */
     width: 33.33%;
     /* max-height: 100%; */
-    border: 3px solid rgb(218, 162, 32);
+    /* border: 3px solid rgb(218, 162, 32); */
   }
 
   .about-image {
@@ -71,7 +71,7 @@
     justify-content: space-around;
     margin-left: 70px;
 
-    border: 3px solid rgb(32, 88, 218);
+    /* border: 3px solid rgb(32, 88, 218); */
   }
 
   .about-text-row {
@@ -81,7 +81,7 @@
     /* border-left: 1px solid rgba(0, 0, 0, 0.724); */
     border-left: 2px solid rgba(0, 0, 0, 0.272);
 
-    border: 3px solid fuchsia;
+    /* border: 3px solid fuchsia; */
   }
 
   .about-text__title {
