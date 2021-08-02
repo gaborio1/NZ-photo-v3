@@ -39,6 +39,7 @@
   /* display: flex; */
   /* float: left; */
   width: 1200px;
+  width: 90%;
 
   /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
   /* height: 100vh; */
@@ -58,24 +59,29 @@
 /*  ========== LIGHTBOX W3S ========== */
 
 /* ===== GALLERY IMAGES ===== */
+
+/* THIS CONTROLS IMAGE WIDTH */
 .gallery-img-container .gallery-div {
   /* !!! float:left NOT ALIGNING IMAGES PROPERLY !!! */
   display: inline-block;
   width: 32%;
   /* width: 375px; */
-  margin: 5px;
+  /* !!! %-MARGIN FIXES ODD DIV BEHAVIOUR WHEN RESIZING WINDOW TO SMALLER SIZE !!! */
+  /* margin: 5px; */
+  margin: 0.5%;
   /* border: 3px solid rgb(86, 86, 249); */
 }
 
-/* img.gallery-img {
+img.gallery-img {
   width: 100%;
   margin: 10px;
-  border: 3px solid lightskyblue;
-} */
+  /* border: 3px solid lightskyblue; */
+}
 
 img.hover-shadow {
   width: 100%;
   transition: 0.3s;
+  /* border: 3px solid olivedrab; */
 }
 
 .hover-shadow:hover {
