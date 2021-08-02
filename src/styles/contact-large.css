@@ -71,7 +71,7 @@ h2.get-in-touch {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   /* margin-left: 70px; */
 
