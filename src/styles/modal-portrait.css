@@ -38,7 +38,7 @@
 .gallery-container {
   /* display: flex; */
   /* float: left; */
-  width: 1200px;
+  /* width: 1200px; */
   width: 90%;
 
   /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
@@ -72,11 +72,11 @@
   /* border: 3px solid rgb(86, 86, 249); */
 }
 
-img.gallery-img {
+/* img.gallery-img {
   width: 100%;
   margin: 10px;
-  /* border: 3px solid lightskyblue; */
-}
+  border: 3px solid lightskyblue;
+} */
 
 img.hover-shadow {
   width: 100%;

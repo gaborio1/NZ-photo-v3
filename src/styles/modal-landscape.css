@@ -41,6 +41,7 @@
   /* display: flex; */
   /* float: left; */
   width: 1200px;
+  width: 90%;
 
   /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
   /* height: 100vh; */
@@ -66,6 +67,7 @@
   width: 49%;
   /* width: 375px; */
   margin: 5px;
+  margin: 0.5%;
   /* border: 3px solid rgb(86, 86, 249); */
 }
 
@@ -78,6 +80,7 @@
 img.hover-shadow {
   width: 100%;
   transition: 0.3s;
+  /* border: 3px solid olivedrab; */
 }
 
 .hover-shadow:hover {
