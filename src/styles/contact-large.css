@@ -29,12 +29,12 @@
 .contact-container {
   width: 90%;
   /* height: 600px; */
-  height: fit-content;
+  /* height: fit-content; */
   max-height: 600px;
 
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: space-between;
 
   /* border: 3px solid rgb(98, 197, 45); */
 }
@@ -50,9 +50,9 @@ h2.get-in-touch {
 }
 
 .contact-image-container {
-  width: 400px;
   width: 33.33%;
-  height: fit-content;
+  width: 32%;
+  /* height: fit-content; */
 
   /* background-size: cover; */
 
@@ -61,7 +61,7 @@ h2.get-in-touch {
 
 .contact-image {
   width: 100%;
-  height: auto;
+  max-height: auto;
 }
 
 .contact-text-container {
