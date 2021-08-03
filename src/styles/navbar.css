@@ -272,12 +272,17 @@ button.dropbtn.nav-link-text:hover {
   /* border: 1px solid rgb(255, 42, 0); */
 }
 
+/* DEFAULT SEARCH ICON */
 button {
-  border: 1px solid red;
   border: none;
-  color: white;
+  /* color: white; */
+  color: rgba(255, 255, 255, 0.753);
   background: transparent;
   outline: none;
+}
+
+button:hover {
+  color: white;
 }
 
 button.submit-btn,
