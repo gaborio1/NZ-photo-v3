@@ -119,6 +119,17 @@ header {
   border-top-right-radius: 0.6rem;
 }
 
+.logo__block-row:hover .logo__block-1 {
+  background-color: #49c4d4dc;
+}
+
+.logo__block-row:hover .logo__block-2 {
+  background-color: #f6ae84f2;
+}
+.logo__block-row:hover .logo__block-3 {
+  background-color: #ffd29e;
+}
+
 /* ===== NAV ===== */
 
 /* NAVLINK & NAVLINK-DROPDOWN */
@@ -138,8 +149,12 @@ a.nav-link.nav-link-text:hover {
 /* ACTIVE NAVBAR LINK TEXT */
 a.nav-link.nav-link-text.active-link,
 button.dropbtn.nav-link-text.active-link {
-  border-bottom: 1px solid orange;
-  color: orange;
+  /* border-bottom: 1px solid orange; */
+  /* border-bottom: 1px solid #fdae81; */
+  border-bottom: 1px solid #56d2e2;
+  /* color: orange; */
+  /* color: #fdae81; */
+  color: #56d2e2;
 }
 
 nav {

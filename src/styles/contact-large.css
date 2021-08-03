@@ -34,6 +34,7 @@
 
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   justify-content: space-between;
 
   /* border: 3px solid rgb(98, 197, 45); */
@@ -67,12 +68,15 @@ h2.get-in-touch {
 .contact-text-container {
   width: 700px;
   width: 66%;
-  /* height: 600px; */
+  /* height: 90%; */
+  /* max-height: 500px; */
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  margin: 1% 0 1% 0;
 
   /* margin-left: 70px; */
 
@@ -84,6 +88,10 @@ h2.get-in-touch {
   display: flex;
 
   /* border: 3px solid aquamarine; */
+}
+
+.contact-text-row:nth-child(2) {
+  margin: 15% 0 15% 0;
 }
 
 .contact-text-block {
