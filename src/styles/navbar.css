@@ -149,12 +149,10 @@ a.nav-link.nav-link-text:hover {
 /* ACTIVE NAVBAR LINK TEXT */
 a.nav-link.nav-link-text.active-link,
 button.dropbtn.nav-link-text.active-link {
-  /* border-bottom: 1px solid orange; */
-  /* border-bottom: 1px solid #fdae81; */
-  border-bottom: 1px solid #56d2e2;
-  /* color: orange; */
-  /* color: #fdae81; */
-  color: #56d2e2;
+  border-bottom: 1px solid #fdae81;
+  /* border-bottom: 1px solid #56d2e2; */
+  color: #fdae81;
+  /* color: #56d2e2; */
 }
 
 nav {

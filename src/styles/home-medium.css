@@ -34,6 +34,10 @@
     background-position: center;
   }
 
+  img.mountain-crop {
+    display: none;
+  }
+
   /* !!! absolute ON LAYERS !!! */
   img.mountain-crop-1 {
     z-index: -1;
@@ -201,8 +205,10 @@
   /* ACTIVE NAVBAR LINK TEXT */
   a.nav-link.nav-link-text.active-link,
   button.dropbtn.nav-link-text.active-link {
-    border-bottom: 1px solid orange;
-    color: orange;
+    border-bottom: 1px solid #fdae81;
+    /* border-bottom: 1px solid #56d2e2; */
+    color: #fdae81;
+    /* color: #56d2e2; */
   }
 
   nav {
@@ -433,8 +439,6 @@
 
     /* width: 100%; */
     width: var(--max-width);
-    height: fit-content;
-    height: 125px;
     height: 135px;
     margin: auto;
 
@@ -470,7 +474,8 @@
 
   .title-div__enzee-container {
     display: flex;
-    width: fit-content;
+    /* ALIGN ENZEE WITH photography */
+    margin-top: 6px;
     /* border: 1px solid orange; */
   }
 
@@ -629,13 +634,25 @@ h2 span.photography__letter:nth-of-type(11) {
     justify-content: space-around;
     margin-top: 50px;
 
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
   }
 
   /* DIV WITH NO HEIGHT, TRIGGERS SCROLL ANIMATION ON ITS SIBLING */
   .spacer-trigger {
     width: 100%;
     /* border: 3px solid rgb(1, 84, 95); */
+  }
+
+  .portrait-container {
+    width: var(--max-width);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+
+    /* border: 3px solid rgb(19, 104, 110); */
   }
 
   .portrait-column {
@@ -653,18 +670,6 @@ h2 span.photography__letter:nth-of-type(11) {
     margin: 10px 5px 150px 5px;
 
     /* border: 3px solid olive; */
-  }
-
-  .portrait-container {
-    width: var(--max-width);
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px;
-
-    /* border: 3px solid rgb(19, 104, 110); */
   }
 
   /* RIGHT HAND SIDE PORTRAIT STYLE COLUMN */
@@ -780,7 +785,7 @@ h2 span.photography__letter:nth-of-type(11) {
     /* !!! EXTRA MARGIN TOP !!! */
     margin-top: 100px;
     padding: 5%;
-    border: 3px solid rgb(59, 72, 190);
+    /* border: 3px solid rgb(59, 72, 190); */
   }
 
   .landscape-img-container {
@@ -822,15 +827,15 @@ h2 span.photography__letter:nth-of-type(11) {
     /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
     width: 120vw;
     /* !!! THIS WORKS FINE !!! */
-    height: 40vh;
-    min-height: 400px;
+    height: 52.5vh;
+    /* min-height: 400px; */
 
     filter: grayscale(0.5) contrast(150%);
     /* filter: grayscale(.25) blur(.1px) opacity(0.90);   */
 
     border-top: 45px solid grey;
     border-bottom: 5px solid grey;
-    margin: 120px 0px 40px 0px;
+    margin: 90px 0px 135px 0px;
   }
 
   /* MOSAIC SLICES */
