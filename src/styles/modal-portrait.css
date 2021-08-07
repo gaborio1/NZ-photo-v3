@@ -159,8 +159,8 @@ img.modal-img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* justify-content: space-around; */
+  /* justify-content: center; */
+  justify-content: space-between;
 
   text-align: center;
 
@@ -168,6 +168,7 @@ img.modal-img {
   background-color: #fefefe;
   background-color: #15191921;
   margin: 1% auto;
+  /* padding-top: 1%; */
   width: 90%;
   max-width: 1200px;
   height: 95%;
@@ -267,8 +268,7 @@ img.modal-img {
   /* display: block; */
   /* height: fit-content; */
   /* height: 200px; */
-  width: 75%;
-  /* min-width: 850px; */
+  width: 80%;
   margin: auto;
   /* !!! MAKE x-scroll WORK !!! */
   overflow: scroll;
@@ -302,7 +302,8 @@ img.thumbnail-image {
 
 @media only screen and (max-width: 1399px) {
   img.modal-img {
-    width: 72.5%;
+    width: 70%;
+    /* margin-top: 3%; */
     /* height: auto; */
     /* min-width: 450px; */
     /* min-height: 600px; */
@@ -313,22 +314,18 @@ img.thumbnail-image {
   }
 }
 
-@media only screen and (max-width: 1399px) and (min-height: 1024px) {
+/* @media only screen and (max-width: 1399px) and (min-height: 1024px) {
   img.modal-img {
     width: 90%;
-    /* height: auto; */
-    /* min-width: 450px; */
-    /* min-height: 600px; */
-    /* min-height: fit-content; */
+    
     animation: fadeIn 0.5s;
-    /* height: 50%; */
     border: 3px solid rgb(0, 76, 255);
   }
-}
+} */
 
 @media only screen and (max-width: 1199px) {
   img.modal-img {
-    width: 82.5%;
+    width: 77.5%;
     /* height: auto; */
     /* min-width: 450px; */
     /* min-height: 600px; */
@@ -336,6 +333,29 @@ img.thumbnail-image {
     animation: fadeIn 0.5s;
     /* height: 50%; */
     border: 3px solid rgb(204, 255, 0);
+  }
+}
+
+/* ipad */
+@media only screen and (min-width: 768px) and (min-height: 1024px) {
+  img.modal-img {
+    /* !!!!!!!!!!!!!!!!!!!!!!!! */
+    position: relative;
+    /* left: -50px; */
+    left: -10%;
+    /* !!!!!!!!!!!!!!!!!!!!!!!! */
+
+    width: 120%;
+    /* height: auto; */
+    /* min-width: 450px; */
+    /* min-height: 600px; */
+    /* min-height: fit-content; */
+    margin-top: 10%;
+    margin-right: none;
+
+    animation: fadeIn 0.5s;
+    /* height: 50%; */
+    border: 3px solid rgb(255, 0, 230);
   }
 }
 
