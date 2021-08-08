@@ -21,6 +21,10 @@
     background-position: center;
   }
 
+  img.mountain-mobile-size {
+    display: none;
+  }
+
   img.mountain-full {
     z-index: -6;
     /* !!! WORKS BEST WITH relative !!!*/
@@ -34,63 +38,38 @@
     background-position: center;
   }
 
-  /* !!! absolute ON LAYERS !!! */
-  img.mountain-crop-1 {
-    z-index: -1;
+  /* ALL LAYERS */
+  img.mountain-crop {
+    /* !!! absolute ON LAYERS !!! */
     position: absolute;
     /* position: relative; */
-    /* height: 100vh; */
     width: 100%;
+    /* height: 100vh; */
 
-    bottom: 0px;
+    /* top: 735px; */
     left: 0px;
+    bottom: 0px;
+  }
 
-    /* ?????????????????????? */
-    /* object-fit: cover; */
+  /* INDIVIDUAL LAYERS */
+  img.mountain-crop-1 {
+    z-index: -1;
   }
 
   img.mountain-crop-2 {
     z-index: -2;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
   }
 
   img.mountain-crop-3 {
     z-index: -3;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
   }
 
   img.mountain-crop-4 {
     z-index: -4;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
   }
 
   img.mountain-crop-5 {
     z-index: -5;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
   }
 
   .sticky {

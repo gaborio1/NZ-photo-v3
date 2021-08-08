@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   /* ===== PARALLAX IMAGE LAYERS ===== */
   .image-container {
     /* display: flex; */
@@ -21,12 +21,12 @@
     background-position: center;
   }
 
-  img.mountain-mobile-size {
+  img.non-mobile-size {
     display: none;
   }
 
-  img.mountain-full {
-    z-index: -6;
+  img.mountain-mobile-size {
+    z-index: -1;
     /* !!! WORKS BEST WITH relative !!!*/
     position: relative;
     /* !!! absolute WILL MESS UP TITLE DIV WHEN RESIZING WINDOW !!! */
@@ -36,69 +36,6 @@
     height: 100vh;
     object-fit: cover;
     background-position: center;
-  }
-
-  img.mountain-crop {
-    display: none;
-  }
-
-  /* !!! absolute ON LAYERS !!! */
-  img.mountain-crop-1 {
-    z-index: -1;
-    position: absolute;
-    /* position: relative; */
-    /* height: 100vh; */
-    width: 100%;
-
-    bottom: 0px;
-    left: 0px;
-
-    /* ?????????????????????? */
-    /* object-fit: cover; */
-  }
-
-  img.mountain-crop-2 {
-    z-index: -2;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
-  }
-
-  img.mountain-crop-3 {
-    z-index: -3;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
-  }
-
-  img.mountain-crop-4 {
-    z-index: -4;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
-  }
-
-  img.mountain-crop-5 {
-    z-index: -5;
-    position: absolute;
-    /* position: relative; */
-    /* height: 50%; */
-    width: 100%;
-    /* top: 735px; */
-    left: 0px;
-    bottom: 0px;
   }
 
   .sticky {
@@ -443,20 +380,14 @@
 
     /* width: 100%; */
     width: var(--max-width);
-    height: 135px;
+    height: 170px;
     margin: auto;
 
     background: rgba(0, 0, 0, 0.192);
-    /* background: #56d2e213; */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)); */
-    /* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.601), rgba(0, 0, 0, 0.8), rgb(0, 0, 0)); */
 
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
 
     border-top: 1px solid rgba(255, 255, 255, 0.519);
     border-bottom: 1px solid rgba(255, 255, 255, 0.519);
@@ -465,28 +396,30 @@
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    /* border: 3px solid red; */
   }
 
   .title-div-content {
     width: 95%;
-    height: inherit;
+    /* height: inherit; */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
-    /* border: 3px solid orange; */
+    border: 3px solid orange;
   }
 
   .title-div__enzee-container {
     display: flex;
-    /* ALIGN ENZEE WITH photography */
-    margin-top: 6px;
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
   }
 
   h1.enzee__letter {
     /* RESPONSIVE TEXT */
     /* font-size: 12vw; */
-    letter-spacing: 0.2rem;
+    /* letter-spacing: 0.5rem; */
     /* text-shadow: 1px 1px rgba(113, 113, 113, 0.683); */
 
     /* ANIMATING Enzee at once */
@@ -494,8 +427,10 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
+    line-height: 120px;
+
     /* text-shadow: 2px 2px rgba(113, 113, 113, 0.683), 4px 4px rgba(113, 113, 113, 0.361); */
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
 
   h1.enzee__letter:nth-of-type(1) {
@@ -531,14 +466,15 @@ h1.enzee__letter:nth-of-type(5) {
   .title-div__photography-container {
     /* display: flex; */
     width: fit-content;
-    /* border: 1px solid orange; */
+    border: 1px solid rgb(104, 234, 100);
   }
 
   h3.photography__letter {
     /* display: inline-block; */
     /* text-transform: uppercase; */
+    font-size: 15px;
     letter-spacing: 1.1rem;
-    margin: 90px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     /* border: 1px solid lime; */
 
     /* animation: flashAnimation ease 1s; */
