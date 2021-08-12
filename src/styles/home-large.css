@@ -379,6 +379,10 @@
     background-color: #ddd;
   }
 
+  .hamburger-button {
+    display: none;
+  }
+
   /* TITLE DIV */
 
   /* FADE IN ON LOAD */

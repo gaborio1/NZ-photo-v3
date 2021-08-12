@@ -65,16 +65,34 @@
     align-items: center;
     justify-content: center;
     width: var(--max-width);
-    height: 50vh;
+    /* height: 50vh; */
 
     /* !!!!! BACKGROUND IS CONTROLLED BY SCROLLMAGIC fromTo 0.85 -> 0.95 !!!!! */
-    background-color: rgba(0, 0, 0, 0.85);
+    /* background-color: rgba(0, 0, 0, 0.85); */
+    background-color: transparent !important;
 
     border: 3px solid rgba(255, 166, 0, 0.944);
   }
 
   .header-content {
     display: flex;
+    /* align-items: flex-end; */
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: var(--main-content-1400); */
+    width: 80%;
+    /* width: 100%; */
+    /* height: 45px; */
+    height: 50vh;
+    height: 80%;
+
+    border: 3px solid rgb(47, 255, 0);
+  }
+
+  .header-content.expand {
+    display: flex;
+    flex-direction: column-reverse;
+
     /* align-items: flex-end; */
     align-items: center;
     /* max-width: var(--main-content-1400); */
@@ -97,15 +115,11 @@
 
   .logo-container {
     flex: 1;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     /* border: 1px solid white; */
 
-    /* LOGO ONLY */
-    justify-content: flex-end;
-    justify-content: center;
-
-    /* border: 1px solid rgb(255, 42, 0); */
+    border: 1px solid rgb(255, 42, 0);
   }
 
   .logo__block-row {
@@ -161,16 +175,32 @@
 
   /* !!! HIDE NAV BY DEFAULT !!! */
   nav {
-    visibility: none;
-    /* display: none !important; */
+    display: none !important;
     /* WIDTH 3 UNITS */
-    flex: 3;
+    /* flex: 3; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgb(255, 42, 0); */
+  }
+  /* !!! TOGGLE NAV WHEN HAMBURGER IS CLICKED */
+  nav.expand {
+    /* display: block; */
+    /* visibility: visible; */
+
+    display: inline !important;
+    /* display: none !important; */
+    width: 135px;
+    /* WIDTH 3 UNITS */
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgb(255, 42, 0);
+    border: 1px solid rgb(0, 202, 253);
   }
 
   .nav-link {
@@ -348,7 +378,8 @@
   a.icon {
     color: white;
     font-size: 2rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
+    border: 1px solid red;
   }
 
   /* TITLE DIV */

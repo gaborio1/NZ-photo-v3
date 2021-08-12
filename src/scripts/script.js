@@ -23,27 +23,49 @@
 // detectmob();
 
 const nav = document.querySelector(".nav");
+const logoContainer = document.querySelector(".logo-container");
+const headerContent = document.querySelector(".header-content");
 const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
 // const searchButton = document.querySelector(".default-btn");
 
 if (window.innerWidth < 767) {
   console.log("small screen");
-  nav.classList.add("hidden");
+  // nav.classList.add("hidden");
   // !!! classList.add("hidden") NOT WORKING ON CONTAINER !!!
   // searchContainer.classList.add("hidden");
-  // INSTEAD:
+
+  // !!!!! INSTEAD: !!!!!
+  // https://stackoverflow.com/questions/462537/overriding-important-style
   // searchContainer.style.setProperty("display", "inline", "important");
+
   // OR, HIDE MAGNIFIER BUTTON ONLY
   // searchButton.classList.add("hidden");
 
-  hamburger.addEventListener("click", () => {
-    console.log("hamburger clicked");
-    nav.classList.toggle("hidden");
-  });
+  // hamburger.addEventListener("click", () => {
+  //   console.log("hamburger clicked");
+  //   nav.classList.toggle("hidden");
+  // });
 } else {
   console.log("large screen");
+  // nav.classList.remove("hidden");
+  // hamburger.classList.add("hidden");
 }
+
+hamburger.addEventListener("click", () => {
+  console.log("hamburger clicked");
+  // nav.classList.toggle("hidden");
+  nav.classList.toggle("expand");
+  headerContent.classList.toggle("expand");
+  // logoContainer.style.visibility = "hidden";
+
+  // TOGGLE VISIBILITY OF LOGO
+  if (logoContainer.style.display === "none") {
+    logoContainer.style.display = "block";
+  } else {
+    logoContainer.style.display = "none";
+  }
+});
 
 // !!!!! PARALLAX HAS TO BE UP TOP !!!!!
 // PARALLAX IS NOW DONE WITH parallax.js
