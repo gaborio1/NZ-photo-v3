@@ -24,13 +24,23 @@
 
 const nav = document.querySelector(".nav");
 const searchContainer = document.querySelector(".search-container");
-const searchButton = document.querySelector(".default-btn");
+const hamburger = document.querySelector(".hamburger-button");
+// const searchButton = document.querySelector(".default-btn");
 
 if (window.innerWidth < 767) {
   console.log("small screen");
-  // nav.classList.add("hidden");
+  nav.classList.add("hidden");
+  // !!! classList.add("hidden") NOT WORKING ON CONTAINER !!!
   // searchContainer.classList.add("hidden");
+  // INSTEAD:
+  // searchContainer.style.setProperty("display", "inline", "important");
+  // OR, HIDE MAGNIFIER BUTTON ONLY
   // searchButton.classList.add("hidden");
+
+  hamburger.addEventListener("click", () => {
+    console.log("hamburger clicked");
+    nav.classList.toggle("hidden");
+  });
 } else {
   console.log("large screen");
 }
