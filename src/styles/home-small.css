@@ -58,7 +58,7 @@
   header {
     z-index: 3;
     position: absolute;
-    top: 45px;
+    /* top: 45px; */
     /* display: none; */
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
     /* background-color: rgba(0, 0, 0, 0.85); */
     background-color: transparent !important;
 
-    border: 3px solid rgba(255, 166, 0, 0.944);
+    /* border: 3px solid rgba(255, 166, 0, 0.944); */
   }
 
   .header-content {
@@ -86,7 +86,9 @@
     height: 50vh;
     height: 80%;
 
-    border: 3px solid rgb(47, 255, 0);
+    margin-top: 45px;
+
+    /* border: 3px solid rgb(47, 255, 0); */
   }
 
   .header-content.expand {
@@ -96,13 +98,13 @@
     /* align-items: flex-end; */
     align-items: center;
     /* max-width: var(--main-content-1400); */
-    width: 80%;
+    width: 90%;
     /* width: 100%; */
     /* height: 45px; */
     height: 50vh;
     height: 80%;
 
-    border: 3px solid rgb(47, 255, 0);
+    /* border: 3px solid rgb(47, 255, 0); */
   }
 
   .logo-container,
@@ -114,12 +116,12 @@
   /* ===== LOGO =====  */
 
   .logo-container {
-    flex: 1;
-    /* display: flex; */
+    /* flex: 1; */
+    display: flex;
     /* align-items: center; */
     /* border: 1px solid white; */
 
-    border: 1px solid rgb(255, 42, 0);
+    /* border: 1px solid rgb(255, 42, 0); */
   }
 
   .logo__block-row {
@@ -127,8 +129,10 @@
   }
 
   .logo__block {
-    width: 0.5rem;
-    height: 1.5rem;
+    /* width: 0.5rem;
+    height: 1.5rem; */
+    width: 1rem;
+    height: 3rem;
     border: 1px solid rgba(0, 0, 0, 0.108);
     border-radius: 0.2rem;
     margin: 0.1rem;
@@ -200,7 +204,7 @@
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgb(0, 202, 253);
+    /* border: 1px solid rgb(0, 202, 253); */
   }
 
   .nav-link {
@@ -263,10 +267,10 @@
 
   .dropdown-content {
     display: none;
-    position: absolute;
+    /* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
+    position: relative;
     /* background-color: #f9f9f9; */
-    background-color: #000000a0;
-    min-width: 130px;
+    /* background-color: #000000a0; */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
@@ -307,7 +311,7 @@
     justify-content: center;
     align-items: center;
 
-    border: 1px solid rgb(255, 42, 0);
+    /* border: 1px solid rgb(255, 42, 0); */
   }
 
   button {
@@ -377,9 +381,12 @@
   /* HAMBURGER ICON */
   a.icon {
     color: white;
-    font-size: 2rem;
+    color: var(--sub-title-orange);
+    color: var(--title-blue);
+    color: black;
+    font-size: 3rem;
     /* margin-right: 2rem; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   /* TITLE DIV */
@@ -530,7 +537,7 @@ h1.enzee__letter:nth-of-type(5) {
     justify-content: center;
     justify-content: space-between;
     margin-bottom: 5px;
-    border: 1px solid rgb(35, 210, 29);
+    /* border: 1px solid rgb(35, 210, 29); */
   }
 
   h3.photography__letter {
@@ -539,7 +546,7 @@ h1.enzee__letter:nth-of-type(5) {
     font-size: 15px;
     letter-spacing: 1.1rem;
     margin: 0px 0px 0px 0px;
-    border: 1px solid rgb(0, 183, 255);
+    /* border: 1px solid rgb(0, 183, 255); */
 
     /* animation: flashAnimation ease 1s; */
   }
