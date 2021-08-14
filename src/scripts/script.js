@@ -67,6 +67,33 @@ hamburger.addEventListener("click", () => {
   }
 });
 
+window.onload = () => {
+  // headerContent.style.animation = "none";
+  // console.log("onload");
+  // setTimeout(function () {
+  //   headerContent.style.animation = "collapseHeight ease 0.5s";
+  // }, 1000);
+};
+
+// ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
+const pageLinks = document.querySelectorAll(".page-link");
+// !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
+for (link of pageLinks) {
+  link.addEventListener("click", () => {
+    console.log("page-link clicked");
+    // headerContent.classList.remove("expand");
+    // nav.classList.remove("expand");
+    nav.classList.toggle("expand");
+    headerContent.classList.toggle("expand");
+    // TOGGLE VISIBILITY OF LOGO
+    if (logoContainer.style.display === "none") {
+      logoContainer.style.display = "block";
+    } else {
+      logoContainer.style.display = "none";
+    }
+  });
+}
+
 // !!!!! PARALLAX HAS TO BE UP TOP !!!!!
 // PARALLAX IS NOW DONE WITH parallax.js
 
