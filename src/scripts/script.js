@@ -67,13 +67,18 @@ hamburger.addEventListener("click", () => {
   }
 });
 
-window.onload = () => {
-  // headerContent.style.animation = "none";
-  // console.log("onload");
-  // setTimeout(function () {
-  //   headerContent.style.animation = "collapseHeight ease 0.5s";
-  // }, 1000);
-};
+setTimeout(function () {
+  document.body.className = "";
+}, 500);
+
+// NOT WORKING AS INTENDED:
+// window.onload = () => {
+//   headerContent.style.animation = "none";
+//   console.log("onload");
+//   setTimeout(function () {
+//     headerContent.style.animation = "collapseHeight ease 0.5s";
+//   }, 1000);
+// };
 
 // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
 const pageLinks = document.querySelectorAll(".page-link");
