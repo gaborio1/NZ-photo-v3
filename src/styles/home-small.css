@@ -78,7 +78,7 @@
     /* background-color: rgba(0, 0, 0, 0.85); */
     /* background-color: transparent !important; */
 
-    border: 3px solid rgba(255, 166, 0, 0.944);
+    /* border: 3px solid rgba(255, 166, 0, 0.944); */
   }
 
   .header-content {
@@ -89,9 +89,9 @@
     width: 90%;
     height: 60px;
 
-    animation: collapseHeight ease 0.5s;
+    animation: collapseHeight ease-in 0.25s;
 
-    border: 3px solid rgb(47, 255, 0);
+    /* border: 3px solid rgb(47, 255, 0); */
   }
 
   .header-content.expand {
@@ -189,40 +189,60 @@
     /* color: #56d2e2; */
   }
 
+  /* NOT IN USE */
+  /* @keyframes fadeOutAnimation {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  } */
+
   /* !!! HIDE NAV BY DEFAULT !!! */
   nav {
     display: none !important;
+    animation: fadeOutAnimation ease 0.5s;
     /* WIDTH 3 UNITS */
     /* flex: 3; */
     /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 
     border: 1px solid rgb(255, 42, 0); */
   }
   /* !!! TOGGLE NAV WHEN HAMBURGER IS CLICKED */
   nav.expand {
-    /* display: block; */
-    /* visibility: visible; */
-
-    display: inline !important;
-    /* display: none !important; */
-    width: 135px;
-    /* WIDTH 3 UNITS */
-    /* flex: 1; */
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* display: block; */
+    /* visibility: visible; */
 
-    border: 1px solid rgb(0, 202, 253);
+    /* display: inline !important; */
+    /* display: none !important; */
+    width: 135px;
+    width: 90%;
+    /* WIDTH 3 UNITS */
+    /* flex: 1; */
+
+    animation: fadeInAnimation ease 0.5s;
+    /* NOT WORKING: */
+    /* animation: fadeOutAnimation ease 0.75s; */
+    margin-top: 15%;
+
+    border: 1px solid rgba(0, 202, 253, 0.423);
+    /* border: 1px solid rgb(230, 250, 255); */
   }
 
-  a.page-link {
-    /* display: none; */
+  /* ALL ACTUAL LINKS (<a>) */
+  /* a.page-link {
     border: 3px solid red;
-  }
+  } */
 
   .nav-link {
     display: block;
@@ -332,7 +352,7 @@
   }
 
   button {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border: none;
     color: white;
     background: transparent;
@@ -403,7 +423,7 @@
     /* color: black; */
     font-size: 3rem;
     /* margin-left: 80%; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   /* TITLE DIV */
