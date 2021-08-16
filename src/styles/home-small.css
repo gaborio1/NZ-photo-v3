@@ -134,9 +134,12 @@
 
   /* ===== LOGO =====  */
 
-  /* .logo-container {
-    border: 1px solid rgb(255, 42, 0);
-  } */
+  /* KEEP LOGO IN TOP LEFT CORNER */
+  .logo-container {
+    position: absolute;
+    top: 10px;
+    /* border: 1px solid rgb(255, 42, 0); */
+  }
 
   .logo__block-row {
     display: flex;
@@ -190,7 +193,7 @@
   }
 
   /* NOT IN USE */
-  /* @keyframes fadeOutAnimation {
+  @keyframes fadeOutAnimation {
     0% {
       opacity: 1;
     }
@@ -198,7 +201,7 @@
     100% {
       opacity: 0;
     }
-  } */
+  }
 
   /* !!! HIDE NAV BY DEFAULT !!! */
   nav {
@@ -233,7 +236,7 @@
     animation: fadeInAnimation ease 0.5s;
     /* NOT WORKING: */
     /* animation: fadeOutAnimation ease 0.75s; */
-    margin-top: 15%;
+    margin-top: 25%;
 
     border: 1px solid rgba(0, 202, 253, 0.423);
     /* border: 1px solid rgb(230, 250, 255); */
@@ -417,6 +420,10 @@
 
   /* HAMBURGER ICON */
   a.icon {
+    /* KEEP HAMBURGER IN TOP RIGHT CORNER */
+    position: absolute;
+    top: 5px;
+    right: 30px;
     color: white;
     color: var(--sub-title-orange);
     color: var(--title-blue);
