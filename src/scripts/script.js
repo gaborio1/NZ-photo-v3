@@ -57,14 +57,15 @@ hamburger.addEventListener("click", () => {
   // nav.classList.toggle("hidden");
   nav.classList.toggle("expand");
   headerContent.classList.toggle("expand");
+  logoContainer.classList.toggle("expand");
   // logoContainer.style.visibility = "hidden";
 
   // TOGGLE VISIBILITY OF LOGO
-  if (logoContainer.style.display === "none") {
-    logoContainer.style.display = "block";
-  } else {
-    logoContainer.style.display = "none";
-  }
+  // if (logoContainer.style.display === "none") {
+  //   logoContainer.style.display = "block";
+  // } else {
+  //   logoContainer.style.display = "none";
+  // }
 });
 
 setTimeout(function () {
@@ -90,12 +91,13 @@ for (link of pageLinks) {
     // nav.classList.remove("expand");
     nav.classList.toggle("expand");
     headerContent.classList.toggle("expand");
+    logoContainer.classList.remove("expand");
     // TOGGLE VISIBILITY OF LOGO
-    if (logoContainer.style.display === "none") {
-      logoContainer.style.display = "block";
-    } else {
-      logoContainer.style.display = "none";
-    }
+    // if (logoContainer.style.display === "none") {
+    //   logoContainer.style.display = "block";
+    // } else {
+    //   logoContainer.style.display = "none";
+    // }
   });
 }
 
