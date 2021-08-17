@@ -47,11 +47,11 @@ footer-bottom smaller height
 homepage:
 ✅ prevent keyframe animation from firing on page load
 hamburger/X toggle when expanding
-keep hamburger/X in top right corner when expanding navbar
+✅keep hamburger/X in top right corner when expanding navbar
 collapse navbar if actual page is selected from menu
 ✅ add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
 toggle sub-menu visibility with dropdown links (portfolio, products)
-collapse/expand navbar with evtlistener on hamburger/X
-fade-out logo when navbar expands ??? OR keep it as it is ???
+✅ collapse/expand navbar with evtlistener on hamburger/X
+✅ fade-out logo when navbar expands ??? OR keep it as it is ???
 refactor navbar-logic.js
 add navbar-small.css

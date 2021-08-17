@@ -267,7 +267,7 @@
     /* WIDTH 3 UNITS */
     /* flex: 1; */
 
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation linear 1s;
     /* NOT WORKING: */
     /* animation: fadeOutAnimation ease 0.75s; */
     margin-top: 25%;
