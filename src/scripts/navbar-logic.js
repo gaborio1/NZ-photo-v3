@@ -14,8 +14,10 @@ const sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeNavbarSticky = () => {
   if (window.pageYOffset >= sticky) {
+    console.log("onscroll");
     navbar.classList.add("sticky");
   } else {
+    // console.log("onscroll");
     navbar.classList.remove("sticky");
   }
 };
@@ -142,3 +144,106 @@ const addActiveClassToCurrrent = () => {
 };
 
 addActiveClassToCurrrent();
+
+// =============================== SMALL SCREEN ===============================
+
+// https://stackoverflow.com/questions/41868060/how-to-run-some-javascript-code-only-on-small-screen-mobile-devices
+// WORKS WITH CHROME DEVICE TOOLBAR
+// function detectmob() {
+//   if (
+//     navigator.userAgent.match(/Android/i) ||
+//     navigator.userAgent.match(/webOS/i) ||
+//     navigator.userAgent.match(/iPhone/i) ||
+//     navigator.userAgent.match(/iPad/i) ||
+//     navigator.userAgent.match(/iPod/i) ||
+//     navigator.userAgent.match(/BlackBerry/i) ||
+//     navigator.userAgent.match(/Windows Phone/i)
+//   ) {
+//     console.log("mobile or tablet size");
+//     // return true;
+//   } else {
+//     console.log("laptop or larger size");
+//     // return false;
+//   }
+// }
+
+// detectmob();
+
+const nav = document.querySelector(".nav");
+const logoContainer = document.querySelector(".logo-container");
+const headerContent = document.querySelector(".header-content");
+const searchContainer = document.querySelector(".search-container");
+const hamburger = document.querySelector(".hamburger-button");
+// const searchButton = document.querySelector(".default-btn");
+
+if (window.innerWidth < 767) {
+  console.log("small screen");
+  // nav.classList.add("hidden");
+  // !!! classList.add("hidden") NOT WORKING ON CONTAINER !!!
+  // searchContainer.classList.add("hidden");
+
+  // !!!!! INSTEAD: !!!!!
+  // https://stackoverflow.com/questions/462537/overriding-important-style
+  // searchContainer.style.setProperty("display", "inline", "important");
+
+  // OR, HIDE MAGNIFIER BUTTON ONLY
+  // searchButton.classList.add("hidden");
+
+  // hamburger.addEventListener("click", () => {
+  //   console.log("hamburger clicked");
+  //   nav.classList.toggle("hidden");
+  // });
+} else {
+  console.log("large screen");
+  // nav.classList.remove("hidden");
+  // hamburger.classList.add("hidden");
+}
+
+hamburger.addEventListener("click", () => {
+  console.log("hamburger clicked");
+  // nav.classList.toggle("hidden");
+  nav.classList.toggle("expand");
+  headerContent.classList.toggle("expand");
+  logoContainer.classList.toggle("expand");
+  // logoContainer.style.visibility = "hidden";
+
+  // TOGGLE VISIBILITY OF LOGO
+  // if (logoContainer.style.display === "none") {
+  //   logoContainer.style.display = "block";
+  // } else {
+  //   logoContainer.style.display = "none";
+  // }
+});
+
+setTimeout(function () {
+  document.body.className = "";
+}, 500);
+
+// NOT WORKING AS INTENDED:
+// window.onload = () => {
+//   headerContent.style.animation = "none";
+//   console.log("onload");
+//   setTimeout(function () {
+//     headerContent.style.animation = "collapseHeight ease 0.5s";
+//   }, 1000);
+// };
+
+// ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
+const pageLinks = document.querySelectorAll(".page-link");
+// !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
+for (link of pageLinks) {
+  link.addEventListener("click", () => {
+    console.log("page-link clicked");
+    // headerContent.classList.remove("expand");
+    // nav.classList.remove("expand");
+    nav.classList.toggle("expand");
+    headerContent.classList.toggle("expand");
+    logoContainer.classList.remove("expand");
+    // TOGGLE VISIBILITY OF LOGO
+    // if (logoContainer.style.display === "none") {
+    //   logoContainer.style.display = "block";
+    // } else {
+    //   logoContainer.style.display = "none";
+    // }
+  });
+}

@@ -1,4 +1,4 @@
-console.log("hello from script.js");
+console.log("hello from script js");
 // =============================== SMALL SCREEN ===============================
 
 // https://stackoverflow.com/questions/41868060/how-to-run-some-javascript-code-only-on-small-screen-mobile-devices
