@@ -31,7 +31,7 @@ index,about,slider,contact.css
 navbar-content.js, navbar.css (for lightbox 2:1 test)
 footer.js, footer.css (for lightbox 2:1 test)
 
-===== MEDIUM SIZE CHANGES: =====
+==================== MEDIUM SIZE CHANGES: ====================
 
 homepage:
 Enzee/photography smaller letter-spacing
@@ -42,9 +42,16 @@ footer-top-img-cover justify-content: space around
 footer-content--full-width smaller margin top to fit clear div in
 footer-bottom smaller height
 
-===== SMALL SIZE =====
+==================== SMALL SIZE ====================
 
 homepage:
+design new layout for main content
+design small footer
+
+other pages:
+make div/main content smaller/responsive as it is messing with sticky navbar
+
+navbar:
 ✅ prevent keyframe animation from firing on page load
 hamburger/X toggle when expanding
 ✅keep hamburger/X in top right corner when expanding navbar
@@ -53,5 +60,11 @@ collapse navbar if actual page is selected from menu
 toggle sub-menu visibility with dropdown links (portfolio, products)
 ✅ collapse/expand navbar with evtlistener on hamburger/X
 ✅ fade-out logo when navbar expands ??? OR keep it as it is ???
+make div/main content smaller/responsive as it is messing with sticky navbar
 refactor navbar-logic.js
 add navbar-small.css
+
+footer:
+✅ add footer-small.css
+add custom css variables to font-sizes
+design new layout
