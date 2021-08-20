@@ -46,6 +46,11 @@ footer-bottom smaller height
 
 homepage:
 design new layout for main content
+design smaller title divs
+disable hover-zoom
+disable info-div animation
+re-configure scroll animation
+image-container div can now fit image height
 design small footer
 
 other pages:
