@@ -68,3 +68,5 @@ footer:
 ✅ add footer-small.css
 add custom css variables to font-sizes
 design new layout
+add back to top button?
+smaller, white social media icons in footer bottom?
