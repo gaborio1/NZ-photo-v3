@@ -57,10 +57,10 @@
 
   /* !!! BLUR HOMEPAGE EXCEPT NAVBAR WHEN SEARCH BAR IS ACTIVE !!! */
   /* GRAYSCALE + BLUR */
-  .blurred {
+  /* .blurred {
     filter: grayscale(0.5) blur(2px);
     filter: grayscale(0.25) blur(1px) opacity(0.75);
-  }
+  } */
 
   header {
     z-index: 3;
@@ -227,7 +227,7 @@
   }
 
   /* NOT IN USE */
-  @keyframes fadeOutAnimation {
+  /* @keyframes fadeOutAnimation {
     0% {
       opacity: 1;
     }
@@ -235,21 +235,14 @@
     100% {
       opacity: 0;
     }
-  }
+  } */
 
   /* !!! HIDE NAV BY DEFAULT !!! */
   nav {
     display: none !important;
     animation: fadeOutAnimation ease 0.5s;
-    /* WIDTH 3 UNITS */
-    /* flex: 3; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
 
-    border: 1px solid rgb(255, 42, 0); */
+    border: 1px solid rgb(255, 42, 0);
   }
   /* !!! TOGGLE NAV WHEN HAMBURGER IS CLICKED */
   nav.expand {
@@ -257,19 +250,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* display: block; */
-    /* visibility: visible; */
 
-    /* display: inline !important; */
-    /* display: none !important; */
     width: 135px;
     width: 90%;
-    /* WIDTH 3 UNITS */
-    /* flex: 1; */
-
     animation: fadeInAnimation linear 1s;
-    /* NOT WORKING: */
-    /* animation: fadeOutAnimation ease 0.75s; */
+
     margin-top: 25%;
 
     /* border: 1px solid rgba(0, 202, 253, 0.423); */
@@ -486,6 +471,8 @@
       opacity: 1;
     }
   }
+
+  /* !!! NOT IN USE !!! */
 
   /* FLASH IN p h o t o g r a p h y WITH SAME COLOR SHADOW */
   /* FOR .flash-fadein, NOW ADDED WITH JS */
@@ -754,7 +741,8 @@ h2 span.photography__letter:nth-of-type(11) {
     align-items: center;
     justify-content: center;
 
-    margin: 10px 5px 150px 5px;
+    /* margin: 10px 5px 150px 5px; */
+    margin: 10px 5px 30px 5px;
 
     border: 3px solid olive;
   }
@@ -772,41 +760,36 @@ h2 span.photography__letter:nth-of-type(11) {
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     /* BOTH % AND px WORK */
     width: 100%;
-    /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
-    max-height: 640px;
-    /* border: 3px solid yellow; */
 
-    /* border: 3px solid black; */
+    /* border: 3px solid yellow; */
   }
 
   /* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
-  /* [1] The container */
-  .img-hover-zoom {
+  /* .img-hover-zoom {
     border-radius: 3px;
-    /* [1.2] Hide the overflowing of child elements */
     overflow: hidden;
-    /* border: 3px solid tomato; */
-  }
+    border: 3px solid tomato;
+  } */
 
   .img-hover-zoom--portrait {
     /* width: 400px;
   height: 590px; */
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     width: 100%;
-    max-width: 500px;
-    max-height: 600px;
+    /* max-width: 500px;
+    max-height: 600px; */
   }
 
   /* [2] Transition property for smooth transformation of images */
-  .img-hover-zoom img {
+  /* .img-hover-zoom img {
     transition: transform 1s ease;
-  }
+  } */
 
   /* [3] Finally, transforming the image when container gets hovered */
   /* THIS INCLUDES IMAGE + INFO DIV */
-  .portrait-img-container:hover img {
+  /* .portrait-img-container:hover img {
     transform: scale(1.025);
-  }
+  } */
 
   /* CATEGORY TEXT CONTAINERS */
 
@@ -832,9 +815,9 @@ h2 span.photography__letter:nth-of-type(11) {
     border: 3px solid burlywood;
   }
 
-  .portrait-column--reverse .portrait-text-container {
+  /* .portrait-column--reverse .portrait-text-container {
     margin-bottom: 4rem;
-  }
+  } */
 
   p.category-info-text {
     font-weight: 300;
@@ -857,7 +840,7 @@ h2 span.photography__letter:nth-of-type(11) {
 
   img.portrait-style {
     width: var(--max-width);
-    border-radius: 3px;
+
     /* border: 1px solid rgba(0, 0, 0, 0.286); */
   }
 
@@ -892,21 +875,18 @@ h2 span.photography__letter:nth-of-type(11) {
   }
 
   /* THIS INCLUDES IMAGE + INFO DIV */
-  .landscape-img-container:hover img {
+  /* .landscape-img-container:hover img {
     transform: scale(1.025);
-  }
+  } */
 
   .img-hover-zoom--landscape {
-    /* width: 750px; */
     width: 100%;
-    /* max-width: 750px; */
-    max-height: 490px;
+
     /* border: 3px solid red; */
   }
 
   img.landscape-style {
     width: var(--max-width);
-    border-radius: 3px;
     /* border: 3px solid rgb(106, 235, 8); */
   }
 
@@ -959,25 +939,26 @@ h2 span.photography__letter:nth-of-type(11) {
     height: 33.33%;
   }
 
-  .category-img {
+  /* !!! NOT IN USE !!! */
+  /* .category-img {
     filter: grayscale(0.2) blur(0.1px) opacity(1);
-  }
+  } */
 
-  .category-img-container:hover .category-img {
+  /* .category-img-container:hover .category-img {
     filter: grayscale(0) blur(0px) opacity(1);
-  }
+  } */
 
   /* FADE OUT / SLIDE INFO DIV */
-  .category-img-container:hover .info-div {
+  /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+  /* .category-img-container:hover .info-div {
     opacity: 0.4;
-    /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
     width: 500px;
-  }
+  } */
 
-  .category-img-container:hover .info-div--landscape {
-    /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+  /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+  /* .category-img-container:hover .info-div--landscape {
     width: 400px;
-  }
+  } */
 
   /* CATEGORY INFO DIVS */
   .info-div {
@@ -985,12 +966,9 @@ h2 span.photography__letter:nth-of-type(11) {
     /* width: 100%; */
     width: 600px;
     height: 65px;
-    /* height: 10%; */
     position: relative;
     top: -300px;
     left: -215px;
-    /* top: -250px;
-  left: -150px; */
 
     /* background-color: rgba(0, 0, 0, 0.115); */
     background: linear-gradient(
@@ -1005,8 +983,9 @@ h2 span.photography__letter:nth-of-type(11) {
     -ms-transform: rotate(-90deg); /* IE 9 */
     transform: rotate(-90deg);
 
+    /* !!! NOT IN USE !!! */
     /* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
-    transition: opacity 1s ease, width ease 1s;
+    /* transition: opacity 1s ease, width ease 1s; */
 
     /* border: 1px solid rgba(255, 166, 0, 0.861); */
   }
@@ -1025,14 +1004,11 @@ h2 span.photography__letter:nth-of-type(11) {
   /* ========== FOOTER ========== */
 
   .footer {
-    /* z-index: 99; */
-
     /* !!!!! FIX THIS !!!!! */
     /* position: relative; */
     /* top: 3800px; */
     /* !!! HAD TO PLACE FOOTER IN MAIN CONTENT AFTER MAIN COLOUMN !!! */
 
-    /* width: var(--max-width); */
     width: 100vw;
     /* background: rgba(0, 0, 0, 0.85); */
     background: rgba(0, 0, 0, 0.95);
@@ -1087,39 +1063,24 @@ h2 span.photography__letter:nth-of-type(11) {
   }
 
   .footer-content--full-width {
-    /* width: 100%; */
     width: var(--max-width);
-    /* height: 120px; */
-    /* height: fit-content; */
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* margin-top: 80px; */
-    /* margin-top: 50px; */
     margin-top: 10px;
 
     /* border: 2px solid white; */
   }
 
   /* CLEAR DIV-1 NO BACKGROUND*/
-  .footer-content-1 {
-    /* width: 90%; */
-    width: 95%;
-    /* height: 100%; */
-    /* height: 180px; */
-
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
-
-    /* border: 1px solid orange; */
-  }
+  /* .footer-content-1 {
+    border: 1px solid orange;
+  } */
 
   .footer-info-container-1 {
     width: 100%;
-    /* height: 180px; */
     height: 200px;
 
     display: flex;
@@ -1158,18 +1119,15 @@ h2 span.photography__letter:nth-of-type(11) {
     /* border: 1px solid rgba(255, 255, 255, 0.779); */
     background: rgba(0, 0, 0, 0.211);
 
-    /* color: black;
-    border: 1px solid black; */
-
     border-radius: 3px;
-    /* margin-top: 1rem; */
-    /* margin-top: 0.5rem; */
-    /* margin-left: 7rem; */
+    /* color: black; */
+    /* border: 1px solid black; */
   }
 
-  .footer-contact-button:hover {
+  /* !!! NOT IN USE !!! */
+  /* .footer-contact-button:hover {
     background: rgba(0, 0, 0, 0.498);
-  }
+  } */
 
   /* CLEAR DIV-2 */
   .footer-content--full-width.full-width-2 {
@@ -1202,19 +1160,11 @@ h2 span.photography__letter:nth-of-type(11) {
 
   /* SOCIAL MEDIA ICON CONTAINER */
   .footer-info-container-2 {
-    /* height: 100%; */
     width: 100%;
 
     display: flex;
-    /* align-items: center; */
-    /* justify-content: flex-end; */
     justify-content: space-around;
-
-    /* border-top: 1px solid rgba(255, 255, 255, 0.759); */
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.759); */
-    /* padding: 0.5rem; */
     padding: 0.25rem;
-    /* margin-right: 1rem; */
 
     /* border: 2px solid #5685e2; */
   }

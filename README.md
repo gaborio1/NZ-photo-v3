@@ -47,7 +47,9 @@ footer-bottom smaller height
 homepage:
 design new layout for main content
 design smaller title divs
-disable hover-zoom
+✅ disable hover-zoom
+disable hover-opacity
+disable blur effect on body when search-bar is active
 disable info-div animation
 re-configure scroll animation
 image-container div can now fit image height
@@ -57,6 +59,8 @@ other pages:
 make div/main content smaller/responsive as it is messing with sticky navbar
 
 navbar:
+include search-bar ???
+make navbar transparent when page loads(navbar-logic.js)
 ✅ prevent keyframe animation from firing on page load
 hamburger/X toggle when expanding
 ✅keep hamburger/X in top right corner when expanding navbar
@@ -71,6 +75,7 @@ add navbar-small.css
 
 footer:
 ✅ add footer-small.css
+try footer without background image ???
 add custom css variables to font-sizes
 design new layout
 add back to top button?
