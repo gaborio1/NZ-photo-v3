@@ -964,11 +964,8 @@ h2 span.photography__letter:nth-of-type(11) {
   .info-div {
     /* WHEN HORIZINTAL */
     /* width: 100%; */
-    width: 600px;
-    height: 65px;
+
     position: relative;
-    top: -300px;
-    left: -215px;
 
     /* background-color: rgba(0, 0, 0, 0.115); */
     background: linear-gradient(
@@ -978,27 +975,46 @@ h2 span.photography__letter:nth-of-type(11) {
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0)
     );
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.224);
 
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
+    border-top: 1px solid rgba(255, 255, 255, 0.519);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.519);
+    /* 
+    border-top: 1px solid rgba(0, 0, 0, 0.663);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.663); */
+    /* border-radius: 5px; */
 
-    /* !!! NOT IN USE !!! */
-    /* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
-    /* transition: opacity 1s ease, width ease 1s; */
+    /* -ms-transform: rotate(-90deg); */
+    /* transform: rotate(-90deg); */
 
     /* border: 1px solid rgba(255, 166, 0, 0.861); */
   }
 
+  .info-div h2 {
+    font-size: 45px;
+  }
+
+  .portrait-img-container .info-div {
+    /* width: 600px;
+    top: -300px;
+    left: -215px; */
+    width: 100%;
+    top: -75px;
+    /* left: -215px; */
+  }
+
   .landscape-img-container .info-div {
-    width: 500px;
+    /* width: 500px;
     top: -250px;
-    left: -165px;
+    left: -165px; */
+    width: 100%;
+    top: -75px;
+    /* left: -165px; */
   }
 
   .info-div-content h2.category {
-    margin-left: 2rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    /* margin-right: 1rem; */
   }
 
   /* ========== FOOTER ========== */
