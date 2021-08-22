@@ -538,6 +538,10 @@ h1.enzee__letter:nth-of-type(5) {
     /* border: 1px solid orange; */
   }
 
+  .opacityZero {
+    opacity: 0;
+  }
+
   h3.photography__letter {
     /* display: inline-block; */
     /* text-transform: uppercase; */

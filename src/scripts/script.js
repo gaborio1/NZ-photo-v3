@@ -69,9 +69,10 @@ hamburger.addEventListener("click", () => {
   // }
 });
 
+// !!! PREVENT CSS ANIMATION FROM RUNNING WHEN PAGE LOADS !!!
 setTimeout(function () {
   document.body.className = "";
-}, 500);
+}, 200);
 
 // NOT WORKING AS INTENDED:
 // window.onload = () => {
@@ -264,14 +265,16 @@ window.addEventListener("load", function () {
 
 const fadeInSequence = (arr) => {
   const letters = arr;
-  let delay = 50;
+  // INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
+  // SEE LINE 73
+  let delay = 201;
   for (let i = 0; i < letters.length; i++) {
     // letters[i].classList.add("hidden");
     setTimeout(() => {
-      letters[i].classList.remove("hidden");
+      letters[i].classList.remove("opacityZero");
       letters[i].classList.add("flash-fadein");
       letters[i].style.display = "inline-block";
     }, delay);
-    delay += 75;
+    delay += 50;
   }
 };

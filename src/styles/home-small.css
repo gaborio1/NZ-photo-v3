@@ -2,8 +2,9 @@
   body.preload * {
     animation-duration: 0s !important;
     -webkit-animation-duration: 0s !important;
-    transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s,
-      padding 0s, margin 0s !important;
+    /* !!! opacity IS REMOVED TO TEMPORARILY FIX ANIMATING photography !!! */
+    transition: background-color 0s, color 0s, width 0s, height 0s, padding 0s,
+      margin 0s !important;
   }
 
   /* ===== PARALLAX IMAGE LAYERS ===== */
@@ -563,7 +564,7 @@
     font-weight: 900;
 
     /* ANIMATING Enzee at once */
-    /* animation: fadeInAnimation ease-out 3s;
+    /* animation: fadeInAnimation ease-out 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; */
 
@@ -579,25 +580,25 @@
   /* FADE IN E n z e e IN SEQUENCE */
   /* h1.enzee__letter:nth-of-type(1) {
     text-transform: uppercase;
-    animation: fadeInAnimation ease .5s;
+    animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
-}
-h1.enzee__letter:nth-of-type(2) {
+  }
+  h1.enzee__letter:nth-of-type(2) {
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
-}
-h1.enzee__letter:nth-of-type(3) {
+  }
+  h1.enzee__letter:nth-of-type(3) {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
-}
-h1.enzee__letter:nth-of-type(4) {
+  }
+  h1.enzee__letter:nth-of-type(4) {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
-}
-h1.enzee__letter:nth-of-type(5) {
+  }
+  h1.enzee__letter:nth-of-type(5) {
     animation: fadeInAnimation ease 2.5s;
     animation-iteration-count: 1;
-} */
+  } */
 
   .title-div__photography-container {
     /* display: flex; */
@@ -606,10 +607,16 @@ h1.enzee__letter:nth-of-type(5) {
     width: 95%;
     /* FLEX WILL CHANGE FADE IN BEHAVIOR */
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
+    /* justify-content: center; */
+    justify-content: space-around;
+    margin-left: 3%;
     margin-bottom: 5px;
+
     /* border: 1px solid rgb(35, 210, 29); */
+  }
+
+  .opacityZero {
+    opacity: 0;
   }
 
   h3.photography__letter {
