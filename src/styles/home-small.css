@@ -242,7 +242,7 @@
     display: none !important;
     animation: fadeOutAnimation ease 0.5s;
 
-    border: 1px solid rgb(255, 42, 0);
+    /* border: 1px solid rgb(255, 42, 0); */
   }
   /* !!! TOGGLE NAV WHEN HAMBURGER IS CLICKED */
   nav.expand {
@@ -525,9 +525,9 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.519);
 
     /* FADE IN ON LOAD */
-    animation: fadeInAnimation ease 0.5s;
+    /* animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 
     /* border: 3px solid red; */
   }
@@ -563,9 +563,9 @@
     font-weight: 900;
 
     /* ANIMATING Enzee at once */
-    animation: fadeInAnimation ease-out 3s;
+    /* animation: fadeInAnimation ease-out 3s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 
     line-height: 100px;
 
@@ -630,52 +630,6 @@ h1.enzee__letter:nth-of-type(5) {
 
   /* THIS IS NOW DONE BY JS */
   /* FADE IN p h o t o g r a p h y IN SEQUENCE WITH CSS */
-  /* animation-fill-mode: forwards; */
-
-  /* h2 span.photography__letter:nth-of-type(1) {
-    animation: flashAnimation ease .25s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(2) {
-    animation: flashAnimation ease 0.5s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(3) {
-    animation: flashAnimation ease 0.75s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(4) {
-    animation: flashAnimation ease 1s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(5) {
-    animation: flashAnimation ease 1.25s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(6) {
-    animation: flashAnimation ease 1.5s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(7) {
-    animation: flashAnimation ease 1.75s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(8) {
-    animation: flashAnimation ease 2s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(9) {
-    animation: flashAnimation ease 2.25s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(10) {
-    animation: flashAnimation ease 2.5s;
-    animation-iteration-count: 1;
-}
-h2 span.photography__letter:nth-of-type(11) {
-    animation: flashAnimation ease 2.75s;
-    animation-iteration-count: 1;
-} */
 
   /* ========== MAIN CONTENT ========== */
 
