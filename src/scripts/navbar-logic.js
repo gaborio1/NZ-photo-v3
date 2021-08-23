@@ -205,7 +205,6 @@ hamburger.addEventListener("click", () => {
   nav.classList.toggle("expand");
   headerContent.classList.toggle("expand");
   logoContainer.classList.toggle("expand");
-  // logoContainer.style.visibility = "hidden";
 
   // TOGGLE VISIBILITY OF LOGO
   // if (logoContainer.style.display === "none") {

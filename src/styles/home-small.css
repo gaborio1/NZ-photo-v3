@@ -84,6 +84,10 @@
     /* border: 3px solid rgba(255, 166, 0, 0.944); */
   }
 
+  /* header.expand {
+    background: rgba(0, 0, 0, 0.85) !important;
+  } */
+
   .header-content {
     display: flex;
     /* align-items: flex-end; */
@@ -102,6 +106,7 @@
     justify-content: flex-end;
 
     height: 100vh;
+    /* background: rgba(0, 0, 0, 0.35); */
 
     animation: expandHeight ease 0.5s;
     /* animation-iteration-count: 1; */
@@ -256,6 +261,8 @@
 
     width: 135px;
     width: 90%;
+    /* !!! TRY THIS !!! */
+    /* background: rgba(255, 128, 0, 0.56); */
     animation: fadeInAnimation linear 1s;
 
     margin-top: 25%;
