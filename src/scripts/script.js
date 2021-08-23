@@ -22,7 +22,7 @@ console.log("hello from script js");
 // }
 
 // detectmob();
-
+const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const logoContainer = document.querySelector(".logo-container");
 const headerContent = document.querySelector(".header-content");
@@ -69,10 +69,11 @@ hamburger.addEventListener("click", () => {
   // }
 });
 
-// !!! PREVENT CSS ANIMATION FROM RUNNING WHEN PAGE LOADS !!!
+// !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
 setTimeout(function () {
-  document.body.className = "";
-}, 200);
+  // document.body.className = "";
+  header.className = "";
+}, 500);
 
 // NOT WORKING AS INTENDED:
 // window.onload = () => {
@@ -269,7 +270,7 @@ const fadeInSequence = (arr) => {
   // const photoLetters = arr;
   // INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
   // SEE LINE 73
-  let delay = 201;
+  let delay = 0;
   for (let i = 0; i < arr.length; i++) {
     // letters[i].classList.add("hidden");
     setTimeout(() => {
@@ -277,11 +278,12 @@ const fadeInSequence = (arr) => {
       arr[i].style.display = "inline-block";
       // arr[i].classList.add("flash-fadein");
     }, delay);
-    delay += 50;
+    delay += 60;
   }
   // ADD flash-fadein TO photography ONLY
   if (arr.length > 5) {
-    let delay = 201;
+    let delay = -160;
+    // let delay = 200;
     for (let i = 0; i < arr.length; i++) {
       // letters[i].classList.add("hidden");
       setTimeout(() => {
@@ -289,7 +291,7 @@ const fadeInSequence = (arr) => {
         arr[i].style.display = "inline-block";
         arr[i].classList.add("flash-fadein");
       }, delay);
-      delay += 50;
+      delay += 40;
     }
   }
 };
