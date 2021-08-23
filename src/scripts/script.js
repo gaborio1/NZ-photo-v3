@@ -255,26 +255,41 @@ addActiveClassToCurrrent();
 
 // ========== ANIMATE "photography" IN TITLE DIV ==========
 
-const letters = document.getElementsByClassName("photography__letter");
+const enzeeLetters = document.getElementsByClassName("enzee__letter");
+const photoLetters = document.getElementsByClassName("photography__letter");
 
 window.addEventListener("load", function () {
   // console.log("page is loaded");
   // console.log(letters);
-  fadeInSequence(letters);
+  fadeInSequence(enzeeLetters);
+  fadeInSequence(photoLetters);
 });
 
 const fadeInSequence = (arr) => {
-  const letters = arr;
+  // const photoLetters = arr;
   // INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
   // SEE LINE 73
   let delay = 201;
-  for (let i = 0; i < letters.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     // letters[i].classList.add("hidden");
     setTimeout(() => {
-      letters[i].classList.remove("opacityZero");
-      letters[i].classList.add("flash-fadein");
-      letters[i].style.display = "inline-block";
+      arr[i].classList.remove("opacityZero");
+      arr[i].style.display = "inline-block";
+      // arr[i].classList.add("flash-fadein");
     }, delay);
     delay += 50;
+  }
+  // ADD flash-fadein TO photography ONLY
+  if (arr.length > 5) {
+    let delay = 201;
+    for (let i = 0; i < arr.length; i++) {
+      // letters[i].classList.add("hidden");
+      setTimeout(() => {
+        arr[i].classList.remove("opacityZero");
+        arr[i].style.display = "inline-block";
+        arr[i].classList.add("flash-fadein");
+      }, delay);
+      delay += 50;
+    }
   }
 };

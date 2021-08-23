@@ -519,7 +519,7 @@ h1.enzee__letter:nth-of-type(5) {
 } */
 
   .title-div__photography-container {
-    /* display: flex; */
+    display: flex;
     width: fit-content;
     /* border: 1px solid orange; */
   }
