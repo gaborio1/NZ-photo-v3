@@ -16,13 +16,13 @@ if (window.innerWidth < 767) {
     .fromTo(
       "header",
       1,
-      { background: "rgba(0, 0, 0, 0.45)" },
+      { background: "rgba(0, 0, 0, 0.75)" },
       { background: "rgba(0, 0, 0, 0.95)" },
       "-=0"
     );
   new ScrollMagic.Scene({
     triggerElement: ".image-container",
-    duration: "15%",
+    duration: "30%",
     // offset: 20,
     triggerHook: 0,
   })

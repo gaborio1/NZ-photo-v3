@@ -44,6 +44,8 @@ footer-bottom smaller height
 
 ==================== SMALL SIZE ====================
 
+!!! ADD .preload TO .header !!!
+
 homepage:
 design new layout for main content
 design smaller title divs
@@ -60,6 +62,7 @@ make div/main content smaller/responsive as it is messing with sticky navbar
 
 navbar:
 include search-bar ???
+blur page when navbar is expanded and transparent ???
 make navbar transparent when page loads(navbar-logic.js)
 ✅ prevent keyframe animation from firing on page load
 hamburger/X toggle when expanding

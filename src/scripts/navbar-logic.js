@@ -14,7 +14,7 @@ const sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeNavbarSticky = () => {
   if (window.pageYOffset >= sticky) {
-    console.log("onscroll");
+    // console.log("onscroll");
     navbar.classList.add("sticky");
   } else {
     // console.log("onscroll");
@@ -168,7 +168,7 @@ addActiveClassToCurrrent();
 // }
 
 // detectmob();
-
+const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const logoContainer = document.querySelector(".logo-container");
 const headerContent = document.querySelector(".header-content");
@@ -201,7 +201,6 @@ if (window.innerWidth < 767) {
 
 hamburger.addEventListener("click", () => {
   console.log("hamburger clicked");
-  // nav.classList.toggle("hidden");
   nav.classList.toggle("expand");
   headerContent.classList.toggle("expand");
   logoContainer.classList.toggle("expand");
@@ -214,8 +213,10 @@ hamburger.addEventListener("click", () => {
   // }
 });
 
+// !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
 setTimeout(function () {
-  document.body.className = "";
+  // document.body.className = "";
+  header.className = "";
 }, 500);
 
 // NOT WORKING AS INTENDED:
