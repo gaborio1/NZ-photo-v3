@@ -1,10 +1,21 @@
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 3px solid orange; */
+}
+
 .slider-title-container {
-  margin: 100px 0px 100px 0px;
+  margin: 30px 0px 30px 0px;
+  text-align: center;
   /* border: 3px solid tomato; */
 }
 
 .slider-title-container h2 {
   font-weight: 400;
+  font-size: 45px;
+  line-height: 2.2rem;
 }
 
 .gallery-container {
@@ -13,8 +24,9 @@
   justify-content: center;
   /* width: 1400px;
     max-width: var(--main-content-1400); */
-  width: 90%;
-  margin-bottom: 100px;
+  width: fit-content;
+  /* padding: 0px 20px; */
+  margin-bottom: 45px;
   /* border: 3px solid rgb(21, 255, 0); */
 }
 
