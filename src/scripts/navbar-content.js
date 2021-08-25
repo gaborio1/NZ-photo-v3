@@ -1,3 +1,4 @@
+console.log("navbar-content.js");
 // !!! ESCAPE SPECIAL CHARS WITH \ !!!
 // ( you're => you\'re )
 

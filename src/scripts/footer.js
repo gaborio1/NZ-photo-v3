@@ -1,3 +1,4 @@
+console.log("footer.js");
 // !!! ESCAPE SPECIAL CHARS WITH \ !!!
 // ( you're => you\'re )
 

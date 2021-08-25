@@ -1,3 +1,5 @@
+console.log("navbar-small.js");
+
 document.write(
   '\
 \

@@ -1,5 +1,12 @@
+// window.addEventListener("resize", getCurrentWidth);
+
+// function getCurrentWidth() {
+//   let currentWidth = window.innerWidth;
+//   console.log(currentWidth);
+// }
+
 if (window.innerWidth < 767) {
-  console.log("hello from parallax small js");
+  console.log("parallax small js");
   // PARALLAX
   // !!!!! HAS TO BE UP TOP !!!!!
   // IF Y VALUE NOT MODIFIED WE CAN USE ELEMENT AS TRIGGER
@@ -37,8 +44,11 @@ if (window.innerWidth < 767) {
     // .to(".mountain-crop-4", 10, { y: -75 }, "-=10")
     // .to(".mountain-crop-5", 10, { y: -20 }, "-=10")
     // .to(".mountain-full", 10, { y: 5 }, "-=10")
-    .to(".title-div", 10, { top: "-200px" }, "0")
+
+    .to(".title-div", 10, { top: "-200px" }, "-=20")
+    // .to(".title-div", 10, { top: "0px" }, "0")
     // MAIN CONTENT SLIDES ON TOP
+    // .to(".main-content", 12, { top: "-20px" }, "-=20");
     .to(".main-content", 10, { top: "-20px" }, "-=20");
   new ScrollMagic.Scene({
     triggerElement: ".image-container",

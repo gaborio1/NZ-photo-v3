@@ -1,3 +1,4 @@
+console.log("navbar-logic.js");
 // STICKY NAVBAR W3SCHOOLS
 
 // When the user scrolls the page, execute myFunction
