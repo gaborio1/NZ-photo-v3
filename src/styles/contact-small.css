@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   /* ========== MAIN CONTENT ========== */
 
   .main-content {
@@ -8,7 +8,7 @@
     width: var(--max-width);
     height: fit-content;
 
-    /* border: 3px solid red; */
+    border: 3px solid red;
   }
 
   .main-coloumn {
