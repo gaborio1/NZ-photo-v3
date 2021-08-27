@@ -3,7 +3,7 @@ console.log("navbar-logic.js");
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = () => {
-  makeNavbarSticky();
+    makeNavbarSticky();
 };
 
 // Get the navbar
@@ -92,16 +92,16 @@ const filterFunction = () => {
 
 // OPEN SEARCH BAR
 defaultButton.addEventListener("click", function () {
-  showSearchBar();
-  showSearchDropdown();
-  blurElements();
+    showSearchBar();
+    showSearchDropdown();
+    blurElements();
 });
 
 // CLOSE SEARCH BAR
 closeButton.addEventListener("click", function () {
-  hideSearchBar();
-  hideSearchDropdown();
-  unBlurElements();
+    hideSearchBar();
+    hideSearchDropdown();
+    unBlurElements();
 });
 
 searchInput.addEventListener("keyup", filterFunction);

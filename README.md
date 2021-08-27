@@ -34,52 +34,52 @@ footer.js, footer.css (for lightbox 2:1 test)
 ==================== MEDIUM SIZE CHANGES: ====================
 
 homepage:
-Enzee/photography smaller letter-spacing
-category images larger width (overall size)
-mosaic div smaller height
-footer-top-img smaller height, justify-content: space between
-footer-top-img-cover justify-content: space around
-footer-content--full-width smaller margin top to fit clear div in
-footer-bottom smaller height
+    Enzee/photography smaller letter-spacing
+    category images larger width (overall size)
+    mosaic div smaller height
+    footer-top-img smaller height, justify-content: space between
+    footer-top-img-cover justify-content: space around
+    footer-content--full-width smaller margin top to fit clear div in
+    footer-bottom smaller height
 
 ==================== SMALL SIZE ====================
 
 !!! ADD .preload TO .header !!!
 
 homepage:
-design new layout for main content
-design smaller title divs
-✅ disable hover-zoom
-disable hover-opacity
-disable blur effect on body when search-bar is active
-disable info-div animation
-re-configure scroll animation
-image-container div can now fit image height
-design small footer
+    design new layout for main content
+    design smaller title divs
+    ✅ disable hover-zoom
+    disable hover-opacity
+    disable blur effect on body when search-bar is active
+    disable info-div animation
+    re-configure scroll animation
+    image-container div can now fit image height
+    design small footer
 
 other pages:
-make div/main content smaller/responsive as it is messing with sticky navbar
+    make div/main content smaller/responsive as it is messing with sticky navbar
 
 navbar:
-include search-bar ???
-blur page when navbar is expanded and transparent ???
-make navbar transparent when page loads(navbar-logic.js)
-✅ prevent keyframe animation from firing on page load
-hamburger/X toggle when expanding
-✅keep hamburger/X in top right corner when expanding navbar
-collapse navbar if actual page is selected from menu
-✅ add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
-toggle sub-menu visibility with dropdown links (portfolio, products)
-✅ collapse/expand navbar with evtlistener on hamburger/X
-✅ fade-out logo when navbar expands ??? OR keep it as it is ???
-make div/main content smaller/responsive as it is messing with sticky navbar
-refactor navbar-logic.js
-add navbar-small.css
+    include search-bar ???
+    blur page when navbar is expanded and transparent ???
+    make navbar transparent when page loads(navbar-logic.js)
+    ✅ prevent keyframe animation from firing on page load
+    hamburger/X toggle when expanding
+    ✅keep hamburger/X in top right corner when expanding navbar
+    collapse navbar if actual page is selected from menu
+    ✅ add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
+    toggle sub-menu visibility with dropdown links (portfolio, products)
+    ✅ collapse/expand navbar with evtlistener on hamburger/X
+    ✅ fade-out logo when navbar expands ??? OR keep it as it is ???
+    make div/main content smaller/responsive as it is messing with sticky navbar
+    refactor navbar-logic.js
+    add navbar-small.css
 
 footer:
-✅ add footer-small.css
-try footer without background image ???
-add custom css variables to font-sizes
-design new layout
-add back to top button?
-smaller, white social media icons in footer bottom?
+    ✅ add footer-small.css
+    try footer without background image ???
+    add custom css variables to font-sizes
+    design new layout
+    add back to top button?
+    smaller, white social media icons in footer bottom?
