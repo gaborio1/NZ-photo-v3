@@ -31,29 +31,29 @@ const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
 
 if (window.innerWidth < 767) {
-  console.log("small screen");
+  	console.log("small screen");
 } else {
-  console.log("large screen");
+  	console.log("large screen");
 }
 
 hamburger.addEventListener("click", () => {
-  console.log("hamburger clicked");
-  nav.classList.toggle("expand");
-  headerContent.classList.toggle("expand");
-  logoContainer.classList.toggle("expand");
+	console.log("hamburger clicked");
+	nav.classList.toggle("expand");
+	headerContent.classList.toggle("expand");
+	logoContainer.classList.toggle("expand");
 
-  // TOGGLE VISIBILITY OF LOGO
-  // if (logoContainer.style.display === "none") {
-  //   logoContainer.style.display = "block";
-  // } else {
-  //   logoContainer.style.display = "none";
-  // }
+	// TOGGLE VISIBILITY OF LOGO
+	// if (logoContainer.style.display === "none") {
+	//   logoContainer.style.display = "block";
+	// } else {
+	//   logoContainer.style.display = "none";
+	// }
 });
 
 // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
 setTimeout(function () {
-  // document.body.className = "";
-  header.className = "";
+	// document.body.className = "";
+	header.className = "";
 }, 500);
 
 // NOT WORKING AS INTENDED:
@@ -69,20 +69,20 @@ setTimeout(function () {
 const pageLinks = document.querySelectorAll(".page-link");
 // !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
 for (link of pageLinks) {
-  link.addEventListener("click", () => {
-    console.log("page-link clicked");
-    // headerContent.classList.remove("expand");
-    // nav.classList.remove("expand");
-    nav.classList.toggle("expand");
-    headerContent.classList.toggle("expand");
-    logoContainer.classList.remove("expand");
-    // TOGGLE VISIBILITY OF LOGO
-    // if (logoContainer.style.display === "none") {
-    //   logoContainer.style.display = "block";
-    // } else {
-    //   logoContainer.style.display = "none";
-    // }
-  });
+	link.addEventListener("click", () => {
+		console.log("page-link clicked");
+		// headerContent.classList.remove("expand");
+		// nav.classList.remove("expand");
+		nav.classList.toggle("expand");
+		headerContent.classList.toggle("expand");
+		logoContainer.classList.remove("expand");
+		// TOGGLE VISIBILITY OF LOGO
+		// if (logoContainer.style.display === "none") {
+		//   logoContainer.style.display = "block";
+		// } else {
+		//   logoContainer.style.display = "none";
+		// }
+	});
 }
 
 // !!!!! PARALLAX HAS TO BE UP TOP !!!!!
@@ -95,7 +95,7 @@ for (link of pageLinks) {
 
 // When user scrolls page, execute stickyNav()
 window.onscroll = () => {
-  makeNavbarSticky();
+  	makeNavbarSticky();
 };
 
 // Get the navbar
@@ -106,11 +106,11 @@ const sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeNavbarSticky = () => {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky");
+	} else {
+		navbar.classList.remove("sticky");
+	}
 };
 
 // ==================== SEARCH BAR ====================
@@ -137,61 +137,61 @@ const hideSearchDropdown = () => {
 
 // ========== SHOW/HIDE SEARCH BAR ==========
 const showSearchBar = () => {
-  defaultButton.classList.add("hidden");
-  submitButton.classList.remove("hidden");
-  searchInput.classList.remove("hidden");
-  closeButton.classList.remove("hidden");
-  searchInput.style.width = "140px";
+	defaultButton.classList.add("hidden");
+	submitButton.classList.remove("hidden");
+	searchInput.classList.remove("hidden");
+	closeButton.classList.remove("hidden");
+	searchInput.style.width = "140px";
 };
 
 const hideSearchBar = () => {
-  defaultButton.classList.remove("hidden");
-  submitButton.classList.add("hidden");
-  searchInput.classList.add("hidden");
-  closeButton.classList.add("hidden");
-  searchInput.style.width = "0px";
+	defaultButton.classList.remove("hidden");
+	submitButton.classList.add("hidden");
+	searchInput.classList.add("hidden");
+	closeButton.classList.add("hidden");
+	searchInput.style.width = "0px";
 };
 
 // ========== BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR ==========
 const blurElements = () => {
-  for (let i = 0; i < searchBlurElements.length; i++) {
-    searchBlurElements[i].classList.add("blurred");
-  }
+	for (let i = 0; i < searchBlurElements.length; i++) {
+		searchBlurElements[i].classList.add("blurred");
+	}
 };
 
 const unBlurElements = () => {
-  for (let i = 0; i < searchBlurElements.length; i++) {
-    searchBlurElements[i].classList.remove("blurred");
-  }
+	for (let i = 0; i < searchBlurElements.length; i++) {
+		searchBlurElements[i].classList.remove("blurred");
+	}
 };
 
 // ========== FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT ==========
 // (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
 const filterFunction = () => {
-  const filter = searchInput.value.toUpperCase();
-  for (let i = 0; i < searchDropdownLinks.length; i++) {
-    txtValue =
-      searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      searchDropdownLinks[i].style.display = "";
-    } else {
-      searchDropdownLinks[i].style.display = "none";
-    }
-  }
+	const filter = searchInput.value.toUpperCase();
+	for (let i = 0; i < searchDropdownLinks.length; i++) {
+		txtValue =
+		searchDropdownLinks[i].textContent || searchDropdownLinks[i].innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		searchDropdownLinks[i].style.display = "";
+		} else {
+		searchDropdownLinks[i].style.display = "none";
+		}
+	}
 };
 
 // OPEN SEARCH BAR
 defaultButton.addEventListener("click", function () {
-  showSearchBar();
-  showSearchDropdown();
-  blurElements();
+	showSearchBar();
+	showSearchDropdown();
+	blurElements();
 });
 
 // CLOSE SEARCH BAR
 closeButton.addEventListener("click", function () {
-  hideSearchBar();
-  hideSearchDropdown();
-  unBlurElements();
+	hideSearchBar();
+	hideSearchDropdown();
+	unBlurElements();
 });
 
 searchInput.addEventListener("keyup", filterFunction);
@@ -209,28 +209,28 @@ const contactLink = document.getElementById("navbar__contact");
 
 // ADD active-link CLASS TO LINK
 const addActiveClass = (el) => {
-  el.classList.add("active-link");
+  	el.classList.add("active-link");
 };
 // ADD active-link CLASS TO CURRENT PAGE'S LINK
 const addActiveClassToCurrrent = () => {
-  if (currentUrl.includes("index")) {
-    addActiveClass(homeLink);
-  } else if (currentUrl.includes("about")) {
-    addActiveClass(aboutLink);
-  } else if (
-    currentUrl.includes("model") ||
-    currentUrl.includes("portrait") ||
-    currentUrl.includes("nature") ||
-    currentUrl.includes("lightbox21")
-  ) {
-    addActiveClass(portfolioLink);
-  } else if (currentUrl.includes("products")) {
-    addActiveClass(productsLink);
-  } else if (currentUrl.includes("contact")) {
-    addActiveClass(contactLink);
-  } else {
-    console.log("page not found");
-  }
+	if (currentUrl.includes("index")) {
+		addActiveClass(homeLink);
+	} else if (currentUrl.includes("about")) {
+		addActiveClass(aboutLink);
+	} else if (
+		currentUrl.includes("model") ||
+		currentUrl.includes("portrait") ||
+		currentUrl.includes("nature") ||
+		currentUrl.includes("lightbox21")
+	) {
+		addActiveClass(portfolioLink);
+	} else if (currentUrl.includes("products")) {
+		addActiveClass(productsLink);
+	} else if (currentUrl.includes("contact")) {
+		addActiveClass(contactLink);
+	} else {
+		console.log("page not found");
+	}
 };
 
 addActiveClassToCurrrent();
@@ -241,38 +241,38 @@ const enzeeLetters = document.getElementsByClassName("enzee__letter");
 const photoLetters = document.getElementsByClassName("photography__letter");
 
 window.addEventListener("load", function () {
-  // console.log("page is loaded");
-  // console.log(letters);
-  fadeInSequence(enzeeLetters);
-  fadeInSequence(photoLetters);
+	// console.log("page is loaded");
+	// console.log(letters);
+	fadeInSequence(enzeeLetters);
+	fadeInSequence(photoLetters);
 });
 
 const fadeInSequence = (arr) => {
-  // const photoLetters = arr;
-  // INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
-  // SEE LINE 73
-  let delay = 0;
-  for (let i = 0; i < arr.length; i++) {
-    // letters[i].classList.add("hidden");
-    setTimeout(() => {
-      arr[i].classList.remove("opacityZero");
-      arr[i].style.display = "inline-block";
-      // arr[i].classList.add("flash-fadein");
-    }, delay);
-    delay += 60;
-  }
-  // ADD flash-fadein TO photography ONLY
-  if (arr.length > 5) {
-    let delay = -160;
-    // let delay = 200;
-    for (let i = 0; i < arr.length; i++) {
-      // letters[i].classList.add("hidden");
-      setTimeout(() => {
-        arr[i].classList.remove("opacityZero");
-        arr[i].style.display = "inline-block";
-        arr[i].classList.add("flash-fadein");
-      }, delay);
-      delay += 40;
-    }
-  }
+	// const photoLetters = arr;
+	// INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
+	// SEE LINE 73
+	let delay = 0;
+	for (let i = 0; i < arr.length; i++) {
+		// letters[i].classList.add("hidden");
+		setTimeout(() => {
+		arr[i].classList.remove("opacityZero");
+		arr[i].style.display = "inline-block";
+		// arr[i].classList.add("flash-fadein");
+		}, delay);
+		delay += 60;
+	}
+	// ADD flash-fadein TO photography ONLY
+	if (arr.length > 5) {
+		let delay = -160;
+		// let delay = 200;
+		for (let i = 0; i < arr.length; i++) {
+		// letters[i].classList.add("hidden");
+		setTimeout(() => {
+			arr[i].classList.remove("opacityZero");
+			arr[i].style.display = "inline-block";
+			arr[i].classList.add("flash-fadein");
+		}, delay);
+		delay += 40;
+		}
+	}
 };

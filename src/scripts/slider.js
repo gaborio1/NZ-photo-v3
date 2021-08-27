@@ -11,35 +11,35 @@ const befores = document.querySelectorAll(".before");
 const containers = document.getElementsByClassName("img-slider-container");
 
 const changeWidth = (element, newWidth) => {
-  element.style.width = newWidth + "px";
+  	element.style.width = newWidth + "px";
 };
 
 const changeLeftPosition = (element, imgWidth = 0, pixels = 0) => {
-  element.style.left = imgWidth + pixels + "px";
+  	element.style.left = imgWidth + pixels + "px";
 };
 
 for (let i = 0; i < containers.length; i++) {
-  containers[i].addEventListener(
-    "mousemove",
-    (event) => {
-      let xPos = event.layerX;
-      let divWidth = containers[i].offsetWidth;
-      let currentDiv = befores[i];
-      let currentSlider = sliders[i];
-      changeWidth(currentDiv, xPos);
+	containers[i].addEventListener(
+		"mousemove",
+		(event) => {
+		let xPos = event.layerX;
+		let divWidth = containers[i].offsetWidth;
+		let currentDiv = befores[i];
+		let currentSlider = sliders[i];
+		changeWidth(currentDiv, xPos);
 
-      sliders[i].style.left = xPos + "px";
-      if (xPos < 10) {
-        changeWidth(currentDiv, 0);
-        changeLeftPosition(currentSlider, divWidth, -1 - divWidth);
-      }
-      if (xPos + 10 > divWidth) {
-        changeWidth(currentDiv, divWidth);
-        changeLeftPosition(currentSlider, divWidth, 1);
-      }
-    },
-    false
-  );
+		sliders[i].style.left = xPos + "px";
+		if (xPos < 10) {
+			changeWidth(currentDiv, 0);
+			changeLeftPosition(currentSlider, divWidth, -1 - divWidth);
+		}
+		if (xPos + 10 > divWidth) {
+			changeWidth(currentDiv, divWidth);
+			changeLeftPosition(currentSlider, divWidth, 1);
+		}
+		},
+		false
+	);
 }
 
 // *** layerX: ***
