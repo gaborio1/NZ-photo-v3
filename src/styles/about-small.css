@@ -46,11 +46,12 @@
     /* border: 3px solid tomato; */
   }
 
-  h2.about-enzee {
+  /* IN common-rules.css/small */
+  /* h2.about-enzee {
     font-weight: 400;
     font-size: 45px;
     line-height: 2.2rem;
-  }
+  } */
 
   .about-image-container {
     width: 100%;

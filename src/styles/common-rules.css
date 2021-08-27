@@ -19,48 +19,103 @@ body {
   background: var(--main-background);
 }
 
-/* TITLE: Enzee */
-h1 {
-  font-size: 120px;
+/* HOMEPAGE FONT PROPERTIES ARE SET IN home-small.css */
 
-  font-weight: 100;
-  /* font-weight: 700; */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  /* TITLE: Enzee */
+  h1 {
+    font-size: 120px;
+
+    font-weight: 100;
+    /* font-weight: 700; */
+  }
+
+  /* CATEGORY TITLE: model etc, AND FOOTER SLOGAN */
+  h2 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 2.2rem;
+    /* font-weight: 700; */
+  }
+
+  /* SUB-TITLE: photography AND FOOTER SLOGAN: you're in the right place */
+  h3 {
+    font-size: 30px;
+    font-weight: 300;
+    /* text-transform: uppercase; */
+    color: var(--sub-title-orange);
+  }
+
+  /* CATEGORY INFO */
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 100;
+  }
+
+  .brand-color {
+    font-weight: 700;
+    /* font-weight: 100; */
+    color: var(--title-blue);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.683);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .hover-pointer {
+    cursor: pointer;
+  }
 }
 
-/* CATEGORY TITLE: model etc, AND FOOTER SLOGAN */
-h2 {
-  font-size: 60px;
-  /* font-weight: 700; */
-}
+@media only screen and (min-width: 768px) {
+  /* TITLE: Enzee */
+  h1 {
+    font-size: 120px;
 
-/* SUB-TITLE: photography AND FOOTER SLOGAN: you're in the right place */
-h3 {
-  font-size: 30px;
-  font-weight: 300;
-  color: var(--sub-title-orange);
-}
+    font-weight: 100;
+    /* font-weight: 700; */
+  }
 
-/* CATEGORY INFO */
-h4 {
-  font-size: 20px;
-}
+  /* CATEGORY TITLE: model etc, AND FOOTER SLOGAN */
+  h2 {
+    font-size: 60px;
+    /* font-weight: 700; */
+  }
 
-p {
-  font-size: 15px;
-  font-weight: 100;
-}
+  /* SUB-TITLE: photography AND FOOTER SLOGAN: you're in the right place */
+  h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--sub-title-orange);
+  }
 
-.brand-color {
-  font-weight: 700;
-  /* font-weight: 100; */
-  color: var(--title-blue);
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.683);
-}
+  /* CATEGORY INFO */
+  h4 {
+    font-size: 20px;
+  }
 
-.hidden {
-  display: none;
-}
+  p {
+    font-size: 15px;
+    font-weight: 100;
+  }
 
-.hover-pointer {
-  cursor: pointer;
+  .brand-color {
+    font-weight: 700;
+    /* font-weight: 100; */
+    color: var(--title-blue);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.683);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .hover-pointer {
+    cursor: pointer;
+  }
 }
