@@ -50,9 +50,9 @@ homepage:
     design new layout for main content
     design smaller title divs
     ✅ disable hover-zoom
-    disable hover-opacity
+    ✅ disable hover-opacity
     disable blur effect on body when search-bar is active
-    disable info-div animation
+    ✅ disable info-div animation
     re-configure scroll animation
     image-container div can now fit image height
     design small footer
@@ -67,14 +67,14 @@ navbar:
     ✅ prevent keyframe animation from firing on page load
     hamburger/X toggle when expanding
     ✅keep hamburger/X in top right corner when expanding navbar
-    collapse navbar if actual page is selected from menu
+    ✅ collapse navbar if actual page is selected from menu
     ✅ add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
     toggle sub-menu visibility with dropdown links (portfolio, products)
     ✅ collapse/expand navbar with evtlistener on hamburger/X
     ✅ fade-out logo when navbar expands ??? OR keep it as it is ???
-    make div/main content smaller/responsive as it is messing with sticky navbar
+    ✅ make div/main content smaller/responsive as it is messing with sticky navbar
     refactor navbar-logic.js
-    add navbar-small.css
+    ✅ add navbar-small.css
 
 footer:
     ✅ add footer-small.css

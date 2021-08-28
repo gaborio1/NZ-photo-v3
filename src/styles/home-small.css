@@ -10,21 +10,8 @@
 
 	/* ===== PARALLAX IMAGE LAYERS ===== */
 	.image-container {
-		/* display: flex; */
-		/* justify-content: center; */
 		height: 100vh;
 		width: 100%;
-		/* background: black; */
-
-		/* !!! THIS IS WORKING !!! */
-		/* https://www.w3schools.com/html/html_images_background.asp */
-
-		/* background-image: url('./images/showcase-3.jpg'); */
-		/* background-image: url("./images/motion-card-1.jpg"); */
-		/* background-repeat: no-repeat; */
-		/* !!! IF fixed, IMAGE WILL NOT SCROLL AS DEFINED IN PARALLAX !!! */
-		/* background-attachment: fixed;   */
-
 		/* !!! IMPORTANT !!! */
 		background-size: cover;
 		background-position: center;
@@ -40,9 +27,7 @@
 		/* !!! WORKS BEST WITH relative !!!*/
 		position: relative;
 		/* !!! absolute WILL MESS UP TITLE DIV WHEN RESIZING WINDOW !!! */
-		/* position: absolute; */
 		width: 100%;
-		/* width: fit-content; */
 		height: 100vh;
 		object-fit: cover;
 		background-position: center;
@@ -67,29 +52,19 @@
 	header {
 		z-index: 3;
 		position: absolute;
-		/* top: 45px; */
-		/* display: none; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		width: var(--max-width);
-		/* height: 50vh; */
 
 		/* !!!!! BACKGROUND IS CONTROLLED BY SCROLLMAGIC fromTo 0.85 -> 0.95 !!!!! */
-		/* background-color: rgba(0, 0, 0, 0.85); */
-		/* background-color: transparent !important; */
-
+		
 		/* border: 3px solid rgba(255, 166, 0, 0.944); */
 	}
 
-	/* header.expand {
-		background: rgba(0, 0, 0, 0.85) !important;
-	} */
-
 	.header-content {
 		display: flex;
-		/* align-items: flex-end; */
 		align-items: center;
 		justify-content: space-between;
 		width: 90%;
@@ -103,13 +78,10 @@
 	.header-content.expand {
 		flex-direction: column-reverse;
 		justify-content: flex-end;
-
 		height: 100vh;
-		/* background: rgba(0, 0, 0, 0.35); */
 
 		animation: expandHeight ease 0.5s;
-		/* animation-iteration-count: 1; */
-		/* animation-fill-mode: forwards; */
+
 		/* border: 3px solid rgb(47, 255, 0); */
 	}
 
@@ -163,7 +135,6 @@
 	}
 
 	.logo-container {
-		/* KEEP LOGO IN TOP LEFT CORNER */
 		position: absolute;
 		top: 10px;
 		left: 18px;
@@ -219,7 +190,6 @@
 
 	/* NAVLINK */
 	a.nav-link.nav-link-text:hover {
-		/* color: rgba(223, 32, 32, 0.753); */
 		border-bottom: 1px solid white;
 		color: white;
 	}
@@ -323,9 +293,7 @@
 		padding: 15px 20px 10px 20px;
 		letter-spacing: 0.04rem;
 		font-weight: 300;
-		/* padding: 16px 16px; */
 		border-bottom: 1px solid transparent;
-
 		text-transform: capitalize;
 		background-color: inherit;
 		font-family: inherit;
@@ -344,8 +312,6 @@
 		display: none;
 		/* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
 		position: relative;
-		/* background-color: #f9f9f9; */
-		/* background-color: #000000a0; */
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		z-index: 1;
 	}
@@ -364,7 +330,6 @@
 
 	.dropdown-content a:hover {
 		background-color: rgba(0, 0, 0, 0.848);
-		/* color: white; */
 		color: var(--sub-title-orange);
 	}
 
@@ -381,7 +346,6 @@
 		flex: 1;
 		display: flex;
 		flex-direction: row;
-		/* end NOT WORKING, INSTEAD: */
 		justify-content: flex-end;
 		justify-content: center;
 		align-items: center;
@@ -407,9 +371,6 @@
 	} */
 
 	input[type="text"] {
-		/* border: yellowgreen; */
-		/* width: 140px; */
-
 		-webkit-transition: width 0.5s ease-in-out;
 		transition: width 0.5s ease-in-out;
 
@@ -419,6 +380,8 @@
 		background: transparent;
 		color: white;
 		font-size: 15px;
+
+		/* border: yellowgreen; */
 	}
 
 	::placeholder {
@@ -432,7 +395,6 @@
 		top: 45px;
 		min-width: 177px;
 		background-color: #f6f6f636;
-
 		overflow: auto;
 		border: 1px solid #ddd;
 		z-index: 1;
@@ -441,10 +403,8 @@
 	}
 
 	.search-dropdown-content a {
-		/* width: 100%; */
 		color: black;
 		padding: 12px 16px;
-		/* margin-left: 10px; */
 		text-decoration: none;
 		display: block;
 	}
@@ -455,16 +415,14 @@
 
 	/* HAMBURGER ICON */
 	a.icon {
-		/* KEEP HAMBURGER IN TOP RIGHT CORNER */
 		position: absolute;
 		top: 5px;
 		right: 30px;
 		color: white;
 		color: var(--sub-title-orange);
 		color: var(--title-blue);
-		/* color: black; */
 		font-size: 3rem;
-		/* margin-left: 80%; */
+
 		/* border: 1px solid red; */
 	}
 
@@ -514,16 +472,10 @@
 		/* !!! !!! */
 		z-index: 0;
 		position: absolute;
-		/* position: relative; */
 		bottom: 45px;
-		/* bottom: 5%; */
 
-		/* width: 100%; */
 		width: var(--max-width);
-		height: 170px;
 		height: fit-content;
-		/* margin: auto; */
-
 		background: rgba(0, 0, 0, 0.192);
 
 		display: flex;
@@ -533,17 +485,11 @@
 		border-top: 1px solid rgba(255, 255, 255, 0.519);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.519);
 
-		/* FADE IN ON LOAD */
-		/* animation: fadeInAnimation ease 0.5s;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards; */
-
 		/* border: 3px solid red; */
 	}
 
 	.title-div-content {
 		width: 95%;
-		/* height: inherit; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -558,7 +504,6 @@
 		align-items: center;
 		justify-content: space-around;
 		margin-top: 5px;
-		/* margin-bottom: 5px; */
 		/* border: 1px solid orange; */
 	}
 
@@ -628,13 +573,13 @@
 
 	h3.photography__letter {
 		display: inline-block;
-		/* text-transform: uppercase; */
+		text-transform: uppercase;
 		font-size: 15px;
 		letter-spacing: 1.1rem;
-		margin: 0px 0px 0px 0px;
-		/* border: 1px solid rgb(0, 183, 255); */
+		/* margin: 0px 0px 0px 0px; */
 
 		/* animation: flashAnimation ease 1s; */
+		/* border: 1px solid rgb(0, 183, 255); */
 	}
 
 	.flash-fadein {
@@ -647,19 +592,16 @@
 
 	/* ========== MAIN CONTENT ========== */
 
+	/* !!!!! overflow:hidden PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
 	.main-content {
-		/* PARALLAX */
 		z-index: 2;
 		position: absolute;
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: var(--max-width);
-		/* height: fit-content; */
 		background: white;
 
-		/* !!!!! THIS PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
 		overflow: hidden;
 
 		/* border: 3px solid red; */
@@ -667,8 +609,6 @@
 
 	.main-coloumn {
 		width: 90%;
-		max-width: var(--main-content-1400);
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -686,9 +626,7 @@
 
 	.portrait-container {
 		width: var(--max-width);
-
 		display: flex;
-		/* flex-direction: row; */
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
@@ -697,19 +635,15 @@
 		/* border: 3px solid rgb(19, 104, 110); */
 	}
 
+	/* width CONTROLS CATEGORY IMG WIDTH */
 	.portrait-column {
-		/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-		/* width CONTROLS CATEGORY IMG WIDTH */
-		/* width: 35%; */
 		width: 90%;
-		/* height: 800px; */
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 
-		/* margin: 10px 5px 150px 5px; */
 		margin: 10px 5px 30px 5px;
 
 		/* border: 3px solid olive; */
@@ -717,7 +651,6 @@
 
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN, non-reverse IN SMALL !!!*/
 	.portrait-column--reverse {
-		/* flex-direction: column-reverse; */
 		flex-direction: column;
 		margin: 150px 5px 10px 5px;
 
@@ -725,10 +658,7 @@
 	}
 
 	.portrait-img-container {
-		/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-		/* BOTH % AND px WORK */
 		width: 100%;
-
 		/* border: 3px solid yellow; */
 	}
 
@@ -739,25 +669,10 @@
 		border: 3px solid tomato;
 	} */
 
+	/* width CONTROLS CATEGORY IMG WIDTH */
 	.img-hover-zoom--portrait {
-		/* width: 400px;
-	height: 590px; */
-		/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 		width: 100%;
-		/* max-width: 500px;
-		max-height: 600px; */
 	}
-
-	/* [2] Transition property for smooth transformation of images */
-	/* .img-hover-zoom img {
-		transition: transform 1s ease;
-	} */
-
-	/* [3] Finally, transforming the image when container gets hovered */
-	/* THIS INCLUDES IMAGE + INFO DIV */
-	/* .portrait-img-container:hover img {
-		transform: scale(1.025);
-	} */
 
 	/* CATEGORY TEXT CONTAINERS */
 
@@ -776,16 +691,12 @@
 	}
 
 	.landscape-text-container {
-		/* width: 30%; */
 		width: 90%;
 		margin-top: 2rem;
 
 		/* border: 3px solid burlywood; */
 	}
 
-	/* .portrait-column--reverse .portrait-text-container {
-		margin-bottom: 4rem;
-	} */
 
 	p.category-info-text {
 		font-weight: 300;
@@ -824,28 +735,17 @@
 		align-items: center;
 		justify-content: space-around;
 		margin: 75px;
-		/* !!! EXTRA MARGIN TOP !!! */
-		margin-top: 100px;
+		/* margin-top: 100px; */
 		padding: 5%;
 
 		/* border: 3px solid rgb(59, 72, 190); */
 	}
 
+	/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
 	.landscape-img-container {
-		/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-		/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
-		/* BOTH % AND px WORK */
-		/* width: 65%; */
 		width: 110%;
-		/* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
-		/* max-height: 530px; */
 		/* border: 3px solid yellow; */
 	}
-
-	/* THIS INCLUDES IMAGE + INFO DIV */
-	/* .landscape-img-container:hover img {
-		transform: scale(1.025);
-	} */
 
 	.img-hover-zoom--landscape {
 		width: 100%;
@@ -866,10 +766,7 @@
 		/* width: 100vw; */
 		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
 		width: 120vw;
-		/* !!! THIS WORKS FINE !!! */
 		height: 52.5vh;
-		/* min-height: 400px; */
-
 		filter: grayscale(0.5) contrast(150%);
 		/* filter: grayscale(.25) blur(.1px) opacity(0.90);   */
 
@@ -907,35 +804,10 @@
 		height: 33.33%;
 	}
 
-	/* !!! NOT IN USE !!! */
-	/* .category-img {
-		filter: grayscale(0.2) blur(0.1px) opacity(1);
-	} */
-
-	/* .category-img-container:hover .category-img {
-		filter: grayscale(0) blur(0px) opacity(1);
-	} */
-
-	/* FADE OUT / SLIDE INFO DIV */
-	/* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
-	/* .category-img-container:hover .info-div {
-		opacity: 0.4;
-		width: 500px;
-	} */
-
-	/* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
-	/* .category-img-container:hover .info-div--landscape {
-		width: 400px;
-	} */
-
 	/* CATEGORY INFO DIVS */
 	.info-div {
-		/* WHEN HORIZINTAL */
-		/* width: 100%; */
-
 		position: relative;
 
-		/* background-color: rgba(0, 0, 0, 0.115); */
 		background: linear-gradient(
 		to right,
 		rgba(0, 0, 0, 0.622),
@@ -963,18 +835,12 @@
 	}
 
 	.portrait-img-container .info-div {
-		/* width: 600px;
-		top: -300px;
-		left: -215px; */
 		width: 100%;
 		top: -75px;
 		/* left: -215px; */
 	}
 
 	.landscape-img-container .info-div {
-		/* width: 500px;
-		top: -250px;
-		left: -165px; */
 		width: 100%;
 		top: -75px;
 		/* left: -165px; */
@@ -982,7 +848,6 @@
 
 	.info-div-content h2.category {
 		margin-left: 0.5rem;
-		/* margin-right: 1rem; */
 	}
 
 	/* ========== FOOTER ========== */
@@ -1001,22 +866,15 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
-		/* margin-top: 100px; */
 
 		/* border: 3px solid orange; */
 	}
 
 	.footer-top-img {
-		/* z-index: 1; */
 		background-image: url("../../images/footer-img-crop-1.jpg");
 		background-size: cover;
-		/* width: 100%; */
 		width: var(--max-width);
-		/* height: 475px; */
-		/* height: 400px; */
 		height: 300px;
-
-		/* border-top: 5px solid black; */
 
 		/* border: 2px solid red; */
 	}
@@ -1025,23 +883,17 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		/* align-items: flex-start; */
 		justify-content: space-around;
-		/* top: -400px; */
-		/* width: 100%; */
+	
 		width: var(--max-width);
 		height: inherit;
-		/* background: rgba(0, 0, 0, 0.457); */
-		/* background: rgba(0, 0, 0, 0.129); */
-
+		
 		/* !!! */
 		/* background: #7a250450; */
-		background: #32130740;
+		/* background: #32130740; */
 
 		/* background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.546)); */
-		/* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.224), rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.403), rgba(0, 0, 0, 0.567)); */
-		/* border-bottom: 10px solid black; */
-		/* border-top: 90px solid rgba(0, 0, 0, 0); */
+		background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.224), rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.403), rgba(0, 0, 0, 0.567));
 
 		/* border: 2px solid rgb(247, 0, 255); */
 	}
@@ -1104,8 +956,6 @@
 		background: rgba(0, 0, 0, 0.211);
 
 		border-radius: 3px;
-		/* color: black; */
-		/* border: 1px solid black; */
 	}
 
 	/* !!! NOT IN USE !!! */
@@ -1114,18 +964,13 @@
 	} */
 
 	/* CLEAR DIV-2 */
+	/* SOCIAL MEDIA ICON CONTAINER */
 	.footer-content--full-width.full-width-2 {
 		height: 90px;
 		height: fit-content;
 		background: rgba(0, 0, 0, 0.128);
 		/* background-image: linear-gradient(to right,rgba(0, 0, 0, 0.355), rgba(0, 0, 0, 0.149)); */
-
 		margin-bottom: 10px;
-		/* margin-bottom: 100px; */
-
-		/* border-top: 1px solid black;
-		border-bottom: 1px solid black; */
-
 		border-top: 1px solid rgba(255, 255, 255, 0.519);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.519);
 
@@ -1163,9 +1008,6 @@
 		align-items: center;
 		justify-content: space-between;
 		justify-content: space-around;
-		/* border-top: 1px solid rgba(255, 255, 255, 0.491); */
-		/* border-top: 1px solid rgb(0, 0, 0); */
-		/* border-top: 5px solid rgba(189, 187, 187, 0.766); */
 
 		/* border: 1px solid green; */
 	}
@@ -1180,14 +1022,12 @@
 	}
 
 	.footer a {
-		/* display: inline-block; */
-		color: #56d2e2;
-		color: rgb(255, 166, 0);
+		/* color: #56d2e2; */
+		/* color: rgb(255, 166, 0); */
 		color: #fdae81;
 		text-align: center;
 		text-decoration: none;
-		/* color: black; */
-		/* color: rgba(255, 255, 255, 0.753); */
+		
 		letter-spacing: 0.04rem;
 		font-size: 12px;
 		font-weight: 300;

@@ -13,13 +13,11 @@
 .main-coloumn {
     width: 90%;
     max-width: var(--main-content-1400);
-
-    display: flex;
+	display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
-    margin-bottom: 200px;
+	margin-bottom: 200px;
     margin-top: 80px;
 
     /* border: 3px solid orange; */
@@ -38,7 +36,6 @@
 .gallery-container {
 	/* display: flex; */
 	/* float: left; */
-	/* width: 1200px; */
 	width: 90%;
 
 	/* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
@@ -65,7 +62,6 @@
 	/* !!! float:left NOT ALIGNING IMAGES PROPERLY !!! */
 	display: inline-block;
 	width: 32%;
-	/* width: 375px; */
 	/* !!! %-MARGIN FIXES ODD DIV BEHAVIOUR WHEN RESIZING WINDOW TO SMALLER SIZE !!! */
 	/* margin: 5px; */
 	margin: 0.5%;
@@ -145,12 +141,7 @@ img.hover-shadow {
 
 img.modal-img {
 	width: 70%;
-	/* height: auto; */
-	/* min-width: 450px; */
-	/* min-height: 600px; */
-	/* min-height: fit-content; */
 	animation: fadeIn 0.5s;
-	/* height: 50%; */
 	border: 3px solid aqua;
 }
 
@@ -214,7 +205,6 @@ img.modal-img {
 	cursor: pointer;
 	position: absolute;
 	top: 45%;
-	/* width: auto; */
 	padding: 16px;
 	margin-top: -50px;
 	color: white;
@@ -230,7 +220,6 @@ img.modal-img {
   	left: 0;
 }
 
-/* Position the "next button" to the right */
 .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
@@ -265,9 +254,6 @@ img.modal-img {
 }
 
 .thumbnail-container {
-	/* display: block; */
-	/* height: fit-content; */
-	/* height: 200px; */
 	width: 80%;
 	margin: auto;
 	/* !!! MAKE x-scroll WORK !!! */
@@ -282,7 +268,6 @@ img.modal-img {
 	display: inline-block;
 	width: 10%;
 	margin: 0px 1px;
-	/* height: 100%; */
 	/* border: 3px solid rgb(238, 238, 31); */
 }
 

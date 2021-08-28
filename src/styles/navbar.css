@@ -1,9 +1,7 @@
 :root {
-	/* --main-background: #75bdc16f; */
 	--main-background: #ffffff;
 	--title-blue: #56d2e2;
 	--sub-title-orange: #fdae81;
-	/* --category-grey: #d6d6d6cf; */
 	--category-grey: #56d2e2;
 
 	--max-width: 100%;
@@ -14,15 +12,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* filter: grayscale(.05); */
 }
 
 /* STICKY NAVBAR */
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
 	position: fixed;
-	/* top: 22.5px; */
-	/* width: 100%; */
 	width: var(--max-width);
 }
 
@@ -41,29 +35,18 @@
 header {
 	z-index: 3;
 	position: absolute;
-	/* display: none; */
 	display: flex;
-	/* top: 22.5px; */
-	/* margin-top: 22.5px; */
-
-	/* width: 100%; */
 	width: var(--max-width);
-
 	/* !!!!! BACKGROUND IS CONTROLLED BY SCROLLMAGIC fromTo 0.85 -> 0.95 !!!!! */
-	background-color: rgba(0, 0, 0, 0.85);
+	/* background-color: rgba(0, 0, 0, 0.85); */
 
 	/* border: 1px solid rgba(255, 166, 0, 0.944); */
 }
 
 .header-content {
 	display: flex;
-	/* align-items: flex-end; */
 	align-items: center;
 	max-width: var(--main-content-1400);
-
-	/* !!! */
-	/* background-color: rgba(165, 77, 77, 0.231); */
-
 	width: 80%;
 	height: 45px;
 	margin-left: auto;
@@ -84,7 +67,6 @@ header {
 	flex: 1;
 	display: flex;
 	align-items: center;
-	/* border: 1px solid white; */
 
 	/* LOGO ONLY */
 	justify-content: flex-end;
@@ -205,7 +187,6 @@ nav {
 	padding: 15px 20px 10px 20px;
 	letter-spacing: 0.04rem;
 	font-weight: 300;
-	/* padding: 16px 16px; */
 	border-bottom: 1px solid transparent;
 
 	text-transform: capitalize;
@@ -225,7 +206,6 @@ button.dropbtn.nav-link-text:hover {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	/* background-color: #f9f9f9; */
 	background-color: #000000a0;
 	min-width: 130px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -265,15 +245,12 @@ button.dropbtn.nav-link-text:hover {
 	justify-content: flex-end;
 	justify-content: center;
 	align-items: center;
-	/* border-left: 1px solid black; */
-
 	/* border: 1px solid rgb(255, 42, 0); */
 }
 
 /* DEFAULT SEARCH ICON */
 button {
 	border: none;
-	/* color: white; */
 	color: rgba(255, 255, 255, 0.753);
 	background: transparent;
 	outline: none;
@@ -314,11 +291,8 @@ input[type="text"] {
 
 /* W3SCHOOLS SEARCH/FILTER DROPDOWN */
 .search-dropdown-content {
-	/* display: none; */
-	/* display: block; */
 	position: absolute;
 	top: 45px;
-	/* left: 0px; */
 	min-width: 177px;
 	background-color: #f6f6f636;
 
@@ -330,10 +304,8 @@ input[type="text"] {
 }
 
 .search-dropdown-content a {
-	/* width: 100%; */
 	color: black;
 	padding: 12px 16px;
-	/* margin-left: 10px; */
 	text-decoration: none;
 	display: block;
 }

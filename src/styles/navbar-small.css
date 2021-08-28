@@ -1,10 +1,8 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	:root {
-		/* --main-background: #75bdc16f; */
 		--main-background: #ffffff;
 		--title-blue: #56d2e2;
 		--sub-title-orange: #fdae81;
-		/* --category-grey: #d6d6d6cf; */
 		--category-grey: #56d2e2;
 
 		--max-width: 100%;
@@ -15,24 +13,17 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		/* filter: grayscale(.05); */
 	}
 
 	.header.preload * {
 		animation-duration: 0s !important;
 		-webkit-animation-duration: 0s !important;
-		/* !!! opacity IS REMOVED TO TEMPORARILY FIX ANIMATING photography !!! */
 		transition: opacity 0s, background-color 0s, color 0s, width 0s, height 0s,
 		padding 0s, margin 0s !important;
 	}
 
-	/* STICKY NAVBAR */
-	/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 	.sticky {
 		position: fixed;
-		/* top: 22.5px; */
-		/* width: 100%; */
-		width: var(--max-width);
 	}
 
 	/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -50,25 +41,20 @@
 	header {
 		z-index: 3;
 		position: absolute;
-		/* top: 45px; */
-		/* display: none; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		width: var(--max-width);
-		/* height: 50vh; */
 
 		/* !!!!! BACKGROUND IS CONTROLLED BY SCROLLMAGIC fromTo 0.85 -> 0.95 !!!!! */
 		/* background-color: rgba(0, 0, 0, 0.85); */
-		/* background-color: transparent !important; */
 
 		/* border: 3px solid rgba(255, 166, 0, 0.944); */
 	}
 
 	.header-content {
 		display: flex;
-		/* align-items: flex-end; */
 		align-items: center;
 		justify-content: space-between;
 		width: 90%;
@@ -82,12 +68,9 @@
 	.header-content.expand {
 		flex-direction: column-reverse;
 		justify-content: flex-end;
-
 		height: 100vh;
-
 		animation: expandHeight ease 0.5s;
-		/* animation-iteration-count: 1; */
-		/* animation-fill-mode: forwards; */
+
 		/* border: 3px solid rgb(47, 255, 0); */
 	}
 
@@ -206,9 +189,7 @@
 	a.nav-link.nav-link-text.active-link,
 	button.dropbtn.nav-link-text.active-link {
 		border-bottom: 1px solid #fdae81;
-		/* border-bottom: 1px solid #56d2e2; */
 		color: #fdae81;
-		/* color: #56d2e2; */
 	}
 
 	/* NOT IN USE */
@@ -226,32 +207,20 @@
 	nav {
 		display: none !important;
 		animation: fadeOutAnimation ease 0.5s;
-		/* WIDTH 3 UNITS */
-		/* flex: 3; */
-		/* display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	
-
-	border: 1px solid rgb(255, 42, 0); */
+		
+		border: 1px solid rgb(255, 42, 0);
 	}
+
 	/* !!! TOGGLE NAV WHEN HAMBURGER IS CLICKED */
 	nav.expand {
 		display: flex !important;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		/* display: block; */
-		/* visibility: visible; */
-
-		/* display: inline !important; */
-		/* display: none !important; */
+		
 		width: 135px;
 		width: 90%;
-		/* WIDTH 3 UNITS */
-		/* flex: 1; */
-
+		
 		animation: fadeInAnimation linear 1s;
 		/* NOT WORKING: */
 		/* animation: fadeOutAnimation ease 0.75s; */
@@ -314,9 +283,7 @@
 		padding: 15px 20px 10px 20px;
 		letter-spacing: 0.04rem;
 		font-weight: 300;
-		/* padding: 16px 16px; */
 		border-bottom: 1px solid transparent;
-
 		text-transform: capitalize;
 		background-color: inherit;
 		font-family: inherit;
@@ -335,8 +302,6 @@
 		display: none;
 		/* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
 		position: relative;
-		/* background-color: #f9f9f9; */
-		/* background-color: #000000a0; */
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		z-index: 1;
 	}
@@ -355,7 +320,6 @@
 
 	.dropdown-content a:hover {
 		background-color: rgba(0, 0, 0, 0.848);
-		/* color: white; */
 		color: var(--sub-title-orange);
 	}
 
@@ -432,10 +396,8 @@
 	}
 
 	.search-dropdown-content a {
-		/* width: 100%; */
 		color: black;
 		padding: 12px 16px;
-		/* margin-left: 10px; */
 		text-decoration: none;
 		display: block;
 	}
@@ -452,10 +414,8 @@
 		right: 30px;
 		color: white;
 		color: var(--sub-title-orange);
-		color: var(--title-blue);
-		/* color: black; */
+		/* color: var(--title-blue); */
 		font-size: 3rem;
-		/* margin-left: 80%; */
 		/* border: 1px solid red; */
 	}
 }
