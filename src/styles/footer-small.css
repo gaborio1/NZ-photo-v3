@@ -6,8 +6,6 @@
 		padding 0s, margin 0s !important;
 	}
 
-	/* ========== FOOTER ========== */
-
 	.footer {
 		/* !!!!! FIX THIS !!!!! */
 		/* position: relative; */
@@ -15,30 +13,22 @@
 		/* !!! HAD TO PLACE FOOTER IN MAIN CONTENT AFTER MAIN COLOUMN !!! */
 
 		width: 100vw;
-		/* background: rgba(0, 0, 0, 0.85); */
 		background: rgba(0, 0, 0, 0.95);
 		color: white;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
-		/* margin-top: 100px; */
-
 		/* border: 3px solid orange; */
 	}
 
 	.footer-top-img {
-		/* z-index: 1; */
 		background-image: url("../../images/footer-img-crop-1.jpg");
 		background-size: cover;
-		/* width: 100%; */
 		width: var(--max-width);
 		/* height: 475px; */
 		/* height: 400px; */
-		height: 300px;
-
-		/* border-top: 5px solid black; */
-
+		height: 350px;
 		/* border: 2px solid red; */
 	}
 
@@ -46,10 +36,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		/* align-items: flex-start; */
 		justify-content: space-around;
-		/* top: -400px; */
-		/* width: 100%; */
 		width: var(--max-width);
 		height: inherit;
 		/* background: rgba(0, 0, 0, 0.457); */
@@ -61,21 +48,15 @@
 
 		/* background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.546)); */
 		/* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.224), rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.403), rgba(0, 0, 0, 0.567)); */
-		/* border-bottom: 10px solid black; */
-		/* border-top: 90px solid rgba(0, 0, 0, 0); */
-
 		/* border: 2px solid rgb(247, 0, 255); */
 	}
 
 	.footer-content--full-width {
 		width: var(--max-width);
-
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
 		margin-top: 10px;
-
 		/* border: 2px solid white; */
 	}
 
@@ -87,13 +68,11 @@
 	.footer-info-container-1 {
 		width: 100%;
 		height: 200px;
-
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		align-items: center;
 		justify-content: space-between;
-
 		/* border: 3px solid #56d2e2; */
 	}
 
@@ -102,8 +81,6 @@
 		font-size: 45px;
 		text-align: center;
 		letter-spacing: 0.1rem;
-		/* text-shadow: 1px 1px rgba(0, 0, 0, 0.683); */
-
 		/* border: 1px solid yellow; */
 	}
 
@@ -121,56 +98,40 @@
 		width: fit-content;
 		padding: 0.5rem;
 		color: rgb(255, 255, 255);
-		/* border: 1px solid rgba(255, 255, 255, 0.779); */
 		background: rgba(0, 0, 0, 0.211);
 
 		border-radius: 3px;
-		/* color: black; */
-		/* border: 1px solid black; */
 	}
-
-	/* !!! NOT IN USE !!! */
-	/* .footer-contact-button:hover {
-		background: rgba(0, 0, 0, 0.498);
-	} */
 
 	/* CLEAR DIV-2 */
 	.footer-content--full-width.full-width-2 {
 		height: 90px;
 		height: fit-content;
 		background: rgba(0, 0, 0, 0.128);
-		/* background-image: linear-gradient(to right,rgba(0, 0, 0, 0.355), rgba(0, 0, 0, 0.149)); */
-
 		margin-bottom: 10px;
-		/* margin-bottom: 100px; */
 
 		/* border-top: 1px solid black;
 		border-bottom: 1px solid black; */
 
 		border-top: 1px solid rgba(255, 255, 255, 0.519);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.519);
-
 		/* border: 1px solid yellow; */
 	}
 
 	.footer-content-2 {
 		width: 95%;
 		height: 100%;
-
 		display: flex;
 		justify-content: center;
-
 		/* border: 3px solid green; */
 	}
 
 	/* SOCIAL MEDIA ICON CONTAINER */
 	.footer-info-container-2 {
 		width: 100%;
-
 		display: flex;
 		justify-content: space-around;
 		padding: 0.25rem;
-
 		/* border: 2px solid #5685e2; */
 	}
 
@@ -184,10 +145,6 @@
 		align-items: center;
 		justify-content: space-between;
 		justify-content: space-around;
-		/* border-top: 1px solid rgba(255, 255, 255, 0.491); */
-		/* border-top: 1px solid rgb(0, 0, 0); */
-		/* border-top: 5px solid rgba(189, 187, 187, 0.766); */
-
 		/* border: 1px solid green; */
 	}
 
@@ -196,23 +153,18 @@
 		display: inline-block;
 		font-size: 12px;
 		margin-left: 1rem;
-
 		/* border: 1px solid red; */
 	}
 
 	.footer a {
-		/* display: inline-block; */
-		color: #56d2e2;
-		color: rgb(255, 166, 0);
+		/* color: #56d2e2; */
+		/* color: rgb(255, 166, 0); */
 		color: #fdae81;
 		text-align: center;
 		text-decoration: none;
-		/* color: black; */
-		/* color: rgba(255, 255, 255, 0.753); */
 		letter-spacing: 0.04rem;
 		font-size: 12px;
 		font-weight: 300;
-
 		/* border: 1px solid red; */
 	}
 
@@ -222,7 +174,6 @@
 		width: 45px;
 		height: 50px;
 		color: white;
-		/* text-align: center; */
 		border-radius: 3px;
 		text-decoration: none;
 		margin: 5px 2px;

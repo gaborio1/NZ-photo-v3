@@ -874,7 +874,7 @@
 		background-image: url("../../images/footer-img-crop-1.jpg");
 		background-size: cover;
 		width: var(--max-width);
-		height: 300px;
+		height: 350px;
 
 		/* border: 2px solid red; */
 	}
