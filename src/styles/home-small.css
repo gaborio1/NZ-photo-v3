@@ -68,7 +68,7 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 90%;
-		height: 60px;
+		height: 50px;
 
 		animation: collapseHeight ease-in 0.25s;
 
@@ -87,7 +87,7 @@
 
 	@keyframes expandHeight {
 		0% {
-		height: 60px;
+		height: 50px;
 		}
 
 		100% {
@@ -101,7 +101,7 @@
 		}
 
 		100% {
-		height: 60px;
+		height: 50px;
 		}
 	}
 
@@ -136,17 +136,15 @@
 
 	.logo-container {
 		position: absolute;
-		top: 10px;
-		left: 18px;
+		top: 7px;
+		left: 25px;
+		margin-bottom: 5px;
 		animation: fullOpacity ease 0.25s;
 		/* border: 1px solid rgb(255, 42, 0); */
 	}
 
 	/* MAKE LOGO TRANSPARENT WHEN MENU EXPANDS */
 	.logo-container.expand {
-		position: absolute;
-		top: 10px;
-		left: 18px;
 		opacity: 0.25;
 		animation: fadeToTransparent ease 0.75s;
 
@@ -158,8 +156,8 @@
 	}
 
 	.logo__block {
-		width: 0.75rem;
-		height: 2.5rem;
+		width: 0.6rem;
+		height: 2rem;
 		border: 1px solid rgba(0, 0, 0, 0.108);
 		border-radius: 0.2rem;
 		margin: 0.1rem;
@@ -416,12 +414,12 @@
 	/* HAMBURGER ICON */
 	a.icon {
 		position: absolute;
-		top: 5px;
-		right: 30px;
+		top: 3px;
+		right: 27px;
 		color: white;
 		color: var(--sub-title-orange);
 		color: var(--title-blue);
-		font-size: 3rem;
+		font-size: 2.5rem;
 
 		/* border: 1px solid red; */
 	}
