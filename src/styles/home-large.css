@@ -303,9 +303,9 @@
     }
     
 	/* MAGNIFIER ICON */
-  	i.fa.fa-search {
+  	/* i.fa.fa-search {
       	color: orange;
-  	}
+  	} */
 
     input[type="text"] {
 		-webkit-transition: width 0.5s ease-in-out;

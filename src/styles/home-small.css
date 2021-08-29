@@ -470,7 +470,7 @@
 		/* !!! !!! */
 		z-index: 0;
 		position: absolute;
-		bottom: 45px;
+		bottom: 50px;
 
 		width: var(--max-width);
 		height: fit-content;
@@ -572,7 +572,7 @@
 	h3.photography__letter {
 		display: inline-block;
 		text-transform: uppercase;
-		font-size: 15px;
+		/* font-size: 15px; */
 		letter-spacing: 1.1rem;
 		/* margin: 0px 0px 0px 0px; */
 
@@ -611,7 +611,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin-top: 50px;
+		margin-top: 30px;
 
 		/* border: 3px solid orange; */
 	}
@@ -805,15 +805,15 @@
 	/* CATEGORY INFO DIVS */
 	.info-div {
 		position: relative;
-
-		background: linear-gradient(
-		to right,
+		padding: 5px 0px 3px 5px;
+		/* background: linear-gradient(
+		to top,
 		rgba(0, 0, 0, 0.622),
 		rgba(0, 0, 0, 0.272),
 		rgba(0, 0, 0, 0),
 		rgba(0, 0, 0, 0)
-		);
-		background: rgba(0, 0, 0, 0.224);
+		); */
+		background: rgba(0, 0, 0, 0.135);
 
 		border-top: 1px solid rgba(255, 255, 255, 0.519);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.519);
@@ -828,13 +828,14 @@
 		/* border: 1px solid rgba(255, 166, 0, 0.861); */
 	}
 
-	.info-div h2 {
+	/* .info-div h2 {
 		font-size: 45px;
-	}
+	} */
 
 	.portrait-img-container .info-div {
 		width: 100%;
-		top: -75px;
+		top: -80px;
+		/* top: -70px; */
 		/* left: -215px; */
 	}
 
@@ -928,7 +929,7 @@
 
 	/* Need a good photographer? */
 	.footer-info-container-1 h2 {
-		font-size: 45px;
+		/* font-size: 45px; */
 		text-align: center;
 		letter-spacing: 0.1rem;
 		/* text-shadow: 1px 1px rgba(0, 0, 0, 0.683); */
@@ -942,8 +943,9 @@
 
 	/* you're in the right place */
 	.footer-info-container-1 h3 {
-		font-size: 22.5px;
+		/* font-size: 22.5px; */
 		letter-spacing: 0.15rem;
+		text-transform: uppercase;
 	}
 
 	.footer-contact-button {
