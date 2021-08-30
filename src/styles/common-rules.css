@@ -1,5 +1,6 @@
 :root {
-  --main-background: #ffffff;
+  --main-background: #eeeeee;
+  /* --main-background: #ffffff; */
   --title-blue: #56d2e2;
   --sub-title-orange: #fdae81;
 
@@ -16,12 +17,16 @@
 body {
   /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
   font-family: "Roboto", sans-serif;
-  background: var(--main-background);
+  }
+
+.main-content {
+	background: var(--main-background);
 }
 
 /* HOMEPAGE FONT PROPERTIES ARE SET IN home-small.css */
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+	
 	/* TITLE: Enzee */
 	h1 {
 		font-size: 120px;
@@ -33,8 +38,9 @@ body {
 	/* CATEGORY TITLE: model etc, AND FOOTER SLOGAN */
 	h2 {
 		font-size: 45px;
-		font-weight: 400;
-		line-height: 2.2rem;
+		font-weight: 300;
+		/* color: blue; */
+		/* line-height: 2.2rem; */
 		/* font-weight: 700; */
 	}
 

@@ -598,7 +598,6 @@
 		flex-direction: column;
 		align-items: center;
 		width: var(--max-width);
-		background: white;
 
 		overflow: hidden;
 
