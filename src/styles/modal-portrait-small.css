@@ -66,7 +66,7 @@
         width: 49%;
         /* !!! %-MARGIN FIXES ODD DIV BEHAVIOUR WHEN RESIZING WINDOW TO SMALLER SIZE !!! */
         /* margin: 5px; */
-        margin: 0.5%;
+        margin: 0.1% 0.5%;
         /* border: 3px solid rgb(86, 86, 249); */
     }
 
