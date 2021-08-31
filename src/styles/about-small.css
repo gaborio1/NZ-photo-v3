@@ -83,4 +83,10 @@
       font-weight: 400;
       color: rgba(0, 0, 0, 0.724);
     }
+
+	.slider-section {
+		border: 3px solid rebeccapurple;
+		display: none !important;
+		/* visibility: hidden; */
+	}
 }

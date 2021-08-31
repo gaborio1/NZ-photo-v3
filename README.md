@@ -60,6 +60,13 @@ homepage:
 other pages:
     make div/main content smaller/responsive as it is messing with sticky navbar
 
+about:
+    ✅ hide before/after gallery 
+    make profile pic smaller?
+
+products:
+    add before/after gallery to products links
+
 navbar:
     include search-bar ???
     blur page when navbar is expanded and transparent ???
