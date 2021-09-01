@@ -24,6 +24,10 @@
         border: 3px solid blue;
     }
         
+    .slider-section {
+        border: 3px solid olive;
+    }
+
     .title-container {
         text-align: center;
         margin: 80px 0px 0px 0px;
@@ -89,11 +93,19 @@
         }
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1230px) {
         .landscape-style {
             /* border: 3px solid red; */
-            width: 200px;
-            height: 100px;
+            width: 525px;
+            height: 264px;
+        }
+    }
+
+    @media only screen and (max-width: 1120px) {
+        .landscape-style {
+            /* border: 3px solid red; */
+            width: 472px;
+            height: 237px;
         }
     }
 
@@ -110,6 +122,22 @@
             /* border: 3px solid red; */
             width: 420px;
             height: 630px;
+        }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 1230px) {
+        .portrait-style {
+            /* border: 3px solid red; */
+            width: 378px;
+            height: 567px;
+        }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 1120px) {
+        .portrait-style {
+            /* border: 3px solid red; */
+            width: 340px;
+            height: 510px;
         }
     }
 
