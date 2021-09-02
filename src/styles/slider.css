@@ -29,31 +29,6 @@
 	/* border: 3px solid rgb(21, 255, 0); */
 }
 
-.spacer-column-div {
-	/* display: none; */
-	width: 24%;
-	text-align: center;
-	padding-top: 50px;
-	/* background: rgba(255, 99, 71, 0.32); */
-}
-
-.spacer-column-div p {
-  	display: none;
-}
-
-/* .column {
-	display: flex;
-	justify-content: center;
-	border: 3px solid goldenrod;
-} */
-
-.right-column {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-}
-
 .img-slider-container {
 	position: relative;
 
