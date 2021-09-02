@@ -10,6 +10,7 @@ BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV 
 ✅ portrait style modal has a fade in animation while landscape style has not!
 ✅ delete createdivs() from script.js as this is now done with portfolio.js
 ✅ ??? navbar/footer-content/logic.js ??? (content is done with: document.write)
+add medium size footer to all pages
 
 ===== BUGS: =====
 
@@ -25,22 +26,25 @@ title div moves away from position when resizing
 ✅ navbar opacity onscroll is only active on home page, trigger el: .image-container
 
 UPDATES:
-navbar, footer:
-index,about,contact.html
-index,about,slider,contact.css
-navbar-content.js, navbar.css (for lightbox 2:1 test)
-footer.js, footer.css (for lightbox 2:1 test)
+    navbar, footer:
+    index,about,contact.html
+    index,about,slider,contact.css
+    navbar-content.js, navbar.css (for lightbox 2:1 test)
+    footer.js, footer.css (for lightbox 2:1 test)
 
-==================== MEDIUM SIZE CHANGES: ====================
+==================== MEDIUM SIZE ====================
 
-homepage:
-    Enzee/photography smaller letter-spacing
-    category images larger width (overall size)
-    mosaic div smaller height
-    footer-top-img smaller height, justify-content: space between
-    footer-top-img-cover justify-content: space around
-    footer-content--full-width smaller margin top to fit clear div in
-    footer-bottom smaller height
+changes
+    homepage:
+        Enzee/photography smaller letter-spacing
+        category images larger width (overall size)
+        mosaic div smaller height
+        footer-top-img smaller height, justify-content: space between
+        footer-top-img-cover justify-content: space around
+        footer-content--full-width smaller margin top to fit clear div in
+        footer-bottom smaller height
+
+
 
 ==================== SMALL SIZE ====================
 

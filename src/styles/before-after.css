@@ -1,7 +1,7 @@
 
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) {
       
     .main-content {
         display: flex;
@@ -10,7 +10,7 @@
         justify-content: center;
         width: 100%;
         /* height: 100vh; */
-        border: 3px solid red;
+        /* border: 3px solid red; */
     }
         
     .main-column {
@@ -21,13 +21,13 @@
         
         width: 90%;
         max-width: 1400px;
-        border: 3px solid blue;
+        /* border: 3px solid blue; */
     }
         
     .title-container {
         text-align: center;
         margin: 80px 0px 0px 0px;
-        border: 3px solid green;
+        /* border: 3px solid green; */
     }
         
     h2.slider-title {
@@ -44,7 +44,7 @@
         /* height: 500px; */
         height: fit-content;
         margin: 50px 0 100px 0;
-        border: 3px solid orange;
+        /* border: 3px solid orange; */
     }
        
     /* @media only screen and (max-width: 1024px) {
@@ -58,31 +58,9 @@
             height: 700px;
         }
     } */
-
-    .spacer-column-div {
-        /* display: none; */
-        width: 24%;
-        background: rgba(105, 238, 255, 0.279);
-    }
-
-    .column {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 5px;
-        border: 3px solid grey;
-    }
-        
-    .right-column {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
         
     .img-slider-container {
         position: relative;
-        /* margin: 10px; */
     }
         
     .img-slider-container:hover {
@@ -93,16 +71,10 @@
         
     /* ALL LANDSCAPE STYLE CONTAINERS AND IMAGES, BOTH after AND before */
     .landscape-style {
-        /* width: 1000px;
-        height: 500px; */
-        /* width: 100%;
-        height: auto; */
-
         width: 75vw;
         max-width: 1400px;
         height: 50vh;
         max-height: 700px;
-        /* height: auto; */
     }
        
     /* @media only screen and (max-width: 1351px) {
