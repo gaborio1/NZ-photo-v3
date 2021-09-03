@@ -44,7 +44,22 @@ changes
         footer-content--full-width smaller margin top to fit clear div in
         footer-bottom smaller height
 
+navbar:
+    adjust search-bar content as magnifier, input field and close button stack on top each other when active at 1235px width
 
+about:
+    profile picture shrinks too fast
+
+contact:
+    profile picture shrinks too fast, hide image???
+
+modal pages:
+    modal gallery layout
+    modal close button slides underneath modal image - reposition/x-index ???
+
+
+footer:
+    h2.brand-color breaks into new line at 853px width
 
 ==================== SMALL SIZE ====================
 
