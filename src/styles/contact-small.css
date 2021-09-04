@@ -16,9 +16,9 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin-bottom: 75px;
-		margin-top: 100px;
-		/* border: 3px solid rgb(0, 106, 255); */
+		margin-top: 50px;
+        margin-bottom:100px;
+		border: 3px solid rgb(0, 106, 255);
 	}
 
 	.contact-container {
@@ -30,7 +30,8 @@
 	}
 
 	.title-container {
-		margin: 0px 0px 30px 0px;
+		margin-top: 50px;
+        margin-bottom:50px;
 		/* border: 3px solid tomato; */
 	}
 

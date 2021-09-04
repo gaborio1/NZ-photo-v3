@@ -22,6 +22,7 @@ title div moves away from position when resizing
 
 ===== PROBLEMS: =====
 
+get rid of products-text-container in products
 ✅ navbar.js does not include the navbar opacity scroll TIMELINE from parallax.js
 ✅ navbar opacity onscroll is only active on home page, trigger el: .image-container
 
@@ -81,7 +82,7 @@ other pages:
 
 about:
     ✅ hide before/after gallery 
-    make profile pic smaller?
+    ✅ make profile pic smaller 1:1 
 
 products:
     add before/after gallery to products links
