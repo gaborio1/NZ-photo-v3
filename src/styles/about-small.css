@@ -49,9 +49,13 @@
 		/* border: 3px solid rgb(218, 162, 32); */
     }
 
-    .about-image {
+    .about-image--square {
 		width: 100%;
     }
+
+	.about-image {
+		display: none;
+	}
 
     .about-text-container {
 		width: 100%;

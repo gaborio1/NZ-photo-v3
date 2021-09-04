@@ -206,7 +206,6 @@
 		0% {
 		opacity: 1;
 		}
-
 		100% {
 		opacity: 0;
 		}
@@ -565,19 +564,43 @@
 		/* border: 1px solid rgb(35, 210, 29); */
 	}
 
-	.opacityZero {
-		opacity: 0;
-	}
-
 	h3.photography__letter {
 		display: inline-block;
 		text-transform: uppercase;
 		/* font-size: 15px; */
 		letter-spacing: 1.1rem;
+		letter-spacing: 0.5rem;
 		/* margin: 0px 0px 0px 0px; */
 
 		/* animation: flashAnimation ease 1s; */
 		/* border: 1px solid rgb(0, 183, 255); */
+	}
+
+	@media only screen and (max-width: 374px) {
+
+		h1.enzee__letter {
+			font-size: 110px;
+		}
+
+		.title-div__photography-container {
+			/* margin-left: 4%; */
+			width: 100%;
+			/* border: 1px solid rgb(35, 210, 29); */
+		}
+
+		h3.photography__letter {
+			font-size: 15px;
+			letter-spacing: 1.1rem;
+			/* text-transform: lowercase; */
+		}
+
+		h3.photography__letter-1 {
+			margin-left: 3%;
+		}
+	}
+
+	.opacityZero {
+		opacity: 0;
 	}
 
 	.flash-fadein {

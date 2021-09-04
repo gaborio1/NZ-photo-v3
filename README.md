@@ -10,28 +10,16 @@ BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV 
 ✅ portrait style modal has a fade in animation while landscape style has not!
 ✅ delete createdivs() from script.js as this is now done with portfolio.js
 ✅ ??? navbar/footer-content/logic.js ??? (content is done with: document.write)
-add medium size footer to all pages
-
-===== BUGS: =====
-
+✅ add medium size footer to all pages
 parallax layers act funny when resizing browser window
 title div moves away from position when resizing
 ✅ category img divs don't fit img height => messing with :hover
 ✅ "photography" animation not smooth enough, try without making container flexbox
 ✅ footer not visible when placed outside of .main-content div (temp fix: placed inside main content)
-
-===== PROBLEMS: =====
-
-get rid of products-text-container in products
+✅ get rid of products-text-container in products
 ✅ navbar.js does not include the navbar opacity scroll TIMELINE from parallax.js
 ✅ navbar opacity onscroll is only active on home page, trigger el: .image-container
 
-UPDATES:
-    navbar, footer:
-    index,about,contact.html
-    index,about,slider,contact.css
-    navbar-content.js, navbar.css (for lightbox 2:1 test)
-    footer.js, footer.css (for lightbox 2:1 test)
 
 ==================== MEDIUM SIZE ====================
 
@@ -45,22 +33,22 @@ changes
         footer-content--full-width smaller margin top to fit clear div in
         footer-bottom smaller height
 
-navbar:
-    adjust search-bar content as magnifier, input field and close button stack on top each other when active at 1235px width
+    navbar:
+        adjust search-bar content as magnifier, input field and close button stack on top each other when active at 1235px width
 
-about:
-    profile picture shrinks too fast
+    about:
+        profile picture shrinks too fast
 
-contact:
-    profile picture shrinks too fast, hide image???
+    contact:
+        profile picture shrinks too fast, hide image???
 
-modal pages:
-    modal gallery layout
-    modal close button slides underneath modal image - reposition/x-index ???
+    modal pages:
+        modal gallery layout
+        modal close button slides underneath modal image - reposition/x-index ???
 
 
-footer:
-    h2.brand-color breaks into new line at 853px width
+    footer:
+        h2.brand-color breaks into new line at 853px width
 
 ==================== SMALL SIZE ====================
 
@@ -78,19 +66,19 @@ homepage:
     design small footer
 
 other pages:
-    make div/main content smaller/responsive as it is messing with sticky navbar
+    ✅ make div/main content smaller/responsive as it is messing with sticky navbar
 
 about:
     ✅ hide before/after gallery 
     ✅ make profile pic smaller 1:1 
 
 products:
-    add before/after gallery to products links
+    ✅ add before/after gallery to products links
 
 navbar:
     include search-bar ???
     blur page when navbar is expanded and transparent ???
-    make navbar transparent when page loads(navbar-logic.js)
+    ✅ make navbar transparent when page loads(navbar-logic.js)
     ✅ prevent keyframe animation from firing on page load
     hamburger/X toggle when expanding
     ✅keep hamburger/X in top right corner when expanding navbar

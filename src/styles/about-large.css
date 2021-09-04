@@ -49,6 +49,10 @@
 		max-height: auto;
 	}
 
+	.about-image--square {
+		display: none;
+	}
+
 	.about-text-container {
 		width: 66%;
 		display: flex;
