@@ -6,19 +6,19 @@ BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV 
 
 ===== TODOS: =====
 
-✅ animated search button/field
-✅ portrait style modal has a fade in animation while landscape style has not!
-✅ delete createdivs() from script.js as this is now done with portfolio.js
-✅ ??? navbar/footer-content/logic.js ??? (content is done with: document.write)
-✅ add medium size footer to all pages
+✅  animated search button/field
+✅  portrait style modal has a fade in animation while landscape style has not!
+✅  delete createdivs() from script.js as this is now done with portfolio.js
+✅  ??? navbar/footer-content/logic.js ??? (content is done with: document.write)
+✅  add medium size footer to all pages
 parallax layers act funny when resizing browser window
 title div moves away from position when resizing
-✅ category img divs don't fit img height => messing with :hover
-✅ "photography" animation not smooth enough, try without making container flexbox
-✅ footer not visible when placed outside of .main-content div (temp fix: placed inside main content)
-✅ get rid of products-text-container in products
-✅ navbar.js does not include the navbar opacity scroll TIMELINE from parallax.js
-✅ navbar opacity onscroll is only active on home page, trigger el: .image-container
+✅  category img divs don't fit img height => messing with :hover
+✅  "photography" animation not smooth enough, try without making container flexbox
+✅  footer not visible when placed outside of .main-content div (temp fix: placed inside main content)
+✅  get rid of products-text-container in products
+✅  navbar.js does not include the navbar opacity scroll TIMELINE from parallax.js
+✅  navbar opacity onscroll is only active on home page, trigger el: .image-container
 
 
 ==================== MEDIUM SIZE ====================
@@ -57,10 +57,10 @@ changes
 homepage:
     design new layout for main content
     design smaller title divs
-    ✅ disable hover-zoom
-    ✅ disable hover-opacity
+    ✅  disable hover-zoom
+    ✅  disable hover-opacity
     disable blur effect on body when search-bar is active
-    ✅ disable info-div animation
+    ✅  disable info-div animation
     re-configure scroll animation
     image-container div can now fit image height
     design small footer
@@ -69,8 +69,12 @@ other pages:
     ✅ make div/main content smaller/responsive as it is messing with sticky navbar
 
 about:
-    ✅ hide before/after gallery 
-    ✅ make profile pic smaller 1:1 
+    ✅  hide before/after gallery 
+    ✅  make profile pic smaller 1:1 
+
+modal:
+    ✅  align last modal image to center in modal-portrait
+    re-position counter/close relative to image/container
 
 products:
     ✅ add before/after gallery to products links
@@ -78,21 +82,21 @@ products:
 navbar:
     include search-bar ???
     blur page when navbar is expanded and transparent ???
-    ✅ make navbar transparent when page loads(navbar-logic.js)
-    ✅ prevent keyframe animation from firing on page load
+    ✅  make navbar transparent when page loads(navbar-logic.js)
+    ✅  prevent keyframe animation from firing on page load
     hamburger/X toggle when expanding
-    ✅keep hamburger/X in top right corner when expanding navbar
-    ✅ collapse navbar if actual page is selected from menu
-    ✅ add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
+    ✅k eep hamburger/X in top right corner when expanding navbar
+    ✅  collapse navbar if actual page is selected from menu
+    ✅  add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
     toggle sub-menu visibility with dropdown links (portfolio, products)
-    ✅ collapse/expand navbar with evtlistener on hamburger/X
-    ✅ fade-out logo when navbar expands ??? OR keep it as it is ???
-    ✅ make div/main content smaller/responsive as it is messing with sticky navbar
+    ✅  collapse/expand navbar with evtlistener on hamburger/X
+    ✅  fade-out logo when navbar expands ??? OR keep it as it is ???
+    ✅  make div/main content smaller/responsive as it is messing with sticky navbar
     refactor navbar-logic.js
-    ✅ add navbar-small.css
+    ✅  add navbar-small.css
 
 footer:
-    ✅ add footer-small.css
+    ✅  add footer-small.css
     try footer without background image ???
     add custom css variables to font-sizes
     design new layout

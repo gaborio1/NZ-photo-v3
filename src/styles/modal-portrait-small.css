@@ -72,6 +72,16 @@
         /* border: 3px solid rgb(86, 86, 249); */
     }
 
+    /* ALIGN LAST (ODD NUMBER) IMAGE TO CENTER. (100-width)/2 % */
+    .gallery-div:last-child {
+        /* margin: 0px auto; */
+        margin-left: 25.5%;
+    }
+
+    /* .gallery-div:nth-child(9) {
+        margin-left: 25.5%;
+    } */
+
     /* img.gallery-img {
         width: 100%;
         margin: 10px;
