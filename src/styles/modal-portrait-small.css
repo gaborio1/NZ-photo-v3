@@ -131,11 +131,12 @@
     .modal.fade-out {
         animation: fadeOut 1s;
     }
-    /* 
+    
+    
     .modal-img-container {
-        height: 66%;
-        border: 3px solid orange;
-    } */
+        /* height: 66%; */
+        border: 3px solid rgb(183, 255, 0);
+    }
 
     /* .modal-img-div {
         width: 100%;
@@ -144,7 +145,7 @@
     } */
 
     img.modal-img {
-        width: 70%;
+        width: 100%;
         animation: fadeIn 0.5s;
         border: 3px solid aqua;
     }
@@ -155,7 +156,7 @@
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
-        justify-content: space-between;
+        justify-content: space-around;
 
         text-align: center;
 
@@ -173,6 +174,7 @@
 
     /* The Close Button */
     .close {
+        z-index: 1;
         color: white;
         position: absolute;
         top: 10px;
@@ -191,12 +193,12 @@
     /* Hide the slides by default */
     .modal-img-div {
         display: none;
-        width: 53%;
+        width: 100%;
         margin: auto;
 
         /* overflow: scroll; */
         /* max-height: 600px; */
-        /* border: 3px solid rgb(254, 176, 31); */
+        border: 3px solid rgb(254, 176, 31);
     }
 
     .modal-img-div.fade-out {
@@ -258,8 +260,8 @@
     }
 
     .thumbnail-container {
-        width: 80%;
-        margin: auto;
+        width: 100%;
+        /* margin: auto; */
         /* !!! MAKE x-scroll WORK !!! */
         overflow: scroll;
 
