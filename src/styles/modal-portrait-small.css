@@ -124,7 +124,7 @@
         background-color: rgba(0, 0, 0, 0.97);
         /* FADE IN MODAL */
         animation: fadeIn 0.7s;
-        border: 3px solid rgb(212, 91, 43);
+        /* border: 3px solid rgb(212, 91, 43); */
     }
 
     /* !!!!! FADE OUT / HIDE IS DONE WITH closeModal() !!!!! */
@@ -132,10 +132,11 @@
         animation: fadeOut 1s;
     }
     
-    
+    /* !!! THIS DIV HAS TO BE RELATIVE AS IT CONTAINS CLOSE BUTTON(absolute) !!!  */
     .modal-img-container {
         /* height: 66%; */
-        border: 3px solid rgb(183, 255, 0);
+        position: relative;
+        /* border: 3px solid rgb(183, 255, 0); */
     }
 
     /* .modal-img-div {
@@ -147,7 +148,7 @@
     img.modal-img {
         width: 100%;
         animation: fadeIn 0.5s;
-        border: 3px solid aqua;
+        /* border: 3px solid aqua; */
     }
 
     /* Modal Content */
@@ -169,7 +170,7 @@
         max-width: 1200px;
         height: 95%;
 
-        border: 3px solid rgb(128, 0, 43);
+        /* border: 3px solid rgb(128, 0, 43); */
     }
 
     /* The Close Button */
@@ -177,10 +178,16 @@
         z-index: 1;
         color: white;
         position: absolute;
-        top: 10px;
-        right: 25px;
+        /* top: 10px; */
+        /* right: 25px; */
+        top: 2%;
+        right: 3%;
         font-size: 35px;
+        line-height: 1.8rem;
         font-weight: bold;
+        padding: 2px 6px 0px 5px;
+        border-radius: .25rem;
+        background: rgba(0, 0, 0, 0.252);
     }
 
     .close:hover,
@@ -190,15 +197,17 @@
     }
 
     /* ===== MODAL IMG CONTAIMERS ===== */
-    /* Hide the slides by default */
+    /* !!! THIS DIV HAS TO BE RELATIVE AS IT CONTAINS IMAGE COUNTER (absolute) !!!  */
     .modal-img-div {
+        /* !!! counter AND close ARE absolute !!! */
         display: none;
+        position: relative;
         width: 100%;
         margin: auto;
 
         /* overflow: scroll; */
         /* max-height: 600px; */
-        border: 3px solid rgb(254, 176, 31);
+        /* border: 3px solid rgb(254, 176, 31); */
     }
 
     .modal-img-div.fade-out {
@@ -243,12 +252,19 @@
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
-        top: 0;
+        /* top: 0; */
+        top: 2%;
+        left: 3%;
+        padding: 5px 5px 5px 5px;
+        line-height: 1.5rem;
+        border-radius: .25rem;
+        background: rgba(0, 0, 0, 0.252);
     }
 
     /* Caption text */
     /* USED AS SPACER BETWEEN MODAL AND THUMBNAIL */
     .caption-container {
+        display: none;
         height: 20px;
         height: 1%;
         text-align: center;
@@ -265,7 +281,7 @@
         /* !!! MAKE x-scroll WORK !!! */
         overflow: scroll;
 
-        border: 3px solid rgb(27, 196, 27);
+        /* border: 3px solid rgb(27, 196, 27); */
     }
 
     /* Create 3 equal columns that floats next to eachother */
