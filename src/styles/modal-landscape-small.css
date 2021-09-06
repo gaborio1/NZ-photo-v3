@@ -130,10 +130,11 @@
     /* !!! THIS DIV HAS TO BE RELATIVE AS IT CONTAINS CLOSE BUTTON(absolute) !!!  */
     .modal-img-container {
         position: relative;
-        margin-top: 20%;
+        margin-top: 10%;
         /* border: 3px solid rgb(183, 255, 0); */
     }
 
+    /* ANIMATION DISABLED AS IT IS ANIMATING COUNTER */
     img.modal-img {
         width: 100%;
         /* NOT IN USE */
@@ -205,7 +206,7 @@
         cursor: pointer;
         position: absolute;
         /* BELOW IMAGE */
-        bottom: -35%;
+        bottom: -70%;
         padding: 16px;
         /* margin-top: -50px; */
         color: white;

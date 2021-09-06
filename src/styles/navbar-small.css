@@ -206,7 +206,7 @@
 		display: none !important;
 		animation: fadeOutAnimation ease 0.5s;
 		
-		border: 1px solid rgb(255, 42, 0);
+		/* border: 1px solid rgb(255, 42, 0); */
 	}
 
 	/* !!! TOGGLE NAV WHEN HAMBURGER IS CLICKED */
