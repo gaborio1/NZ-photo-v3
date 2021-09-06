@@ -144,7 +144,6 @@
     
     /* !!! THIS DIV HAS TO BE RELATIVE AS IT CONTAINS CLOSE BUTTON(absolute) !!!  */
     .modal-img-container {
-        /* height: 66%; */
         position: relative;
         /* border: 3px solid rgb(183, 255, 0); */
     }
@@ -177,7 +176,6 @@
         margin: 1% auto;
         /* padding-top: 1%; */
         width: 90%;
-        max-width: 1200px;
         height: 95%;
 
         /* border: 3px solid rgb(128, 0, 43); */
@@ -227,11 +225,12 @@
     /* Next & previous buttons */
     .prev,
     .next {
+        z-index: 2;
         cursor: pointer;
         position: absolute;
         top: 45%;
         padding: 16px;
-        margin-top: -50px;
+        /* margin-top: -50px; */
         color: white;
         font-weight: bold;
         font-size: 20px;
@@ -262,7 +261,6 @@
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
-        /* top: 0; */
         top: 2%;
         left: 3%;
         padding: 5px 5px 5px 5px;

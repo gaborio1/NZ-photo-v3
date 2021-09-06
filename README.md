@@ -20,6 +20,10 @@ title div moves away from position when resizing
 ✅  navbar.js does not include the navbar opacity scroll TIMELINE from parallax.js
 ✅  navbar opacity onscroll is only active on home page, trigger el: .image-container
 
+modal:
+      re-position counter/close relative to image/container
+      move prev/next to modal-img-container 
+
 
 ==================== MEDIUM SIZE ====================
 
@@ -74,7 +78,8 @@ about:
 
 modal:
     ✅  align last modal image to center in modal-portrait
-    re-position counter/close relative to image/container
+    ✅  re-position counter/close relative to image/container
+    ✅  move prev/next to modal-img-container 
 
 products:
     ✅ add before/after gallery to products links
