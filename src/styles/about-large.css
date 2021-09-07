@@ -11,22 +11,22 @@
 	}
 
 	.main-coloumn {
-		width: 90%;
-		max-width: var(--main-content-1400);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
+		width: 90%;
+		max-width: var(--main-content-1400);
 		margin-bottom: 100px;
 		margin-top: 80px;
 		/* border: 3px solid rgb(0, 106, 255); */
 	}
 
 	.about-container {
-		width: 90%;
-		max-height: 600px;
 		display: flex;
 		justify-content: space-between;
+		width: 90%;
+		max-height: 600px;
 		/* border: 3px solid rgb(21, 255, 0); */
 	}
 
@@ -54,11 +54,11 @@
 	}
 
 	.about-text-container {
-		width: 66%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
+		width: 66%;
 		margin-left: 70px;
 		/* border: 3px solid rgb(32, 88, 218); */
 	}

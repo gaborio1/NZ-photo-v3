@@ -21,8 +21,8 @@ title div moves away from position when resizing
 ✅  navbar opacity onscroll is only active on home page, trigger el: .image-container
 
 modal:
-      re-position counter/close relative to image/container
-      move prev/next to modal-img-container 
+    ✅  re-position counter/close relative to image/container
+    ✅  move prev/next to modal-img-container 
 
 
 ==================== MEDIUM SIZE ====================
