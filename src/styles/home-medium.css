@@ -180,6 +180,11 @@
 
 	/* NAVLINK-DROPDOWN  */
 
+	i.fa.fa-caret-down {
+		display: none;
+		margin-left: 3px;
+	}
+
 	.navbar a {
 		float: left;
 		font-size: 16px;
@@ -214,6 +219,8 @@
 	}
 
 	/* NAVLINK-DROPDOWN */
+
+
 	button.dropbtn.nav-link-text:hover {
 		/* color: rgba(223, 32, 32, 0.753); */
 		border-bottom: 1px solid white;

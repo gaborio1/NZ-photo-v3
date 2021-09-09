@@ -178,15 +178,15 @@
 
 	/* NAVLINK */
 	a.nav-link.nav-link-text:hover {
-		/* color: rgba(223, 32, 32, 0.753); */
-		border-bottom: 1px solid white;
+		/* border-bottom: 1px solid white; */
 		color: white;
+		/* color: rgba(223, 32, 32, 0.753); */
 	}
 
 	/* ACTIVE NAVBAR LINK TEXT */
 	a.nav-link.nav-link-text.active-link,
 	button.dropbtn.nav-link-text.active-link {
-		border-bottom: 1px solid #fdae81;
+		/* border-bottom: 1px solid #fdae81; */
 		color: #fdae81;
 	}
 
@@ -258,6 +258,10 @@
 
 	/* NAVLINK-DROPDOWN  */
 
+	i.fa.fa-caret-down::before {
+		margin-left: 8px;
+	}
+
 	.navbar a {
 		float: left;
 		font-size: 16px;
@@ -291,9 +295,9 @@
 
 	/* NAVLINK-DROPDOWN */
 	button.dropbtn.nav-link-text:hover {
-		/* color: rgba(223, 32, 32, 0.753); */
-		border-bottom: 1px solid white;
+		/* border-bottom: 1px solid white; */
 		color: white;
+		/* color: rgba(223, 32, 32, 0.753); */
 	}
 
 	.dropdown-content {

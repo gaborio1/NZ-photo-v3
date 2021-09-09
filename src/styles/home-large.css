@@ -205,6 +205,11 @@
 
     /* NAVLINK-DROPDOWN  */
 
+	i.fa.fa-caret-down {
+		display: none;
+		margin-left: 3px;
+	}
+
     .navbar a {
 		float: left;
 		font-size: 16px;
