@@ -8,6 +8,10 @@
 		padding 0s, margin 0s !important;
 	}
 
+	.hidden {
+		display: none;
+	}
+
 	/* ===== PARALLAX IMAGE LAYERS ===== */
 	.image-container {
 		height: 100vh;
@@ -188,7 +192,7 @@
 
 	/* NAVLINK */
 	a.nav-link.nav-link-text:hover {
-		border-bottom: 1px solid white;
+		/* border-bottom: 1px solid white; */
 		color: white;
 	}
 
@@ -310,7 +314,7 @@
 	}
 
 	.dropdown-content {
-		display: none;
+		/* display: block; */
 		/* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
 		position: relative;
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -330,14 +334,15 @@
 	}
 
 	.dropdown-content a:hover {
-		background-color: rgba(0, 0, 0, 0.848);
+		/* background-color: rgba(0, 0, 0, 0.848); */
 		color: var(--sub-title-orange);
 	}
 
 	/* MAKE DROPDOWN LINKS VISIBLE ON HOVER */
-	.nav-link--dropdown:hover .dropdown-content {
+	/* HOVER ONLY WORKS IN SMALL RESPONSIVE (CLICK ON MOBILE) */
+	/* .nav-link--dropdown:hover .dropdown-content {
 		display: block;
-	}
+	} */
 
 	/* SEARCH BAR */
 

@@ -86,6 +86,7 @@ products:
 
 navbar:
     include search-bar ???
+    align all links to center
     blur page when navbar is expanded and transparent ???
     ✅  make navbar transparent when page loads(navbar-logic.js)
     ✅  prevent keyframe animation from firing on page load

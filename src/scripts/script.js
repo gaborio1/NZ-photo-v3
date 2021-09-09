@@ -23,6 +23,7 @@ console.log("script.js");
 
 // detectmob();
 
+// HEADER AND CONTENT
 const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const logoContainer = document.querySelector(".logo-container");
@@ -30,8 +31,52 @@ const headerContent = document.querySelector(".header-content");
 const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
 
+// DROPDOWN AND CONTENT 
+// const dropdownButtons = document.querySelectorAll(".dropbtn");
+const portfolioButton = document.querySelector(".navbar__portfolio");
+const productsButton = document.querySelector(".navbar__products");
+const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
+const dropdownProducts = document.querySelector(".dropdown-content--products");
+// ARROW ICONS
+const upArrowPortfolio = document.querySelector(".down-arrow--portfolio");
+const downArrowPortfolio = document.querySelector(".up-arrow--portfolio");
+const upArrowProducts = document.querySelector(".up-arrow--products");
+const downArrowProducts = document.querySelector(".down-arrow--products");
+
 if (window.innerWidth < 767) {
   	console.log("small screen");
+
+	portfolioButton.addEventListener("click", () => {
+		// console.log("dropdown clicked");
+		dropdownPortfolio.classList.toggle("hidden");
+		dropdownProducts.classList.add("hidden");
+
+		// ARROW ICON UP/DOWN 
+
+		// downArrowPortfolio.classList.toggle("hidden");
+		// upArrowPortfolio.classList.toggle("hidden");
+
+		// if (downArrowProducts.classList.contains("hidden")) {
+		// 	downArrowProducts.classList.remove("hidden");
+		// 	upArrowProducts.classList.add("hidden");
+		// } 
+	})
+
+	productsButton.addEventListener("click", () => {
+		dropdownProducts.classList.toggle("hidden");
+		dropdownPortfolio.classList.add("hidden");
+
+		// ARROW ICON UP/DOWN 
+
+		// downArrowProducts.classList.toggle("hidden");
+		// upArrowProducts.classList.toggle("hidden");
+
+		// if (!downArrowPortfolio.classList.contains("hidden")) {
+		// 	console.log("down hidden");
+		// 	downArrowPortfolio.classList.add("hidden");
+		// 	upArrowPortfolio.classList.remove("hidden");
+		// }
+	})
 } else {
   	console.log("large screen");
 }
