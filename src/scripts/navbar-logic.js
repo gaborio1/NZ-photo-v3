@@ -174,23 +174,62 @@ const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
 // const searchButton = document.querySelector(".default-btn");
 
+// DROPDOWN AND CONTENT 
+// const dropdownButtons = document.querySelectorAll(".dropbtn");
+const portfolioButton = document.querySelector("#navbar__portfolio");
+const productsButton = document.querySelector("#navbar__products");
+const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
+const dropdownProducts = document.querySelector(".dropdown-content--products");
+// ARROW ICONS
+const upArrowPortfolio = document.querySelector(".down-arrow--portfolio");
+const downArrowPortfolio = document.querySelector(".up-arrow--portfolio");
+const upArrowProducts = document.querySelector(".up-arrow--products");
+const downArrowProducts = document.querySelector(".down-arrow--products");
+
 if (window.innerWidth < 767) {
+    console.log(window.innerWidth);
     console.log("small screen");
-  // nav.classList.add("hidden");
-  // !!! classList.add("hidden") NOT WORKING ON CONTAINER !!!
-  // searchContainer.classList.add("hidden");
 
-  // !!!!! INSTEAD: !!!!!
-  // https://stackoverflow.com/questions/462537/overriding-important-style
-  // searchContainer.style.setProperty("display", "inline", "important");
+    portfolioButton.addEventListener("click", () => {
+        // CONSOLE.LOG WORKS
+		console.log("dropdown clicked");
 
-  // OR, HIDE MAGNIFIER BUTTON ONLY
-  // searchButton.classList.add("hidden");
 
-  // hamburger.addEventListener("click", () => {
-  //   console.log("hamburger clicked");
-  //   nav.classList.toggle("hidden");
-  // });
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        // !!! navbar-logic.js:195 Uncaught TypeError: Cannot read properties of null (reading 'classList'!!!)
+		dropdownPortfolio.classList.toggle("hidden");
+		dropdownProducts.classList.add("hidden");
+        
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+		// ARROW ICON UP/DOWN 
+
+		// downArrowPortfolio.classList.toggle("hidden");
+		// upArrowPortfolio.classList.toggle("hidden");
+
+		// if (downArrowProducts.classList.contains("hidden")) {
+		// 	downArrowProducts.classList.remove("hidden");
+		// 	upArrowProducts.classList.add("hidden");
+		// } 
+	})
+
+    productsButton.addEventListener("click", () => {
+		dropdownProducts.classList.toggle("hidden");
+		dropdownPortfolio.classList.add("hidden");
+
+		// ARROW ICON UP/DOWN 
+
+		// downArrowProducts.classList.toggle("hidden");
+		// upArrowProducts.classList.toggle("hidden");
+
+		// if (!downArrowPortfolio.classList.contains("hidden")) {
+		// 	console.log("down hidden");
+		// 	downArrowPortfolio.classList.add("hidden");
+		// 	upArrowPortfolio.classList.remove("hidden");
+		// }
+	})
+  
 } else {
     console.log("large screen");
   // nav.classList.remove("hidden");

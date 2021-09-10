@@ -33,8 +33,8 @@ const hamburger = document.querySelector(".hamburger-button");
 
 // DROPDOWN AND CONTENT 
 // const dropdownButtons = document.querySelectorAll(".dropbtn");
-const portfolioButton = document.querySelector(".navbar__portfolio");
-const productsButton = document.querySelector(".navbar__products");
+const portfolioButton = document.querySelector("#navbar__portfolio");
+const productsButton = document.querySelector("#navbar__products");
 const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
 const dropdownProducts = document.querySelector(".dropdown-content--products");
 // ARROW ICONS

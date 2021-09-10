@@ -20,10 +20,8 @@ console.log("navbar-small.js");
               <div class="logo__block logo__block-3"></div>
             </div>
           </div>
-
             <i class="fa fa-bars"></i>
           </a> -->
-
           <nav class="nav">
             <a
               id="navbar__home"

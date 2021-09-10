@@ -184,6 +184,7 @@
 	/* ===== NAV ===== */
 
 	/* NAVLINK & NAVLINK-DROPDOWN */
+
 	a.nav-link.nav-link-text,
 	button.dropbtn.nav-link-text {
 		color: rgba(255, 255, 255, 0.753);
@@ -229,10 +230,10 @@
 		align-items: center;
 		justify-content: center;
 
-		width: 135px;
-		width: 90%;
+		/* width: 135px; */
+		width: 100%;
 		/* !!! TRY THIS !!! */
-		/* background: rgba(255, 128, 0, 0.56); */
+		/* background: rgba(255, 128, 0, 0.711); */
 		animation: fadeInAnimation linear 1s;
 
 		margin-top: 25%;
@@ -250,7 +251,11 @@
 	a.page-link,
 	button.dropbtn.nav-link-text {
 		width: 100%;
-		/* background: rgba(0, 234, 255, 0.437); */
+		width: 200px;
+		text-align: center;
+		padding: 10px 20px 10px 20px;
+		margin: 1px;
+		border: 1px solid rgba(0, 234, 255, 0.074);
 	}
 
 	.nav-link {
@@ -263,17 +268,25 @@
 		letter-spacing: 0.04rem;
 		font-size: 15px;
 		font-weight: 300;
-		margin-top: 16px;
-		padding: 0px 20px 10px 20px;
-		border-bottom: 1px solid transparent;
-		/* border: 3px solid yellow; */
+		/* padding: 10px 20px 10px 20px; */
+		/* border-bottom: 1px solid transparent; */
+		/* border: 1px solid yellow; */
 	}
 
 	/* NAVLINK-DROPDOWN  */
 
-	i.fa.fa-caret-down {
-		margin-left: 3px;
+	.dropbtn {
+		position: relative;
 	}
+
+	.arrow {
+		position: absolute;
+		right: 5%;
+	}
+
+	/* i.fa.fa-caret-down {
+		margin-left: 3px;
+	} */
 
 	.navbar a {
 		float: left;
@@ -324,13 +337,12 @@
 	.dropdown-content a {
 		float: none;
 		color: rgba(255, 255, 255, 0.753);
-		padding: 12px 16px;
-		padding: 12px 0px 16px 33px;
+		/* padding: 12px 0px 16px 0px; */
 		letter-spacing: 0.04rem;
 		font-weight: 300;
 		text-decoration: none;
 		display: block;
-		text-align: left;
+		text-align: center;
 	}
 
 	.dropdown-content a:hover {
