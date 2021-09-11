@@ -166,6 +166,7 @@ addActiveClassToCurrrent();
 // }
 
 // detectmob();
+
 const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const logoContainer = document.querySelector(".logo-container");
@@ -175,7 +176,10 @@ const hamburger = document.querySelector(".hamburger-button");
 // const searchButton = document.querySelector(".default-btn");
 
 // DROPDOWN AND CONTENT 
+// COLLECTION WILL BE USED WITH LOOP
 // const dropdownButtons = document.querySelectorAll(".dropbtn");
+
+// !!! CLASS NAME IS NOT WORKING !!! USE ID INSTEAD !!!
 const portfolioButton = document.querySelector("#navbar__portfolio");
 const productsButton = document.querySelector("#navbar__products");
 const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
@@ -191,43 +195,30 @@ if (window.innerWidth < 767) {
     console.log("small screen");
 
     portfolioButton.addEventListener("click", () => {
-        // CONSOLE.LOG WORKS
-		console.log("dropdown clicked");
-
-
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-        // !!! navbar-logic.js:195 Uncaught TypeError: Cannot read properties of null (reading 'classList'!!!)
-		dropdownPortfolio.classList.toggle("hidden");
+		// console.log("portfolio clicked");
+        dropdownPortfolio.classList.toggle("hidden");
 		dropdownProducts.classList.add("hidden");
-        
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-		// ARROW ICON UP/DOWN 
-
-		// downArrowPortfolio.classList.toggle("hidden");
-		// upArrowPortfolio.classList.toggle("hidden");
-
-		// if (downArrowProducts.classList.contains("hidden")) {
-		// 	downArrowProducts.classList.remove("hidden");
-		// 	upArrowProducts.classList.add("hidden");
-		// } 
+        // DYNAMIC UP/DOWN ARROW ICON 
+        downArrowPortfolio.classList.toggle("hidden");
+		upArrowPortfolio.classList.toggle("hidden");
+        if (downArrowProducts.classList.contains("hidden")) {
+			downArrowProducts.classList.remove("hidden");
+			upArrowProducts.classList.add("hidden");
+		} 
 	})
 
     productsButton.addEventListener("click", () => {
-		dropdownProducts.classList.toggle("hidden");
+        // console.log("products clicked");
+        dropdownProducts.classList.toggle("hidden");
 		dropdownPortfolio.classList.add("hidden");
-
-		// ARROW ICON UP/DOWN 
-
-		// downArrowProducts.classList.toggle("hidden");
-		// upArrowProducts.classList.toggle("hidden");
-
-		// if (!downArrowPortfolio.classList.contains("hidden")) {
-		// 	console.log("down hidden");
-		// 	downArrowPortfolio.classList.add("hidden");
-		// 	upArrowPortfolio.classList.remove("hidden");
-		// }
+        // DYNAMIC UP/DOWN ARROW ICON 
+        downArrowProducts.classList.toggle("hidden");
+		upArrowProducts.classList.toggle("hidden");
+        if (!downArrowPortfolio.classList.contains("hidden")) {
+			console.log("down hidden");
+			downArrowPortfolio.classList.add("hidden");
+			upArrowPortfolio.classList.remove("hidden");
+		}
 	})
   
 } else {

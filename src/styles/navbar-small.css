@@ -15,6 +15,10 @@
 		box-sizing: border-box;
 	}
 
+	.hidden {
+		display: none;
+	}
+
 	.header.preload * {
 		animation-duration: 0s !important;
 		-webkit-animation-duration: 0s !important;
@@ -267,7 +271,7 @@
 	.arrow {
 		position: absolute;
 		right: 5%;
-		border: 2px solid yellow;
+		/* border: 2px solid yellow; */
 	}
 
 	/* i.fa.fa-caret-down::before {
@@ -313,7 +317,7 @@
 	}
 
 	.dropdown-content {
-		display: none;
+		/* display: none; */
 		/* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
 		position: relative;
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -338,9 +342,9 @@
 	}
 
 	/* MAKE DROPDOWN LINKS VISIBLE ON HOVER */
-	.nav-link--dropdown:hover .dropdown-content {
+	/* .nav-link--dropdown:hover .dropdown-content {
 		display: block;
-	}
+	} */
 
 	/* SEARCH BAR */
 

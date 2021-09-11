@@ -32,7 +32,10 @@ const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
 
 // DROPDOWN AND CONTENT 
+// COLLECTION WILL BE USED WITH LOOP
 // const dropdownButtons = document.querySelectorAll(".dropbtn");
+
+// !!! CLASS NAME IS NOT WORKING !!! USE ID INSTEAD !!!
 const portfolioButton = document.querySelector("#navbar__portfolio");
 const productsButton = document.querySelector("#navbar__products");
 const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
@@ -50,32 +53,27 @@ if (window.innerWidth < 767) {
 		// console.log("dropdown clicked");
 		dropdownPortfolio.classList.toggle("hidden");
 		dropdownProducts.classList.add("hidden");
-
-		// ARROW ICON UP/DOWN 
-
-		// downArrowPortfolio.classList.toggle("hidden");
-		// upArrowPortfolio.classList.toggle("hidden");
-
-		// if (downArrowProducts.classList.contains("hidden")) {
-		// 	downArrowProducts.classList.remove("hidden");
-		// 	upArrowProducts.classList.add("hidden");
-		// } 
+		// DYNAMIC UP/DOWN ARROW ICON 
+		downArrowPortfolio.classList.toggle("hidden");
+		upArrowPortfolio.classList.toggle("hidden");
+		if (downArrowProducts.classList.contains("hidden")) {
+			downArrowProducts.classList.remove("hidden");
+			upArrowProducts.classList.add("hidden");
+		} 
 	})
 
 	productsButton.addEventListener("click", () => {
+		// console.log("products clicked");
 		dropdownProducts.classList.toggle("hidden");
 		dropdownPortfolio.classList.add("hidden");
-
-		// ARROW ICON UP/DOWN 
-
-		// downArrowProducts.classList.toggle("hidden");
-		// upArrowProducts.classList.toggle("hidden");
-
-		// if (!downArrowPortfolio.classList.contains("hidden")) {
-		// 	console.log("down hidden");
-		// 	downArrowPortfolio.classList.add("hidden");
-		// 	upArrowPortfolio.classList.remove("hidden");
-		// }
+		// DYNAMIC UP/DOWN ARROW ICON 
+		downArrowProducts.classList.toggle("hidden");
+		upArrowProducts.classList.toggle("hidden");
+		if (!downArrowPortfolio.classList.contains("hidden")) {
+			console.log("down hidden");
+			downArrowPortfolio.classList.add("hidden");
+			upArrowPortfolio.classList.remove("hidden");
+		}
 	})
 } else {
   	console.log("large screen");
