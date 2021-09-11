@@ -86,7 +86,11 @@ products:
 
 navbar:
     include search-bar ???
-    align all links to center
+    ✅  highlight and make dropdown content smaller
+    ✅  align all links to center
+    ✅  dynamically display up/down arrows with dropdown button
+    ✅ keep active dropdown button text color when clicked
+    keep active dropdown button text color when clicked
     blur page when navbar is expanded and transparent ???
     ✅  make navbar transparent when page loads(navbar-logic.js)
     ✅  prevent keyframe animation from firing on page load
@@ -94,7 +98,7 @@ navbar:
     ✅k eep hamburger/X in top right corner when expanding navbar
     ✅  collapse navbar if actual page is selected from menu
     ✅  add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
-    toggle sub-menu visibility with dropdown links (portfolio, products)
+    ✅ toggle sub-menu visibility with dropdown links (portfolio, products)
     ✅  collapse/expand navbar with evtlistener on hamburger/X
     ✅  fade-out logo when navbar expands ??? OR keep it as it is ???
     ✅  make div/main content smaller/responsive as it is messing with sticky navbar

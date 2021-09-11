@@ -255,7 +255,7 @@
 		text-align: center;
 		padding: 10px 20px 10px 20px;
 		margin: 1px;
-		border: 1px solid rgba(0, 234, 255, 0.074);
+		border: 1px solid rgba(0, 234, 255, 0.259);
 	}
 
 	.nav-link {
@@ -335,6 +335,8 @@
 	}
 
 	.dropdown-content a {
+		width: 80%;
+		margin: 6px auto;
 		float: none;
 		color: rgba(255, 255, 255, 0.753);
 		/* padding: 12px 0px 16px 0px; */
@@ -343,6 +345,7 @@
 		text-decoration: none;
 		display: block;
 		text-align: center;
+		background: rgba(0, 234, 255, 0.252);
 	}
 
 	.dropdown-content a:hover {
