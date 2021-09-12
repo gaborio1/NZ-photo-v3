@@ -89,9 +89,10 @@ navbar:
     ✅  highlight and make dropdown content smaller
     ✅  align all links to center
     ✅  dynamically display up/down arrows with dropdown button
-    ✅ keep active dropdown button text color when clicked
-    keep active dropdown button text color when clicked
+    ✅  keep active dropdown button text color when clicked
     blur page when navbar is expanded and transparent ???
+    ✅  reset/collapse dropdown content when navbar is expanded
+    ✅  reset arrows (show default down arrow only) when navbar is expanded
     ✅  make navbar transparent when page loads(navbar-logic.js)
     ✅  prevent keyframe animation from firing on page load
     hamburger/X toggle when expanding

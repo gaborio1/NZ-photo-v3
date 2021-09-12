@@ -167,15 +167,16 @@ addActiveClassToCurrrent();
 
 // detectmob();
 
+// ========== HEADER AND CONTENT ==========
 const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const logoContainer = document.querySelector(".logo-container");
 const headerContent = document.querySelector(".header-content");
 const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
-// const searchButton = document.querySelector(".default-btn");
 
-// DROPDOWN AND CONTENT 
+// ========== DROPDOWN AND CONTENT ==========
+
 // COLLECTION WILL BE USED WITH LOOP
 // const dropdownButtons = document.querySelectorAll(".dropbtn");
 
@@ -185,60 +186,57 @@ const productsButton = document.querySelector("#navbar__products");
 const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
 const dropdownProducts = document.querySelector(".dropdown-content--products");
 // ARROW ICONS
-const upArrowPortfolio = document.querySelector(".down-arrow--portfolio");
-const downArrowPortfolio = document.querySelector(".up-arrow--portfolio");
+const upArrowPortfolio = document.querySelector(".up-arrow--portfolio");
+const downArrowPortfolio = document.querySelector(".down-arrow--portfolio");
 const upArrowProducts = document.querySelector(".up-arrow--products");
 const downArrowProducts = document.querySelector(".down-arrow--products");
 
 if (window.innerWidth < 767) {
-    console.log(window.innerWidth);
-    console.log("small screen");
+  	console.log("small screen");
 
-    portfolioButton.addEventListener("click", () => {
-		// console.log("portfolio clicked");
-        dropdownPortfolio.classList.toggle("hidden");
+	portfolioButton.addEventListener("click", () => {
+		// console.log("dropdown clicked");
+		dropdownPortfolio.classList.toggle("hidden");
 		dropdownProducts.classList.add("hidden");
-        // DYNAMIC UP/DOWN ARROW ICON 
-        downArrowPortfolio.classList.toggle("hidden");
+		// DYNAMIC UP/DOWN ARROW ICON 
+		downArrowPortfolio.classList.toggle("hidden");
 		upArrowPortfolio.classList.toggle("hidden");
-        if (downArrowProducts.classList.contains("hidden")) {
+		if (downArrowProducts.classList.contains("hidden")) {
 			downArrowProducts.classList.remove("hidden");
 			upArrowProducts.classList.add("hidden");
 		} 
 	})
 
-    productsButton.addEventListener("click", () => {
-        // console.log("products clicked");
-        dropdownProducts.classList.toggle("hidden");
+	productsButton.addEventListener("click", () => {
+		// console.log("products clicked");
+		dropdownProducts.classList.toggle("hidden");
 		dropdownPortfolio.classList.add("hidden");
-        // DYNAMIC UP/DOWN ARROW ICON 
-        downArrowProducts.classList.toggle("hidden");
+		// DYNAMIC UP/DOWN ARROW ICON 
+		downArrowProducts.classList.toggle("hidden");
 		upArrowProducts.classList.toggle("hidden");
-        if (!downArrowPortfolio.classList.contains("hidden")) {
-			console.log("down hidden");
-			downArrowPortfolio.classList.add("hidden");
-			upArrowPortfolio.classList.remove("hidden");
+		if (downArrowPortfolio.classList.contains("hidden")) {
+			// console.log("down hidden");
+			downArrowPortfolio.classList.remove("hidden");
+			upArrowPortfolio.classList.add("hidden");
 		}
 	})
-  
 } else {
-    console.log("large screen");
-  // nav.classList.remove("hidden");
-  // hamburger.classList.add("hidden");
+  	console.log("large screen");
 }
 
 hamburger.addEventListener("click", () => {
-    console.log("hamburger clicked");
-    nav.classList.toggle("expand");
-    headerContent.classList.toggle("expand");
-    logoContainer.classList.toggle("expand");
-
-    // TOGGLE VISIBILITY OF LOGO
-    // if (logoContainer.style.display === "none") {
-    //   logoContainer.style.display = "block";
-    // } else {
-    //   logoContainer.style.display = "none";
-    // }
+	// console.log("hamburger clicked");
+	nav.classList.toggle("expand");
+	headerContent.classList.toggle("expand");
+	logoContainer.classList.toggle("expand");
+	// RESET DROPDOWN CONTENT: COLLAPSE 
+	dropdownPortfolio.classList.add("hidden");
+	dropdownProducts.classList.add("hidden");
+	// RESET ARROWS: SHOW DOWN ARROW AND HIDE UP ARROW 
+	downArrowProducts.classList.remove("hidden");
+	upArrowProducts.classList.add("hidden");
+	downArrowPortfolio.classList.remove("hidden");
+	upArrowPortfolio.classList.add("hidden");
 });
 
 // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!

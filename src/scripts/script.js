@@ -41,8 +41,8 @@ const productsButton = document.querySelector("#navbar__products");
 const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
 const dropdownProducts = document.querySelector(".dropdown-content--products");
 // ARROW ICONS
-const upArrowPortfolio = document.querySelector(".down-arrow--portfolio");
-const downArrowPortfolio = document.querySelector(".up-arrow--portfolio");
+const upArrowPortfolio = document.querySelector(".up-arrow--portfolio");
+const downArrowPortfolio = document.querySelector(".down-arrow--portfolio");
 const upArrowProducts = document.querySelector(".up-arrow--products");
 const downArrowProducts = document.querySelector(".down-arrow--products");
 
@@ -69,10 +69,10 @@ if (window.innerWidth < 767) {
 		// DYNAMIC UP/DOWN ARROW ICON 
 		downArrowProducts.classList.toggle("hidden");
 		upArrowProducts.classList.toggle("hidden");
-		if (!downArrowPortfolio.classList.contains("hidden")) {
-			console.log("down hidden");
-			downArrowPortfolio.classList.add("hidden");
-			upArrowPortfolio.classList.remove("hidden");
+		if (downArrowPortfolio.classList.contains("hidden")) {
+			// console.log("down hidden");
+			downArrowPortfolio.classList.remove("hidden");
+			upArrowPortfolio.classList.add("hidden");
 		}
 	})
 } else {
@@ -80,17 +80,18 @@ if (window.innerWidth < 767) {
 }
 
 hamburger.addEventListener("click", () => {
-	console.log("hamburger clicked");
+	// console.log("hamburger clicked");
 	nav.classList.toggle("expand");
 	headerContent.classList.toggle("expand");
 	logoContainer.classList.toggle("expand");
-
-	// TOGGLE VISIBILITY OF LOGO
-	// if (logoContainer.style.display === "none") {
-	//   logoContainer.style.display = "block";
-	// } else {
-	//   logoContainer.style.display = "none";
-	// }
+	// RESET DROPDOWN CONTENT: COLLAPSE 
+	dropdownPortfolio.classList.add("hidden");
+	dropdownProducts.classList.add("hidden");
+	// RESET ARROWS: SHOW DOWN ARROW AND HIDE UP ARROW 
+	downArrowProducts.classList.remove("hidden");
+	upArrowProducts.classList.add("hidden");
+	downArrowPortfolio.classList.remove("hidden");
+	upArrowPortfolio.classList.add("hidden");
 });
 
 // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
