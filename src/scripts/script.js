@@ -23,7 +23,7 @@ console.log("script.js");
 
 // detectmob();
 
-// HEADER AND CONTENT
+// ========== HEADER AND CONTENT ==========
 const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const logoContainer = document.querySelector(".logo-container");
@@ -31,7 +31,8 @@ const headerContent = document.querySelector(".header-content");
 const searchContainer = document.querySelector(".search-container");
 const hamburger = document.querySelector(".hamburger-button");
 
-// DROPDOWN AND CONTENT 
+// ========== DROPDOWN AND CONTENT ==========
+
 // COLLECTION WILL BE USED WITH LOOP
 // const dropdownButtons = document.querySelectorAll(".dropbtn");
 

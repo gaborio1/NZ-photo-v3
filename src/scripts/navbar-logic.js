@@ -111,8 +111,8 @@ console.log(currentUrl);
 // GRAB NAVBAR LINKS
 const homeLink = document.getElementById("navbar__home");
 const aboutLink = document.getElementById("navbar__about");
-const portfolioLink = document.getElementById("navbar__portfolio");
-const productsLink = document.getElementById("navbar__products");
+const portLink = document.getElementById("navbar__portfolio");
+const prodLink = document.getElementById("navbar__products");
 const contactLink = document.getElementById("navbar__contact");
 
 // ADD active-link CLASS TO LINK
@@ -131,9 +131,9 @@ const addActiveClassToCurrrent = () => {
         currentUrl.includes("nature") ||
         currentUrl.includes("lightbox21")
     ) {
-        addActiveClass(portfolioLink);
+        addActiveClass(portLink);
     } else if (currentUrl.includes("products")) {
-        addActiveClass(productsLink);
+        addActiveClass(prodLink);
     } else if (currentUrl.includes("contact")) {
         addActiveClass(contactLink);
     } else {
@@ -181,82 +181,76 @@ const hamburger = document.querySelector(".hamburger-button");
 // const dropdownButtons = document.querySelectorAll(".dropbtn");
 
 // !!! CLASS NAME IS NOT WORKING !!! USE ID INSTEAD !!!
-const portfolioButton = document.querySelector("#navbar__portfolio");
-const productsButton = document.querySelector("#navbar__products");
-const dropdownPortfolio = document.querySelector(".dropdown-content--portfolio");
-const dropdownProducts = document.querySelector(".dropdown-content--products");
+const portButton = document.querySelector("#navbar__portfolio");
+const prodButton = document.querySelector("#navbar__products");
+const dropdownPort = document.querySelector(".dropdown-content--portfolio");
+const dropdownProd = document.querySelector(".dropdown-content--products");
 // ARROW ICONS
-const upArrowPortfolio = document.querySelector(".up-arrow--portfolio");
-const downArrowPortfolio = document.querySelector(".down-arrow--portfolio");
-const upArrowProducts = document.querySelector(".up-arrow--products");
-const downArrowProducts = document.querySelector(".down-arrow--products");
+const upArrowPort = document.querySelector(".up-arrow--portfolio");
+const downArrowPort = document.querySelector(".down-arrow--portfolio");
+const upArrowProd = document.querySelector(".up-arrow--products");
+const downArrowProd = document.querySelector(".down-arrow--products");
 
-const togglePortfolioArrows = () => {
-    downArrowPortfolio.classList.toggle("hidden");
-	upArrowPortfolio.classList.toggle("hidden");
+
+const toggleClass = (elementsArr, classname) => {
+    for (el of elementsArr) {
+        el.classList.toggle(classname);
+    }
 }
 
-const toggleProductsArrows = () => {
-    downArrowProducts.classList.toggle("hidden");
-	upArrowProducts.classList.toggle("hidden");
+const showElements = (...elements) => {
+    for (el of elements) {
+        el.classList.remove("hidden");
+    }
 }
 
-const collapseElement = (element) => {
-    element.classList.add("hidden");
+const hideElements = (...elements) => {
+    for (el of elements) {
+        el.classList.add("hidden");
+    }
 }
 
-const toggleVisibility = (element) => {
-    element.classList.toggle("hidden");
-}
 
 // DYNAMIC UP/DOWN ARROW ICONS 
-const setProductsArrows = () => {
-    if (downArrowProducts.classList.contains("hidden")) {
-        downArrowProducts.classList.remove("hidden");
-        upArrowProducts.classList.add("hidden");
+const setProdArrows = () => {
+    if (downArrowProd.classList.contains("hidden")) {
+        showElements(downArrowProd);
+        hideElements(upArrowProd);
     } 
 }
 
-const setPortfolioArrows = () => {
-    if (downArrowPortfolio.classList.contains("hidden")) {
-        downArrowPortfolio.classList.remove("hidden");
-        upArrowPortfolio.classList.add("hidden");
+const setPortArrows = () => {
+    if (downArrowPort.classList.contains("hidden")) {
+        showElements(downArrowPort);
+        hideElements(upArrowPort)
     }
 }
 
 if (window.innerWidth < 767) {
   	console.log("small screen");
 
-	portfolioButton.addEventListener("click", () => {
-        toggleVisibility(dropdownPortfolio);
-        collapseElement(dropdownProducts);
-        togglePortfolioArrows();
-        setProductsArrows();
+	portButton.addEventListener("click", () => {
+        hideElements(dropdownProd);
+        toggleClass([dropdownPort, downArrowPort, upArrowPort], "hidden");
+        setProdArrows();
 	})
 
-	productsButton.addEventListener("click", () => {
-        toggleVisibility(dropdownProducts);
-        collapseElement(dropdownPortfolio);		
-        toggleProductsArrows();
-        setPortfolioArrows();
+	prodButton.addEventListener("click", () => {
+        hideElements(dropdownPort);		
+        toggleClass([dropdownProd, downArrowProd, upArrowProd], "hidden");
+        setPortArrows();
 	})
 } else {
   	console.log("large screen");
 }
 
+// 1. EXPAND NAVBAR CONTENT
+// 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
+// 3. RESET ARROWS: SHOW DOWN ARROW
 hamburger.addEventListener("click", () => {
-	// console.log("hamburger clicked");
-	nav.classList.toggle("expand");
-	headerContent.classList.toggle("expand");
-	logoContainer.classList.toggle("expand");
-	// RESET DROPDOWN CONTENT: COLLAPSE 
-	dropdownPortfolio.classList.add("hidden");
-	dropdownProducts.classList.add("hidden");
-	// RESET ARROWS: SHOW DOWN ARROW AND HIDE UP ARROW 
-	downArrowProducts.classList.remove("hidden");
-	upArrowProducts.classList.add("hidden");
-	downArrowPortfolio.classList.remove("hidden");
-	upArrowPortfolio.classList.add("hidden");
+    toggleClass([nav, headerContent, logoContainer], "expand");
+	hideElements(dropdownPort, dropdownProd, upArrowProd, upArrowPort);
+    showElements(downArrowProd, downArrowPort);
 });
 
 // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
