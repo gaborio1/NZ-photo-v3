@@ -23,8 +23,8 @@ if (window.innerWidth < 767) {
     .fromTo(
      	"header",
       	1,
-      	{ background: "rgba(0, 0, 0, 0.75)" },
-      	{ background: "rgba(0, 0, 0, 0.95)" },
+      	{ background: "rgba(0, 0, 0, 0.9)" },
+      	{ background: "rgba(0, 0, 0, 1)" },
       	"-=0"
     );
   	new ScrollMagic.Scene({

@@ -191,34 +191,54 @@ const downArrowPortfolio = document.querySelector(".down-arrow--portfolio");
 const upArrowProducts = document.querySelector(".up-arrow--products");
 const downArrowProducts = document.querySelector(".down-arrow--products");
 
+const togglePortfolioArrows = () => {
+    downArrowPortfolio.classList.toggle("hidden");
+	upArrowPortfolio.classList.toggle("hidden");
+}
+
+const toggleProductsArrows = () => {
+    downArrowProducts.classList.toggle("hidden");
+	upArrowProducts.classList.toggle("hidden");
+}
+
+const collapseElement = (element) => {
+    element.classList.add("hidden");
+}
+
+const toggleVisibility = (element) => {
+    element.classList.toggle("hidden");
+}
+
+// DYNAMIC UP/DOWN ARROW ICONS 
+const setProductsArrows = () => {
+    if (downArrowProducts.classList.contains("hidden")) {
+        downArrowProducts.classList.remove("hidden");
+        upArrowProducts.classList.add("hidden");
+    } 
+}
+
+const setPortfolioArrows = () => {
+    if (downArrowPortfolio.classList.contains("hidden")) {
+        downArrowPortfolio.classList.remove("hidden");
+        upArrowPortfolio.classList.add("hidden");
+    }
+}
+
 if (window.innerWidth < 767) {
   	console.log("small screen");
 
 	portfolioButton.addEventListener("click", () => {
-		// console.log("dropdown clicked");
-		dropdownPortfolio.classList.toggle("hidden");
-		dropdownProducts.classList.add("hidden");
-		// DYNAMIC UP/DOWN ARROW ICON 
-		downArrowPortfolio.classList.toggle("hidden");
-		upArrowPortfolio.classList.toggle("hidden");
-		if (downArrowProducts.classList.contains("hidden")) {
-			downArrowProducts.classList.remove("hidden");
-			upArrowProducts.classList.add("hidden");
-		} 
+        toggleVisibility(dropdownPortfolio);
+        collapseElement(dropdownProducts);
+        togglePortfolioArrows();
+        setProductsArrows();
 	})
 
 	productsButton.addEventListener("click", () => {
-		// console.log("products clicked");
-		dropdownProducts.classList.toggle("hidden");
-		dropdownPortfolio.classList.add("hidden");
-		// DYNAMIC UP/DOWN ARROW ICON 
-		downArrowProducts.classList.toggle("hidden");
-		upArrowProducts.classList.toggle("hidden");
-		if (downArrowPortfolio.classList.contains("hidden")) {
-			// console.log("down hidden");
-			downArrowPortfolio.classList.remove("hidden");
-			upArrowPortfolio.classList.add("hidden");
-		}
+        toggleVisibility(dropdownProducts);
+        collapseElement(dropdownPortfolio);		
+        toggleProductsArrows();
+        setPortfolioArrows();
 	})
 } else {
   	console.log("large screen");

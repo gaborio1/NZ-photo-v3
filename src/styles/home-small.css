@@ -1,4 +1,5 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+	
 	/* preload CLASS IS ADDED TO header TO PREVENT ANIMATION ONLOAD */
 	/* THIS USED TO BE body.preload */
 	.header.preload * {
@@ -6,10 +7,6 @@
 		-webkit-animation-duration: 0s !important;
 		transition: opacity 0s, background-color 0s, color 0s, width 0s, height 0s,
 		padding 0s, margin 0s !important;
-	}
-
-	.hidden {
-		display: none;
 	}
 
 	/* ===== PARALLAX IMAGE LAYERS ===== */
