@@ -12,14 +12,27 @@ const navbar = document.getElementById("header");
 // Get the offset position of the navbar
 const sticky = navbar.offsetTop;
 
+const addClass = (elementsArr, classname) => {
+    for (el of elementsArr) {
+        el.classList.add(classname);
+    }
+}
+
+const removeClass = (elementsArr, classname) => {
+    for (el of elementsArr) {
+        el.classList.remove(classname);
+    }
+}
+
+
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeNavbarSticky = () => {
     if (window.pageYOffset >= sticky) {
         // console.log("onscroll");
-        navbar.classList.add("sticky");
+        addClass([navbar], "sticky");
     } else {
         // console.log("onscroll");
-        navbar.classList.remove("sticky");
+        removeClass([navbar], "sticky");
     }
 };
 
@@ -33,6 +46,12 @@ const searchDropdownContent = document.getElementById("search-dropdown-content")
 const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
 // imageContainer, mainContent AND footer (ALL ELEMENTS EXCEPT NAVBAR)
 const searchBlurElements = document.getElementsByClassName("search-blur");
+
+
+
+
+
+// CONTINUE add/remove REFACTOR HERE !!!
 
 // SHOW/HIDE SEARCH BAR
 const showSearchBar = () => {
@@ -170,9 +189,6 @@ const hamburger = document.querySelector(".hamburger-button");
 
 // ========== DROPDOWN AND CONTENT ==========
 
-// COLLECTION WILL BE USED WITH LOOP
-// const dropdownButtons = document.querySelectorAll(".dropbtn");
-
 // !!! CLASS NAME IS NOT WORKING !!! USE ID INSTEAD !!!
 const portButton = document.querySelector("#navbar__portfolio");
 const prodButton = document.querySelector("#navbar__products");
@@ -233,24 +249,25 @@ if (window.innerWidth < 767) {
         toggleClass([dropdownProd, downArrowProd, upArrowProd], "hidden");
         setPortArrows();
 	})
+
+    // 1. EXPAND NAVBAR CONTENT
+    // 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
+    // 3. RESET ARROWS: SHOW DOWN ARROW
+    hamburger.addEventListener("click", () => {
+        toggleClass([nav, headerContent, logoContainer], "expand");
+	    hideElements(dropdownPort, dropdownProd, upArrowProd, upArrowPort);
+        showElements(downArrowProd, downArrowPort);
+    });
+
+    // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
+    setTimeout(function () {
+        // document.body.className = "";
+        header.className = "";
+    }, 500);
+
 } else {
   	console.log("large screen");
 }
-
-// 1. EXPAND NAVBAR CONTENT
-// 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
-// 3. RESET ARROWS: SHOW DOWN ARROW
-hamburger.addEventListener("click", () => {
-    toggleClass([nav, headerContent, logoContainer], "expand");
-	hideElements(dropdownPort, dropdownProd, upArrowProd, upArrowPort);
-    showElements(downArrowProd, downArrowPort);
-});
-
-// !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
-setTimeout(function () {
-    // document.body.className = "";
-    header.className = "";
-}, 500);
 
 // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
 const pageLinks = document.querySelectorAll(".page-link");
