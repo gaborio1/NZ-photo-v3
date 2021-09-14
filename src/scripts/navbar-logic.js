@@ -1,5 +1,6 @@
 console.log("navbar-logic.js");
-// STICKY NAVBAR W3SCHOOLS
+// ========== STICKY NAVBAR (W3SCHOOLS) ==========
+//  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = () => {
@@ -28,10 +29,8 @@ const removeClass = (elementsArr, classname) => {
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeNavbarSticky = () => {
     if (window.pageYOffset >= sticky) {
-        // console.log("onscroll");
         addClass([navbar], "sticky");
     } else {
-        // console.log("onscroll");
         removeClass([navbar], "sticky");
     }
 };
@@ -48,39 +47,17 @@ const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
 const searchBlurElements = document.getElementsByClassName("search-blur");
 
 
-
-
-
-// CONTINUE add/remove REFACTOR HERE !!!
-
 // SHOW/HIDE SEARCH BAR
 const showSearchBar = () => {
-    defaultButton.classList.add("hidden");
-    submitButton.classList.remove("hidden");
-    searchInput.classList.remove("hidden");
-    closeButton.classList.remove("hidden");
+    addClass([defaultButton], "hidden");
+    removeClass([submitButton, searchInput, closeButton], "hidden");
     searchInput.style.width = "140px";
 };
 
 const hideSearchBar = () => {
-    defaultButton.classList.remove("hidden");
-    submitButton.classList.add("hidden");
-    searchInput.classList.add("hidden");
-    closeButton.classList.add("hidden");
+    removeClass([defaultButton], "hidden");
+    addClass([submitButton, searchInput, closeButton], "hidden");
     searchInput.style.width = "0px";
-};
-
-// BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR
-const blurElements = () => {
-    for (let i = 0; i < searchBlurElements.length; i++) {
-        searchBlurElements[i].classList.add("blurred");
-    }
-};
-
-const unBlurElements = () => {
-    for (let i = 0; i < searchBlurElements.length; i++) {
-        searchBlurElements[i].classList.remove("blurred");
-    }
 };
 
 // FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT
@@ -98,19 +75,17 @@ const filterFunction = () => {
 };
 
 // OPEN SEARCH BAR
-defaultButton.addEventListener("click", function () {
-    showSearchBar();
-    showElements(searchDropdownContent);
-    // showSearchDropdown();
-    blurElements();
+defaultButton.addEventListener("click", () => {
+	showSearchBar();
+	removeClass([searchDropdownContent], "hidden");
+	addClass(searchBlurElements, "blurred");
 });
 
 // CLOSE SEARCH BAR
-closeButton.addEventListener("click", function () {
-    hideSearchBar();
-    hideElements(searchDropdownContent);
-    // hideSearchDropdown();
-    unBlurElements();
+closeButton.addEventListener("click", () => {
+	hideSearchBar();
+    addClass([searchDropdownContent], "hidden");
+	removeClass(searchBlurElements, "blurred");
 });
 
 searchInput.addEventListener("keyup", filterFunction);
@@ -127,27 +102,23 @@ const portLink = document.getElementById("navbar__portfolio");
 const prodLink = document.getElementById("navbar__products");
 const contactLink = document.getElementById("navbar__contact");
 
-// ADD active-link CLASS TO LINK
-const addActiveClass = (el) => {
-    el.classList.add("active-link");
-};
 // ADD active-link CLASS TO CURRENT PAGE'S LINK
 const addActiveClassToCurrrent = () => {
     if (currentUrl.includes("index")) {
-        addActiveClass(homeLink);
+        addClass([homeLink], "active-link")
     } else if (currentUrl.includes("about")) {
-        addActiveClass(aboutLink);
+        addClass([aboutLink], "active-link")
     } else if (
         currentUrl.includes("model") ||
         currentUrl.includes("portrait") ||
         currentUrl.includes("nature") ||
         currentUrl.includes("lightbox21")
     ) {
-        addActiveClass(portLink);
+        addClass([portLink], "active-link")
     } else if (currentUrl.includes("products")) {
-        addActiveClass(prodLink);
+        addClass([prodLink], "active-link")
     } else if (currentUrl.includes("contact")) {
-        addActiveClass(contactLink);
+        addClass([contactLink], "active-link")
     } else {
         console.log("page not found");
     }
@@ -265,17 +236,30 @@ if (window.innerWidth < 767) {
         header.className = "";
     }, 500);
 
+    // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
+    const pageLinks = document.querySelectorAll(".page-link");
+    // !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
+    for (link of pageLinks) {
+        link.addEventListener("click", () => {
+        // console.log("page-link clicked");
+        toggleClass([nav, headerContent], "expand");
+        removeClass([logoContainer], "expand");
+        // logoContainer.classList.remove("expand");
+    });
+}
+
 } else {
   	console.log("large screen");
 }
 
-// ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
-const pageLinks = document.querySelectorAll(".page-link");
-// !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
-for (link of pageLinks) {
-    link.addEventListener("click", () => {
-        // console.log("page-link clicked");
-        toggleClass([nav, headerContent], "expand");
-        logoContainer.classList.remove("expand");
-    });
-}
+// // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
+// const pageLinks = document.querySelectorAll(".page-link");
+// // !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
+// for (link of pageLinks) {
+//     link.addEventListener("click", () => {
+//         // console.log("page-link clicked");
+//         toggleClass([nav, headerContent], "expand");
+//         removeClass([logoContainer], "expand");
+//         // logoContainer.classList.remove("expand");
+//     });
+// }
