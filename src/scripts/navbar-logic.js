@@ -34,15 +34,6 @@ const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
 // imageContainer, mainContent AND footer (ALL ELEMENTS EXCEPT NAVBAR)
 const searchBlurElements = document.getElementsByClassName("search-blur");
 
-// SHOW/HIDE SEARCH DROPDOWN CONTENT
-const showSearchDropdown = () => {
-    document.getElementById("search-dropdown-content").classList.remove("hidden");
-};
-
-const hideSearchDropdown = () => {
-    document.getElementById("search-dropdown-content").classList.add("hidden");
-};
-
 // SHOW/HIDE SEARCH BAR
 const showSearchBar = () => {
     defaultButton.classList.add("hidden");
@@ -90,14 +81,16 @@ const filterFunction = () => {
 // OPEN SEARCH BAR
 defaultButton.addEventListener("click", function () {
     showSearchBar();
-    showSearchDropdown();
+    showElements(searchDropdownContent);
+    // showSearchDropdown();
     blurElements();
 });
 
 // CLOSE SEARCH BAR
 closeButton.addEventListener("click", function () {
     hideSearchBar();
-    hideSearchDropdown();
+    hideElements(searchDropdownContent);
+    // hideSearchDropdown();
     unBlurElements();
 });
 
@@ -259,31 +252,13 @@ setTimeout(function () {
     header.className = "";
 }, 500);
 
-// NOT WORKING AS INTENDED:
-// window.onload = () => {
-//   headerContent.style.animation = "none";
-//   console.log("onload");
-//   setTimeout(function () {
-//     headerContent.style.animation = "collapseHeight ease 0.5s";
-//   }, 1000);
-// };
-
 // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
 const pageLinks = document.querySelectorAll(".page-link");
 // !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
 for (link of pageLinks) {
     link.addEventListener("click", () => {
-        console.log("page-link clicked");
-        // headerContent.classList.remove("expand");
-        // nav.classList.remove("expand");
-        nav.classList.toggle("expand");
-        headerContent.classList.toggle("expand");
+        // console.log("page-link clicked");
+        toggleClass([nav, headerContent], "expand");
         logoContainer.classList.remove("expand");
-        // TOGGLE VISIBILITY OF LOGO
-        // if (logoContainer.style.display === "none") {
-        //   logoContainer.style.display = "block";
-        // } else {
-        //   logoContainer.style.display = "none";
-        // }
     });
 }
