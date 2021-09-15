@@ -241,25 +241,14 @@ if (window.innerWidth < 767) {
     // !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
     for (link of pageLinks) {
         link.addEventListener("click", () => {
-        // console.log("page-link clicked");
-        toggleClass([nav, headerContent], "expand");
-        removeClass([logoContainer], "expand");
-        // logoContainer.classList.remove("expand");
-    });
-}
+            console.log("page-link clicked");
+            // !!! THIS CAUSES CONTENT TO DISAPPEAR BEFORE NAV BACKGROUND !!! 
+            // (IT IS WORKING IN SCRIPT.JS)
+            // toggleClass([nav, headerContent], "expand");
+            removeClass([logoContainer], "expand");
+        });
+    }
 
 } else {
   	console.log("large screen");
 }
-
-// // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED
-// const pageLinks = document.querySelectorAll(".page-link");
-// // !!! forEach WILL TRIGGER LISTENER ON PARENT ELEMENT, USE for/for of LOOP !!!
-// for (link of pageLinks) {
-//     link.addEventListener("click", () => {
-//         // console.log("page-link clicked");
-//         toggleClass([nav, headerContent], "expand");
-//         removeClass([logoContainer], "expand");
-//         // logoContainer.classList.remove("expand");
-//     });
-// }

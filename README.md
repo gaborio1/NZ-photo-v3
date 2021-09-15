@@ -85,6 +85,7 @@ products:
     ✅ add before/after gallery to products links
 
 navbar:
+    animate navbar collapse when clicking on current page link
     look into navbar-logic.js:256 (ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED) is this necessary ???
     include search-bar ???
     ✅  highlight and make dropdown content smaller
