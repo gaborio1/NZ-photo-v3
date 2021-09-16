@@ -24,9 +24,20 @@ if (window.innerWidth < 767) {
      	"header",
       	1,
       	{ background: "rgba(0, 0, 0, 0.9)" },
-      	{ background: "rgba(0, 0, 0, 1)" },
+      	// { background: "rgba(0, 0, 0, 1)" },
+      	{ background: "rgba(0, 0, 0, 0.10)" },
       	"-=0"
     );
+
+	// NOT WORKING AS INTENDED
+
+// 	.fromTo(
+// 		".logo-container",
+// 		1,
+// 		{ opacity: "1" },
+// 		{ opacity: "0.55" },
+// 		"-=0"
+//    );
   	new ScrollMagic.Scene({
     	triggerElement: ".image-container",
     	duration: "20%",

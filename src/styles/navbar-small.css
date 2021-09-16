@@ -7,6 +7,14 @@
 		padding 0s, margin 0s !important;
 	}
 
+
+	.backdrop.preload * {
+		animation-duration: 0s !important;
+		-webkit-animation-duration: 0s !important;
+		transition: opacity 0s, background-color 0s, color 0s, width 0s, height 0s,
+		padding 0s, margin 0s !important;
+	}
+
 	.sticky {
 		position: fixed;
 	}
@@ -153,6 +161,24 @@
 	}
 
 	/* ===== NAV ===== */
+
+	.backdrop {
+		/* display: none; */
+		z-index: 3;
+		position: fixed;
+		/* top: 50px; */
+		width: 100%;
+		height: 0vh;
+		animation: collapseHeight ease-in 0.25s;
+		background: rgba(0, 0, 0, 0.9);
+		/* background: rgba(185, 38, 38, 0.813); */
+	}
+
+	.backdrop.expand {
+		/* display: block; */
+		height: 100vh;
+		animation: expandHeight ease 0.5s;
+	}
 
 	/* NAVLINK & NAVLINK-DROPDOWN */
 	a.nav-link.nav-link-text,

@@ -1,5 +1,27 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	
+	/* .wrapper {
+		position: relative;
+	} */
+
+	.backdrop {
+		/* display: none; */
+		z-index: 3;
+		position: fixed;
+		/* top: 50px; */
+		width: 100%;
+		height: 0vh;
+		animation: collapseHeight ease-in 0.25s;
+		background: rgba(0, 0, 0, 0.9);
+		/* background: rgba(185, 38, 38, 0.813); */
+	}
+
+	.backdrop.expand {
+		/* display: block; */
+		height: 100vh;
+		animation: expandHeight ease 0.5s;
+	}
+
 	/* preload CLASS IS ADDED TO header TO PREVENT ANIMATION ONLOAD */
 	/* THIS USED TO BE body.preload */
 	.header.preload * {

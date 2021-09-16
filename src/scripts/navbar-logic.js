@@ -150,6 +150,8 @@ addActiveClassToCurrrent();
 
 // detectmob();
 
+
+const backdrop = document.querySelector(".backdrop");
 // ========== HEADER AND CONTENT ==========
 const header = document.querySelector("#header");
 const nav = document.querySelector(".nav");
@@ -221,19 +223,28 @@ if (window.innerWidth < 767) {
         setPortArrows();
 	})
 
-    // 1. EXPAND NAVBAR CONTENT
+    // 1. EXPAND NAVBAR CONTENT / BACKDROP
     // 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
     // 3. RESET ARROWS: SHOW DOWN ARROW
     hamburger.addEventListener("click", () => {
-        toggleClass([nav, headerContent, logoContainer], "expand");
+        toggleClass([nav, headerContent, logoContainer, backdrop], "expand");
 	    hideElements(dropdownPort, dropdownProd, upArrowProd, upArrowPort);
         showElements(downArrowProd, downArrowPort);
+
+
+        backdrop.classList.remove("hidden");
+
+        // toggleClass([backdrop], "expand");
     });
 
     // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
     setTimeout(function () {
         // document.body.className = "";
-        header.className = "";
+		// header.className = "";
+		header.classList.remove("preload");
+		// backdrop.className = "";
+		backdrop.classList.remove("preload");
+		// removeClass([header, backdrop], "preload");
     }, 500);
 
     // ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED

@@ -5,7 +5,7 @@ MODAL GALLERY: https://www.w3schools.com/howto/howto_js_lightbox.asp BY w3school
 BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV ED
 
 ===== TODOS: =====
-
+check and adjust z-indexes properly
 ✅  animated search button/field
 ✅  portrait style modal has a fade in animation while landscape style has not!
 ✅  delete createdivs() from script.js as this is now done with portfolio.js
