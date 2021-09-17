@@ -25,6 +25,12 @@ modal:
     ✅  move prev/next to modal-img-container 
 
 
+==================== ALL SIZES ====================
+
+before/after:
+    ✅   navbar dropdown button not showing active status (border bottom)
+
+
 ==================== MEDIUM SIZE ====================
 
 changes
@@ -56,8 +62,6 @@ changes
 
 ==================== SMALL SIZE ====================
 
-!!! ADD .preload TO .header !!!
-
 homepage:
     design new layout for main content
     design smaller title divs
@@ -85,6 +89,7 @@ products:
     ✅ add before/after gallery to products links
 
 navbar:
+    ✅  ADD .preload TO .header and .backdrop to prevent animation on load
     animate navbar collapse when clicking on current page link
     look into navbar-logic.js:256 (ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED) is this necessary ???
     include search-bar ???

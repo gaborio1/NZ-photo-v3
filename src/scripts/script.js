@@ -134,11 +134,13 @@ const addActiveClassToCurrrent = () => {
     } else if (
         currentUrl.includes("model") ||
         currentUrl.includes("portrait") ||
-        currentUrl.includes("nature") ||
-        currentUrl.includes("lightbox21")
+        currentUrl.includes("nature") 
     ) {
         addClass([portLink], "active-link")
-    } else if (currentUrl.includes("products")) {
+    } else if (
+		currentUrl.includes("products") ||
+		currentUrl.includes("before-after") 
+	) {
         addClass([prodLink], "active-link")
     } else if (currentUrl.includes("contact")) {
         addClass([contactLink], "active-link")
