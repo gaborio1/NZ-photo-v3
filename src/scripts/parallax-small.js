@@ -99,8 +99,8 @@ if (window.innerWidth < 767) {
     	.fromTo(
 			"#model-img-container",
 			1,
-			{ y: "20vh" },
-			{ y: "-2vh", ease: "linear" }
+			{ y: "30vh" },
+			{ y: "-0vh", ease: "linear" }
     	)
     	.fromTo(
 			"#model-img-container",
@@ -111,7 +111,7 @@ if (window.innerWidth < 767) {
 		);
   	new ScrollMagic.Scene({
     	triggerElement: "#model-img-trigger",
-    	duration: "70%",
+    	duration: "75%",
     	// offset: 50,
     	triggerHook: 0.95,
   	})
@@ -123,8 +123,8 @@ if (window.innerWidth < 767) {
 		.fromTo(
 			"#model-text-container",
 			0.3,
-			{ y: "2vh" },
-			{ y: "-2vh", ease: "linear" }
+			{ y: "5vh" },
+			{ y: "-5vh", ease: "linear" }
 		)
 		.fromTo(
 			"#model-text-container",
@@ -148,22 +148,28 @@ if (window.innerWidth < 767) {
 		.fromTo(
 			"#street-text-container",
 			0.1,
-			{ y: "-2vh" },
-			{ y: "-2vh", ease: "linear" },
+			{ y: "-5vh" },
+			{ y: "-4vh", ease: "linear" },
 			"-=0"
 		)
-		// .fromTo("#street-text-container", 0.3, { x: "5vw" }, { x: "-0vw", ease: "linear" }, "-=0.3")
 		.fromTo(
 			"#street-text-container",
-			0.3,
+			1,
+			{ x: "-40vw" },
+			{ x: "-0vw", ease: "linear" },
+			"-=1"
+		)
+		.fromTo(
+			"#street-text-container",
+			2,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			"-=0.1"
+			"-=1"
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#street-text-trigger",
-		duration: "70%",
-		offset: 40,
+		duration: "60%",
+		offset: -100,
 		triggerHook: 0.95,
 	})
 		.setTween(timelineStreetText)
@@ -173,21 +179,22 @@ if (window.innerWidth < 767) {
     	.fromTo(
 			"#street-img-container",
 			1,
-			{ y: "20vh" },
-			{ y: "-2vh", ease: "linear" },
+			{ y: "-10vh" },
+			{ y: "-0vh", ease: "linear" },
 			"-=1"
 		)
+
 		.fromTo(
 			"#street-img-container",
 			1,
-			{ x: "5vw" },
+			{ x: "50vw" },
 			{ x: "-0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo("#street-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#street-img-trigger",
-		duration: "50%",
+		duration: "80%",
 		offset: -80,
 		triggerHook: 0.95,
 	})

@@ -693,9 +693,9 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin: 20px;
+		/* margin: 20px; */
 
-		/* border: 3px solid rgb(19, 104, 110); */
+		border: 3px solid rgb(19, 104, 110);
 	}
 
 	/* width CONTROLS CATEGORY IMG WIDTH */
@@ -707,17 +707,17 @@
 		align-items: center;
 		justify-content: center;
 
-		margin: 10px 5px 30px 5px;
+		/* margin: 10px 5px 0px 5px; */
 
-		/* border: 3px solid olive; */
+		border: 3px solid olive;
 	}
 
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN, non-reverse IN SMALL !!!*/
 	.portrait-column--reverse {
 		flex-direction: column;
-		margin: 150px 5px 10px 5px;
+		margin: 90px 5px 10px 5px;
 
-		/* border: 3px solid aqua; */
+		border: 3px solid aqua;
 	}
 
 	.portrait-img-container {
@@ -748,16 +748,16 @@
 
 	.portrait-text-container {
 		width: 90%;
-		margin-top: 0.25rem;
+		/* margin-top: 0.25rem; */
 
-		/* border: 3px solid burlywood; */
+		border: 3px solid burlywood;
 	}
 
 	.landscape-text-container {
 		width: 90%;
 		margin-top: 2rem;
 
-		/* border: 3px solid burlywood; */
+		border: 3px solid burlywood;
 	}
 
 
@@ -797,11 +797,11 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin: 75px;
-		/* margin-top: 100px; */
+		/* margin: 75px; */
+		margin-top: 100px;
 		padding: 5%;
 
-		/* border: 3px solid rgb(59, 72, 190); */
+		border: 3px solid rgb(59, 72, 190);
 	}
 
 	/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
@@ -830,6 +830,7 @@
 		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
 		width: 120vw;
 		height: 52.5vh;
+		height: 66vh;
 		filter: grayscale(0.5) contrast(150%);
 		/* filter: grayscale(.25) blur(.1px) opacity(0.90);   */
 
