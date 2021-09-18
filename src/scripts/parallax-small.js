@@ -213,14 +213,14 @@ if (window.innerWidth < 767) {
 		.fromTo(
 			"#motion-img-container",
 			1,
-			{ x: "-5vw" },
+			{ x: "-20vw" },
 			{ x: "-0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo("#motion-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
   	new ScrollMagic.Scene({
 		triggerElement: "#motion-img-trigger",
-		duration: "50%",
+		duration: "75%",
 		// offset: -50,
 		triggerHook: 0.95,
   	})
@@ -237,7 +237,7 @@ if (window.innerWidth < 767) {
 		.fromTo(
 			"#motion-text-container",
 			0.3,
-			{ x: "5vw" },
+			{ x: "15vw" },
 			{ x: "-0vw", ease: "linear" },
 			"-=0.3"
 		)
