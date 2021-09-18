@@ -94,7 +94,7 @@ if (window.innerWidth < 767) {
 
 	// ========== ANIMATING CATEGORIES ONE BY ONE WITHOUT TIMELINE ==========
 
-  	// MODEL
+  	// ===== MODEL =====
   	let timelineModel = new TimelineMax()
     	.fromTo(
 			"#model-img-container",
@@ -143,7 +143,7 @@ if (window.innerWidth < 767) {
     .setTween(timelineModelText)
     .addTo(controller);
 
-  	// STREET
+  	// ===== STREET =====
   	let timelineStreetText = new TimelineMax()
 		.fromTo(
 			"#street-text-container",
@@ -201,7 +201,7 @@ if (window.innerWidth < 767) {
     .setTween(timelineStreet)
     .addTo(controller);
 
-  	// MOTION
+  	// ===== MOTION =====
   	let timelineMotion = new TimelineMax()
 		.fromTo(
 			"#motion-img-container",
@@ -257,7 +257,7 @@ if (window.innerWidth < 767) {
 	.setTween(timelineMotionText)
 	.addTo(controller);
 
-  	// MOSAIC DIVIDER CONTAINER
+  	//  ===== MOSAIC DIVIDER CONTAINER =====
   	let timelineMosaicContainer = new TimelineMax()
 		.fromTo(
 			"#mosaic-container",
@@ -282,7 +282,7 @@ if (window.innerWidth < 767) {
 	.setTween(timelineMosaicContainer)
 	.addTo(controller);
 
-  // MOSAIC SLICES
+  // ===== MOSAIC SLICES =====
   	let timelineMosaicSlices = new TimelineMax()
     	.fromTo(
 			".mosaic-slice-container-1",
@@ -314,7 +314,7 @@ if (window.innerWidth < 767) {
     .setTween(timelineMosaicSlices)
     .addTo(controller);
 
-  // PORTRAIT
+  // ===== PORTRAIT =====
   	let timelinePortrait = new TimelineMax()
 		.fromTo(
 			"#portrait-container",
@@ -332,11 +332,12 @@ if (window.innerWidth < 767) {
     	triggerElement: "#portrait-trigger",
     	duration: "80%",
     	// offset: 50,
-    	triggerHook: 0.95,
+    	triggerHook: 1,
   })
     .setTween(timelinePortrait)
     .addTo(controller);
 
+	// ===== ABSTRACT =====
 	let timelineAbstract = new TimelineMax()
 		.fromTo(
 			"#abstract-container",
@@ -353,49 +354,21 @@ if (window.innerWidth < 767) {
   	new ScrollMagic.Scene({
     	triggerElement: "#abstract-trigger",
     	duration: "80%",
-    	// offset: 50,
-    	triggerHook: 0.95,
+		// SPACER TRIGGER IS BY THE TEXT CONTAINER DOWN BELOW SO HAVE TO FAKE IT IS ON TOP OF IMAGE
+    	offset: -600,
+    	triggerHook: 1,
   })
     .setTween(timelineAbstract)
     .addTo(controller);
 
-  	// ABSTRACT
-  	// let timelineAbstract = new TimelineMax()
-    // 	.fromTo(
-    //   		"#abstract-container",
-    //   		1,
-    //   		{ y: "5vh" },
-    //   		{ y: "-0vh", ease: "linear" }
-    // 	)
-    // 	.fromTo(
-	// 		"#abstract-container",
-	// 		1,
-	// 		{ opacity: 0 },
-	// 		{ opacity: 1 },
-	// 		"-=1");
-  	// new ScrollMagic.Scene({
-	// 	triggerElement: "#abstract-trigger",
-	// 	duration: "70%",
-	// 	// offset: 50,
-	// 	triggerHook: 0.95,
-  	// })
-    // .setTween(timelineAbstract)
-    // .addTo(controller);
 
-  	// NATURE
+  	// ===== NATURE =====
   	let timelineNature = new TimelineMax()
 		.fromTo(
 			"#nature-container",
 			1,
-			{ y: "-20vh" },
-			{ y: "-2vh", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#nature-container",
-			1,
-			{ x: "-5vw" },
-			{ x: "-0vw", ease: "linear" },
+			{ y: "10vh" },
+			{ y: "-0vh", ease: "linear" },
 			"-=1"
 		)
 		.fromTo(
@@ -408,7 +381,7 @@ if (window.innerWidth < 767) {
 		triggerElement: "#nature-trigger",
 		duration: "50%",
 		offset: -50,
-		triggerHook: 0.95,
+		triggerHook: 1,
   	})
     .setTween(timelineNature)
     .addTo(controller);
