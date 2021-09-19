@@ -528,6 +528,7 @@
 		/* border: 3px solid red; */
 	}
 
+
 	.title-div-content {
 		width: 95%;
 		display: flex;
@@ -609,7 +610,7 @@
 
 	h3.photography__letter {
 		display: inline-block;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		/* font-size: 15px; */
 		letter-spacing: 1.1rem;
 		letter-spacing: 0.5rem;
@@ -1161,5 +1162,89 @@
 		background: #125688;
 		background: #12578884;
 		color: white;
+	}
+}
+
+
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
+
+
+	img.mountain-mobile-size {
+		display: none;
+	}
+
+	img.non-mobile-size {
+		display: block;
+		z-index: -1;
+		/* !!! WORKS BEST WITH relative !!!*/
+		position: relative;
+		/* !!! absolute WILL MESS UP TITLE DIV WHEN RESIZING WINDOW !!! */
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+		background-position: center;
+	}
+
+	.title-div {
+		bottom: 25px;
+	}
+
+	.title-div-content {
+		/* width: 95%; */
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: space-between;
+		height: fit-content;
+		/* height: 100px; */
+
+		/* border: 3px solid orange; */
+	}
+
+	.title-div__enzee-container {
+		/* width: var(--max-width); */
+		/* flex: 1; */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		max-width: 33%;
+		/* margin-top: 5px; */
+		/* border: 1px solid orange; */
+	}
+
+	h1.enzee__letter {
+		/* RESPONSIVE TEXT */
+		font-size: 60px;
+		/* letter-spacing: 0.5rem; */
+		/* text-shadow: 1px 1px rgba(113, 113, 113, 0.683); */
+
+		/* font-weight: 900; */
+
+		/* ANIMATING Enzee at once */
+		/* animation: fadeInAnimation ease-out 2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards; */
+
+		line-height: 50px;
+
+		/* text-shadow: 2px 2px rgba(113, 113, 113, 0.683), 4px 4px rgba(113, 113, 113, 0.361); */
+		/* border: 1px solid red; */
+	}
+
+	.title-div__photography-container {
+		/* flex: 1; */
+		/* display: flex; */
+		/* width: fit-content; */
+		/* width: var(--max-width); */
+		/* width: 95%; */
+		/* FLEX WILL CHANGE FADE IN BEHAVIOR */
+		display: flex;
+		max-width: 40%;
+		/* justify-content: center; */
+		justify-content: space-around;
+		/* margin-left: 3%; */
+		margin-bottom: 5px;
+
+		/* border: 1px solid rgb(35, 210, 29); */
 	}
 }

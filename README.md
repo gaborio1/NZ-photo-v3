@@ -27,6 +27,9 @@ modal:
 
 ==================== ALL SIZES ====================
 
+homepage:
+    use text-align: baseline for .title-div-content to align enzee with photography
+
 before/after:
     ✅   navbar dropdown button not showing active status (border bottom)
 
