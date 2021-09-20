@@ -773,6 +773,7 @@
 	.landscape-text-container {
 		width: 90%;
 		margin-top: 2rem;
+		/* margin-bottom: none; */
 
 		/* border: 3px solid burlywood; */
 	}
@@ -810,14 +811,16 @@
 	/* LANDSCAPE CONTAINER */
 	.landscape-container {
 		width: var(--max-width);
+		width: 90%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
 		/* margin: 75px; */
 		margin-top: 100px;
-		margin-bottom: 100px;
-		padding: 5%;
+		margin-bottom: 0px;
+		/* padding: 5%; */
+		padding: 0px;
 
 		/* border: 3px solid rgb(59, 72, 190); */
 	}
@@ -853,7 +856,7 @@
 
 		border-top: 50px solid grey;
 		border-bottom: 5px solid grey;
-		margin: 90px 0px 135px 0px;
+		margin: 50px 0px 100px 0px;
 	}
 
 	/* MOSAIC SLICES */
@@ -948,6 +951,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
+		margin-top: 50px;
 
 		/* border: 3px solid orange; */
 	}
@@ -1292,7 +1296,7 @@
 	/* width CONTROLS CATEGORY IMG WIDTH */
 	.portrait-column {
 		width: 90%;
-
+		max-height: 100vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -1305,6 +1309,7 @@
 
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN, non-reverse IN SMALL !!!*/
 	.portrait-column--reverse {
+		max-height: 100vh;
 		flex-direction: row-reverse;
 		margin: 90px 5px 10px 5px;
 
@@ -1313,6 +1318,7 @@
 
 	.portrait-img-container {
 		width: 45%;
+		max-height: 100vh;
 		/* width: 300px; */
 		/* height: 300px; */
 		/* max-height: 375px; */
@@ -1366,8 +1372,8 @@
 	}
 
 	.landscape-text-container {
-		width: 20%;
-		margin-top: 12%;
+		width: 75%;
+		/* margin-top: 12%; */
 
 		border: 3px solid burlywood;
 	}
@@ -1407,13 +1413,14 @@
 		width: var(--max-width);
 		width: 90%;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		/* justify-content: center; */
 		/* margin: 75px; */
 		margin-top: 100px;
-		margin-bottom: 100px;
-
+		/* margin-bottom: 50px; */
+		/* max-height: 100vh; */
 		padding: 0px;
 
 		border: 3px solid rgb(59, 72, 190);
@@ -1447,12 +1454,12 @@
 		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
 		width: 120vw;
 		height: 52.5vh;
-		height: 66vh;
+		height: 100vh;
 		filter: grayscale(0.5) contrast(150%);
 		/* filter: grayscale(.25) blur(.1px) opacity(0.90);   */
 
-		border-top: 50px solid grey;
-		border-bottom: 5px solid grey;
+		border-top: 10px solid grey;
+		border-bottom: 10px solid grey;
 		margin: 90px 0px 135px 0px;
 	}
 

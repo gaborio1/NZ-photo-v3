@@ -315,74 +315,167 @@ if (window.innerWidth < 767) {
     .addTo(controller);
 
   // ===== PORTRAIT =====
-  	let timelinePortrait = new TimelineMax()
-		.fromTo(
-			"#portrait-container",
+
+let timelinePortrait = new TimelineMax()
+    	.fromTo(
+			"#portrait-img-container",
 			1,
-			{ y: "10vh" },
+			{ y: "30vh" },
 			{ y: "-0vh", ease: "linear" }
-		)
-		.fromTo(
-			"#portrait-container",
+    	)
+    	.fromTo(
+			"#portrait-img-container",
 			1,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			"-=1");
+			"-=1"
+		);
   	new ScrollMagic.Scene({
-    	triggerElement: "#portrait-trigger",
-    	duration: "80%",
+    	triggerElement: "#portrait-img-trigger",
+    	duration: "75%",
     	// offset: 50,
-    	triggerHook: 1,
-  })
+    	triggerHook: 0.95,
+  	})
+    	// .setClassToggle("visible")
     .setTween(timelinePortrait)
     .addTo(controller);
 
-	// ===== ABSTRACT =====
-	let timelineAbstract = new TimelineMax()
+  	let timelinePortraitText = new TimelineMax()
 		.fromTo(
-			"#abstract-container",
-			1,
-			{ y: "10vh" },
-			{ y: "-0vh", ease: "linear" }
+			"#portrait-text-container",
+			0.3,
+			{ y: "5vh" },
+			{ y: "-5vh", ease: "linear" }
 		)
 		.fromTo(
-			"#abstract-container",
-			1,
+			"#portrait-text-container",
+			0.3,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			"-=1");
-  	new ScrollMagic.Scene({
-    	triggerElement: "#abstract-trigger",
-    	duration: "80%",
-		// SPACER TRIGGER IS BY THE TEXT CONTAINER DOWN BELOW SO HAVE TO FAKE IT IS ON TOP OF IMAGE
-    	offset: -600,
-    	triggerHook: 1,
-  })
-    .setTween(timelineAbstract)
+			"-=0.3"
+		);
+	new ScrollMagic.Scene({
+		triggerElement: "#portrait-text-trigger",
+		duration: "20%",
+		offset: -30,
+		triggerHook: 0.95,
+	})
+		// .setClassToggle("visible")
+    .setTween(timelinePortraitText)
     .addTo(controller);
 
-
-  	// ===== NATURE =====
-  	let timelineNature = new TimelineMax()
+	// ===== ABSTRACT =====
+	let timelineAbstractText = new TimelineMax()
 		.fromTo(
-			"#nature-container",
+			"#abstract-text-container",
+			0.1,
+			{ y: "-5vh" },
+			{ y: "-4vh", ease: "linear" },
+			"-=0"
+		)
+		.fromTo(
+			"#abstract-text-container",
 			1,
-			{ y: "10vh" },
-			{ y: "-0vh", ease: "linear" },
+			{ x: "-40vw" },
+			{ x: "-0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo(
-			"#nature-container",
-			1,
+			"#abstract-text-container",
+			2,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			"-=1");
+			"-=1"
+		);
+	new ScrollMagic.Scene({
+		triggerElement: "#abstract-text-trigger",
+		duration: "60%",
+		offset: -100,
+		triggerHook: 0.95,
+	})
+		.setTween(timelineAbstractText)
+		.addTo(controller);
+
+  	let timelineAbstract = new TimelineMax()
+    	.fromTo(
+			"#abstract-img-container",
+			1,
+			{ y: "-10vh" },
+			{ y: "-0vh", ease: "linear" },
+			"-=1"
+		)
+
+		.fromTo(
+			"#abstract-img-container",
+			1,
+			{ x: "50vw" },
+			{ x: "-0vw", ease: "linear" },
+			"-=1"
+		)
+		.fromTo("#abstract-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
+	new ScrollMagic.Scene({
+		triggerElement: "#abstract-img-trigger",
+		duration: "80%",
+		offset: -80,
+		triggerHook: 0.95,
+	})
+    .setTween(timelineAbstract)
+    .addTo(controller);
+
+  	// ===== NATURE =====
+
+	let timelineNature = new TimelineMax()
+		.fromTo(
+			"#nature-img-container",
+			1,
+			{ y: "-20vh" },
+			{ y: "-2vh", ease: "linear" },
+			"-=1"
+		)
+		.fromTo(
+			"#nature-img-container",
+			1,
+			{ x: "-20vw" },
+			{ x: "-0vw", ease: "linear" },
+			"-=1"
+		)
+		.fromTo("#nature-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
   	new ScrollMagic.Scene({
-		triggerElement: "#nature-trigger",
-		duration: "50%",
-		offset: -50,
-		triggerHook: 1,
+		triggerElement: "#nature-img-trigger",
+		duration: "75%",
+		// offset: -50,
+		triggerHook: 0.95,
   	})
     .setTween(timelineNature)
     .addTo(controller);
+
+  	let timelineNatureText = new TimelineMax()
+		.fromTo(
+			"#nature-text-container",
+			0.3,
+			{ y: "-10vh" },
+			{ y: "-10vh", ease: "linear" }
+		)
+		.fromTo(
+			"#nature-text-container",
+			0.3,
+			{ x: "15vw" },
+			{ x: "-0vw", ease: "linear" },
+			"-=0.3"
+		)
+		.fromTo(
+		"#nature-text-container",
+			0.3,
+			{ opacity: 0 },
+			{ opacity: 1 },
+			"-=0.3"
+		);
+	new ScrollMagic.Scene({
+		triggerElement: "#nature-text-trigger",
+		duration: "40%",
+		// offset: 300,
+		triggerHook: 0.95,
+	})
+	.setTween(timelineNatureText)
+	.addTo(controller);
 }
