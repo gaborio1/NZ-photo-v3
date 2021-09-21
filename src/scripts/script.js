@@ -2,10 +2,15 @@ console.log("script.js");
 
 
 window.onorientationchange = function() {  	window.location.reload(); };
-window.addEventListener('resize', function () { 
-    "use strict";
-    window.location.reload(); 
-});
+// window.addEventListener('resize', function () { 
+//     "use strict";
+//     window.location.reload(); 
+// });
+window.onresize = function() {
+	if (window.innerWidth > 767) {
+		location.reload();
+	}
+}
 
 // ========== STICKY NAVBAR (W3SCHOOLS) ==========
 //  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
@@ -241,39 +246,31 @@ const setPortArrows = () => {
     }
 }
 
-if (window.innerWidth < 767) {
+if (window.innerWidth < 768) {
 	console.log("small screen");
 
-  portButton.addEventListener("click", () => {
+  	portButton.addEventListener("click", () => {
 		hideElements(dropdownProd);
 		toggleClass([dropdownPort, downArrowPort, upArrowPort], "hidden");
 		setProdArrows();
-  })
+  	})
 
-  prodButton.addEventListener("click", () => {
+  	prodButton.addEventListener("click", () => {
 		hideElements(dropdownPort);		
 		toggleClass([dropdownProd, downArrowProd, upArrowProd], "hidden");
 		setPortArrows();
-  })
+  	})
 
-  // 1. EXPAND NAVBAR CONTENT
-  // 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
-  // 3. RESET ARROWS: SHOW DOWN ARROW
-  hamburger.addEventListener("click", () => {
+  	// 1. EXPAND NAVBAR CONTENT
+  	// 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
+  	// 3. RESET ARROWS: SHOW DOWN ARROW
+  	hamburger.addEventListener("click", () => {
 		// toggleClass([nav, headerContent, logoContainer], "expand");
 		toggleClass([nav, headerContent, logoContainer, backdrop], "expand");
 		hideElements(dropdownPort, dropdownProd, upArrowProd, upArrowPort);
 		showElements(downArrowProd, downArrowPort);
-
-
-
 		backdrop.classList.remove("hidden");
-
-
-
-
-
-  });
+	});
 
   // !!! PREVENT CSS ANIMATION IN .header FROM RUNNING WHEN PAGE LOADS !!!
 

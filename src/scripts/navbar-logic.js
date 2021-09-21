@@ -210,7 +210,7 @@ const setPortArrows = () => {
     }
 }
 
-if (window.innerWidth < 767) {
+if (window.innerWidth < 768) {
   	console.log("small screen");
 
 	portButton.addEventListener("click", () => {
