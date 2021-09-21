@@ -400,6 +400,7 @@
 		z-index: 0;
 		position: absolute;
 		bottom: 45px;
+		/* bottom: 5%; */
 		width: var(--max-width);
 		height: 135px;
 		margin: auto;

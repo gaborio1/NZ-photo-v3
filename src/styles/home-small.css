@@ -1,4 +1,7 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+
+/* @media only screen and (min-width: 320px) and (max-width: 812px) { */
+
 	
 	/* .wrapper {
 		position: relative;
@@ -1172,6 +1175,8 @@
 
 @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
 
+/* @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {	 */
+
 
 	img.mountain-mobile-size {
 		display: none;
@@ -1252,34 +1257,18 @@
 		/* border: 1px solid rgb(35, 210, 29); */
 	}
 
-	.main-content {
-		/* z-index: 2;
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: var(--max-width);
+	/* .main-content {
+		border: 3px solid red;
+	} */
 
-		overflow: hidden; */
-
-		/* border: 3px solid red; */
-	}
-
-	.main-coloumn {
-		/* width: 90%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		margin-top: 50px; */
-
+	/* .main-coloumn {
 		border: 3px solid orange;
-	}
+	} */
 
 	/* DIV WITH NO HEIGHT, TRIGGERS SCROLL ANIMATION ON ITS SIBLING */
 	.spacer-trigger {
 		width: 100%;
-		border: 3px solid rgb(1, 84, 95);
+		/* border: 3px solid rgb(1, 84, 95); */
 	}
 
 	.portrait-container {
@@ -1290,7 +1279,7 @@
 		justify-content: space-around;
 		/* margin: 20px; */
 
-		border: 3px solid rgb(19, 104, 110);
+		/* border: 3px solid rgb(19, 104, 110); */
 	}
 
 	/* width CONTROLS CATEGORY IMG WIDTH */
@@ -1304,7 +1293,7 @@
 
 		/* margin: 10px 5px 0px 5px; */
 
-		border: 3px solid olive;
+		/* border: 3px solid olive; */
 	}
 
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN, non-reverse IN SMALL !!!*/
@@ -1313,7 +1302,7 @@
 		flex-direction: row-reverse;
 		margin: 90px 5px 10px 5px;
 
-		border: 3px solid aqua;
+		/* border: 3px solid aqua; */
 	}
 
 	.portrait-img-container {
@@ -1375,7 +1364,7 @@
 		width: 75%;
 		/* margin-top: 12%; */
 
-		border: 3px solid burlywood;
+		/* border: 3px solid burlywood; */
 	}
 
 
@@ -1423,14 +1412,14 @@
 		/* max-height: 100vh; */
 		padding: 0px;
 
-		border: 3px solid rgb(59, 72, 190);
+		/* border: 3px solid rgb(59, 72, 190); */
 	}
 
 	/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
 	.landscape-img-container {
 		width: 75%;
 		max-height: 300px;
-		border: 3px solid yellow;
+		/* border: 3px solid yellow; */
 	}
 
 	.img-hover-zoom--landscape {
@@ -1439,11 +1428,9 @@
 		/* border: 3px solid red; */
 	}
 
-	img.landscape-style {
-		/* width: var(--max-width); */
-		/* width: 50%; */
-		/* border: 3px solid rgb(106, 235, 8); */
-	}
+	/* img.landscape-style {
+		border: 3px solid rgb(106, 235, 8);
+	} */
 
 	/* MOSAIC CONTAINER */
 
