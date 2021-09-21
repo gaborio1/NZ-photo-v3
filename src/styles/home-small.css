@@ -817,8 +817,8 @@
 		align-items: center;
 		justify-content: space-between;
 		/* margin: 75px; */
-		margin-top: 100px;
-		margin-bottom: 0px;
+		margin-top: 150px;
+		margin-bottom: 50px;
 		/* padding: 5%; */
 		padding: 0px;
 
@@ -951,7 +951,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
-		margin-top: 50px;
+		/* margin-top: 50px; */
 
 		/* border: 3px solid orange; */
 	}

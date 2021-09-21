@@ -250,7 +250,7 @@ if (window.innerWidth < 767) {
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-text-trigger",
-		duration: "40%",
+		duration: "25%",
 		// offset: 300,
 		triggerHook: 0.95,
 	})
@@ -472,7 +472,7 @@ let timelinePortrait = new TimelineMax()
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-text-trigger",
-		duration: "40%",
+		duration: "25%",
 		// offset: 300,
 		triggerHook: 0.95,
 	})
