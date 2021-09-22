@@ -724,38 +724,74 @@
 		/* border: 3px solid aqua; */
 	}
 
-	.portrait-img-container {
-		width: 100%;
-		/* border: 3px solid rgb(231, 231, 44); */
-	}
 
 	/* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
-	/* .img-hover-zoom {
-		border-radius: 3px;
-		overflow: hidden;
-		border: 3px solid tomato;
-	} */
 
-
-
-	img.portrait-style,
-	img.landscape-style {
-		/* width: 100px; */
+	/* ===== PORTRAIT ===== */
+	.portrait-img-container {
 		width: 100%;
-		/* border: 10px solid rgb(0, 0, 0); */
+		border: 3px solid rgb(231, 231, 44);
 	}
 
+	/* !!! How to Create a Responsive Square with CSS !!! */
+	/* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
 
-
-
-
-	/* width CONTROLS CATEGORY IMG WIDTH */
+	/* IMG CONTAINER width CONTROLS CATEGORY IMG WIDTH */
 	.img-hover-zoom--portrait {
+		position: relative;
 		width: 100%;
-		/* width: 50%; */
-		
-		/* border: 5px solid hotpink; */
+		overflow: hidden;
+		border: 5px solid hotpink;
 	}
+
+	.img-hover-zoom--portrait::after {
+		content: "";
+  		display: block;
+  		padding-bottom: 100%;
+  		/* overflow: hidden; */
+
+	}
+
+	/* ACTUAL CATEGORY IMAGE */
+	img.portrait-style {
+		width: var(--max-width);
+		position: absolute;
+  		width: 100%;
+  		/* height: 100%; */
+  		height: auto;
+	}
+	/* ===== LANDSCAPE ===== */
+	.landscape-img-container {
+		width: 100%;
+		border: 3px solid yellow;
+	}
+
+	.img-hover-zoom--landscape {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		border: 5px solid hotpink;
+	}
+
+	.img-hover-zoom--landscape::after {
+		content: "";
+  		display: block;
+  		padding-bottom: 100%;
+  		/* overflow: hidden; */
+
+	}
+
+	img.landscape-style {
+		width: var(--max-width);
+		position: absolute;
+  		width: 150%;
+  		height: auto;
+	}
+
+
+
+
+
 
 	/* CATEGORY TEXT CONTAINERS */
 
@@ -794,23 +830,6 @@
 		margin-bottom: 0.5rem;
 	}
 
-	/* LAST 3 CATEGORIES */
-	h4.category-info-title {
-		color: var(--sub-title-orange);
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-	}
-
-	/* img.portrait-style {
-		width: var(--max-width);
-	} */
-
-	/* .portrait-reverse .portrait-img-container {
-		margin-top: 100px;
-	}
-	/*  */
-
-
 	/* LANDSCAPE CONTAINER */
 	.landscape-container {
 		width: var(--max-width);
@@ -828,21 +847,8 @@
 		/* border: 3px solid rgb(59, 72, 190); */
 	}
 
-	/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
-	/* .landscape-img-container {
-		border: 3px solid yellow;
-	} */
 
-	.img-hover-zoom--landscape {
-		width: 100%;
 
-		/* border: 3px solid red; */
-	}
-
-	img.landscape-style {
-		width: var(--max-width);
-		/* border: 3px solid rgb(106, 235, 8); */
-	}
 
 	/* MOSAIC CONTAINER */
 
