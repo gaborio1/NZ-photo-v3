@@ -23,9 +23,8 @@ if (window.innerWidth < 768) {
     .fromTo(
      	"header",
       	1,
-      	{ background: "rgba(0, 0, 0, 0.9)" },
-      	// { background: "rgba(0, 0, 0, 1)" },
-      	{ background: "rgba(0, 0, 0, 0.10)" },
+      	{ background: "rgba(0, 0, 0, 0.05)" },
+      	{ background: "rgba(0, 0, 0, 0.95)" },
       	"-=0"
     );
 
@@ -40,7 +39,7 @@ if (window.innerWidth < 768) {
 //    );
   	new ScrollMagic.Scene({
     	triggerElement: ".image-container",
-    	duration: "20%",
+    	duration: "50%",
     	// offset: 20,
     	triggerHook: 0,
   	})
