@@ -99,7 +99,7 @@ if (window.innerWidth < 768) {
 			"#model-img-container",
 			1,
 			{ y: "20vh" },
-			{ y: "-0vh", ease: "linear" }
+			{ y: "0vh", ease: "linear" }
     	)
     	.fromTo(
 			"#model-img-container",
@@ -123,7 +123,7 @@ if (window.innerWidth < 768) {
 			"#model-text-container",
 			0.3,
 			{ y: "5vh" },
-			{ y: "-5vh", ease: "linear" }
+			{ y: "-0vh", ease: "linear" }
 		)
 		.fromTo(
 			"#model-text-container",
@@ -146,16 +146,9 @@ if (window.innerWidth < 768) {
   	let timelineStreetText = new TimelineMax()
 		.fromTo(
 			"#street-text-container",
-			0.1,
-			{ y: "-5vh" },
-			{ y: "-4vh", ease: "linear" },
-			"-=0"
-		)
-		.fromTo(
-			"#street-text-container",
 			1,
-			{ x: "-40vw" },
-			{ x: "-0vw", ease: "linear" },
+			{ x: "-50vw" },
+			{ x: "0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo(
@@ -167,8 +160,8 @@ if (window.innerWidth < 768) {
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#street-text-trigger",
-		duration: "60%",
-		offset: -100,
+		duration: "35%",
+		offset: 0,
 		triggerHook: 0.95,
 	})
 		.setTween(timelineStreetText)
@@ -179,7 +172,7 @@ if (window.innerWidth < 768) {
 			"#street-img-container",
 			1,
 			{ y: "-10vh" },
-			{ y: "-0vh", ease: "linear" },
+			{ y: "0vh", ease: "linear" },
 			"-=1"
 		)
 
@@ -206,20 +199,20 @@ if (window.innerWidth < 768) {
 			"#motion-img-container",
 			1,
 			{ y: "-20vh" },
-			{ y: "-2vh", ease: "linear" },
+			{ y: "0vh", ease: "linear" },
 			"-=1"
 		)
 		.fromTo(
 			"#motion-img-container",
 			1,
 			{ x: "-20vw" },
-			{ x: "-0vw", ease: "linear" },
+			{ x: "0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo("#motion-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
   	new ScrollMagic.Scene({
 		triggerElement: "#motion-img-trigger",
-		duration: "75%",
+		duration: "70%",
 		// offset: -50,
 		triggerHook: 0.95,
   	})
@@ -230,26 +223,20 @@ if (window.innerWidth < 768) {
 		.fromTo(
 			"#motion-text-container",
 			0.3,
-			{ y: "-10vh" },
-			{ y: "-10vh", ease: "linear" }
-		)
-		.fromTo(
-			"#motion-text-container",
-			0.3,
-			{ x: "15vw" },
-			{ x: "-0vw", ease: "linear" },
-			"-=0.3"
+			{ x: "50vw" },
+			{ x: "0vw", ease: "linear" },
+			"-=1"
 		)
 		.fromTo(
 		"#motion-text-container",
 			0.3,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			"-=0.3"
+			"-=1"
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-text-trigger",
-		duration: "25%",
+		duration: "10%",
 		// offset: 300,
 		triggerHook: 0.95,
 	})
@@ -320,7 +307,7 @@ let timelinePortrait = new TimelineMax()
 			"#portrait-img-container",
 			1,
 			{ y: "20vh" },
-			{ y: "-0vh", ease: "linear" }
+			{ y: "0vh", ease: "linear" }
     	)
     	.fromTo(
 			"#portrait-img-container",
@@ -344,7 +331,7 @@ let timelinePortrait = new TimelineMax()
 			"#portrait-text-container",
 			0.3,
 			{ y: "5vh" },
-			{ y: "-5vh", ease: "linear" }
+			{ y: "0vh", ease: "linear" }
 		)
 		.fromTo(
 			"#portrait-text-container",
@@ -367,16 +354,9 @@ let timelinePortrait = new TimelineMax()
 	let timelineAbstractText = new TimelineMax()
 		.fromTo(
 			"#abstract-text-container",
-			0.1,
-			{ y: "-5vh" },
-			{ y: "-4vh", ease: "linear" },
-			"-=0"
-		)
-		.fromTo(
-			"#abstract-text-container",
 			1,
-			{ x: "-40vw" },
-			{ x: "-0vw", ease: "linear" },
+			{ x: "-50vw" },
+			{ x: "0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo(
@@ -388,8 +368,8 @@ let timelinePortrait = new TimelineMax()
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#abstract-text-trigger",
-		duration: "60%",
-		offset: -100,
+		duration: "35%",
+		offset: 0,
 		triggerHook: 0.95,
 	})
 		.setTween(timelineAbstractText)
@@ -400,7 +380,7 @@ let timelinePortrait = new TimelineMax()
 			"#abstract-img-container",
 			1,
 			{ y: "-10vh" },
-			{ y: "-0vh", ease: "linear" },
+			{ y: "0vh", ease: "linear" },
 			"-=1"
 		)
 
@@ -428,20 +408,20 @@ let timelinePortrait = new TimelineMax()
 			"#nature-img-container",
 			1,
 			{ y: "-20vh" },
-			{ y: "-2vh", ease: "linear" },
+			{ y: "0vh", ease: "linear" },
 			"-=1"
 		)
 		.fromTo(
 			"#nature-img-container",
 			1,
 			{ x: "-20vw" },
-			{ x: "-0vw", ease: "linear" },
+			{ x: "0vw", ease: "linear" },
 			"-=1"
 		)
 		.fromTo("#nature-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
   	new ScrollMagic.Scene({
 		triggerElement: "#nature-img-trigger",
-		duration: "75%",
+		duration: "70%",
 		// offset: -50,
 		triggerHook: 0.95,
   	})
@@ -452,26 +432,20 @@ let timelinePortrait = new TimelineMax()
 		.fromTo(
 			"#nature-text-container",
 			0.3,
-			{ y: "-10vh" },
-			{ y: "-10vh", ease: "linear" }
-		)
-		.fromTo(
-			"#nature-text-container",
-			0.3,
-			{ x: "15vw" },
-			{ x: "-0vw", ease: "linear" },
-			"-=0.3"
+			{ x: "50vw" },
+			{ x: "0vw", ease: "linear" },
+			"-=1"
 		)
 		.fromTo(
 		"#nature-text-container",
 			0.3,
 			{ opacity: 0 },
 			{ opacity: 1 },
-			"-=0.3"
+			"-=1"
 		);
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-text-trigger",
-		duration: "25%",
+		duration: "10%",
 		// offset: 300,
 		triggerHook: 0.95,
 	})

@@ -811,7 +811,7 @@
 
 	.landscape-text-container {
 		width: 90%;
-		margin-top: 2rem;
+		/* margin-top: 2rem; */
 		/* margin-bottom: none; */
 
 		/* border: 3px solid burlywood; */
@@ -840,7 +840,7 @@
 		justify-content: space-between;
 		/* margin: 75px; */
 		margin-top: 150px;
-		margin-bottom: 50px;
+		margin-bottom: 100px;
 		/* padding: 5%; */
 		padding: 0px;
 
