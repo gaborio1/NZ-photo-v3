@@ -680,7 +680,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin-top: 50px;
+		margin-top: 100px;
 
 		/* border: 3px solid orange; */
 	}
@@ -719,7 +719,7 @@
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN, non-reverse IN SMALL !!!*/
 	.portrait-column--reverse {
 		flex-direction: column;
-		margin: 90px 5px 10px 5px;
+		margin: 150px 5px 50px 5px;
 
 		/* border: 3px solid aqua; */
 	}

@@ -98,7 +98,7 @@ if (window.innerWidth < 768) {
     	.fromTo(
 			"#model-img-container",
 			1,
-			{ y: "30vh" },
+			{ y: "20vh" },
 			{ y: "-0vh", ease: "linear" }
     	)
     	.fromTo(
@@ -110,7 +110,7 @@ if (window.innerWidth < 768) {
 		);
   	new ScrollMagic.Scene({
     	triggerElement: "#model-img-trigger",
-    	duration: "75%",
+    	duration: "60%",
     	// offset: 50,
     	triggerHook: 0.95,
   	})
@@ -319,7 +319,7 @@ let timelinePortrait = new TimelineMax()
     	.fromTo(
 			"#portrait-img-container",
 			1,
-			{ y: "30vh" },
+			{ y: "20vh" },
 			{ y: "-0vh", ease: "linear" }
     	)
     	.fromTo(
@@ -331,7 +331,7 @@ let timelinePortrait = new TimelineMax()
 		);
   	new ScrollMagic.Scene({
     	triggerElement: "#portrait-img-trigger",
-    	duration: "75%",
+    	duration: "60%",
     	// offset: 50,
     	triggerHook: 0.95,
   	})
