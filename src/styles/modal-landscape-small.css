@@ -16,8 +16,7 @@
         justify-content: space-around;
         width: 90%;
         margin-top: 50px;
-        margin-bottom:50px;
-
+        margin-bottom:100px;
         /* border: 3px solid orange; */
     }
 
@@ -27,14 +26,8 @@
         /* border: 3px solid cyan; */
     }
 
-    /* .category-title-container h2 {
-        font-weight: 400;
-    } */
-
     .gallery-container {
         width: 90%;
-        /* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
-        /* height: 100vh; */
         /* border: 3px solid rgb(0, 255, 140); */
     }
 
@@ -120,16 +113,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        width: 90%;
         /* !!! NOT WORKING !!! */
         justify-content: space-around;
-
         /* text-align: center; */
-
         background-color: #fefefe;
         background-color: #15191921;
         margin: 1% auto;
-        width: 90%;
         /* border: 3px solid rgb(128, 0, 43); */
     }
 
@@ -137,8 +127,6 @@
     .close {
         z-index: 1;
         position: absolute;
-        /* top: 10px; */
-        /* right: 25px; */
         top: 2%;
         right: 3%;
         font-size: 35px;
@@ -178,7 +166,6 @@
         /* BELOW IMAGE */
         bottom: -70%;
         padding: 16px;
-        /* margin-top: -50px; */
         font-weight: bold;
         font-size: 20px;
         transition: 0.6s ease;
@@ -225,7 +212,6 @@
         background-color: black;
         padding: 2px 16px;
         color: white;
-
         /* border: 3px solid rgb(255, 218, 149); */
     }
 
@@ -238,7 +224,6 @@
 
     /* Create 3 equal columns that floats next to eachother */
     .thumbnail-container .thumbnail-div {
-        /* float: left; */
         display: inline-block;
         width: 49%;
         margin: 0px 1px;
@@ -257,6 +242,14 @@
     .thumbnail-image:hover {
         opacity: 1;
     }
-
-
 }
+
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
+
+    .gallery-img-container .gallery-div {
+        width: 49%;
+        /* !!! %-MARGIN FIXES ODD DIV BEHAVIOUR WHEN RESIZING WINDOW TO SMALLER SIZE !!! */
+        margin: 0.1% 0.5%;
+    }
+}
+
