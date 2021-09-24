@@ -102,6 +102,7 @@
         overflow: auto;
         background-color: black;
         background-color: rgba(0, 0, 0, 0.97);
+        /* background-color: rgb(255, 255, 255); */
         /* FADE IN MODAL */
         animation: fadeIn 0.7s;
         /* border: 3px solid rgb(212, 91, 43); */
@@ -137,6 +138,7 @@
         height: 95%;
         background-color: #fefefe;
         background-color: #15191921;
+        /* background-color: #c2bcbc45; */
         margin: 1% auto;
         /* border: 3px solid rgb(128, 0, 43); */
     }
@@ -237,7 +239,7 @@
         padding: 2px 16px;
         color: white;
 
-        border: 3px solid rgb(255, 218, 149);
+        /* border: 3px solid rgb(255, 218, 149); */
     }
 
     .thumbnail-container {
@@ -277,5 +279,32 @@
         width: 32%;
         /* !!! %-MARGIN FIXES ODD DIV BEHAVIOUR WHEN RESIZING WINDOW TO SMALLER SIZE !!! */
         margin: 0.1% 0.5%;
+    }
+
+    .modal {
+        background-color: rgba(0, 0, 0, 0.97);
+        background-color: rgb(255, 255, 255);
+    }
+
+
+    .modal-content {
+        flex-direction: row;
+        background-color: #c2bcbc45;
+        /* background-color: #15191921; */
+        margin: 1% auto;
+    }
+
+    .modal-img-container {
+        position: relative;
+        width: 38%;
+    }
+
+    .thumbnail-container {
+        width: 38%;
+    }
+
+    .thumbnail-container .thumbnail-div {
+        width: 32%;
+        margin: 0px 1px;
     }
 }
