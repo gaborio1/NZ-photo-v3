@@ -164,7 +164,7 @@
         z-index: 2;
         position: absolute;
         /* BELOW IMAGE */
-        bottom: -70%;
+        bottom: 2%;
         padding: 16px;
         font-weight: bold;
         font-size: 20px;
@@ -274,12 +274,6 @@
 
     .caption-container {
         display: none;
-        height: 1%;
-        text-align: center;
-        background-color: black;
-        padding: 2px 16px;
-        color: white;
-        /* border: 3px solid rgb(255, 218, 149); */
     }
 
     .thumbnail-container {
