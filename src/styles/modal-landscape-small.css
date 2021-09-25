@@ -97,7 +97,7 @@
     .modal-img-container {
         position: relative;
         margin-top: 10%;
-        /* border: 3px solid rgb(183, 255, 0); */
+        border: 3px solid rgb(183, 255, 0);
     }
 
     /* ANIMATION DISABLED AS IT IS ANIMATING COUNTER */
@@ -120,7 +120,7 @@
         background-color: #fefefe;
         background-color: #15191921;
         margin: 1% auto;
-        /* border: 3px solid rgb(128, 0, 43); */
+        border: 3px solid rgb(128, 0, 43);
     }
 
     /* The Close Button */
@@ -219,7 +219,7 @@
         width: 100%;
         /* !!! MAKE x-scroll WORK !!! */
         overflow: scroll;
-        /* border: 3px solid rgb(27, 196, 27); */
+        border: 3px solid rgb(27, 196, 27);
     }
 
     /* Create 3 equal columns that floats next to eachother */
@@ -251,5 +251,45 @@
         /* !!! %-MARGIN FIXES ODD DIV BEHAVIOUR WHEN RESIZING WINDOW TO SMALLER SIZE !!! */
         margin: 0.1% 0.5%;
     }
+
+    .modal {
+        background-color: rgba(0, 0, 0, 0.97);
+        background-color: rgb(255, 255, 255);
+    }
+
+
+    .modal-content {
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #c2bcbc45;
+        /* background-color: #15191921; */
+        margin: 1% auto;
+    }
+
+    .modal-img-container {
+        position: relative;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .caption-container {
+        display: none;
+        height: 1%;
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+        /* border: 3px solid rgb(255, 218, 149); */
+    }
+
+    .thumbnail-container {
+        width: 66%;
+    }
+
+    .thumbnail-container .thumbnail-div {
+        width: 24%;
+        margin: 0px 1px;
+    }
+    
 }
 
