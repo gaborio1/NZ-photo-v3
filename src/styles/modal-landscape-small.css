@@ -97,7 +97,7 @@
     .modal-img-container {
         position: relative;
         margin-top: 10%;
-        border: 3px solid rgb(183, 255, 0);
+        /* border: 3px solid rgb(183, 255, 0); */
     }
 
     /* ANIMATION DISABLED AS IT IS ANIMATING COUNTER */
@@ -120,7 +120,7 @@
         background-color: #fefefe;
         background-color: #15191921;
         margin: 1% auto;
-        border: 3px solid rgb(128, 0, 43);
+        /* border: 3px solid rgb(128, 0, 43); */
     }
 
     /* The Close Button */
@@ -219,7 +219,7 @@
         width: 100%;
         /* !!! MAKE x-scroll WORK !!! */
         overflow: scroll;
-        border: 3px solid rgb(27, 196, 27);
+        /* border: 3px solid rgb(27, 196, 27); */
     }
 
     /* Create 3 equal columns that floats next to eachother */
@@ -268,8 +268,8 @@
 
     .modal-img-container {
         position: relative;
-        width: 100%;
-        margin-top: 0px;
+        width: 90%;
+        margin-top: 1%;
     }
 
     .caption-container {
@@ -283,7 +283,9 @@
     }
 
     .thumbnail-container {
-        width: 66%;
+        width: 70%;
+        margin-bottom: 1%;
+
     }
 
     .thumbnail-container .thumbnail-div {
