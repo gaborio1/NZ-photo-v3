@@ -18,7 +18,7 @@
 		justify-content: center;
 		margin-top: 50px;
         margin-bottom:100px;
-		border: 3px solid rgb(255, 157, 0);
+		/* border: 3px solid rgb(255, 157, 0); */
     }
 
     .about-container {
@@ -27,13 +27,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		border: 3px solid rgb(48, 255, 145);
+		/* border: 3px solid rgb(48, 255, 145); */
     }
 
     .about-enzee-container {
 		margin-top: 50px;
         margin-bottom:50px;
-      border: 3px solid tomato;
+      /* border: 3px solid tomato; */
     }
 
     /* IN common-rules.css/small */
@@ -45,8 +45,8 @@
 
     .about-image-container {
 		width: 100%;
-		margin-bottom: 30px;
-		border: 3px solid rgb(218, 162, 32);
+		margin-bottom: 50px;
+		/* border: 3px solid rgb(218, 162, 32); */
     }
 
     .about-image--square {
@@ -64,18 +64,18 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		border: 3px solid rgb(32, 88, 218);
+		/* border: 3px solid rgb(32, 88, 218); */
     }
 
     .about-text-row {
 		width: 100%;
 		padding-left: 1rem;
 		border-left: 2px solid rgba(0, 0, 0, 0.272);
-		border: 3px solid fuchsia;
+		/* border: 3px solid fuchsia; */
     }
 
     .about-text-row:nth-child(2) {
-      margin: 15px auto;
+      margin: 25px auto;
     }
 
     .about-text__title {
@@ -90,7 +90,7 @@
     }
 
 	.slider-section {
-		border: 3px solid rebeccapurple;
+		/* border: 3px solid rebeccapurple; */
 		display: none !important;
 		/* visibility: hidden; */
 	}
@@ -104,14 +104,14 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		border: 3px solid rgb(48, 255, 145);
+		/* border: 3px solid rgb(48, 255, 145); */
     }
 
 	.about-image-container {
 		width: 50%;
 		min-width: 250px;
-		margin-bottom: 30px;
-		border: 3px solid rgb(218, 162, 32);
+		margin-bottom: 100px;
+		/* border: 3px solid rgb(218, 162, 32); */
     }
 
     .about-image--square {
@@ -125,7 +125,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		border: 3px solid rgb(32, 88, 218);
+		/* border: 3px solid rgb(32, 88, 218); */
     }
 
 	/* .about-text-row:nth-child(1) {

@@ -1113,8 +1113,6 @@
 	.footer p {
 		display: inline-block;
 		font-size: 12px;
-		margin-left: 1rem;
-
 		/* border: 1px solid red; */
 	}
 
@@ -1130,6 +1128,18 @@
 		font-weight: 300;
 
 		/* border: 1px solid red; */
+	}
+
+	.footer-links {
+		width: 75%;
+		display: flex;
+		justify-content: center;
+		/* border: 1px solid forestgreen; */
+	}
+
+	.footer-links a:nth-child(2) {
+		margin: 0px 3%;
+		/* border: 1px solid hotpink; */
 	}
 
 	.fa.social-media-icon {
@@ -1666,8 +1676,6 @@
 	.footer p {
 		display: inline-block;
 		font-size: 12px;
-		margin-left: 1rem;
-
 		/* border: 1px solid red; */
 	}
 

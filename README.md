@@ -92,6 +92,7 @@ products:
     ✅ add before/after gallery to products links
 
 navbar:
+    re-design layout for orientation: landscape
     ✅  ADD .preload TO .header and .backdrop to prevent animation on load
     animate navbar collapse when clicking on current page link
     look into navbar-logic.js:256 (ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED) is this necessary ???
@@ -118,6 +119,7 @@ navbar:
 
 footer:
     ✅  add footer-small.css
+    make footer 100vh
     try footer without background image ???
     add custom css variables to font-sizes
     design new layout
