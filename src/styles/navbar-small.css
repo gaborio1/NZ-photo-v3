@@ -237,10 +237,18 @@
 		/* border: 1px solid rgb(230, 250, 255); */
 	}
 
-	/* ALL ACTUAL LINKS (<a>) */
-	/* a.page-link {
-	border: 3px solid red;
-	} */
+
+
+	/* !!! SELECT ALL NAVBAR TEXT AND APPLY 15 PX FONT SIZE !!! */
+
+	.dropdown-content a.page-link {
+		font-size: 15px;
+		/* border: 1px solid red; */
+	}
+
+	/* !!! SELECT ALL NAVBAR TEXT AND APPLY 15 PX FONT SIZE !!! */
+
+
 
 	/* ALL LINKS AND DROPDOWN BUTTONS */
 	a.page-link,
@@ -250,8 +258,9 @@
 		text-align: center;
 		padding: 10px 20px 10px 20px;
 		margin: 2px;
-		border: 1px solid rgba(0, 234, 255, 0.074);
-		border: 1px solid #fdae8163;
+		/* border: 1px solid rgba(0, 234, 255, 0.074); */
+		/* border: 1px solid #fdae8163; */
+		border: 1px solid #fdae8130;
 		/* background: rgba(0, 234, 255, 0.437); */
 	}
 
@@ -268,7 +277,7 @@
 		margin-top: 16px;
 		/* padding: 0px 20px 10px 20px; */
 		/* border-bottom: 1px solid transparent; */
-		/* border: 3px solid yellow; */
+		border: 3px solid yellow;
 	}
 
 	/* NAVLINK-DROPDOWN  */
@@ -288,11 +297,12 @@
 
 	.navbar a {
 		float: left;
-		font-size: 16px;
+		font-size: 15px;
 		color: white;
 		text-align: center;
 		padding: 14px 16px;
 		text-decoration: none;
+		border: 2px solid darkorange;
 	}
 
 	.nav-link--dropdown {
@@ -328,8 +338,7 @@
 		/* display: none; */
 		/* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
 		position: relative;
-		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-		border: 1px solid ;
+		/* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
 		/* border: 1px solid rgba(0, 234, 255, 0.485); */
 	}
 
@@ -465,7 +474,11 @@
 		/* animation: fadeOutAnimation ease 0.75s; */
 
 		/* CENTER ITS POSITION */
-		margin: auto auto;
+		/* margin: auto auto; */
+
+		/* ALIGN WITH BOTTOM OF NAVBAR */
+		margin: 50px auto;
+
 		/* border: 1px solid rgba(0, 202, 253, 0.423); */
 		/* border: 1px solid rgb(230, 250, 255); */
 	}
@@ -489,7 +502,7 @@
 		background-color: inherit;
 		font-family: inherit;
 		margin: 0;
-		border: 3px solid rgb(85, 175, 16);
+		/* border: 3px solid rgb(85, 175, 16); */
 	}
 
 	.dropdown-content {
@@ -501,28 +514,36 @@
 		/* !!! relative WILL SQUEEZE SUBMENU IN MENU !!! */
 		/* position: relative; */
 		position: absolute;
-		top: 6%;
+		/* top: 6%;	 */
+		top: 50px;	
 		right: 9%;
 
-		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		/* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
 		
 		/* border: 1px solid rgba(247, 0, 255, 0.485); */
 	}
 
 	.dropdown-content a {
+		display: block;
 		width: 80%;
-		margin: 6px auto;
-		float: none;
+
+		/* ALIGN DROPDOWN LINKS WITH NAV LINKS */
+		margin: 1px auto 4px;
+
+		/* float: none; */
 		color: rgba(255, 255, 255, 0.753);
-		padding: 12px 16px;
-		/* padding: 12px 0px 16px 33px; */
-		letter-spacing: 0.04rem;
+		padding: 10px 16px;
+		/* letter-spacing: 0.05rem; */
 		font-weight: 300;
 		text-decoration: none;
-		display: block;
 		text-align: center;
 		background: rgba(0, 234, 255, 0.252);
 		background: #fdae8138;
 		/* border: 1px solid rgba(0, 234, 255, 0.485); */
+	}
+
+	/* ALIGN DROPDOWN LINKS WITH NAV LINKS */
+	.dropdown-content a:nth-child(1) {
+		margin-top: 2px;
 	}
 }
