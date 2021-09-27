@@ -7,10 +7,12 @@ window.onscroll = () => {
     makeNavbarSticky();
 };
 
+// THIS IS ALSO IN navbar-logic.js FOR ALL OTHER PAGES
 window.onresize = function() {
-	location.reload();
+	if (window.innerWidth > 767) {
+		location.reload();
+	}
 }
-
 // Get the navbar
 const navbar = document.getElementById("header");
 

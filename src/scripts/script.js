@@ -9,9 +9,9 @@ window.onorientationchange = function() {  	window.location.reload(); };
 
 // THIS IS ALSO IN navbar-logic.js FOR ALL OTHER PAGES
 window.onresize = function() {
-	// if (window.innerWidth > 767) {
+	if (window.innerWidth > 767) {
 		location.reload();
-	// }
+	}
 }
 
 // ========== STICKY NAVBAR (W3SCHOOLS) ==========
