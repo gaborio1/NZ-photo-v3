@@ -29,7 +29,6 @@ modal:
 
 homepage:
     use text-align: baseline for .title-div-content to align enzee with photography
-
 before/after:
     ✅   navbar dropdown button not showing active status (border bottom)
 
@@ -66,6 +65,7 @@ changes
 ==================== SMALL SIZE ====================
 
 homepage:
+    orientation change refresh will close collapse navbar if it was expanded
     design new layout for main content
     design smaller title divs
     ✅  disable hover-zoom
