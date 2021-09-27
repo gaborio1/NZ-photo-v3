@@ -7,6 +7,10 @@ window.onscroll = () => {
     makeNavbarSticky();
 };
 
+window.onresize = function() {
+	location.reload();
+}
+
 // Get the navbar
 const navbar = document.getElementById("header");
 
