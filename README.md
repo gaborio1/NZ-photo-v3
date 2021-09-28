@@ -5,6 +5,8 @@ MODAL GALLERY: https://www.w3schools.com/howto/howto_js_lightbox.asp BY w3school
 BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV ED
 
 ===== TODOS: =====
+
+!!! prevent mobile sixe scroll from triggering onresize !!!
 check and adjust z-indexes properly
 ✅  animated search button/field
 ✅  portrait style modal has a fade in animation while landscape style has not!
@@ -29,8 +31,13 @@ modal:
 
 homepage:
     use text-align: baseline for .title-div-content to align enzee with photography
+    ✅  add common footer css to homeapage
+
 before/after:
-    ✅   navbar dropdown button not showing active status (border bottom)
+    ✅  navbar dropdown button not showing active status (border bottom)
+
+footer:
+
 
 
 ==================== MEDIUM SIZE ====================
