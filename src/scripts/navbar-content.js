@@ -1,4 +1,4 @@
-if (window.innerWidth > 767) {
+if (window.innerWidth > 812) {
   	console.log("navbar-content.js");
   	// !!! ESCAPE SPECIAL CHARS WITH \ !!!
   	// ( you're => you\'re )

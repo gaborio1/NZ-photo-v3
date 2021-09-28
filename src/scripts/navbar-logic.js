@@ -216,7 +216,7 @@ const setPortArrows = () => {
     }
 }
 
-if (window.innerWidth < 768) {
+if (window.innerWidth < 813) {
   	console.log("small screen");
 
 	portButton.addEventListener("click", () => {
@@ -235,6 +235,7 @@ if (window.innerWidth < 768) {
     // 2. RESET DROPDOWN CONTENT: COLLAPSE AND HIDE UP ARROW 
     // 3. RESET ARROWS: SHOW DOWN ARROW
     hamburger.addEventListener("click", () => {
+        console.log("hamburger clicked");
         toggleClass([nav, headerContent, logoContainer, backdrop], "expand");
 	    hideElements(dropdownPort, dropdownProd, upArrowProd, upArrowPort);
         showElements(downArrowProd, downArrowPort);

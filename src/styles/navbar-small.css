@@ -1,4 +1,5 @@
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+/* @media only screen and (min-width: 320px) and (max-width: 767px) { */
+@media only screen and (min-width: 320px) and (max-width: 812px) {
 	
 	.header.preload * {
 		animation-duration: 0s !important;
@@ -461,7 +462,7 @@
 	}
 }
 
-@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {
 	nav.expand {
 		display: flex !important;
 		flex-direction: column;
