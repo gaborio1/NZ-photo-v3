@@ -1,4 +1,4 @@
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 812px) {
 
 	/* ===== PARALLAX IMAGE LAYERS ===== */
 	.image-container {
@@ -508,7 +508,7 @@
 }
 
 
-@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {
 
 /* @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {	 */
 
