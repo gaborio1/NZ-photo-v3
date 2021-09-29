@@ -29,7 +29,7 @@ body {
 
 /* HOMEPAGE FONT PROPERTIES ARE SET IN home-small.css */
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 812px) {
 	
 	/* TITLE: Enzee */
 	h1 {
@@ -84,7 +84,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 813px) {
 	/* TITLE: Enzee */
 	h1 {
 		font-size: 120px;
