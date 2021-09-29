@@ -1,5 +1,10 @@
 @media only screen and (min-width: 320px) and (max-width: 812px) {
 
+	html,
+	body {
+    overscroll-behavior-y: contain;
+}
+
 	/* ===== PARALLAX IMAGE LAYERS ===== */
 	.image-container {
 		height: 100vh;
@@ -510,6 +515,11 @@
 
 @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {
 
+	/* html,
+	body {
+    overscroll-behavior-y: contain;
+} */
+	
 /* @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {	 */
 
 
