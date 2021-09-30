@@ -7,6 +7,7 @@ BEFORE/AFTER SLIDER: https://www.youtube.com/watch?v=ee8y1IV6pOI&t=1396s BY DEV 
 ===== TODOS: =====
 
 !!! prevent mobile sixe scroll from triggering onresize !!!
+!!! only reload homepage on resize !!!
 check and adjust z-indexes properly
 ✅  animated search button/field
 ✅  portrait style modal has a fade in animation while landscape style has not!
@@ -32,6 +33,9 @@ modal:
 homepage:
     use text-align: baseline for .title-div-content to align enzee with photography
     ✅  add common footer css to homeapage
+
+modal:
+    stop resizing from closing modal(reload)
 
 before/after:
     ✅  navbar dropdown button not showing active status (border bottom)
@@ -71,8 +75,13 @@ changes
 
 ==================== SMALL SIZE ====================
 
+all pages: 
+    ✅  include iPhoneX (landscape) on all pages
+
 homepage:
-    orientation change refresh will close collapse navbar if it was expanded
+    !!! prevent scroll from triggering resize=>reload !!!
+    orientation change refresh will close collapse expanded navbar 
+    title div shifts y-position on orientation change (have to reload)
     design new layout for main content
     design smaller title divs
     ✅  disable hover-zoom
@@ -91,6 +100,8 @@ about:
     ✅  make profile pic smaller 1:1 
 
 modal:
+    modal portrait gallery overflows container in landscape
+    modal landscape gallery overflows container in landscape
     ✅  align last modal image to center in modal-portrait
     ✅  re-position counter/close relative to image/container
     ✅  move prev/next to modal-img-container 
@@ -126,6 +137,7 @@ navbar:
 
 footer:
     ✅  add footer-small.css
+    add landscape to footer-small.css
     make footer 100vh
     try footer without background image ???
     add custom css variables to font-sizes
