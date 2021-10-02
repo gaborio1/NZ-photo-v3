@@ -326,7 +326,7 @@
 
     .thumbnail-container {
         width: 38%;
-        max-height: 350px;
+        /* max-height: 350px; */
         overflow: auto;
         /* border: 2px solid red; */
     }
