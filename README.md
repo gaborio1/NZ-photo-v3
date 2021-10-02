@@ -31,7 +31,7 @@ modal:
 ==================== ALL SIZES ====================
 
 homepage:
-    use text-align: baseline for .title-div-content to align enzee with photography
+    ✅  use text-align: baseline to .title-div-content to align enzee with photography
     ✅  add common footer css to homeapage
 
 modal:
@@ -100,8 +100,8 @@ about:
     ✅  make profile pic smaller 1:1 
 
 modal:
-    modal portrait gallery overflows container in landscape (iPhoneX)
-    modal landscape gallery overflows container in landscape (iPhoneX)
+    ✅  modal portrait gallery overflows container in landscape (iPhoneX)
+    ✅  modal landscape gallery overflows container in landscape (iPhoneX)
     ✅  align last modal image to center in modal-portrait
     ✅  re-position counter/close relative to image/container
     ✅  move prev/next to modal-img-container 
