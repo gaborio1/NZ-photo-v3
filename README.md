@@ -80,15 +80,15 @@ all pages:
 
 homepage:
     !!! prevent scroll from triggering resize=>reload !!!
-    orientation change refresh will close collapse expanded navbar 
+    orientation change refresh will collapse expanded navbar ONLY ON HOMEPAGE 
     title div shifts y-position on orientation change (have to reload)
-    design new layout for main content
+    ✅  design new layout for main content
     design smaller title divs
     ✅  disable hover-zoom
     ✅  disable hover-opacity
     disable blur effect on body when search-bar is active
     ✅  disable info-div animation
-    re-configure scroll animation
+    ✅  re-configure scroll animation
     image-container div can now fit image height
     design small footer
 
@@ -100,8 +100,8 @@ about:
     ✅  make profile pic smaller 1:1 
 
 modal:
-    modal portrait gallery overflows container in landscape
-    modal landscape gallery overflows container in landscape
+    modal portrait gallery overflows container in landscape (iPhoneX)
+    modal landscape gallery overflows container in landscape (iPhoneX)
     ✅  align last modal image to center in modal-portrait
     ✅  re-position counter/close relative to image/container
     ✅  move prev/next to modal-img-container 
@@ -112,7 +112,7 @@ products:
 navbar:
     re-design layout for orientation: landscape
     ✅  ADD .preload TO .header and .backdrop to prevent animation on load
-    animate navbar collapse when clicking on current page link
+    !!! animate navbar collapse when clicking on current page link (only working on homepage) CAUSES RELOAD ON OTHER PAGES !!!
     look into navbar-logic.js:256 (ADD LISTENER TO ALL PAGE-LINKS AND COLLAPSE NAVBAR WHEN CLICKED) is this necessary ???
     include search-bar ???
     ✅  highlight and make dropdown content smaller
@@ -124,8 +124,8 @@ navbar:
     ✅  reset arrows (show default down arrow only) when navbar is expanded
     ✅  make navbar transparent when page loads(navbar-logic.js)
     ✅  prevent keyframe animation from firing on page load
-    hamburger/X toggle when expanding
-    ✅k eep hamburger/X in top right corner when expanding navbar
+    hamburger/X toggle when expanding ???
+    ✅  keep hamburger/X in top right corner when expanding navbar
     ✅  collapse navbar if actual page is selected from menu
     ✅  add evt listener to all nav-links (page-link.) and collapse navbar when one is clicked
     ✅ toggle sub-menu visibility with dropdown links (portfolio, products)
