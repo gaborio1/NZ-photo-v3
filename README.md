@@ -30,10 +30,6 @@ modal:
 
 ==================== ALL SIZES ====================
 
-homepage:
-    ✅  use text-align: baseline to .title-div-content to align enzee with photography
-    ✅  add common footer css to homeapage
-
 modal:
     stop resizing from closing modal(reload)
 
@@ -57,23 +53,31 @@ changes
         footer-top-img-cover justify-content: space around
         footer-content--full-width smaller margin top to fit clear div in
         footer-bottom smaller height
+    
 
-    navbar:
-         !!! adjust search-bar content as magnifier, input field and close button stack on top of each other when active at around 930px width !!!
-
-    about:
-        profile picture shrinks too fast
-
-    contact:
-        profile picture shrinks too fast, hide image???
-
-    modal pages:
-        modal gallery layout
-        modal close button slides underneath modal image - reposition/x-index ???
+homepage:
+    ✅  use text-align: baseline to .title-div-content to align enzee with photography
+    ✅  add common footer css to homeapage
 
 
-    footer:
-        h2.brand-color breaks into new line at 853px width
+navbar:
+    ✅  !!! adjust search-bar content as magnifier, input field and close button stack on top of each other when active at around 930px width !!!
+    align dropdown content with nav buttons
+    add  percentage / max-width to dropdown content width
+
+about:
+    profile picture shrinks too fast
+
+contact:
+    profile picture shrinks too fast, hide image???
+
+modal pages:
+    modal gallery layout
+    modal close button slides underneath modal image - reposition/x-index ???
+
+
+footer:
+    h2.brand-color breaks into new line at 853px width
 
 ==================== SMALL SIZE ====================
 

@@ -11,7 +11,7 @@ window.onorientationchange = function() {  	window.location.reload(); };
 window.onresize = function() {
 	// if (window.innerWidth > 812) {
 	// if (window.innerWidth > 767) {
-		location.reload();
+		// location.reload();
 	// }
 }
 
