@@ -46,6 +46,8 @@ footer:
 
 ==================== MEDIUM SIZE ====================
 
+
+
 changes
     homepage:
         Enzee/photography smaller letter-spacing
@@ -57,7 +59,7 @@ changes
         footer-bottom smaller height
 
     navbar:
-        adjust search-bar content as magnifier, input field and close button stack on top each other when active at 1235px width
+         !!! adjust search-bar content as magnifier, input field and close button stack on top of each other when active at around 930px width !!!
 
     about:
         profile picture shrinks too fast
