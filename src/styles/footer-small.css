@@ -317,3 +317,21 @@
 		/* border: 1px solid forestgreen; */
 	}
 }
+
+/* ADJUSTMENTS TO iPhone5 */
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 568px) {
+	/* .footer {
+		border: 3px solid fuchsia;
+	} */
+
+	/* Need a good photographer? */
+	.footer-info-container-1 h2 {
+		font-size: 40px;
+		/* border: 1px solid yellow; */
+	}
+
+	/* you're in the right place */
+	.footer-info-container-1 h3 {
+		font-size: 20px;
+	}
+}
