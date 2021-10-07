@@ -101,13 +101,21 @@
 	
 	/* ===== NAV ===== */
 	
+
+
+
+
 	/* NAVLINK & NAVLINK-DROPDOWN */
 	a.nav-link.nav-link-text,
 	button.dropbtn.nav-link-text {
-		  color: rgba(255, 255, 255, 0.753);
-	  /* border: 2px solid green; */
+		color: rgba(255, 255, 255, 0.753);
+	  	/* border: 2px solid green; */
 	}
 	
+
+
+
+
 	/* NAVLINK */
 	a.nav-link.nav-link-text:hover {
 		/* color: rgba(223, 32, 32, 0.753); */
@@ -132,10 +140,11 @@
 		/* border: 1px solid rgb(255, 42, 0); */
 	}
 	
+	/* NAV LINK NON DROPDOWN */
 	.nav-link {
 		display: block;
 		float: left;
-		width: 130px;
+		/* width: 130px; */
 		text-align: center;
 		text-decoration: none;
 		color: black;
@@ -180,6 +189,7 @@
 	.nav-link, .nav-link--dropdown {
 		width: 20%;
 		max-width: 125px;
+		/* border: 3px solid rgb(255, 115, 0); */
 	}
 
 
@@ -208,15 +218,21 @@
 
 
 
+	/* NAVLINK DROPDOWN DEFAULT */
+	button.dropbtn.nav-link-text {
+		width: 100%;
+		/* border: 3px solid rgb(175, 16, 159); */
+	}
 
-
-	/* NAVLINK-DROPDOWN */
+	/* NAVLINK-DROPDOWN  HOVER*/
 	button.dropbtn.nav-link-text:hover {
-		/* color: rgba(223, 32, 32, 0.753); */
 		border-bottom: 1px solid white;
 		color: white;
 	}
 	
+
+
+
 	.dropdown-content {
 		display: none;
 		position: absolute;
@@ -287,23 +303,30 @@
 	 */
 	input[type="text"] {
 		width: 70% !important;
+		height: 25px;
 	
 		/* -webkit-transition: width 0.5s ease-in-out;
 		transition: width 0.5s ease-in-out; */
 	
-		/* margin: 0px 0px 0px 7px; */
+		margin: 0px 2px 0px 2px;
+		font-family: "Roboto", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		letter-spacing: .05rem;
 		text-align: center;
 		border: none;
 		outline: none;
-		background: transparent;
-		color: white;
-		font-size: 15px;
+		color: #fdae81;
+		border-radius: 2px;
+		/* background: transparent; */
+		background: rgb(64, 64, 64);
 		/* border: 1px solid yellowgreen; */
 	}
 	
-	/* ::placeholder {
+	::placeholder {
 	  	color: red;
-	} */
+	  	color: #fdae81;
+	}
 	
 	/* W3SCHOOLS SEARCH/FILTER DROPDOWN */
 	.search-dropdown-content {
@@ -345,4 +368,3 @@
 		/* border: 1px solid rgb(47, 255, 0); */
 	}
 }
-
