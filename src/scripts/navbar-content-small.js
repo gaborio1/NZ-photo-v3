@@ -1,4 +1,4 @@
-if (window.innerWidth < 813) {
+if (window.innerWidth < 768) {
 	document.write(
 		'\
 	\

@@ -3,7 +3,7 @@
 // IF Y VALUE NOT MODIFIED WE CAN USE ELEMENT AS TRIGGER
 
 // ========== LANDING PAGE AND TITLE DIV PARALLAX ==========
-if (window.innerWidth > 812) {
+if (window.innerWidth > 767) {
 	console.log("parallax js");
 	const controller = new ScrollMagic.Controller();
 

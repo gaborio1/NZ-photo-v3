@@ -377,11 +377,6 @@
     }
 
     /* LAST 3 CATEGORIES */
-    h4.category-info-title {
-		color: var(--sub-title-orange);
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-    }
 
     img.portrait-style {
 		width: var(--max-width);
@@ -389,10 +384,6 @@
 		/* border: 1px solid rgba(0, 0, 0, 0.286); */
     }
 
-    .portrait-reverse .portrait-img-container {
-      	margin-top: 100px;
-    }
-    /* 
 
   /* LANDSCAPE CONTAINER */
     .landscape-container {

@@ -9,8 +9,7 @@ window.onorientationchange = function() {  	window.location.reload(); };
 
 // THIS IS ALSO IN navbar-logic.js FOR ALL OTHER PAGES
 window.onresize = function() {
-	if (window.innerWidth > 812) {
-	// if (window.innerWidth > 767) {
+	if (window.innerWidth > 767) {
 		location.reload();
 	}
 }
@@ -249,7 +248,7 @@ const setPortArrows = () => {
     }
 }
 
-if (window.innerWidth < 813) {
+if (window.innerWidth < 768) {
 	console.log("small screen");
 
   	portButton.addEventListener("click", () => {

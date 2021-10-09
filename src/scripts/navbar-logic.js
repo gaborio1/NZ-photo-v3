@@ -8,7 +8,7 @@ window.onscroll = () => {
 };
 
 window.onresize = function() {
-	// if (window.innerWidth > 812) {
+	// if (window.innerWidth > 767) {
 		// location.reload();
 	// }
 }
@@ -215,7 +215,7 @@ const setPortArrows = () => {
     }
 }
 
-if (window.innerWidth < 813) {
+if (window.innerWidth < 768) {
   	console.log("small screen");
 
 	portButton.addEventListener("click", () => {

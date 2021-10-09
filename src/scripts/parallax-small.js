@@ -5,7 +5,7 @@
 //   console.log(currentWidth);
 // }
 
-if (window.innerWidth < 813) {
+if (window.innerWidth < 768) {
   	console.log("parallax small js");
   	// PARALLAX
   	// !!!!! HAS TO BE UP TOP !!!!!

@@ -1,193 +1,79 @@
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
-	/* ===== PARALLAX IMAGE LAYERS ===== */
-	.image-container {
-		height: 100vh;
-		width: 100%;
-		/* !!! IMPORTANT !!! */
-		background-size: cover;
-		background-position: center;
-	}
+/* CURRENTLY NOT IN USE */
 
-	img.mountain-mobile-size {
-		display: none;
-	}
+/* PLACE THIS INTO home-small.css */
 
-	img.mountain-full {
-		z-index: -6;
-		position: relative;
-		width: 100%;
-		height: 100vh;
-		object-fit: cover;
-		background-position: center;
-	}
-
-	img.mountain-crop {
-		display: none;
-		position: absolute;
-		width: 100%;
-
-		bottom: 0px;
-		left: 0px;
-	}
-
-	/* !!! absolute ON LAYERS !!! */
-	img.mountain-crop-1 {
-		z-index: -1;
-	}
-
-	img.mountain-crop-2 {
-		z-index: -2;
-	}
-
-	img.mountain-crop-3 {
-		z-index: -3;
-	}
-
-	img.mountain-crop-4 {
-		z-index: -4;
-	}
-
-	img.mountain-crop-5 {
-		z-index: -5;
-	}
-
-
-
-	/* !!! BLUR HOMEPAGE EXCEPT NAVBAR WHEN SEARCH BAR IS ACTIVE !!! */
-	/* GRAYSCALE + BLUR */
-	.blurred {
-		filter: grayscale(0.5) blur(2px);
-		filter: grayscale(0.25) blur(1px) opacity(0.75);
-	}
-
-	
-
-	/* TITLE DIV */
-
-	/* FADE IN ON LOAD */
-	@keyframes fadeInAnimation {
-		0% {
-		opacity: 0;
-		}
-
-		100% {
-		opacity: 1;
-		}
-	}
-
-	/* FLASH IN p h o t o g r a p h y WITH SAME COLOR SHADOW */
-	/* FOR .flash-fadein, NOW ADDED WITH JS */
-	@keyframes flashAnimation {
-		0% {
-		opacity: 0;
-		}
-
-		50% {
-		opacity: 0.05;
-		}
-
-		75% {
-		opacity: 0.75;
-		text-shadow: 1px 1px 2px var(--sub-title-orange),
-			-1px -1px 2px var(--sub-title-orange);
-		}
-
-		90% {
-		text-shadow: none;
-		}
-
-		100% {
-		opacity: 1;
-		/* text-shadow: none; */
-		}
-	}
-
-	.title-div {
-		z-index: 0;
-		position: absolute;
-		bottom: 45px;
-		/* bottom: 5%; */
-		width: var(--max-width);
-		height: 135px;
-		margin: auto;
-
-		background: rgba(0, 0, 0, 0.192);
-		/* background: #56d2e213; */
-		/* background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)); */
-		/* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.601), rgba(0, 0, 0, 0.8), rgb(0, 0, 0)); */
-
+@media only screen 
+and (min-device-height : 1024px) 
+and (min-device-width : 768px)
+{
+    .title-div-content {
+		width: 95%;
 		display: flex;
-		align-items: flex-end;
+		flex-direction: row;
+		align-items: baseline;
 		justify-content: center;
 
-		border-top: 2px solid black;
-		border-bottom: 2px solid black;
-
-		border-top: 1px solid rgba(255, 255, 255, 0.519);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.519);
-
-		/* FADE IN ON LOAD */
-		animation: fadeInAnimation ease 0.5s;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-	}
-
-	.title-div-content {
-		width: 95%;
-		height: inherit;
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		/* border: 3px solid orange; */
+		border: 3px solid orange;
 	}
 
 	.title-div__enzee-container {
-		display: flex;
-		/* margin-top: 6px; */
+		/* width: var(--max-width);
+		display: flex; */
+		width: 50%;
+		align-items: center;
+		justify-content: left;
+		/* margin-top: 5px; */
 		/* border: 1px solid orange; */
 	}
 
 	h1.enzee__letter {
 		/* RESPONSIVE TEXT */
-		/* font-size: 12vw; */
-		letter-spacing: 0.2rem;
+		font-size: 105px;
+		letter-spacing: 0.05rem;
+		/* text-shadow: 1px 1px rgba(113, 113, 113, 0.683); */
+
+		/* font-weight: 900; */
 
 		/* ANIMATING Enzee at once */
-		animation: fadeInAnimation ease-out 3s;
+		/* animation: fadeInAnimation ease-out 2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards; */
+
+		/* line-height: 100px; */
+
+		/* text-shadow: 2px 2px rgba(113, 113, 113, 0.683), 4px 4px rgba(113, 113, 113, 0.361); */
 		/* border: 1px solid red; */
 	}
 
-	h1.enzee__letter:nth-of-type(1) {
-		text-transform: uppercase;
-	}
-
 	.title-div__photography-container {
-		display: flex;
-		width: fit-content;
-		/* border: 1px solid orange; */
-	}
+		/* display: flex; */
+		/* width: fit-content;
+		width: var(--max-width); */
+		width: 50%;
+		/* width: 95%; */
+		/* FLEX WILL CHANGE FADE IN BEHAVIOR */
+		/* display: flex; */
+		/* justify-content: center; */
+		justify-content: right;
+		/* margin-left: 3%; */
+		/* margin-bottom: 5px; */
 
-	.opacityZero {
-		opacity: 0;
+		/* border: 1px solid rgb(35, 210, 29); */
 	}
 
 	h3.photography__letter {
+		display: inline-block;
 		/* text-transform: uppercase; */
+		/* font-size: 15px; */
 		letter-spacing: 1.1rem;
-		margin: 90px 0px 0px 0px;
-		/* border: 1px solid lime; */
+		letter-spacing: 1rem;
+		/* margin: 0px 0px 0px 0px; */
+
+		/* animation: flashAnimation ease 1s; */
+		/* border: 1px solid rgb(0, 183, 255); */
 	}
 
-	.flash-fadein {
-		animation: flashAnimation ease 0.75s;
-	}
-
-	/* FADE IN p h o t o g r a p h y IN SEQUENCE WITH CSS */
-	/* THIS IS NOW DONE BY JS */
-	
-
-	/* ========== MAIN CONTENT ========== */
-
+	/* !!! FROM home-medium.css !!! */
 	/* !!!!! overflow: hidden PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
 	.main-content {
 		z-index: 2;
@@ -211,7 +97,7 @@
 		align-items: center;
 		justify-content: space-around;
 		margin-top: 50px;
-		/* border: 3px solid orange; */
+		border: 3px solid orange;
 	}
 
 	/* DIV WITH NO HEIGHT, TRIGGERS SCROLL ANIMATION ON ITS SIBLING */
@@ -227,31 +113,36 @@
 		align-items: center;
 		justify-content: space-around;
 		margin: 20px;
-		/* border: 3px solid rgb(19, 104, 110); */
+		border: 3px solid rgb(19, 104, 110);
 	}
 
 	/* width CONTROLS CATEGORY IMG WIDTH */
 	.portrait-column {
-		width: 35%;
+
+		width: 40%;
+
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		margin: 10px 5px 150px 5px;
-		/* border: 3px solid olive; */
+		border: 3px solid olive;
 	}
 
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN */
 	.portrait-column--reverse {
 		flex-direction: column-reverse;
 		margin: 150px 5px 10px 5px;
-		/* border: 3px solid aqua; */
+		border: 3px solid aqua;
 	}
 
 	/* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
 	.portrait-img-container {
 		width: 100%;
-		/* border: 3px solid yellow; */
+
+		max-height: 400px;
+
+		border: 3px solid yellow;
 	}
 
 	/* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
@@ -287,18 +178,19 @@
 		color: rgba(0, 0, 0, 0.724);
 		padding-left: 1rem;
 		border-left: 2px solid rgba(0, 0, 0, 0.272);
+		/* border: 3px solid slateblue; */
 	}
 
 	.portrait-text-container {
 		width: 90%;
 		margin-top: 2rem;
-		/* border: 3px solid burlywood; */
+		border: 3px solid burlywood;
 	}
 
 	.landscape-text-container {
 		width: 30%;
 		margin-top: 8rem;
-		/* border: 3px solid burlywood; */
+		border: 3px solid burlywood;
 	}
 
 	.portrait-column--reverse .portrait-text-container {
@@ -318,13 +210,11 @@
 	}
 
 	/* LAST 3 CATEGORIES */
-	h4.category-info-title {
-		color: var(--sub-title-orange);
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-	}
 
 	img.portrait-style {
+
+		position: relative;
+
 		width: var(--max-width);
 		border-radius: 3px;
 		/* border: 1px solid rgba(0, 0, 0, 0.286); */
@@ -343,16 +233,15 @@
 		margin: 75px;
 		margin-top: 100px;
 		padding: 5%;
-		/* border: 3px solid rgb(59, 72, 190); */
+		border: 3px solid rgb(59, 72, 190);
 	}
 
 	/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
 	/* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
 	.landscape-img-container {
-		width: 60%;
-		width: 65%;
-		max-height: 530px;
-		/* border: 3px solid yellow; */
+		width: 100%;
+		max-height: 400px;
+		border: 3px solid yellow;
 	}
 
 	/* THIS INCLUDES IMAGE + INFO DIV */
@@ -438,11 +327,11 @@
 
 	/* CATEGORY INFO DIVS */
 	.info-div {
-		width: 600px;
+		width: 400px !important;
 		height: 65px;
 		position: relative;
-		top: -300px;
-		left: -215px;
+		top: -420px !important;
+		left: -130px;
 	
 		background: linear-gradient(
 		to right,
@@ -458,13 +347,13 @@
 
 		/* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
 		transition: opacity 1s ease, width ease 1s;
-		/* border: 1px solid rgba(255, 166, 0, 0.861); */
+		border: 1px solid rgba(255, 166, 0, 0.861);
 	}
 
 	.landscape-img-container .info-div {
-		width: 500px;
-		top: -250px;
-		left: -165px;
+		width: 400px;
+		top: -300px !important;
+		left: -130px;
 	}
 
 	.info-div-content h2.category {
@@ -472,8 +361,4 @@
 		margin-right: 1rem;
 	}
 
-	/* ========== FOOTER ========== */
-
-	
 }
-

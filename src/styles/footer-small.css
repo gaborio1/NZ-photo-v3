@@ -1,4 +1,4 @@
-@media only screen and (min-width: 320px) and (max-width: 812px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
 	body.preload * {
 		animation-duration: 0s !important;
 		-webkit-animation-duration: 0s !important;
@@ -224,7 +224,7 @@
 	}
 }
 
-@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
 
 	.footer {
 		/* !!!!! FIX THIS !!!!! */
@@ -319,7 +319,7 @@
 }
 
 /* ADJUSTMENTS TO iPhone5 */
-@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 568px) {
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
 	/* .footer {
 		border: 3px solid fuchsia;
 	} */
