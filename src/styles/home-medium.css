@@ -477,3 +477,11 @@
 	
 }
 
+/* iPhoneX LANDSCAPE ADJUSTMENTS  */
+@media only screen and (orientation: landscape) and (min-width: 812px) and (max-width: 1399px) and (max-height: 375px) {
+	.mosaic-container {
+		height: calc(100vh - 50px);
+		border-top: 5px solid grey;
+	}
+}
+

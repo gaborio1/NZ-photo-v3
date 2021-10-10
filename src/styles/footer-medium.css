@@ -212,3 +212,108 @@
 		color: white;
 	}
 }
+
+/* iPhoneX LANDSCAPE ADJUSTMENTS  */
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 812px) {
+
+	.footer {
+		/* !!!!! FIX THIS !!!!! */
+		/* position: relative; */
+		/* top: 3800px; */
+		/* !!! HAD TO PLACE FOOTER IN MAIN CONTENT AFTER MAIN COLOUMN !!! */
+
+		width: 100vw;
+		height: calc(100vh - 45px);
+		background: rgba(0, 0, 0, 0.95);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		/* align-items: center; */
+		/* justify-content: flex-end; */
+		/* border: 3px solid orange; */
+	}
+
+	.footer-top-img {
+		height: calc(100vh - 95px);
+		/* border: 2px solid red; */
+	}
+
+	.footer-top-img-cover {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: var(--max-width);
+		height: inherit;
+		/* background: rgba(0, 0, 0, 0.457); */
+		/* background: rgba(0, 0, 0, 0.129); */
+
+		/* !!! */
+		/* background: #7a250450; */
+		background: #32130740;
+
+		/* background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.546)); */
+		/* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.224), rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.403), rgba(0, 0, 0, 0.567)); */
+		/* border: 2px solid rgb(247, 0, 255); */
+	}
+
+	.footer-content--full-width {
+		/* height: 60%; */
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		/* border: 2px solid white; */
+	}
+
+	.footer-info-container-1 {
+		width: 100%;
+		max-height: calc(100vh - 145px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		margin-top: 10px;
+		/* border: 3px solid #56d2e2; */
+	}
+
+	.footer-contact-button {
+		margin-bottom: 10px;
+	}
+
+	/* CLEAR DIV-2 */
+	/* .footer-content--full-width.full-width-2 {
+		border: 3px solid yellow;
+	} */
+
+	/* SOCIAL MEDIA ICON CONTAINER */
+	.footer-info-container-2 {
+		padding: 0px;
+		/* CENTER SOCIAL MEDIA ICONS */
+		margin: 0px auto;
+		/* border: 3px solid  #56d2e2;  */
+	}
+
+
+
+	.footer-links {
+		width: 50%;
+		text-align: center;
+		/* border: 1px solid forestgreen; */
+	}
+
+	/* !!! MAKE CLASS FOR FOOTER p TEXT font-size !!! */
+	.footer p {
+		width: 50%;
+		text-align: center;
+		font-size: 12px;
+		/* border: 1px solid red; */
+	}
+
+	.footer a {
+		font-size: 12px;
+		/* border: 1px solid red; */
+	}
+
+}
