@@ -313,6 +313,7 @@
     }
 }
 
+/* CURRENTLY NOT IN USE  */
 /* iPhoneX ADJUSTMENTS  FOR OVERFLOWING IMAGES IN LANDSCAPE MODAL */
 @media only screen and (orientation: landscape) and (min-width: 812px) and (max-width: 1399px) and (max-height: 375px) {
 

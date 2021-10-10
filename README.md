@@ -86,7 +86,16 @@ footer:
 ==================== SMALL SIZE ====================
 
 all pages: 
-    ✅  include iPhoneX (landscape) on all pages
+    add custom mediaquery to iPhoneX 
+        home
+        aboout
+        modal portrait
+        modal landscape
+        products
+        before/after
+        contact
+
+    
 
 homepage:
     !!! prevent scroll from triggering resize=>reload !!!
@@ -120,6 +129,9 @@ products:
     ✅ add before/after gallery to products links
 
 navbar:
+    !!! medium navbar in iPhonex landscape !!!
+
+    refactor navbar.js / parallax.js (make navbar dark on light background)
     re-design layout for orientation: landscape
     ✅  ADD .preload TO .header and .backdrop to prevent animation on load
     !!! animate navbar collapse when clicking on current page link (only working on homepage) CAUSES RELOAD ON OTHER PAGES !!!
@@ -147,6 +159,7 @@ navbar:
 
 footer:
     ✅  add footer-small.css
+    make it 100vh-50 for iPhonex landscape
     add landscape to footer-small.css
     make footer 100vh
     try footer without background image ???
