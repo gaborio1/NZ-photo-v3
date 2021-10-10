@@ -277,7 +277,7 @@ img.thumbnail-image {
         background-color: #15191921;
         /* background-color: #c2bcbc45; */
         margin: 1% auto;
-        border: 3px solid rgb(128, 0, 43);
+        /* border: 3px solid rgb(128, 0, 43); */
     }
 
 	/* The Close Button */
@@ -356,7 +356,7 @@ img.thumbnail-image {
         width: 33%;
         overflow: hidden;
         max-height: 350px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
     }
 
 
@@ -394,7 +394,7 @@ img.thumbnail-image {
 		margin: 0px;
         /* max-height: 350px; */
         overflow: auto;
-        border: 2px solid red;
+        /* border: 2px solid red; */
     }
 
     /*  HIDE OVERFLOW OF THUMBNAIL IMG CONTAINERS */
