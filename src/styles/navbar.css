@@ -179,8 +179,9 @@
 
 
 	.nav-link--dropdown {
+		position: relative;
 		float: left;
-		overflow: hidden;
+		/* overflow: hidden; */
 		text-align: center;
 		/* border: 3px solid rgb(255, 115, 0); */
 	}
@@ -238,10 +239,13 @@
 
 
 	.dropdown-content {
-		z-index: 1;
+		z-index: 10;
 		display: none;
 		position: absolute;
-		width: 125px;
+		left: 0px;
+  		top: 44px;
+		/* MATCHING PARENT ELEMENT WIDTH */
+  		width: 100%;
 		background-color: #000000c3;
 		/* min-width: 130px; */
 		border-bottom-left-radius: 5px;
