@@ -384,7 +384,8 @@
 		left: 0px;
   		top: 35px;
 		/* MATCHING PARENT ELEMENT WIDTH */
-  		width: 100%;
+  		width: 95%;
+		max-width: 180px;
 		background-color: #000000c3;
 		/* min-width: 130px; */
 		border-bottom-left-radius: 5px;
