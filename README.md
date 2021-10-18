@@ -51,6 +51,9 @@ footer:
 navbar:
     expanded search-content will affect scrollmagic/parallax effects on homepage
 
+homepage:
+    collapse search dropdown content when clicking on page
+
 ==================== MEDIUM SIZE ====================
 
 

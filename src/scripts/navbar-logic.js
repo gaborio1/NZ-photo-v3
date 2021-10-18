@@ -93,6 +93,24 @@ closeButton.addEventListener("click", () => {
 	removeClass(searchBlurElements, "blurred");
 });
 
+// COLLAPSE SEARCH DROP CONTENT & UNBLUR PAGE WHEN PAGE IS CLICKED
+
+// const wrapper = document.querySelector(".wrapper");
+
+// wrapper.addEventListener("click", () => {
+//     console.log("hello");
+//     if(!searchDropdownContent.classList.contains("hidden")) {
+//         wrapper.addEventListener("click", () => {
+//             console.log("blur element clicked");
+//             hideSearchBar();
+//             addClass([searchDropdownContent], "hidden");
+// 	        removeClass(searchBlurElements, "blurred");
+//         })
+//     }
+// })
+
+
+
 searchInput.addEventListener("keyup", filterFunction);
 
 // ========== ACTIVE NAVLINKS HIGHLIGHT/BORDER BOTTOM ==========

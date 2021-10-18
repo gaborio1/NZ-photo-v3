@@ -76,8 +76,8 @@
     /* !!! BLUR HOMEPAGE EXCEPT NAVBAR WHEN SEARCH BAR IS ACTIVE !!! */
     /* GRAYSCALE + BLUR */
     .blurred {
-		filter: grayscale(0.5) blur(2px);
-		filter: grayscale(0.25) blur(1px) opacity(0.75);
+		filter: grayscale(0.30) blur(1px);
+		/* filter: grayscale(0.25) blur(1px) opacity(0.75); */
     }
 
     
