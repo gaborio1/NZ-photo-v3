@@ -179,6 +179,7 @@
 
 
 	.nav-link--dropdown {
+		/* HAS TO BE RELATIVE FOR DROP-CONTEENT */
 		position: relative;
 		float: left;
 		/* overflow: hidden; */
@@ -239,7 +240,7 @@
 
 
 	.dropdown-content {
-		z-index: 10;
+		z-index: 1;
 		display: none;
 		position: absolute;
 		left: 0px;
@@ -288,6 +289,12 @@
 	}
 	
 	/* SEARCH BAR */
+
+	form {
+		/* HAS TO BR RELATIVE FOR DROP-CONTENT */
+		position: relative;
+		/* border: 3px solid forestgreen; */
+	}
 	
 	.search-container {
 		flex: 1;
@@ -350,8 +357,15 @@
 	  	color: #fdae81;
 	}
 	
+
+
+
+
+
+
+
 	/* W3SCHOOLS SEARCH/FILTER DROPDOWN */
-	.search-dropdown-content {
+	/* .search-dropdown-content {
 		position: absolute;
 		top: 45px;
 		min-width: 177px;
@@ -361,25 +375,75 @@
 		border: 1px solid #ddd;
 		z-index: 1;
 	
-		/* border: 1px solid orange; */
-	}
+	} */
 	
-	.search-dropdown-content a {
+
+	.search-dropdown-content {
+		z-index: 1;
+		position: absolute;
+		left: 0px;
+  		top: 35px;
+		/* MATCHING PARENT ELEMENT WIDTH */
+  		width: 100%;
+		background-color: #000000c3;
+		/* min-width: 130px; */
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		/* border: 1px solid rgb(248, 24, 24); */
+	}
+
+	/* .search-dropdown-content a {
 		color: black;
 		padding: 12px 16px;
 		text-decoration: none;
 		display: block;
+	} */
+
+	.search-dropdown-content a {
+		float: none;
+		color: rgba(255, 255, 255, 0.753);
+		padding: 12px 0px 12px 0px;
+		letter-spacing: 0.04rem;
+		font-weight: 300;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		/* border: 1px solid rgb(249, 229, 103); */
 	}
 	
-	.search-dropdown-content a:hover {
+	.search-dropdown-content a:last-child {
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	/* .search-dropdown-content a:hover {
 		  background-color: #ddd;
-	}
+	} */
 	
+
+	.search-dropdown-content a:hover {
+		background-color: rgba(0, 0, 0, 0.848);
+		/* color: white; */
+		color: var(--sub-title-orange);
+	}
 	/* HIDE HAMBURGER */
 	a.icon {
 		  display: none;
 	}
 	
+
+
+
+
+
+
+
+
+
+
+
+
 } 
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {

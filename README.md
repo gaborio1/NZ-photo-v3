@@ -31,8 +31,9 @@ modal:
 ==================== ALL SIZES ====================
 
 navbar:
-    style navlink dropdown content
-    style search dropdown content
+    make common class for navlink and search dropdown content
+    ✅  style navlink dropdown content
+    ✅  style search dropdown content
 
 modal:
     stop resizing from closing modal(reload)
