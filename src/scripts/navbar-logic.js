@@ -95,20 +95,26 @@ closeButton.addEventListener("click", () => {
 
 // COLLAPSE SEARCH DROP CONTENT & UNBLUR PAGE WHEN PAGE IS CLICKED
 
-// const wrapper = document.querySelector(".wrapper");
+const wrapper = document.querySelector(".wrapper");
+const mainContent = document.querySelector(".main-content");
 
-// wrapper.addEventListener("click", () => {
-//     console.log("hello");
-//     if(!searchDropdownContent.classList.contains("hidden")) {
-//         wrapper.addEventListener("click", () => {
-//             console.log("blur element clicked");
-//             hideSearchBar();
-//             addClass([searchDropdownContent], "hidden");
-// 	        removeClass(searchBlurElements, "blurred");
-//         })
+wrapper.addEventListener("click", () => {
+    if(!searchDropdownContent.classList.contains("hidden")) {
+        mainContent.addEventListener("click", () => {
+            console.log("main content clicked");
+            hideSearchBar();
+            addClass([searchDropdownContent], "hidden");
+	        removeClass(searchBlurElements, "blurred");
+        })
+    }
+})
+
+// wrapper.addEventListener('click', function(e) {
+//     if (!e.target.classList.contains('header')) {
+//         // console.log("search-blur clicked");
+//         console.log(e.target.classList);
 //     }
-// })
-
+// });
 
 
 searchInput.addEventListener("keyup", filterFunction);
