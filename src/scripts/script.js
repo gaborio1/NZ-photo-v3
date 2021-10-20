@@ -51,6 +51,7 @@ const makeNavbarSticky = () => {
 
 // ==================== SEARCH BAR ====================
 
+
 const defaultButton = document.getElementById("default-btn");
 const submitButton = document.getElementById("submit-btn");
 const closeButton = document.getElementById("close-btn");
@@ -59,17 +60,10 @@ const searchDropdownContent = document.getElementById("search-dropdown-content")
 const searchDropdownLinks = searchDropdownContent.getElementsByTagName("a");
 // imageContainer, mainContent AND footer (ALL ELEMENTS EXCEPT NAVBAR)
 const searchBlurElements = document.getElementsByClassName("search-blur");
+const wrapper = document.querySelector(".wrapper");
+const mainContent = document.querySelector(".main-content");
 
-// ========== SHOW/HIDE SEARCH DROPDOWN CONTENT ==========
-const showSearchDropdown = () => {
-  document.getElementById("search-dropdown-content").classList.remove("hidden");
-};
 
-const hideSearchDropdown = () => {
-  document.getElementById("search-dropdown-content").classList.add("hidden");
-};
-
-// ========== SHOW/HIDE SEARCH BAR ==========
 // SHOW/HIDE SEARCH BAR
 const showSearchBar = () => {
     addClass([defaultButton], "hidden");
@@ -83,19 +77,51 @@ const hideSearchBar = () => {
     searchInput.style.width = "0px";
 };
 
-// ========== BLUR/UN-BLUR ALL ELEMENTS EXCEPT NAVBAR ==========
+//  SHOW / HIDE SEARCH DROP CONTENT AND BLUR / UNBLUR PAGE
+const showSearchDrop = () => {
+    removeClass([searchDropdownContent], "hidden");
+	addClass(searchBlurElements, "blurred");
+}
 
-// const blurElements = () => {
-// 	for (let i = 0; i < searchBlurElements.length; i++) {
-// 		searchBlurElements[i].classList.add("blurred");
-// 	}
-// };
+const hideSearchDrop = () => {
+    addClass([searchDropdownContent], "hidden");
+	removeClass(searchBlurElements, "blurred");
+}
 
-const unBlurElements = () => {
-	for (let i = 0; i < searchBlurElements.length; i++) {
-		searchBlurElements[i].classList.remove("blurred");
-	}
-};
+// OPEN SEARCH BAR ( MAGNIFIER )
+defaultButton.addEventListener("click", () => {
+	showSearchBar();
+    showSearchDrop();
+});
+
+// CLOSE SEARCH BAR ( X )
+closeButton.addEventListener("click", () => {
+	hideSearchBar();
+    hideSearchDrop();
+});
+
+// COLLAPSE SEARCH DROP CONTENT & UNBLUR PAGE WHEN PAGE IS CLICKED
+// LOOK INTO THIS AND INCLUDE FOOTER 
+
+wrapper.addEventListener("click", () => {
+    if(!searchDropdownContent.classList.contains("hidden")) {
+        mainContent.addEventListener("click", () => {
+            // console.log("main content clicked");
+            hideSearchBar();
+            hideSearchDrop();
+        })
+    }
+})
+
+// wrapper.addEventListener('click', function(e) {
+//     if (!e.target.classList.contains('header')) {
+//         // console.log("search-blur clicked");
+//         console.log(e.target.classList);
+//     }
+// });
+
+
+
 
 // ========== FILTER THROUGH SEARCH-BAR DROPDOWN LINKS BASED ON USER INPUT ==========
 // (W3SCHOOLS) https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
@@ -111,20 +137,6 @@ const filterFunction = () => {
 		}
 	}
 };
-
-// OPEN SEARCH BAR
-defaultButton.addEventListener("click", () => {
-	showSearchBar();
-	removeClass([searchDropdownContent], "hidden");
-	addClass(searchBlurElements, "blurred");
-});
-
-// CLOSE SEARCH BAR
-closeButton.addEventListener("click", () => {
-	hideSearchBar();
-    addClass([searchDropdownContent], "hidden");
-	removeClass(searchBlurElements, "blurred");
-});
 
 searchInput.addEventListener("keyup", filterFunction);
 

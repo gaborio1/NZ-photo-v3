@@ -30,8 +30,17 @@ modal:
 
 ==================== ALL SIZES ====================
 
-body: 
-    ✅  add search-blur class to all pages (all elements except navbar)
+homepage:
+    ✅  add search-blur class to page (all elements except navbar)
+    ✅  collapse search dropdown content when clicking on page
+            include footer !!!
+            include parallax !!!
+
+all other pages: 
+    ✅  add search-blur class to page (all elements except navbar)
+    ✅  collapse search dropdown content when clicking on page
+            include footer !!!
+        
 
 navbar:
     make common class for navlink and search dropdown content
@@ -49,13 +58,11 @@ footer:
 ==================== LARGE SIZE ====================
 
 navbar:
-    expanded search-content will affect scrollmagic/parallax effects on homepage
+    expanded search-content affects scrollmagic/parallax effects on homepage
 
-homepage:
-    collapse search dropdown content when clicking on page
 
 all other pages:
-    ✅  collapse search dropdown content when clicking on page (main content only)
+    
 
 ==================== MEDIUM SIZE ====================
 
