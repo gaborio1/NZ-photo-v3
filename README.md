@@ -54,6 +54,9 @@ navbar:
 homepage:
     collapse search dropdown content when clicking on page
 
+all other pages:
+    ✅  collapse search dropdown content when clicking on page (main content only)
+
 ==================== MEDIUM SIZE ====================
 
 
