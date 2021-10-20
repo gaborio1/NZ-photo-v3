@@ -102,17 +102,17 @@ if (window.innerWidth > 767) {
 		.fromTo(
 			"#street-text-container",
 			0.1,
-			{ y: "-2vh" },
-			{ y: "-2vh", ease: "linear" },
+			{ y: "-12vh" },
+			{ y: "0vh", ease: "linear" },
 			"-=0"
 		)
-		// .fromTo(
-		// 	"#street-text-container",
-		// 	0.3,
-		// 	{ x: "5vw" },
-		// 	{ x: "0vw", ease: "linear" },
-		// 	"-=0.3"
-		// )
+		.fromTo(
+			"#street-text-container",
+			0.3,
+			{ x: "0vw" },
+			{ x: "0vw", ease: "linear" },
+			"-=0.3"
+		)
 		.fromTo(
 			"#street-text-container",
 			0.3,
@@ -331,8 +331,8 @@ new ScrollMagic.Scene({
 	.fromTo(
 		"#abstract-text-container",
 		0.1,
-		{ y: "-2vh" },
-		{ y: "-2vh", ease: "linear" },
+		{ y: "-10vh" },
+		{ y: "-0vh", ease: "linear" },
 		"-=0"
 	)
 	.fromTo(
