@@ -248,6 +248,8 @@
 		align-items: center;
 		width: var(--max-width);
 		background: white;
+		/* background: #ffe5a7; */
+		/* background: rgba(64, 207, 255, 0.327); */
 
 		/* !!!!! THIS PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
 		overflow: hidden;
@@ -288,7 +290,10 @@
 	/* width CONTROLS CATEGORY IMG WIDTH */
     .portrait-column {		
 		width: 30%;
-		height: 800px;
+		
+		/* height: 800px; */
+		/* !!! THIS FIXES CAT.IMG FLICKERING ON HOVER !!! */
+		height: 900px;
 
 		display: flex;
 		flex-direction: column;

@@ -25,6 +25,7 @@ body {
 
 .main-content {
 	background: var(--main-background);
+	/* background: #56d2e2; */
 }
 
 /* HOMEPAGE FONT PROPERTIES ARE SET IN home-small.css */

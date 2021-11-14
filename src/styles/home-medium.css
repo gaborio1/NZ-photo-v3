@@ -233,12 +233,13 @@
 	/* width CONTROLS CATEGORY IMG WIDTH */
 	.portrait-column {
 		width: 35%;
+		/* height: 900px; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		margin: 10px 5px 150px 5px;
-		/* border: 3px solid olive; */
+		border: 3px solid olive;
 	}
 
 	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN */
@@ -251,7 +252,7 @@
 	/* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
 	.portrait-img-container {
 		width: 100%;
-		/* border: 3px solid yellow; */
+		border: 3px solid yellow;
 	}
 
 	/* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
@@ -266,7 +267,9 @@
 	.img-hover-zoom--portrait {
 		width: 100%;
 		max-width: 500px;
-		max-height: 600px;
+		/* max-height: 560px; */
+		/* !!! THIS FIXES CAT.IMG FLICKERING ON HOVER !!! */
+		max-height: 560px;
 	}
 
 	/* [2] Transition property for smooth transformation of images */
@@ -362,7 +365,7 @@
 
 	.img-hover-zoom--landscape {
 		width: 100%;
-		max-height: 490px;
+		max-height: 420px;
 		/* border: 3px solid red; */
 	}
 
