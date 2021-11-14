@@ -276,9 +276,9 @@
 
 	/* [3] Finally, transforming the image when container gets hovered */
 	/* THIS INCLUDES IMAGE + INFO DIV */
-	.portrait-img-container:hover img {
-		transform: scale(1.025);
-	}
+	/* .portrait-img-container:hover img {
+		transform: scale(1.02);
+	} */
 
 	/* CATEGORY TEXT CONTAINERS */
 
@@ -356,9 +356,9 @@
 	}
 
 	/* THIS INCLUDES IMAGE + INFO DIV */
-	.landscape-img-container:hover img {
-		transform: scale(1.025);
-	}
+	/* .landscape-img-container:hover img {
+		transform: scale(1.02);
+	} */
 
 	.img-hover-zoom--landscape {
 		width: 100%;
@@ -417,7 +417,7 @@
 	}
 
 	.category-img {
-		filter: grayscale(0.2) blur(0.1px) opacity(1);
+		filter: grayscale(0.2) blur(0.05px) opacity(1);
 	}
 
 	.category-img-container:hover .category-img {
