@@ -7,7 +7,7 @@
 		align-items: center;
 		width: var(--max-width);
 		height: fit-content;
-		/* border: 3px solid red; */
+		border: 3px solid red;
     }
 
     .main-coloumn {
@@ -19,7 +19,7 @@
 		justify-content: space-around;
 		margin-bottom: 100px;
 		margin-top: 100px;
-		/* border: 3px solid rgb(0, 106, 255); */
+		border: 3px solid rgb(0, 106, 255);
     }
 
     .about-container {
@@ -27,7 +27,7 @@
 		max-height: 600px;
 		display: flex;
 		justify-content: space-between;
-		/* border: 3px solid rgb(21, 255, 0); */
+		border: 3px solid rgb(21, 255, 0);
     }
 
     .about-enzee-container {
@@ -42,7 +42,7 @@
     .about-image-container {
 		width: 400px;
 		width: 33.33%;
-		/* border: 3px solid rgb(218, 162, 32); */
+		border: 3px solid rgb(218, 162, 32);
     }
 
 	.about-image--square {
@@ -63,14 +63,14 @@
 		align-items: center;
 		justify-content: space-around;
 		margin-left: 70px;
-		/* border: 3px solid rgb(32, 88, 218); */
+		border: 3px solid rgb(32, 88, 218);
     }
 
     .about-text-row {
 		width: 100%;
 		padding-left: 1rem;
 		border-left: 2px solid rgba(0, 0, 0, 0.272);
-		/* border: 3px solid fuchsia; */
+		border: 3px solid fuchsia;
     }
 
     .about-text__title {
@@ -83,100 +83,4 @@
 		font-weight: 400;
 		color: rgba(0, 0, 0, 0.724);
     }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-	.about-container {
-		width: 100%;
-		max-height: 600px;
-		display: flex;
-		justify-content: space-between;
-		/* border: 3px solid rgb(21, 255, 0); */
-    }
-
-	.about-text-container {
-		width: 750px;
-		width: 80%;
-		max-height: 90%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		margin-left: 20px;
-		/* border: 3px solid rgb(32, 88, 218); */
-    }
-
-	
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1080px) {
-
-	.main-coloumn {
-		width: 90%;
-		max-width: var(--main-content-1400);
-		/* height: 1000px; */
-		/* max-height: 100vh; */
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		justify-content: start;
-		margin-bottom: 100px;
-		/* margin-top: 100px; */
-		margin-top: 50px;
-		/* border: 3px solid rgb(21, 107, 226); */
-    }
-
-
-	.about-container {
-		width: 90%;
-		max-height: 750px;
-		/* NOT WORKING */
-		/* height: fit-content; */
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		/* border: 3px solid rgb(21, 255, 0); */
-    }
-
-	.about-enzee-container {
-		margin: 45px 0px 45px 0px;
-		/* border: 3px solid tomato; */
-    }
-
-	.about-image-container {
-		width: 40%;
-		margin-bottom: 45px;
-		/* border: 3px solid rgb(218, 162, 32); */
-    }
-
-	.about-image--square {
-		display: inline;
-		width: 100%;
-		/* height: 100px; */
-    }
-
-	.about-image {
-		display: none;
-	}
-
-	.about-text-container {
-		width: 750px;
-		width: 90%;
-		max-height: 90%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		margin-left: 20px;
-		/* border: 3px solid rgb(32, 88, 218); */
-    }
-
-	.about-text-row:nth-child(2) {
-		margin: 2rem 0 2rem 0;
-    }
-
-	
-	
 }
