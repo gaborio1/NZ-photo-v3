@@ -20,16 +20,15 @@
         justify-content: center;
         
         width: 90%;
-        margin-top: 50px;
+        margin-top: 80px;
         margin-bottom:100px;
-        /* border: 3px solid blue; */
+        /* border: 3px solid orange; */
     }
         
     .title-container {
         text-align: center;
-        margin-top: 50px;
-        /* margin-bottom:50px; */
-        /* border: 3px solid green; */
+        margin: 45px 0px 90px 0px;
+	    /* border: 3px solid cyan; */
     }
         
     /* h2.slider-title {
@@ -46,8 +45,8 @@
         max-width: 1400px;
         /* height: 500px; */
         height: fit-content;
-        margin: 50px 0 0 0;
-        /* border: 3px solid orange; */
+        /* margin: 50px 0 0 0; */
+        /* border: 3px solid rgb(0, 255, 140); */
     }
        
     /* @media only screen and (max-width: 1024px) {

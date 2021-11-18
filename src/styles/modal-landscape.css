@@ -17,8 +17,8 @@
 	justify-content: space-around;
 	width: 90%;
 	max-width: var(--main-content-1400);
-	margin-bottom: 200px;
 	margin-top: 80px;
+	margin-bottom: 200px;
 
 	/* border: 3px solid orange; */
 }
@@ -28,15 +28,14 @@
 	/* border: 3px solid cyan; */
 }
 
-.category-title-container h1 {
+/* .category-title-container h1 {
 	font-size: 60px;
 	font-weight: 400;
-}
+} */
 
 .gallery-container {
 	/* display: flex; */
 	/* float: left; */
-	width: 1200px;
 	width: 90%;
 
 	/* !!!!! THIS WAS CAUSING CONTENT OVERFLOW !!!!!  */
