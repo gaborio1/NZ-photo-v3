@@ -2,6 +2,10 @@
 	
     /* ===== PARALLAX IMAGE LAYERS ===== */
     .image-container {
+
+		/* position: relative; */
+
+
 		height: 100vh;
 		width: 100%;
 		/* !!! THIS IS WORKING !!! */
@@ -14,8 +18,9 @@
 		/* background-attachment: fixed;   */
 
 		/* !!! IMPORTANT !!! */
-		background-size: cover;
-		background-position: center;
+		/* background-size: cover; */
+		/* background-position: center; */
+		overflow: hidden;
     }
 
     img.mountain-mobile-size {
@@ -23,29 +28,51 @@
     }
 
     img.mountain-full {
+		/* display: none; */
 		z-index: -6;
 		/* !!! WORKS BEST WITH relative !!!*/
 		position: relative;
+
+
+		/* position: absolute; */
+		left: 0px;
+		bottom: 0px;
+
+
+
 		/* !!! absolute WILL MESS UP TITLE DIV WHEN RESIZING WINDOW !!! */
 		/* position: absolute; */
 		width: 100%;
-		height: 100vh;
+
+		/* !!! WITHOUT HEIGHT IMAGES SCALE DOWN TOGETHER !!! */
+		/* height: 100vh; */
+		/* height: 100%; */
+
 		object-fit: cover;
 		background-position: center;
     }
 
+
+/* !!! TRY CALCULATING HEIGHT FOR EACH INDIVIDUAL LAYER IN RELATION TO FULL SIZE !!! */
+
     /* ALL LAYERS */
     img.mountain-crop {
+		/* display: none; */
+		/* background-position: center; */
 		/* !!! absolute ON LAYERS !!! */
 		position: absolute;
 		width: 100%;
+
 		left: 0px;
 		bottom: 0px;
+		/* object-fit: cover; */
+		/* border: 1px solid black; */
     }
 
     /* INDIVIDUAL LAYERS */
     img.mountain-crop-1 {
       	z-index: -1;
+		/* height: 40%; */
     }
 
     img.mountain-crop-2 {

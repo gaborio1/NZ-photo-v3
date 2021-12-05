@@ -1,18 +1,21 @@
 console.log("script.js");
 
 
-window.onorientationchange = function() {  	window.location.reload(); };
+window.onorientationchange = function() {
+	window.location.reload();
+};
 // window.addEventListener('resize', function () { 
 //     "use strict";
 //     window.location.reload(); 
 // });
 
 // THIS IS ALSO IN navbar-logic.js FOR ALL OTHER PAGES
-window.onresize = function() {
-	if (window.innerWidth > 767) {
-		location.reload();
-	}
-}
+// window.onresize = function() {
+// 	if (window.innerWidth > 767) {
+// 		location.reload();
+
+// 	}
+// }
 
 // ========== STICKY NAVBAR (W3SCHOOLS) ==========
 //  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
