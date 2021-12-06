@@ -3,53 +3,55 @@
 	.image-container {
 		height: 100vh;
 		width: 100%;
-		/* !!! IMPORTANT !!! */
-		background-size: cover;
-		background-position: center;
+		overflow: hidden;
 	}
 
-	img.mountain-mobile-size {
-		display: none;
-	}
+    img.mountain-mobile-size {
+      	display: none;
+    }
+	
+/* !!! CONTAINER RELATIVE !!! */
+.parallax-layers-container {
+	position: relative;
+	width: 100vw;
+	height: 100%;
+	overflow: hidden;
+	/* border: 5px solid aqua; */
+}
 
-	img.mountain-full {
-		z-index: -6;
-		position: relative;
+/* !!! ALL LAYERS ABSOLUTE !!! */
+    img.mountain-parallax {
+		/* ABSOLUTE ON ALL LAYERS */
+		position: absolute;
 		width: 100%;
 		height: 100vh;
 		object-fit: cover;
-		background-position: center;
-	}
+    }
 
-	img.mountain-crop {
-		display: none;
-		position: absolute;
-		width: 100%;
+    /* INDIVIDUAL LAYERS */
+    img.mountain-crop-1 {
+      	z-index: -1;
+    }
 
-		bottom: 0px;
-		left: 0px;
-	}
+    img.mountain-crop-2 {
+      	z-index: -2;
+    }
 
-	/* !!! absolute ON LAYERS !!! */
-	img.mountain-crop-1 {
-		z-index: -1;
-	}
+    img.mountain-crop-3 {
+      	z-index: -3;
+    }
 
-	img.mountain-crop-2 {
-		z-index: -2;
-	}
+    img.mountain-crop-4 {
+      	z-index: -4;
+    }
 
-	img.mountain-crop-3 {
-		z-index: -3;
-	}
+    img.mountain-crop-5 {
+      	z-index: -5;
+    }
 
-	img.mountain-crop-4 {
-		z-index: -4;
-	}
-
-	img.mountain-crop-5 {
-		z-index: -5;
-	}
+	img.mountain-full {
+		z-index: -6;
+    }
 
 
 

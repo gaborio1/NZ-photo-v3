@@ -2,6 +2,7 @@
 	
     /* ===== PARALLAX IMAGE LAYERS ===== */
     .image-container {
+		/* z-index: 1; */
 		/* !!! THIS IS WORKING !!! */
 		/* https://www.w3schools.com/html/html_images_background.asp */
 
@@ -12,73 +13,41 @@
 		/* background-attachment: fixed;   */
 
 		/* ??? */
-		position: relative;
-
+		/* position: relative; */
 		height: 100vh;
 		width: 100%;
-		
-
-		/* !!! IMPORTANT !!! */
-		/* background-size: cover;
-		background-position: center; */
-		/* overflow: hidden; */
-    }
+		/* border: 1px solid aqua; */
+	}
 
     img.mountain-mobile-size {
       	display: none;
     }
 
-    img.mountain-full {
-		/* display: none; */
-		z-index: -6;
-		/* !!! WORKS BEST WITH relative !!!*/
-		/* position: relative; */
+	/* !!! CONTAINER RELATIVE !!! */
+	.parallax-layers-container {
+		position: relative;
+		width: 100vw;
+		height: 100%;
+		overflow: hidden;
+		/* border: 5px solid aqua; */
+	}
 
-
-		position: absolute;
-		/* left: 0px;
-		bottom: 0px; */
-
-
-
-		/* !!! absolute WILL MESS UP TITLE DIV WHEN RESIZING WINDOW !!! */
-		/* position: absolute; */
-		width: 100%;
-		height: 100vh;
-		/* height: 100%; */
-
-		object-fit: cover;
-		/* background-position: center; */
-    }
-
-
-/* !!! TRY CALCULATING HEIGHT FOR EACH INDIVIDUAL LAYER IN RELATION TO FULL SIZE !!! */
-
-    /* ALL LAYERS */
-    img.mountain-crop {
-		/* display: none; */
-		/* background-position: center; */
-		/* !!! absolute ON LAYERS !!! */
+    /* !!! ALL LAYERS ABSOLUTE !!! */
+    img.mountain-parallax {
+		/* ABSOLUTE ON ALL LAYERS */
 		position: absolute;
 		width: 100%;
 		height: 100vh;
-
-		/* left: 0px;
-		bottom: 0px; */
 		object-fit: cover;
-		/* background-position: center; */
-		border: 1px solid black;
     }
 
     /* INDIVIDUAL LAYERS */
     img.mountain-crop-1 {
       	z-index: -1;
-		/* height: 40%; */
     }
 
     img.mountain-crop-2 {
       	z-index: -2;
-		  border: 1px solid black;
     }
 
     img.mountain-crop-3 {
@@ -92,6 +61,11 @@
     img.mountain-crop-5 {
       	z-index: -5;
     }
+
+	img.mountain-full {
+		z-index: -6;
+    }
+
 
     .sticky {
 		position: fixed;
