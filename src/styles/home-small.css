@@ -19,6 +19,15 @@
 		display: none;
 	}
 
+    /* img.mountain-crop {
+
+		display: none !important;
+
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+    } */
 
 	img.mountain-mobile-size {
 		z-index: -1;

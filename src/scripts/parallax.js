@@ -3,7 +3,7 @@
 // IF Y VALUE NOT MODIFIED WE CAN USE ELEMENT AS TRIGGER
 
 // ========== LANDING PAGE AND TITLE DIV PARALLAX ==========
-if (window.innerWidth > 414) {
+if (window.innerWidth > 736) {
 	console.log("parallax js");
 	const controller = new ScrollMagic.Controller();
 
@@ -29,19 +29,20 @@ if (window.innerWidth > 414) {
 
 	// ========== MOVING MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
 	let timelineMountain = new TimelineMax()
-		.to("#mountain-crop-1", 3, { y: -800 }, "-=10")
+		.to("#mountain-crop-1", 3, { y: -800 }, "-=30")
 		// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
-		.to("#mountain-crop-2", 3, { y: -500 }, "-=10")
-		.to("#mountain-crop-3", 3, { y: -250 }, "-=10")
-		.to("#mountain-crop-4", 3, { y: -55 }, "-=10")
-		.to("#mountain-crop-5", 3, { y: 20 }, "-=10")
-		.to("#mountain-full", 3, { y: 100 }, "-=10")
-		.to("#title-div", 3, { top: "-120%" }, "-=10")
+		.to("#mountain-crop-2", 3, { y: -500 }, "-=30")
+		.to("#mountain-crop-3", 3, { y: -250 }, "-=30")
+		.to("#mountain-crop-4", 3, { y: -55 }, "-=30")
+		.to("#mountain-crop-5", 3, { y: 20 }, "-=30")
+		.to("#mountain-full", 3, { y: 100 }, "-=30")
+		.to("#title-div", 3, { top: "-120%" }, "-=30")
 		// MAIN CONTENT SLIDES ON TOP
-		.to(".main-content", 3, { top: "0%" }, "-=10");
+		.to(".main-content", 3, { top: "0%" }, "-=30");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
-		duration: "1000%",
+		duration: "3000%",
+		// duration: "100000px",
 		triggerHook: 0,
 	})
 		.setTween(timelineMountain)
@@ -105,14 +106,14 @@ if (window.innerWidth > 414) {
 
 
 	let zoomSequence = new TimelineMax()
-		.to("#mountain-crop-1", 3, { scale: 8, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-2", 3, { scale: 5, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-3", 3, { scale: 4, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-4", 3, { scale: 2.5, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-5", 3, { scale: 1.5, opacity: 1, ease: Linear.easeNone }, "-=10");
+		.to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-2", 2, { scale: 1.6, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-3", 3, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-4", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-5", 3, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=10");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
-		duration: "1000%",
+		duration: "3000%",
 		triggerHook: 0,
 	})
 		.setTween(zoomSequence)
