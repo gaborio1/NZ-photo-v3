@@ -3,7 +3,7 @@
 // IF Y VALUE NOT MODIFIED WE CAN USE ELEMENT AS TRIGGER
 
 // ========== LANDING PAGE AND TITLE DIV PARALLAX ==========
-if (window.innerWidth > 736) {
+if (window.innerWidth > 768) {
 	console.log("parallax js");
 	const controller = new ScrollMagic.Controller();
 
@@ -28,6 +28,10 @@ if (window.innerWidth > 736) {
 		.addTo(controller);
 
 	// ========== MOVING MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
+
+
+// 					CURRENT VERSION:
+
 	let timelineMountain = new TimelineMax()
 		.to("#mountain-crop-1", 3, { y: -800 }, "-=30")
 		// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
@@ -49,6 +53,35 @@ if (window.innerWidth > 736) {
 		// TRY PINNING IMAGE CONTAINER
 		// .setPin(".image-container")
 		.addTo(controller);
+
+
+// 					PINNING IMAGE CONTAINER:
+
+	// let timelineMountain = new TimelineMax()
+	// 	.to("#mountain-crop-1", 3, { y: -1000 }, "-=30")
+	// 	// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
+	// 	.to("#mountain-crop-2", 3, { y: -600 }, "-=30")
+	// 	.to("#mountain-crop-3", 3, { y: -300 }, "-=30")
+	// 	.to("#mountain-crop-4", 3, { y: -60 }, "-=30")
+	// 	.to("#mountain-crop-5", 3, { y: 25 }, "-=30")
+	// 	.to("#mountain-full", 3, { y: 100 }, "-=30")
+	// 	.to("#title-div", 3, { top: "80%" }, "-=30")
+	// 	// MAIN CONTENT SLIDES ON TOP
+	// 	.to(".main-content", 3, { top: "100%" }, "-=30");
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".image-container",
+	// 	duration: "3000%",
+	// 	// duration: "100000px",
+	// 	triggerHook: 0,
+	// })
+	// 	.setTween(timelineMountain)
+	// 	// .setPin(".image-container")
+	// 	// THIS IS BETTER:
+	// 	.setPin(".parallax-layers-container")
+	// 	.addTo(controller);
+
+
+
 
 
 	// ========== ZOOMING IN ON MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
@@ -106,7 +139,7 @@ if (window.innerWidth > 736) {
 
 
 	let zoomSequence = new TimelineMax()
-		.to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-1", 1, { scale: 2.5, opacity: 1, ease: Linear.easeNone }, "-=10")
 		.to("#mountain-crop-2", 2, { scale: 1.6, opacity: 1, ease: Linear.easeNone }, "-=10")
 		.to("#mountain-crop-3", 3, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=10")
 		.to("#mountain-crop-4", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10")
@@ -118,7 +151,6 @@ if (window.innerWidth > 736) {
 	})
 		.setTween(zoomSequence)
 		.addTo(controller);
-
 
 	// ========== ANIMATING CATEGORIES ONE BY ONE WITHOUT TIMELINE ==========
 
