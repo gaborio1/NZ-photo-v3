@@ -11,14 +11,8 @@ if (window.innerWidth > 768) {
 	let timelineNav = new TimelineMax()
 		// REVEAL NAVBAR ON SCROLL display: none -> flex
 		// .to("header", 1, { display: "flex" })
-		// .fromTo("header", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
-		.fromTo(
-			"header",
-			1,
-			{ background: "rgba(0, 0, 0, 0.85)" },
-			{ background: "rgba(0, 0, 0, 0.95)" },
-			"-=0"
-		);
+		// .fromTo("header", 1, { opacity: 0 }, { opacity: 1 }, "-=1")
+		.fromTo("header", 1, { background: "rgba(0, 0, 0, 0.85)" }, { background: "rgba(0, 0, 0, 0.95)" }, "-=0");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "250%",
@@ -30,7 +24,7 @@ if (window.innerWidth > 768) {
 	// ========== MOVING MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
 
 
-// 					CURRENT VERSION:
+	// 					CURRENT VERSION:
 
 	let timelineMountain = new TimelineMax()
 		.to("#mountain-crop-1", 3, { y: -800 }, "-=30")
@@ -46,16 +40,13 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "3000%",
-		// duration: "100000px",
 		triggerHook: 0,
 	})
 		.setTween(timelineMountain)
-		// TRY PINNING IMAGE CONTAINER
-		// .setPin(".image-container")
 		.addTo(controller);
 
 
-// 					PINNING IMAGE CONTAINER:
+	// 					PINNING IMAGE CONTAINER:
 
 	// let timelineMountain = new TimelineMax()
 	// 	.to("#mountain-crop-1", 3, { y: -1000 }, "-=30")
@@ -81,61 +72,7 @@ if (window.innerWidth > 768) {
 	// 	.addTo(controller);
 
 
-
-
-
 	// ========== ZOOMING IN ON MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
-
-	// let zoom1 = new TimelineMax()
-	// 	.to("#mountain-crop-1", 3, { scale: 8, opacity: 1, ease: Linear.easeNone });
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".image-container",
-	// 	duration: "300%",
-	// 	triggerHook: 0,
-	// })
-	// 	.setTween(zoom1)
-	// 	.addTo(controller);
-
-	// let zoom2 = new TimelineMax()
-	// 	.to("#mountain-crop-2", 3, { scale: 5, opacity: 1, ease: Linear.easeNone });
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".image-container",
-	// 	duration: "300%",
-	// 	triggerHook: 0,
-	// })
-	// 	.setTween(zoom2)
-	// 	.addTo(controller);
-
-
-	// let zoom3 = new TimelineMax()
-	// 	.to("#mountain-crop-3", 3, { scale: 4, opacity: 1, ease: Linear.easeNone });
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".image-container",
-	// 	duration: "300%",
-	// 	triggerHook: 0,
-	// })
-	// 	.setTween(zoom3)
-	// 	.addTo(controller);
-
-	// let zoom4 = new TimelineMax()
-	// 	.to("#mountain-crop-4", 3, { scale: 2.5, opacity: 1, ease: Linear.easeNone });
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".image-container",
-	// 	duration: "300%",
-	// 	triggerHook: 0,
-	// })
-	// 	.setTween(zoom4)
-	// 	.addTo(controller);
-
-	// let zoom5 = new TimelineMax()
-	// 	.to("#mountain-crop-5", 3, { scale: 1.5, opacity: 1, ease: Linear.easeNone });
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".image-container",
-	// 	duration: "300%",
-	// 	triggerHook: 0,
-	// })
-	// 	.setTween(zoom5)
-	// 	.addTo(controller);
 
 
 	let zoomSequence = new TimelineMax()
@@ -156,19 +93,8 @@ if (window.innerWidth > 768) {
 
 	// ===== MODEL =====
 	let timelineModel = new TimelineMax()
-		.fromTo(
-			"#model-img-container",
-			1,
-			{ y: "20vh" },
-			{ y: "-2vh", ease: "linear" }
-		)
-		.fromTo(
-			"#model-img-container",
-			1,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1"
-		);
+		.fromTo("#model-img-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear" })
+		.fromTo("#model-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#model-img-trigger",
 		duration: "70%",
@@ -178,19 +104,8 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	let timelineModelText = new TimelineMax()
-		.fromTo(
-			"#model-text-container",
-			0.3,
-			{ y: "2vh" },
-			{ y: "-2vh", ease: "linear" }
-		)
-		.fromTo(
-			"#model-text-container",
-			0.3,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=0.3"
-		);
+		.fromTo("#model-text-container", 0.3, { y: "2vh" }, { y: "-2vh", ease: "linear" })
+		.fromTo("#model-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.3");
 	new ScrollMagic.Scene({
 		triggerElement: "#model-text-trigger",
 		duration: "20%",
@@ -202,27 +117,9 @@ if (window.innerWidth > 768) {
 
 	// ===== STREET =====
 	let timelineStreetText = new TimelineMax()
-		.fromTo(
-			"#street-text-container",
-			0.1,
-			{ y: "-12vh" },
-			{ y: "0vh", ease: "linear" },
-			"-=0"
-		)
-		.fromTo(
-			"#street-text-container",
-			0.3,
-			{ x: "0vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=0.3"
-		)
-		.fromTo(
-			"#street-text-container",
-			0.3,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=0.1"
-		);
+		.fromTo("#street-text-container", 0.1, { y: "-12vh" }, { y: "0vh", ease: "linear" }, "-=0")
+		.fromTo("#street-text-container", 0.3, { x: "0vw" }, { x: "0vw", ease: "linear" }, "-=0.3")
+		.fromTo("#street-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.1");
 	new ScrollMagic.Scene({
 		triggerElement: "#street-text-trigger",
 		duration: "70%",
@@ -233,26 +130,9 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	let timelineStreet = new TimelineMax()
-		.fromTo(
-			"#street-img-container",
-			1,
-			{ y: "20vh" },
-			{ y: "-2vh", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#street-img-container",
-			1,
-			{ x: "5vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#street-img-container",
-			1,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1");
+		.fromTo("#street-img-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+		.fromTo("#street-img-container", 1, { x: "5vw" }, { x: "0vw", ease: "linear" }, "-=1")
+		.fromTo("#street-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#street-img-trigger",
 		duration: "50%",
@@ -264,26 +144,9 @@ if (window.innerWidth > 768) {
 
 	// ===== MOTION =====
 	let timelineMotion = new TimelineMax()
-		.fromTo(
-			"#motion-img-container",
-			1,
-			{ y: "-20vh" },
-			{ y: "-2vh", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#motion-img-container",
-			1,
-			{ x: "-5vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#motion-img-container",
-			1,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1");
+		.fromTo("#motion-img-container", 1, { y: "-20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+		.fromTo("#motion-img-container", 1, { x: "-5vw" }, { x: "0vw", ease: "linear" }, "-=1")
+		.fromTo("#motion-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-img-trigger",
 		duration: "50%",
@@ -293,26 +156,9 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	let timelineMotionText = new TimelineMax()
-		.fromTo(
-			"#motion-text-container",
-			0.3,
-			{ y: "-10vh" },
-			{ y: "-10vh", ease: "linear" }
-		)
-		.fromTo(
-			"#motion-text-container",
-			0.3,
-			{ x: "5vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=0.3"
-		)
-		.fromTo(
-			"#motion-text-container",
-			0.3,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=0.3"
-		);
+		.fromTo("#motion-text-container", 0.3, { y: "-10vh" }, { y: "-10vh", ease: "linear" })
+		.fromTo("#motion-text-container", 0.3, { x: "5vw" }, { x: "0vw", ease: "linear" }, "-=0.3")
+		.fromTo("#motion-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.3");
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-text-trigger",
 		duration: "40%",
@@ -323,27 +169,8 @@ if (window.innerWidth > 768) {
 
 	// ===== MOSAIC DIVIDER CONTAINER =====
 	let timelineMosaicContainer = new TimelineMax()
-		.fromTo(
-			"#mosaic-container",
-			1,
-			{ y: "-10vh" },
-			{ y: "-2vh", ease: "linear" },
-			"-=1"
-		)
-		// .fromTo(
-		// 	"#mosaic-container",
-		// 	1,
-		// 	{ x: "5vw" },
-		// 	{ x: "-5vw", ease: "linear" },
-		// 	"-=1"
-		// )
-		.fromTo(
-			"#mosaic-container",
-			0.5,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1"
-		);
+		.fromTo("#mosaic-container", 1, { y: "-10vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+		.fromTo("#mosaic-container", 0.5, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#mosaic-trigger",
 		duration: "150%",
@@ -354,27 +181,9 @@ if (window.innerWidth > 768) {
 
 	//===== MOSAIC SLICES =====
 	let timelineMosaicSlices = new TimelineMax()
-		.fromTo(
-			".mosaic-slice-container-1",
-			1,
-			{ x: "5vw" },
-			{ x: "-5vw", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			".mosaic-slice-container-2",
-			1,
-			{ x: "3vw" },
-			{ x: "-3vw", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			".mosaic-slice-container-3",
-			1,
-			{ x: "1.5vw" },
-			{ x: "-1.5vw", ease: "linear" },
-			"-=1"
-		);
+		.fromTo(".mosaic-slice-container-1", 1, { x: "5vw" }, { x: "-5vw", ease: "linear" }, "-=1")
+		.fromTo(".mosaic-slice-container-2", 1, { x: "3vw" }, { x: "-3vw", ease: "linear" }, "-=1")
+		.fromTo(".mosaic-slice-container-3", 1, { x: "1.5vw" }, { x: "-1.5vw", ease: "linear" }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: ".mosaic-slice-container-1",
 		duration: "150%",
@@ -385,19 +194,8 @@ if (window.innerWidth > 768) {
 
 	// ===== PORTRAIT =====
 	let timelinePortrait = new TimelineMax()
-		.fromTo(
-			"#portrait-img-container",
-			1,
-			{ y: "20vh" },
-			{ y: "-2vh", ease: "linear" }
-		)
-		.fromTo(
-			"#portrait-img-container",
-			1,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1"
-		);
+		.fromTo("#portrait-img-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear" })
+		.fromTo("#portrait-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#portrait-img-trigger",
 		duration: "70%",
@@ -407,19 +205,8 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	let timelinePortraitText = new TimelineMax()
-		.fromTo(
-			"#portrait-text-container",
-			0.3,
-			{ y: "2vh" },
-			{ y: "-2vh", ease: "linear" }
-		)
-		.fromTo(
-			"#portrait-text-container",
-			0.3,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=0.3"
-		);
+		.fromTo("#portrait-text-container", 0.3, { y: "2vh" }, { y: "-2vh", ease: "linear" })
+		.fromTo("#portrait-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.3");
 	new ScrollMagic.Scene({
 		triggerElement: "#portrait-text-trigger",
 		duration: "20%",
@@ -431,27 +218,9 @@ if (window.innerWidth > 768) {
 
 	// ===== ABSTRACT =====
 	let timelineAbstractText = new TimelineMax()
-		.fromTo(
-			"#abstract-text-container",
-			0.1,
-			{ y: "-10vh" },
-			{ y: "-0vh", ease: "linear" },
-			"-=0"
-		)
-		.fromTo(
-			"#street-text-container",
-			0.3,
-			{ x: "5vw" },
-			{ x: "-0vw", ease: "linear" },
-			"-=0.3"
-		)
-		.fromTo(
-			"#abstract-text-container",
-			0.3,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=0.1"
-		);
+		.fromTo("#abstract-text-container", 0.1, { y: "-10vh" }, { y: "-0vh", ease: "linear" }, "-=0")
+		.fromTo("#street-text-container", 0.3, { x: "5vw" }, { x: "-0vw", ease: "linear" }, "-=0.3")
+		.fromTo("#abstract-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.1");
 	new ScrollMagic.Scene({
 		triggerElement: "#abstract-text-trigger",
 		duration: "70%",
@@ -462,26 +231,9 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	let timelineAbstract = new TimelineMax()
-		.fromTo(
-			"#abstract-img-container",
-			1,
-			{ y: "20vh" },
-			{ y: "-2vh", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#abstract-img-container",
-			1,
-			{ x: "5vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#abstract-img-container",
-			1,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1");
+		.fromTo("#abstract-img-container", 1, { y: "20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+		.fromTo("#abstract-img-container", 1, { x: "5vw" }, { x: "0vw", ease: "linear" }, "-=1")
+		.fromTo("#abstract-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#abstract-img-trigger",
 		duration: "50%",
@@ -493,26 +245,9 @@ if (window.innerWidth > 768) {
 
 	// ===== NATURE =====
 	let timelineNature = new TimelineMax()
-		.fromTo(
-			"#nature-img-container",
-			1,
-			{ y: "-20vh" },
-			{ y: "-2vh", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#nature-img-container",
-			1,
-			{ x: "-5vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=1"
-		)
-		.fromTo(
-			"#nature-img-container",
-			1,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=1");
+		.fromTo("#nature-img-container", 1, { y: "-20vh" }, { y: "-2vh", ease: "linear" }, "-=1")
+		.fromTo("#nature-img-container", 1, { x: "-5vw" }, { x: "0vw", ease: "linear" }, "-=1")
+		.fromTo("#nature-img-container", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-img-trigger",
 		duration: "50%",
@@ -522,26 +257,9 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	let timelineNatureText = new TimelineMax()
-		.fromTo(
-			"#nature-text-container",
-			0.3,
-			{ y: "-10vh" },
-			{ y: "-10vh", ease: "linear" }
-		)
-		.fromTo(
-			"#nature-text-container",
-			0.3,
-			{ x: "5vw" },
-			{ x: "0vw", ease: "linear" },
-			"-=0.3"
-		)
-		.fromTo(
-			"#nature-text-container",
-			0.3,
-			{ opacity: 0 },
-			{ opacity: 1 },
-			"-=0.3"
-		);
+		.fromTo("#nature-text-container", 0.3, { y: "-10vh" }, { y: "-10vh", ease: "linear" })
+		.fromTo("#nature-text-container", 0.3, { x: "5vw" }, { x: "0vw", ease: "linear" }, "-=0.3")
+		.fromTo("#nature-text-container", 0.3, { opacity: 0 }, { opacity: 1 }, "-=0.3");
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-text-trigger",
 		duration: "40%",
