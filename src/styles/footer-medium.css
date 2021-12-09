@@ -60,7 +60,7 @@
 		max-width: var(--main-content-1400);
 		height: 180px;
 		display: flex;
-		/* border: 1px solid orange; */
+		/* border: 3px solid orange; */
 	}
 
 	.footer-info-container-1 {
@@ -70,7 +70,7 @@
 		align-items: flex-end;
 		align-items: center;
 		justify-content: space-between;
-		/* border: 1px solid #56d2e2; */
+		/* border: 3px solid #56d2e2; */
 	}
 
 	.footer-info-container-1 h1::first-letter {
