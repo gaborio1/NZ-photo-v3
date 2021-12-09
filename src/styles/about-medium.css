@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
+@media only screen and (min-width: 945px) and (max-width: 1399px) {
   /* ========== MAIN CONTENT ========== */
 
     .main-content {
@@ -7,7 +7,7 @@
 		align-items: center;
 		width: var(--max-width);
 		height: fit-content;
-		border: 3px solid red;
+		/* border: 3px solid red; */
     }
 
     .main-coloumn {
@@ -19,15 +19,15 @@
 		justify-content: space-around;
 		margin-bottom: 100px;
 		margin-top: 100px;
-		border: 3px solid rgb(0, 106, 255);
+		/* border: 3px solid rgb(0, 106, 255); */
     }
 
     .about-container {
-		width: 90%;
+		width: 95%;
 		max-height: 600px;
 		display: flex;
 		justify-content: space-between;
-		border: 3px solid rgb(21, 255, 0);
+		/* border: 3px solid rgb(21, 255, 0); */
     }
 
     .about-enzee-container {
@@ -40,9 +40,9 @@
     } */
 
     .about-image-container {
-		width: 400px;
+		/* width: 400px; */
 		width: 33.33%;
-		border: 3px solid rgb(218, 162, 32);
+		/* border: 3px solid rgb(218, 162, 32); */
     }
 
 	.about-image--square {
@@ -51,7 +51,7 @@
 
     .about-image {
       width: 100%;
-      max-height: 100%;
+	  /* border: 3px solid aqua; */
     }
 
     .about-text-container {
@@ -63,14 +63,15 @@
 		align-items: center;
 		justify-content: space-around;
 		margin-left: 70px;
-		border: 3px solid rgb(32, 88, 218);
+		margin-left: 3%;
+		/* border: 3px solid rgb(32, 88, 218); */
     }
 
     .about-text-row {
 		width: 100%;
 		padding-left: 1rem;
 		border-left: 2px solid rgba(0, 0, 0, 0.272);
-		border: 3px solid fuchsia;
+		/* border: 3px solid fuchsia; */
     }
 
     .about-text__title {
@@ -83,4 +84,123 @@
 		font-weight: 400;
 		color: rgba(0, 0, 0, 0.724);
     }
+
+
+	@media only screen and (max-width: 1024px) {
+		.about-container {
+			width: 100%;
+			/* max-height: 600px; */
+			display: flex;
+			justify-content: space-between;
+			/* border: 3px solid rgb(255, 200, 0); */
+		}
+	}
+}
+
+/* @media only screen and (max-width: 1024px) {
+	.about-container {
+		width: 100%;
+		max-height: 600px;
+		display: flex;
+		justify-content: space-between;
+		border: 3px solid rgb(255, 200, 0);
+    }
+} */
+
+@media only screen and (min-width: 769px) and (max-width: 944px) {
+	.main-content {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: var(--max-width);
+		height: fit-content;
+		/* border: 3px solid red; */
+		/* background: cornflowerblue; */
+	}
+
+	.main-coloumn {
+		width: 90%;
+		/* height: fit-content; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 100px;
+		margin-bottom:100px;
+		/* border: 3px solid rgb(255, 179, 0); */
+	}
+
+	.about-container {
+		width: 100%;
+		/* max-height: 100vh; */
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		/* border: 3px solid rgb(48, 255, 145); */
+	}
+
+	.about-enzee-container {
+		margin-top: 45px;
+		margin-bottom:90px;
+		  /* border: 3px solid tomato; */
+	}
+
+	/* IN common-rules.css/small */
+	/* h2.about-enzee {
+	  font-weight: 400;
+	  font-size: 45px;
+	  line-height: 2.2rem;
+	} */
+
+	.about-image-container {
+		width: 90%;
+		/* height: 200px; */
+		margin-bottom: 50px;
+		/* border: 3px solid rgb(218, 32, 137); */
+	}
+
+	.about-image--square {
+		/* display: none; */
+		display: block;
+		width: 100%;
+	}
+
+	.about-image {
+		display: none;
+	}
+
+	.about-text-container {
+		width: 90%;
+		max-height: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		/* border: 3px solid rgb(32, 88, 218); */
+	}
+
+	.about-text-row {
+		width: 100%;
+		padding-left: 1rem;
+		border-left: 2px solid rgba(0, 0, 0, 0.272);
+		/* border: 3px solid fuchsia; */
+	}
+
+	.about-text-row:nth-child(2) {
+	  margin: 25px auto;
+	}
+
+	.about-text__title {
+	  margin: 0px 0px 8px 0px;
+	  text-transform: uppercase;
+	}
+
+	.about-text__text {
+	  font-size: 15px;
+	  font-weight: 400;
+	  color: rgba(0, 0, 0, 0.724);
+	}
 }

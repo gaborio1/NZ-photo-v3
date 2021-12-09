@@ -88,12 +88,6 @@
       font-weight: 400;
       color: rgba(0, 0, 0, 0.724);
     }
-
-	.slider-section {
-		/* border: 3px solid rebeccapurple; */
-		display: none !important;
-		/* visibility: hidden; */
-	}
 }
 
 @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
