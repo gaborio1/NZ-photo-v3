@@ -26,14 +26,30 @@ if (window.innerWidth > 768) {
 
 	// 					CURRENT VERSION:
 
+	// MOUNTAIN LAYERS:
+
 	let timelineMountain = new TimelineMax()
 		.to("#mountain-crop-1", 3, { y: -800 }, "-=30")
+
 		// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
+
 		.to("#mountain-crop-2", 3, { y: -500 }, "-=30")
 		.to("#mountain-crop-3", 3, { y: -250 }, "-=30")
-		.to("#mountain-crop-4", 3, { y: -55 }, "-=30")
-		.to("#mountain-crop-5", 3, { y: 20 }, "-=30")
-		.to("#mountain-full", 3, { y: 100 }, "-=30")
+		.to("#mountain-crop-4", 3, { y: -115 }, "-=30")
+		.to("#mountain-crop-5", 3, { y: -30 }, "-=30")
+		// !!! CURRENTLY NOT IN USE AS PARALLAX.JS CAN'T HANDLE MORE THAN 6 LAYERS !!!
+		// .to("#mountain-crop-6", 3, { y: -20 }, "-=30");
+		.to("#mountain-full", 3, { y: 100 }, "-=30");
+	new ScrollMagic.Scene({
+		triggerElement: ".image-container",
+		duration: "3000%",
+		triggerHook: 0,
+	})
+		.setTween(timelineMountain)
+		.addTo(controller);
+
+	// TITLE-DIV AND MAIN CONTENT:
+	let timelineContentAndTitle = new TimelineMax()
 		.to("#title-div", 3, { top: "-120%" }, "-=30")
 		// MAIN CONTENT SLIDES ON TOP
 		.to(".main-content", 3, { top: "0%" }, "-=30");
@@ -42,7 +58,7 @@ if (window.innerWidth > 768) {
 		duration: "3000%",
 		triggerHook: 0,
 	})
-		.setTween(timelineMountain)
+		.setTween(timelineContentAndTitle)
 		.addTo(controller);
 
 
