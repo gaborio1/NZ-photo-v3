@@ -284,4 +284,29 @@ if (window.innerWidth > 768) {
 	})
 		.setTween(timelineNatureText)
 		.addTo(controller);
+
+
+	// FOOTER BACKCROUND PARALLAX
+
+	let timelineFooter = new TimelineMax()
+		.to("#footer-crop-rock-left", 3, { y: -800 }, "-=30")
+
+		// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
+
+		.to("#footer-crop-rock-right", 3, { y: -500 }, "-=30")
+		.to("#footer-crop-rock-camera", 3, { y: -250 }, "-=30")
+	// .to("#footer-crop-full", 3, { y: -115 }, "-=30");
+
+	new ScrollMagic.Scene({
+		triggerElement: "#nature-text-trigger",
+		duration: "3000%",
+		triggerHook: 0,
+	})
+		.setTween(timelineFooter)
+		.addTo(controller);
+
+
+
+
+
 }

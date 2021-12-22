@@ -51,12 +51,12 @@
 	z-index: 3;
 }
 
-.footer-crop-camera {
+.footer-crop-rock-camera {
 	z-index: 2;
 }
 
 .footer-crop-full {
-	z-index: 1;
+	z-index: 0;
 }
 
 
