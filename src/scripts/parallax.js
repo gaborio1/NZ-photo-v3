@@ -286,25 +286,64 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 
+
+
+
+
+
+
+
+
 	// FOOTER BACKCROUND PARALLAX
 
 	let timelineFooter = new TimelineMax()
-		.to("#footer-crop-rock-left", 3, { y: -800 }, "-=30")
+
+		// .fromTo("#footer-crop-rock-left", 10, { y: -100 }, { y: 0 }, "-=20")
+		.fromTo("#footer-crop-rock-left", 10, { x: -100 }, { x: 0 }, "-=20")
+
+		// .fromTo("#footer-crop-rock-right", 1, { y: -100 }, { y: 25 }, "-=10")
+		.fromTo("#footer-crop-rock-right", 10, { x: 100 }, { x: 0 }, "-=20");
+
+		// .fromTo("#footer-crop-rock-camera", 10, { y: 0 }, { y: 0 }, "-=20")
+		// .fromTo("#footer-crop-rock-camere", 10, { x: -500 }, { x: 0 }, "-=20");
 
 		// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
 
-		.to("#footer-crop-rock-right", 3, { y: -500 }, "-=30")
-		.to("#footer-crop-rock-camera", 3, { y: -250 }, "-=30")
+		// .to("#footer-crop-rock-right", 3, { y: -800 }, "-=30")
+		// .to("#footer-crop-rock-camera", 3, { y: -400 }, "-=30")
 	// .to("#footer-crop-full", 3, { y: -115 }, "-=30");
 
 	new ScrollMagic.Scene({
-		triggerElement: "#nature-text-trigger",
-		duration: "3000%",
-		triggerHook: 0,
+		// triggerElement: "#nature-text-trigger",
+		triggerElement: ".footer-info-container-1",
+		duration: "50%",
+		triggerHook: 1,
+		offset: 200
 	})
 		.setTween(timelineFooter)
 		.addTo(controller);
 
+
+
+	// let zoomSequenceFooter = new TimelineMax()
+
+	// 	.fromTo("#footer-crop-rock-left", 1, { scale: 1.3, ease: Linear.easeNone }, { scale: 1, ease: Linear.easeNone }, "-=10")
+
+	// 	.fromTo("#footer-crop-rock-right", 1, { scale: 1.1, ease: Linear.easeNone }, { scale: 1, ease: Linear.easeNone }, "-=10");
+
+	// 	// .to("#footer-crop-rock-left", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
+	// 	// .to("#footer-crop-rock-right", 2, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
+	// 	// .to("#footer-crop-rock-camera", 3, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10");
+	// 	// .to("#ooter-crop-full", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10");
+	// new ScrollMagic.Scene({
+	// 	// triggerElement: ".footer",
+	// 	triggerElement: ".footer-info-container-1",
+	// 	duration: "50%",
+	// 	triggerHook: 1,
+	// 	offset: 200
+	// })
+	// 	.setTween(zoomSequenceFooter)
+	// 	.addTo(controller);
 
 
 
