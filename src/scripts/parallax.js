@@ -287,60 +287,72 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 
-	// FOOTER BACKCROUND PARALLAX
+	// ========== FOOTER PARALLAX: ==========
 
-	let timelineFooter = new TimelineMax()
-
-		// .fromTo("#footer-crop-rock-left", 10, { y: 50 }, { y: 0 }, "-=20")
-		.fromTo("#footer-crop-rock-left", 1, { x: -100 }, { x: 0 }, "-=1")
-
-		// .fromTo("#footer-crop-rock-right", 1, { y: -100 }, { y: 25 }, "-=10")
-		.fromTo("#footer-crop-rock-right", 1, { x: 200 }, { x: 0 }, "-=1");
-
-	// .fromTo("#footer-crop-rock-camera", 10, { y: 0 }, { y: 0 }, "-=20")
-	// .fromTo("#footer-crop-rock-camere", 10, { x: -500 }, { x: 0 }, "-=20");
-
-	// .to("#mountain-crop-1", 3, { scale: 2, opacity: 0, ease: Linear.easeNone })
-
-	// .to("#footer-crop-rock-right", 3, { y: -800 }, "-=30")
-	// .to("#footer-crop-rock-camera", 3, { y: -400 }, "-=30")
-	// .to("#footer-crop-full", 3, { y: -115 }, "-=30");
-
+	let textAndIconsFooter = new TimelineMax()
+		// SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
+		.fromTo(
+			".footer-info-container-1",
+			7,
+			{ x: -300, y: -70, scale: 0.4, opacity: 0 },
+			{ x: 0, y: 0, scale: 1, opacity: 1, ease: "easein", delay: 4, stagger: 0.8 },
+			"-=0.5")
+		// SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
+		.fromTo(".social-media-icon",
+			7,
+			{ x: 200, opacity: 0 },
+			{ x: 0, opacity: 1, ease: "easein", delay: 4, stagger: 0.8 },
+			"-=0.5");
 	new ScrollMagic.Scene({
-		// triggerElement: "#nature-text-trigger",
 		triggerElement: ".footer-info-container-1",
 		duration: "60%",
 		triggerHook: 1,
-		// offset: 200
 	})
-		.setTween(timelineFooter)
+		.setTween(textAndIconsFooter)
 		.addTo(controller);
 
 
-
-	let zoomSequenceFooter = new TimelineMax()
-
-		// .fromTo("#footer-crop-rock-left", 1, { scale: 1, ease: Linear.easeNone }, { scale: 2, ease: Linear.easeNone }, "-=10")
-
-		// .fromTo("#footer-crop-rock-right", 1, { scale: 1.1, ease: Linear.easeNone }, { scale: 1, ease: Linear.easeNone }, "-=10");
-
-		.fromTo("#footer-crop-rock-camera", 1, { scale: 1.3, ease: Linear.easeNone }, { scale: 1, ease: Linear.easeNone }, "-=10");
-
-	// .to("#footer-crop-rock-left", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
-	// .to("#footer-crop-rock-right", 2, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
-	// .to("#footer-crop-rock-camera", 3, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10");
-	// .to("#ooter-crop-full", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10");
+	// ROCKS SLIDE:
+	let rockSlideFooter = new TimelineMax()
+		.fromTo("#footer-crop-rock-left", 5, { x: -100 }, { x: 0 }, "2")
+		.fromTo("#footer-crop-rock-right", 5, { x: 200 }, { x: 0 }, "0.5")
 	new ScrollMagic.Scene({
-		// triggerElement: ".footer",
 		triggerElement: ".footer-info-container-1",
 		duration: "100%",
 		triggerHook: 1,
-		// offset: 10
 	})
-		.setTween(zoomSequenceFooter)
+		.setTween(rockSlideFooter)
 		.addTo(controller);
 
 
+	//  CAMERA ZOOM IN:
+	let zoomCameraFooter = new TimelineMax()
+		.fromTo("#footer-crop-rock-camera",
+			1,
+			{ scale: 1.3, ease: Linear.easeNone },
+			{ scale: 1, ease: Linear.easeNone },
+			"-=10");
+	new ScrollMagic.Scene({
+		triggerElement: ".footer-info-container-1",
+		duration: "100%",
+		triggerHook: 1,
+	})
+		.setTween(zoomCameraFooter)
+		.addTo(controller);
 
+	// NOT IN USE AS ICONS SLIDE IN ONE BY ONE !!!
+	// SOCIAL MEDIA ICON CONTAINER (ALL ICONS SLIDE WITH CONTAINER)
+
+	// let timelineSocialMediaContainer = new TimelineMax()
+	// 	.to(".social-media-icon-container", 10, { x: "-200" }, "-=10")
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".footer-content-2",
+	// 	duration: "100%",
+	// 	triggerHook: 0.5,
+	// 	// offset: 10
+	// })
+	// 	.setTween(timelineSocialMediaContainer)
+	// 	// .setPin(".image-container")
+	// 	.addTo(controller);
 
 }
