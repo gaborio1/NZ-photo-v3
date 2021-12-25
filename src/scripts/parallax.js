@@ -106,6 +106,51 @@ if (window.innerWidth > 768) {
 		.setTween(zoomSequence)
 		.addTo(controller);
 
+
+
+
+	let titleDivFadeOut = new TimelineMax()
+		// NOT IN USE:
+		// photography LETTERS FADEOUT (SEQUENCE: stagger)
+
+		// .fromTo(
+		// 	// ".photography__letter",
+		// 	// ".title-div-content",
+		// 	".enzee__letter",
+		// 	7,
+		// 	{ y: 0, filter: "blur(0px)", opacity: 1 },
+		// 	{ y: 0, filter: "blur(0px)", opacity: 0 },
+		// )
+
+		// Enzee
+		.fromTo(
+			".title-div__enzee-container",
+			1,
+			{ x: 0, filter: "blur(0px)", opacity: 1 },
+			{ x: -100, filter: "blur(0px)", opacity: 0 },
+		)
+		// photography
+		.fromTo(".photography__letter",
+			1,
+			{ x: 0, y: 0, opacity: 1 },
+			{ x: 100, y: 0, opacity: 0, delay: 0, stagger: 0 },
+			"-=1")
+		// CLEAR DIV
+		.fromTo(
+			"#title-div",
+			7,
+			{ y: 0, scale: 1, filter: "blur(0px)", opacity: 1 },
+			{ y: 0, scale: 1, filter: "blur(10px)", opacity: 0, ease: "easein" },
+			"-=1");
+	new ScrollMagic.Scene({
+		triggerElement: "#title-div",
+		duration: "100%",
+		triggerHook: 0.1,
+	})
+		.setTween(titleDivFadeOut)
+		.addTo(controller);
+
+
 	// ========== ANIMATING CATEGORIES ONE BY ONE WITHOUT TIMELINE ==========
 
 	// ===== MODEL =====
