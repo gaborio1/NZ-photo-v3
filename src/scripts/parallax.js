@@ -291,13 +291,40 @@ if (window.innerWidth > 768) {
 
 	let textAndIconsFooter = new TimelineMax()
 		// SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
+
+		// FOOTER INFO DIV WITH SLOGAN AND BUTTON TOGETHER:
+
+		// .fromTo(
+		// 	".footer-info-container-1",
+		// 	7,
+		// 	{ x: -300, y: -70, scale: 0.4, opacity: 0 },
+		// 	{ x: 0, y: 0, scale: 1, opacity: 1, ease: "easein", delay: 4, stagger: 0.8 },
+		// 	"-=0.5")
+
+		// SLOGAN SENTENCES/BUTTON IN SEQUENCE:
 		.fromTo(
-			".footer-info-container-1",
+			".footer-info-content",
 			7,
-			{ x: -300, y: -70, scale: 0.4, opacity: 0 },
-			{ x: 0, y: 0, scale: 1, opacity: 1, ease: "easein", delay: 4, stagger: 0.8 },
+			{ x: -300, y: -70, scale: 0.5, filter: "blur(10px)", opacity: 0 },
+			{ x: 0, y: 0, scale: 1, filter: "blur(0px)", opacity: 1, ease: "easein", delay: 4, stagger: 10 },
 			"-=0.5")
+
+		// CLEAR DIV:
+		// .fromTo(
+		// 	".footer-info-container-2",
+		// 	7,
+		// 	{ x: -300, scale: 0.5, filter: "blur(10px)", opacity: 0 },
+		// 	{ x: 0, scale: 1, filter: "blur(0px)", opacity: 1, ease: "easein", delay: 4, stagger: 10 },
+		// 	"-=0")
+
 		// SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
+		.fromTo(
+			".full-width-2",
+			7,
+			{ y: 100, scale: 1, filter: "blur(10px)", opacity: 0 },
+			{ y: 0, scale: 1, filter: "blur(0px)", opacity: 1, ease: "easein" },
+			"-=0")
+
 		.fromTo(".social-media-icon",
 			7,
 			{ x: 200, opacity: 0 },
@@ -314,8 +341,8 @@ if (window.innerWidth > 768) {
 
 	// ROCKS SLIDE:
 	let rockSlideFooter = new TimelineMax()
-		.fromTo("#footer-crop-rock-left", 5, { x: -100 }, { x: 0 }, "2")
-		.fromTo("#footer-crop-rock-right", 5, { x: 200 }, { x: 0 }, "0.5")
+		.fromTo("#footer-crop-rock-left", 5, { x: -100, filter: "blur(2px)" }, { x: 0, filter: "blur(0px)" }, "2")
+		.fromTo("#footer-crop-rock-right", 5, { x: 200, filter: "blur(2px)" }, { x: 0, filter: "blur(0px)" }, "0.5")
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
 		duration: "100%",
@@ -329,9 +356,9 @@ if (window.innerWidth > 768) {
 	let zoomCameraFooter = new TimelineMax()
 		.fromTo("#footer-crop-rock-camera",
 			1,
-			{ scale: 1.3, ease: Linear.easeNone },
-			{ scale: 1, ease: Linear.easeNone },
-			"-=10");
+			{ scale: 1.3, filter: "blur(5px)" },
+			{ scale: 1, filter: "blur(0px)" }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
 		duration: "100%",
