@@ -63,8 +63,12 @@
       	z-index: -5;
     }
 
-	img.mountain-full {
+	img.mountain-crop-6 {
 		z-index: -6;
+  	}
+
+	img.mountain-full {
+		z-index: -7;
     }
 
 
