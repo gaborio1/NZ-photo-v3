@@ -44,7 +44,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="my-scrollbar" class="wrapper">
         <div class="backdrop preload hidden"></div>
         <header id="header" class="header preload">
             <div class="header-content">
@@ -152,8 +152,8 @@
                     class="mountain-parallax mountain-crop mountain-crop-5 non-mobile-size" alt="" />
 
                 <!-- !!! CURRENTLY NOT IN USE, PARALLAX.JS WON'T HANDLE MORE THAN 6 LAYERS !!! -->
-                <!-- <img src="./images/mountain-crop-6.png" id="mountain-crop-6"
-                    class="mountain-parallax mountain-crop mountain-crop-6 non-mobile-size" alt="" /> -->
+                <img src="./images/mountain-crop-6.png" id="mountain-crop-6"
+                    class="mountain-parallax mountain-crop mountain-crop-6 non-mobile-size" alt="" />
             </div>
 
 
@@ -491,6 +491,7 @@
         </div>
         <!-- WRAPPER 2 -->
     </div>
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
 			integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
 			crossorigin="anonymous">
@@ -499,13 +500,35 @@
     <!-- SMOOTH SCROLL: -->
     <!-- https://forum.squarespace.com/topic/174489-slowsmooth-scroll/ -->
 
-    <script src="https://code.nath.co/src/jQuery.min.js"></script>
+    <!-- <script src="https://code.nath.co/src/jQuery.min.js"></script>
     <script src="https://rawgit.com/nathco/jQuery.scrollSpeed/master/jQuery.scrollSpeed.js"></script>
     <script>
         $(function () {
-            jQuery.scrollSpeed(0, 1000000000, "easeOutCubic");
+            jQuery.scrollSpeed(0, 10000000, "easeOutCubic");
         });
-    </script>
+    </script> -->
+
+
+    <!-- NOT JIN USE: -->
+
+    <!-- <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+
+    <script>
+        var Scrollbar = window.Scrollbar;
+
+        const options = {
+            damping: 0.05,
+            renderByPixels: true,
+            alwaysShowTracks: true
+        }
+
+        // TRIGGER ELEMENT: WRAPPER
+        Scrollbar.init(document.querySelector('#my-scrollbar'), options);
+
+        console.log("smooth scroll");
+    </script> -->
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
         integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
