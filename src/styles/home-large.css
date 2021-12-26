@@ -135,6 +135,7 @@
 		width: var(--max-width);
 		height: 135px;
 		margin: auto;
+		overflow: hidden;
 
 		background: rgba(0, 0, 0, 0.192);
 		/* background: #56d2e213; */
@@ -478,7 +479,7 @@
 
     /* FADE OUT / SLIDE INFO DIV */
     .category-img-container:hover .info-div {
-		opacity: 0.4;
+		opacity: 0;
 		/* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
 		width: 500px;
     }
@@ -509,7 +510,7 @@
 		transform: rotate(-90deg);
 
 		/* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
-		transition: opacity 1s ease, width ease 1s;
+		transition: opacity 0.5s ease-in, width ease-in 0.5s;
 
 		/* border: 1px solid rgba(255, 166, 0, 0.861); */
     }

@@ -2,9 +2,10 @@
 // !!!!! HAS TO BE UP TOP !!!!!
 // IF Y VALUE NOT MODIFIED WE CAN USE ELEMENT AS TRIGGER
 
-// ========== LANDING PAGE AND TITLE DIV PARALLAX ==========
+
 if (window.innerWidth > 768) {
 	console.log("parallax js");
+
 	const controller = new ScrollMagic.Controller();
 
 	// CONTROL NAVBAR OPACITY WITH SCROLL
@@ -105,8 +106,6 @@ if (window.innerWidth > 768) {
 	})
 		.setTween(zoomSequence)
 		.addTo(controller);
-
-
 
 
 	let titleDivFadeOut = new TimelineMax()
