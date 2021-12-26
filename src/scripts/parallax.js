@@ -370,14 +370,16 @@ if (window.innerWidth > 768) {
 			"-=0")
 
 		.fromTo(".social-media-icon",
-			7,
+			5,
 			{ x: 200, opacity: 0 },
-			{ x: 0, opacity: 1, ease: "easein", delay: 4, stagger: 0.8 },
+			{ x: 0, opacity: 1, ease: "easein", delay: 4, stagger: 1 },
 			"-=0.5");
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
-		duration: "60%",
+		// duration: "100%",
+		duration: 475,
 		triggerHook: 1,
+		// offset: -150
 	})
 		.setTween(textAndIconsFooter)
 		.addTo(controller);
