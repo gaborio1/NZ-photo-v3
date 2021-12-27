@@ -44,11 +44,11 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="my-scrollbar" class="wrapper">
         <div class="backdrop preload hidden"></div>
         <header id="header" class="header preload">
             <div class="header-content">
-                <div class="logo-container">
+                <div class="logo-container navbar-fadein">
                     <div class="logo__block-row">
                         <div class="logo__block logo__block-1"></div>
                         <div class="logo__block logo__block-2"></div>
@@ -61,15 +61,16 @@
                 </a> -->
 
                 <nav class="nav">
-                    <a id="navbar__home" class="page-link nav-link nav-link-text hover-pointer" href="#">
+                    <a id="navbar__home" class="page-link nav-link nav-link-text navbar-fadein hover-pointer" href="#">
                         Home
                     </a>
-                    <a id="navbar__about" class="page-link nav-link nav-link-text hover-pointer"
+                    <a id="navbar__about" class="page-link nav-link nav-link-text navbar-fadein hover-pointer"
                         href="pages/about.html">
                         About
                     </a>
                     <div class="nav-link--dropdown">
-                        <button id="navbar__portfolio" class="dropbtn nav-link-text hover-pointer navbar__portfolio">
+                        <button id="navbar__portfolio"
+                            class="dropbtn nav-link-text navbar-fadein hover-pointer navbar__portfolio">
                             portfolio
                             <i class="fa fa-caret-down down-arrow--portfolio arrow"></i>
                             <i class="fa fa-caret-up up-arrow--portfolio arrow hidden"></i>
@@ -84,7 +85,8 @@
                         </div>
                     </div>
                     <div class="nav-link--dropdown">
-                        <button id="navbar__products" class="dropbtn nav-link-text hover-pointer navbar__products">
+                        <button id="navbar__products"
+                            class="dropbtn nav-link-text navbar-fadein hover-pointer navbar__products">
                             products
                             <i class="fa fa-caret-down down-arrow--products arrow"></i>
                             <i class="fa fa-caret-up up-arrow--products arrow hidden"></i>
@@ -94,7 +96,7 @@
                             <a class="page-link" href="pages/before-after.html">before/after</a>
                         </div>
                     </div>
-                    <a id="navbar__contact" class="page-link nav-link nav-link-text hover-pointer"
+                    <a id="navbar__contact" class="page-link nav-link nav-link-text navbar-fadein hover-pointer"
                         href="pages/contact.html">
                         Contact
                     </a>
@@ -117,7 +119,7 @@
                             <a href="pages/model.html">Model</a>
                             <a href="pages/nature.html">Nature</a>
                         </div>
-                        <button type="" id="default-btn" class="default-btn hover-pointer">
+                        <button type="" id="default-btn" class="default-btn navbar-fadein hover-pointer">
                             <i class="fa fa-search"></i>
                         </button>
                         <button type="" id="close-btn" class="close-btn hidden">
@@ -150,10 +152,8 @@
                     class="mountain-parallax mountain-crop mountain-crop-4 non-mobile-size" alt="" />
                 <img src="./images/mountain-crop-5.png" id="mountain-crop-5"
                     class="mountain-parallax mountain-crop mountain-crop-5 non-mobile-size" alt="" />
-
-                <!-- !!! CURRENTLY NOT IN USE, PARALLAX.JS WON'T HANDLE MORE THAN 6 LAYERS !!! -->
-                <!-- <img src="./images/mountain-crop-6.png" id="mountain-crop-6"
-                    class="mountain-parallax mountain-crop mountain-crop-6 non-mobile-size" alt="" /> -->
+                <img src="./images/mountain-crop-6.png" id="mountain-crop-6"
+                    class="mountain-parallax mountain-crop mountain-crop-6 non-mobile-size" alt="" />
             </div>
 
 
@@ -491,21 +491,40 @@
         </div>
         <!-- WRAPPER 2 -->
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-			integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-			crossorigin="anonymous">
-		  </script> -->
+
+    <!-- NOT IN USE: -->
 
     <!-- SMOOTH SCROLL: -->
     <!-- https://forum.squarespace.com/topic/174489-slowsmooth-scroll/ -->
 
-    <script src="https://code.nath.co/src/jQuery.min.js"></script>
+    <!-- <script src="https://code.nath.co/src/jQuery.min.js"></script>
     <script src="https://rawgit.com/nathco/jQuery.scrollSpeed/master/jQuery.scrollSpeed.js"></script>
     <script>
         $(function () {
-            jQuery.scrollSpeed(0, 1000000000, "easeOutCubic");
+            jQuery.scrollSpeed(0, 10000000, "easeOutCubic");
         });
-    </script>
+    </script> -->
+
+
+    <!-- NOT IN USE -->
+
+    <!-- <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+
+    <script>
+        var Scrollbar = window.Scrollbar;
+
+        const options = {
+            damping: 0.05,
+            renderByPixels: true,
+            alwaysShowTracks: true
+        }
+
+        // TRIGGER ELEMENT: WRAPPER
+        Scrollbar.init(document.querySelector('#my-scrollbar'), options);
+
+        console.log("smooth scroll");
+    </script> -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
         integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="

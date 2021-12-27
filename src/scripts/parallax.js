@@ -2,7 +2,6 @@
 // !!!!! HAS TO BE UP TOP !!!!!
 // IF Y VALUE NOT MODIFIED WE CAN USE ELEMENT AS TRIGGER
 
-
 if (window.innerWidth > 768) {
 	console.log("parallax js");
 
@@ -19,6 +18,13 @@ if (window.innerWidth > 768) {
 		.setTween(timelineNav)
 		.addTo(controller);
 
+	// NAVBAR SLIDES DOWN 
+	gsap.from("header", { duration: 1.25, y: -45, opacity: 0.5, ease: "power4" });
+	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
+	gsap.from(".navbar-fadein", { duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" });
+
+
+
 	// ========== MOVING MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
 
 
@@ -27,6 +33,7 @@ if (window.innerWidth > 768) {
 	// MOUNTAIN LAYERS:
 
 	let timelineMountain = new TimelineMax()
+<<<<<<< HEAD
 		.to("#mountain-crop-1", 3, { y: -800 }, "-=30")
 		.to("#mountain-crop-2", 3, { y: -500 }, "-=30")
 		.to("#mountain-crop-3", 3, { y: -250 }, "-=30")
@@ -37,6 +44,30 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "3000%",
+=======
+
+
+		// .to("#mountain-crop-1", 3, { y: -800 }, "-=30")
+		.to("#mountain-crop-1", 1, { y: -1000 })
+		// .to("#mountain-crop-2", 3, { y: -500 }, "-=30")
+		.to("#mountain-crop-2", 1, { y: -600 }, "-=1")
+		// .to("#mountain-crop-3", 3, { y: -250 }, "-=30")
+		.to("#mountain-crop-3", 1, { y: -250 }, "-=1")
+		// .to("#mountain-crop-4", 3, { y: -115 }, "-=30")
+		.to("#mountain-crop-4", 1, { y: -115 }, "-=1")
+		// .to("#mountain-crop-5", 3, { y: -30 }, "-=30")
+		.to("#mountain-crop-5", 1, { y: -30 }, "-=1")
+		// .to("#mountain-crop-6", 3, { y: -10 }, "-=30");
+		.to("#mountain-crop-6", 1, { y: 20 }, "-=1")
+
+
+
+		.to("#mountain-full", 3, { y: 100 }, "-=1");
+	new ScrollMagic.Scene({
+		triggerElement: ".image-container",
+		duration: "250%",
+		// duration: "100%",
+>>>>>>> 1-refactor-parallax.js
 		triggerHook: 0,
 	})
 		.setTween(timelineMountain)
@@ -44,12 +75,19 @@ if (window.innerWidth > 768) {
 
 	// TITLE-DIV AND MAIN CONTENT:
 	let timelineContentAndTitle = new TimelineMax()
-		.to("#title-div", 3, { top: "-120%" }, "-=30")
+		// .to("#title-div", 3, { top: "-120%" }, "-=30")
+		.to("#title-div", 4, { top: "-130%" }, "-=20")
 		// MAIN CONTENT SLIDES ON TOP
-		.to(".main-content", 3, { top: "0%" }, "-=30");
+		// .to(".main-content", 3, { top: "0%" }, "-=30");
+		.to(".main-content", 4, { top: "-5%" }, "-=20");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
+<<<<<<< HEAD
 		duration: "3000%",
+=======
+		// duration: "1000%",
+		duration: "500%",
+>>>>>>> 1-refactor-parallax.js
 		triggerHook: 0,
 	})
 		.setTween(timelineContentAndTitle)
@@ -61,14 +99,19 @@ if (window.innerWidth > 768) {
 
 
 	let zoomSequence = new TimelineMax()
-		.to("#mountain-crop-1", 1, { scale: 2.5, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-2", 2, { scale: 1.6, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
+		.to("#mountain-crop-2", 2, { scale: 1.8, opacity: 1, ease: Linear.easeNone }, "-=10")
 		.to("#mountain-crop-3", 3, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=10")
 		.to("#mountain-crop-4", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10")
 		.to("#mountain-crop-5", 3, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=10");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
+<<<<<<< HEAD
 		duration: "3000%",
+=======
+		duration: "500%",
+		// duration: "100%",
+>>>>>>> 1-refactor-parallax.js
 		triggerHook: 0,
 	})
 		.setTween(zoomSequence)
@@ -99,7 +142,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#title-div",
 		duration: "100%",
-		triggerHook: 0.1,
+		triggerHook: 0.1
 	})
 		.setTween(titleDivFadeOut)
 		.addTo(controller);
@@ -114,7 +157,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#model-img-trigger",
 		duration: "70%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineModel)
 		.addTo(controller);
@@ -126,7 +169,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#model-text-trigger",
 		duration: "20%",
 		offset: -30,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineModelText)
 		.addTo(controller);
@@ -140,7 +183,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#street-text-trigger",
 		duration: "70%",
 		offset: 40,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineStreetText)
 		.addTo(controller);
@@ -153,7 +196,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#street-img-trigger",
 		duration: "50%",
 		offset: -80,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineStreet)
 		.addTo(controller);
@@ -166,7 +209,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-img-trigger",
 		duration: "50%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineMotion)
 		.addTo(controller);
@@ -178,7 +221,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-text-trigger",
 		duration: "40%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineMotionText)
 		.addTo(controller);
@@ -190,7 +233,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#mosaic-trigger",
 		duration: "150%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineMosaicContainer)
 		.addTo(controller);
@@ -203,7 +246,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: ".mosaic-slice-container-1",
 		duration: "150%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineMosaicSlices)
 		.addTo(controller);
@@ -215,7 +258,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#portrait-img-trigger",
 		duration: "70%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelinePortrait)
 		.addTo(controller);
@@ -227,7 +270,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#portrait-text-trigger",
 		duration: "20%",
 		offset: -30,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelinePortraitText)
 		.addTo(controller);
@@ -241,7 +284,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#abstract-text-trigger",
 		duration: "70%",
 		offset: 40,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineAbstractText)
 		.addTo(controller);
@@ -254,7 +297,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#abstract-img-trigger",
 		duration: "50%",
 		offset: -80,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineAbstract)
 		.addTo(controller);
@@ -267,7 +310,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-img-trigger",
 		duration: "50%",
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineNature)
 		.addTo(controller);
@@ -280,7 +323,7 @@ if (window.innerWidth > 768) {
 		triggerElement: "#nature-text-trigger",
 		duration: "40%",
 		// offset: 300,
-		triggerHook: 0.95,
+		triggerHook: 0.95
 	})
 		.setTween(timelineNatureText)
 		.addTo(controller);
@@ -313,7 +356,7 @@ if (window.innerWidth > 768) {
 		triggerElement: ".footer-info-container-1",
 		// duration: "100%",
 		duration: 475,
-		triggerHook: 1,
+		triggerHook: 1
 		// offset: -150
 	})
 		.setTween(textAndIconsFooter)
@@ -327,7 +370,7 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
 		duration: "100%",
-		triggerHook: 1,
+		triggerHook: 1
 	})
 		.setTween(rockSlideFooter)
 		.addTo(controller);
@@ -343,9 +386,12 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
 		duration: "100%",
-		triggerHook: 1,
+		triggerHook: 1
 	})
 		.setTween(zoomCameraFooter)
 		.addTo(controller);
 
 }
+
+
+
