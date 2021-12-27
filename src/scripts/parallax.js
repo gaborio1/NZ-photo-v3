@@ -33,18 +33,6 @@ if (window.innerWidth > 768) {
 	// MOUNTAIN LAYERS:
 
 	let timelineMountain = new TimelineMax()
-<<<<<<< HEAD
-		.to("#mountain-crop-1", 3, { y: -800 }, "-=30")
-		.to("#mountain-crop-2", 3, { y: -500 }, "-=30")
-		.to("#mountain-crop-3", 3, { y: -250 }, "-=30")
-		.to("#mountain-crop-4", 3, { y: -115 }, "-=30")
-		.to("#mountain-crop-5", 3, { y: -30 }, "-=30")
-		.to("#mountain-crop-6", 3, { y: -10 }, "-=30");
-	// .to("#mountain-full", 3, { y: 100 }, "-=30");
-	new ScrollMagic.Scene({
-		triggerElement: ".image-container",
-		duration: "3000%",
-=======
 
 
 		// .to("#mountain-crop-1", 3, { y: -800 }, "-=30")
@@ -67,7 +55,6 @@ if (window.innerWidth > 768) {
 		triggerElement: ".image-container",
 		duration: "250%",
 		// duration: "100%",
->>>>>>> 1-refactor-parallax.js
 		triggerHook: 0,
 	})
 		.setTween(timelineMountain)
@@ -82,12 +69,8 @@ if (window.innerWidth > 768) {
 		.to(".main-content", 4, { top: "-5%" }, "-=20");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
-<<<<<<< HEAD
-		duration: "3000%",
-=======
 		// duration: "1000%",
 		duration: "500%",
->>>>>>> 1-refactor-parallax.js
 		triggerHook: 0,
 	})
 		.setTween(timelineContentAndTitle)
@@ -106,12 +89,8 @@ if (window.innerWidth > 768) {
 		.to("#mountain-crop-5", 3, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=10");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
-<<<<<<< HEAD
-		duration: "3000%",
-=======
 		duration: "500%",
 		// duration: "100%",
->>>>>>> 1-refactor-parallax.js
 		triggerHook: 0,
 	})
 		.setTween(zoomSequence)
