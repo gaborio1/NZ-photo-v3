@@ -12,7 +12,7 @@ if (window.innerWidth > 768) {
 		// REVEAL NAVBAR ON SCROLL display: none -> flex
 		// .to("header", 1, { display: "flex" })
 		// .fromTo("header", 1, { opacity: 0 }, { opacity: 1 }, "-=1")
-		.fromTo("header", 1, { background: "rgba(0, 0, 0, 0.85)" }, { background: "rgba(0, 0, 0, 0.95)" }, "-=0");
+		.fromTo("header", 1, { background: "rgba(0, 0, 0, 0.85)" }, { background: "rgba(0, 0, 0, 0.95)" });
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "250%",
@@ -23,7 +23,7 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 	// NAVBAR SLIDES DOWN 
-	gsap.from("header", { duration: 1.25, y: -45, opacity: 0.5, ease: "power4" });
+	// gsap.from("header", { duration: 1.25, y: -45, opacity: 0.5, ease: "power4" });
 	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
 	gsap.from(".navbar-fadein", { duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" });
 
@@ -32,54 +32,72 @@ if (window.innerWidth > 768) {
 	// ========== MOVING MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
 
 
-	// 					CURRENT VERSION:
+	// gsap.to("#mountain-crop-1", 5, { y: -1000 })
+	// gsap.to("#mountain-crop-2", 5, { y: -600 })
+	// gsap.to("#mountain-crop-3", 5, { y: -250 })
+	// gsap.to("#mountain-crop-4", 5, { y: -115 })
+	// gsap.to("#mountain-crop-5", 5, { y: -30 })
+	// gsap.to("#mountain-crop-6", 5, { y: 20 })
 
-	// MOUNTAIN LAYERS:
+	// gsap.to("#mountain-full", 5, { y: 100 });
+	
+	// gsap.to("#title-div", 5, { top: "-130%" })
+		
+	// gsap.to(".main-content", 5, { top: "-5%" });
 
 	let timelineMountain = new TimelineMax()
 
+	.to("#mountain-crop-1", 5, { y: -1000 })
+	.to("#mountain-crop-2", 5, { y: -600 }, "-=5")
+	.to("#mountain-crop-3", 5, { y: -250 }, "-=5")
+	.to("#mountain-crop-4", 5, { y: -115 }, "-=5")
+	.to("#mountain-crop-5", 5, { y: -30 }, "-=5")
+	.to("#mountain-crop-6", 5, { y: 20 }, "-=5")
+	.to("#mountain-full", 5, { y: 100 }, "-=5")
 
-		// .to("#mountain-crop-1", 3, { y: -800 }, "-=30")
-		.to("#mountain-crop-1", 1, { y: -1000 })
-		// .to("#mountain-crop-2", 3, { y: -500 }, "-=30")
-		.to("#mountain-crop-2", 1, { y: -600 }, "-=1")
-		// .to("#mountain-crop-3", 3, { y: -250 }, "-=30")
-		.to("#mountain-crop-3", 1, { y: -250 }, "-=1")
-		// .to("#mountain-crop-4", 3, { y: -115 }, "-=30")
-		.to("#mountain-crop-4", 1, { y: -115 }, "-=1")
-		// .to("#mountain-crop-5", 3, { y: -30 }, "-=30")
-		.to("#mountain-crop-5", 1, { y: -30 }, "-=1")
-		// .to("#mountain-crop-6", 3, { y: -10 }, "-=30");
-		.to("#mountain-crop-6", 1, { y: 20 }, "-=1")
+	// .to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=1")
+	// .to("#mountain-crop-2", 1, { scale: 1.8, opacity: 1, ease: Linear.easeNone }, "-=1")
+	// .to("#mountain-crop-3", 1, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=1")
+	// .to("#mountain-crop-4", 1, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=1")
+	// .to("#mountain-crop-5", 1, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=1")
+	
+	.to("#title-div", 5, { top: "-130%" }, "-=5")
+		
+	.to(".main-content", 5, { top: "-5%" }, "-=5");
 
 
 
-		.to("#mountain-full", 3, { y: 100 }, "-=1");
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
-		duration: "250%",
+		duration: "100%",
 		// duration: "100%",
 		triggerHook: 0,
 	})
 		.setTween(timelineMountain)
+		// .setPin(".image-container")
+		// .timeScale( 0.5 )
 		.addTo(controller);
 
+	// timelineMountain.timeScale(0.5);
+
+
+
 	// TITLE-DIV AND MAIN CONTENT:
-	let timelineContentAndTitle = new TimelineMax()
-		// .to("#title-div", 3, { top: "-120%" }, "-=30")
-		.to("#title-div", 4, { top: "-130%" }, "-=20")
-		// MAIN CONTENT SLIDES ON TOP
-		// .to(".main-content", 3, { top: "0%" }, "-=30");
-		.to(".main-content", 4, { top: "-5%" }, "-=20");
-	new ScrollMagic.Scene({
-		triggerElement: ".image-container",
-		// duration: "1000%",
-		duration: "500%",
-		triggerHook: 0,
-	})
-		.setTween(timelineContentAndTitle)
-		// .setPin(".image-container")
-		.addTo(controller);
+	// let timelineContentAndTitle = new TimelineMax()
+	// 	// .to("#title-div", 3, { top: "-120%" }, "-=30")
+	// 	.to("#title-div", 4, { top: "-130%" }, "-=20")
+	// 	// MAIN CONTENT SLIDES ON TOP
+	// 	// .to(".main-content", 3, { top: "0%" }, "-=30");
+	// 	.to(".main-content", 4, { top: "-5%" }, "-=20");
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".image-container",
+	// 	// duration: "1000%",
+	// 	duration: "500%",
+	// 	triggerHook: 0,
+	// })
+	// 	.setTween(timelineContentAndTitle)
+	// 	// .setPin(".image-container")
+	// 	.addTo(controller);
 
 
 	// 					PINNING IMAGE CONTAINER:
@@ -111,20 +129,20 @@ if (window.innerWidth > 768) {
 	// ========== ZOOMING IN ON MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
 
 
-	let zoomSequence = new TimelineMax()
-		.to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-2", 2, { scale: 1.8, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-3", 3, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-4", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10")
-		.to("#mountain-crop-5", 3, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=10");
-	new ScrollMagic.Scene({
-		triggerElement: ".image-container",
-		duration: "500%",
-		// duration: "100%",
-		triggerHook: 0,
-	})
-		.setTween(zoomSequence)
-		.addTo(controller);
+	// let zoomSequence = new TimelineMax()
+	// 	.to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
+	// 	.to("#mountain-crop-2", 2, { scale: 1.8, opacity: 1, ease: Linear.easeNone }, "-=10")
+	// 	.to("#mountain-crop-3", 3, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=10")
+	// 	.to("#mountain-crop-4", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10")
+	// 	.to("#mountain-crop-5", 3, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=10");
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".image-container",
+	// 	duration: "100%",
+	// 	// duration: "100%",
+	// 	triggerHook: 0,
+	// })
+	// 	.setTween(zoomSequence)
+	// 	.addTo(controller);
 
 
 	let titleDivFadeOut = new TimelineMax()
@@ -352,6 +370,8 @@ if (window.innerWidth > 768) {
 
 	// ========== FOOTER PARALLAX: ==========
 
+	// WORKS FINE WITHOUT ROCK SLIDE AND CAMERA ZOOM:
+
 	let textAndIconsFooter = new TimelineMax()
 		// SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
 
@@ -405,32 +425,38 @@ if (window.innerWidth > 768) {
 
 
 	// ROCKS SLIDE:
-	let rockSlideFooter = new TimelineMax()
-		.fromTo("#footer-crop-rock-left", 5, { x: -100, filter: "blur(2px)" }, { x: 0, filter: "blur(0px)" }, "2")
-		.fromTo("#footer-crop-rock-right", 5, { x: 200, filter: "blur(2px)" }, { x: 0, filter: "blur(0px)" }, "0.5")
-	new ScrollMagic.Scene({
-		triggerElement: ".footer-info-container-1",
-		duration: "100%",
-		triggerHook: 1
-	})
-		.setTween(rockSlideFooter)
-		.addTo(controller);
+	// let rockSlideFooter = new TimelineMax()
+	// 	.fromTo("#footer-crop-rock-left", 5, { x: -100, filter: "blur(2px)" }, { x: 0, filter: "blur(0px)" }, "2")
+	// 	.fromTo("#footer-crop-rock-right", 5, { x: 200, filter: "blur(2px)" }, { x: 0, filter: "blur(0px)" }, "0.5")
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".footer-info-container-1",
+	// 	duration: "100%",
+	// 	triggerHook: 1
+	// })
+	// 	.setTween(rockSlideFooter)
+	// 	.addTo(controller);
 
 
 	//  CAMERA ZOOM IN:
-	let zoomCameraFooter = new TimelineMax()
-		.fromTo("#footer-crop-rock-camera",
-			1,
-			{ scale: 1.3, filter: "blur(5px)" },
-			{ scale: 1, filter: "blur(0px)" }
-		);
-	new ScrollMagic.Scene({
-		triggerElement: ".footer-info-container-1",
-		duration: "100%",
-		triggerHook: 1
-	})
-		.setTween(zoomCameraFooter)
-		.addTo(controller);
+	// let zoomCameraFooter = new TimelineMax()
+	// 	.fromTo("#footer-crop-rock-camera",
+	// 		1,
+	// 		{ scale: 1.3, filter: "blur(5px)" },
+	// 		{ scale: 1, filter: "blur(0px)" }
+	// 	);
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".footer-info-container-1",
+	// 	duration: "100%",
+	// 	triggerHook: 1
+	// })
+	// 	.setTween(zoomCameraFooter)
+	// 	.addTo(controller);
+
+
+
+
+
+
 
 	// NOT IN USE AS ICONS SLIDE IN ONE BY ONE !!!
 	// SOCIAL MEDIA ICON CONTAINER (ALL ICONS SLIDE WITH CONTAINER)
