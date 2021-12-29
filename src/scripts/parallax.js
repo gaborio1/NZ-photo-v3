@@ -52,13 +52,20 @@ if (window.innerWidth > 768) {
 
 		// SLIDE
 		// .to("#mountain-crop-1", 1, { y: "-90vh" })
-		.to("#mountain-crop-2", 1, { y: "-60vh" }, "-=1")
-		.to("#mountain-crop-3", 1, { y: "-25vh" }, "-=1")
-		.to("#mountain-crop-4", 1, { y: "-5vh" }, "-=1")
-		.to("#mountain-crop-5", 1, { y: "30vh" }, "-=1")
-		.to("#mountain-crop-6", 1, { y: "40vh" }, "-=1")
+		.to("#mountain-crop-1", 1, { y: "-270vh" })
+		// .to("#mountain-crop-2", 1, { y: "-60vh" }, "-=1")
+		.to("#mountain-crop-2", 1, { y: "-180vh" }, "-=1")
+		// .to("#mountain-crop-3", 1, { y: "-25vh" }, "-=1")
+		.to("#mountain-crop-3", 1, { y: "-75vh" }, "-=1")
+		// .to("#mountain-crop-4", 1, { y: "-5vh" }, "-=1")
+		.to("#mountain-crop-4", 1, { y: "-15vh" }, "-=1")
+		// .to("#mountain-crop-5", 1, { y: "30vh" }, "-=1")
+		.to("#mountain-crop-5", 1, { y: "90vh" }, "-=1")
+		// .to("#mountain-crop-6", 1, { y: "40vh" }, "-=1")
+		.to("#mountain-crop-6", 1, { y: "120vh" }, "-=1")
 		// PINNED:
-		.to("#mountain-full", 1, { y: "60vh" }, "-=1")
+		// .to("#mountain-full", 1, { y: "60vh" }, "-=1")
+		.to("#mountain-full", 1, { y: "180vh" }, "-=1")
 
 		// ZOOM
 		.to("#mountain-crop-1", 1, { scale: 1.5 }, "-=1")
@@ -67,12 +74,14 @@ if (window.innerWidth > 768) {
 		// .to("#mountain-crop-4", 1, { scale: 1.05 }, "-=1")
 
 		// SLIDE
-		.to("#title-div", 1, { top: "-130%" }, "-=1")
-		.to(".main-content", 1, { top: "-5%" }, "-=1");
+		// .to("#title-div", 1, { top: "-130%" }, "-=1")
+		.to("#title-div", 1, { top: "-400%" }, "-=1")
+		// .to(".main-content", 1, { top: "-5%" }, "-=1");
+		.to(".main-content", 1, { top: "-140%" }, "-=1");
 
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
-		duration: "100%",
+		duration: "800%",
 		triggerHook: 0,
 	})
 		.setTween(timelineMountain)
