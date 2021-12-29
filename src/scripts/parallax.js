@@ -16,7 +16,6 @@ if (window.innerWidth > 768) {
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "250%",
-		// duration: "100%",
 		triggerHook: 0,
 	})
 		.setTween(timelineNav)
@@ -26,16 +25,34 @@ if (window.innerWidth > 768) {
 	gsap.from("header", { duration: 1.25, y: -45, opacity: 0.5, ease: "power4" });
 	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
 	gsap.from(".navbar-fadein", { duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" });
+	gsap.from(".mountain-parallax", {
+		duration: 3,
+		// FLICKERING EDGE WITH SCALE
+		scale: 1.05,
+		filter: "blur(10px)",
+		// NOT WORKING
+		// filter: "brightness(100%)",
+		opacity: 0.7,
+		// ease: "power2"
+	});
 
-	// WITH TIMESCALE:
-	// const tween = gsap.from(".navbar-fadein", { duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" });
+	gsap.from(".main-content", {
+		duration: 1.25,
+		scale: 1.025,
+		// NOT WORKING
+		filter: "grayscale(50%)",
+		opacity: 0.1,
+		ease: "power1"
+	});
 
-	// tween.timeScale(2);
-
+	// NOT WORKING TOGETHER WITH from
+	// gsap.fromTo(".mountain-parallax", { filter: "brightness(0%)" }, { duration: 3, filter: "brightness(100%)" });
 
 
 	// ========== MOVING MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
 
+
+	// ANIMATE ON PAGE LOAD
 
 	// gsap.to("#mountain-crop-1", 5, { y: -1000 })
 	// gsap.to("#mountain-crop-2", 5, { y: -600 })
@@ -321,6 +338,7 @@ if (window.innerWidth > 768) {
 		.setTween(timelineMosaicSlices)
 		.addTo(controller);
 
+
 	// ===== PORTRAIT =====
 
 	const timelinePortrait = new TimelineMax()
@@ -390,8 +408,6 @@ if (window.innerWidth > 768) {
 
 
 	// ========== FOOTER PARALLAX: ==========
-
-	// WORKS FINE WITHOUT ROCK SLIDE AND CAMERA ZOOM:
 
 	let textAndIconsFooter = new TimelineMax()
 		// SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
@@ -490,16 +506,22 @@ if (window.innerWidth > 768) {
 	// NOT NEEDED:
 	// gsap.registerPlugin(ScrollTrigger);
 
-	var skewSetter = gsap.quickSetter(".hover-shadow", "skewY", "deg");
-	var proxy = { skew: 0 }
+	const skewSetter = gsap.quickSetter(".hover-shadow", "skewY", "deg");
+	const proxy = { skew: 0 }
 
 	ScrollTrigger.create({
 		onUpdate: self => {
-			var skew = self.getVelocity() / -800;
+			const skew = self.getVelocity() / -800;
 			// console.log(skew);
 			if (Math.abs(skew) > Math.abs(proxy.skew)) {
 				proxy.skew = skew;
-				gsap.to(proxy, { skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew) })
+				gsap.to(proxy, {
+					skew: 0,
+					duration: 1,
+					ease: "power3",
+					overwrite: true,
+					onUpdate: () => skewSetter(proxy.skew)
+				})
 			}
 		}
 	});
