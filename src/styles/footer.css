@@ -2,6 +2,9 @@
 /* ========== FOOTER ========== */
 
 .footer {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 50;
 	width: var(--max-width);
 	background: rgba(0, 0, 0, 0.848);
 	color: white;

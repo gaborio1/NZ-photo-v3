@@ -3,7 +3,7 @@ console.log("portfolio.js");
 
 // OPEN MODAL
 const openModal = () => {
-  	document.getElementById("modal").style.display = "flex";
+	document.getElementById("modal").style.display = "flex";
 };
 
 // CLOSE MODAL
@@ -22,7 +22,7 @@ let slideIndex = 1;
 
 // NEXT / PREV ARROWS
 const plusSlides = (n) => {
-  	showSlides((slideIndex += n));
+	showSlides((slideIndex += n));
 };
 
 const currentSlide = (n) => {
@@ -42,7 +42,7 @@ const currentSlide = (n) => {
 
 //  RETREIVE IMAGE FOLDER NAME AND IMAGE NAME FROM CATEGORY TITLE
 const getCategoryName = () => {
-  	return document.querySelector(".category-title").innerHTML;
+	return document.querySelector(".category-title").innerHTML;
 };
 
 // ========== CATEGORY GALLERY ==========
@@ -82,16 +82,16 @@ const addListenerGalleryImg = () => {
 		// !!!!! NO NEED FOR THIS: !!!!!
 		// galleryImages[i].addEventListener("click", getNumberOfImages, false);
 		galleryImages[i].addEventListener(
-		"click",
-		(function (index) {
-			return function () {
-			currentSlide(Number(index + 1));
-			};
-		})(i),
-		true
+			"click",
+			(function (index) {
+				return function () {
+					currentSlide(Number(index + 1));
+				};
+			})(i),
+			true
 		);
 	}
-	};
+};
 
 // ========== CREATE MODAL DIVS WITH IMAGE-COUNTER AND IMAGES ==========
 
@@ -181,13 +181,13 @@ function addListenerThumbnailImg() {
 
 	for (let i = 0; i < thumbnailImages.length; i++) {
 		thumbnailImages[i].addEventListener(
-		"click",
-		(function (index) {
-			return function () {
-			currentSlide(Number(index + 1));
-			};
-		})(i),
-		true
+			"click",
+			(function (index) {
+				return function () {
+					currentSlide(Number(index + 1));
+				};
+			})(i),
+			true
 		);
 	}
 }
@@ -219,8 +219,8 @@ const showSlides = (n) => {
 	}
 	for (i = 0; i < thumbnailImages.length; i++) {
 		thumbnailImages[i].className = thumbnailImages[i].className.replace(
-		" active",
-		""
+			" active",
+			""
 		);
 	}
 	modalImageDivs[slideIndex - 1].style.display = "block";
@@ -271,3 +271,17 @@ addListenerThumbnailImg();
 // }
 
 // addListenerGalleryImg();
+
+// var skewSetter = gsap.quickSetter(".hover-shadow", "skewY", "deg");
+// var proxy = { skew: 0 }
+
+// ScrollTrigger.create({
+// 	onUpdate: self => {
+// 		var skew = self.getVelocity() / -300;
+// 		console.log(skew);
+// 		if (Math.abs(skew) > Math.abs(proxy.skew)) {
+// 			proxy.skew = skew;
+// 			gsap.to(proxy, { skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew) })
+// 		}
+// 	}
+// });

@@ -401,7 +401,7 @@ if (window.innerWidth > 768) {
 		.from(
 			".footer-info-content",
 			7,
-			{ x: -300, y: -70, scale: 0.5, filter: "blur(10px)", opacity: 0, delay: 10, stagger: 10 })
+			{ x: -300, y: -70, scale: 0.5, filter: "blur(10px)", opacity: 0, delay: 50, stagger: 10 })
 
 		// SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
 		.from(
@@ -416,10 +416,27 @@ if (window.innerWidth > 768) {
 		triggerElement: ".footer-info-container-1",
 		// duration: "100%",
 		duration: 470,
-		triggerHook: 1
+		triggerHook: 1,
 	})
+
 		.setTween(textAndIconsFooter)
+		// .setPin("footer")
 		.addTo(controller);
+
+
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".footer-info-container-1",
+	// 	// duration: "400px",
+	// 	duration: "100%",
+	// 	triggerHook: 0.6,
+	// 	// offset: "-90px"
+
+	// })
+	// 	.setPin("footer")
+	// 	.addTo(controller);
+
+
+
 
 
 	// ROCKS SLIDE:
@@ -466,6 +483,26 @@ if (window.innerWidth > 768) {
 	// 	.setTween(timelineSocialMediaContainer)
 	// 	// .setPin(".image-container")
 	// 	.addTo(controller);
+
+
+	// SCROLL SKEW EFFECT ON PORTFOLIO GALLERY	
+
+	// NOT NEEDED:
+	// gsap.registerPlugin(ScrollTrigger);
+
+	var skewSetter = gsap.quickSetter(".hover-shadow", "skewY", "deg");
+	var proxy = { skew: 0 }
+
+	ScrollTrigger.create({
+		onUpdate: self => {
+			var skew = self.getVelocity() / -800;
+			// console.log(skew);
+			if (Math.abs(skew) > Math.abs(proxy.skew)) {
+				proxy.skew = skew;
+				gsap.to(proxy, { skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew) })
+			}
+		}
+	});
 
 }
 
