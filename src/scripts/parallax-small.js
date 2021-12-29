@@ -245,4 +245,25 @@ if (window.innerWidth <= 768) {
 	})
 		.setTween(timelineNatureText)
 		.addTo(controller);
+
+
+	// SCROLL SKEW EFFECT ON PORTFOLIO GALLERY	
+
+	// NOT NEEDED:
+	// gsap.registerPlugin(ScrollTrigger);
+
+	var skewSetter = gsap.quickSetter(".hover-shadow", "skewY", "deg");
+	var proxy = { skew: 0 }
+
+	ScrollTrigger.create({
+		onUpdate: self => {
+			var skew = self.getVelocity() / -800;
+			// console.log(skew);
+			if (Math.abs(skew) > Math.abs(proxy.skew)) {
+				proxy.skew = skew;
+				gsap.to(proxy, { skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew) })
+			}
+		}
+	});
+
 }

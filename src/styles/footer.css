@@ -21,9 +21,6 @@
 } */
 
 
-
-
-
 .footer-top-parallax-container {
 	/* z-index: -1; */
 	position: relative;
@@ -61,14 +58,9 @@
 }
 
 
-
-
-
-
-
 .footer-top-img-cover {
 
-	z-index: 4;
+	z-index: 3;
 
 	position: relative;
 	display: flex;
