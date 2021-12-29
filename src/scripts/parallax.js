@@ -26,20 +26,23 @@ if (window.innerWidth > 768) {
 	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
 	gsap.from(".navbar-fadein", { duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" });
 	gsap.from(".mountain-parallax", {
-		duration: 3,
+		duration: 1,
 		// FLICKERING EDGE WITH SCALE
-		scale: 1.05,
+		// scale: 1.1,
 		filter: "blur(10px)",
 		// NOT WORKING
 		// filter: "brightness(100%)",
-		opacity: 0.7,
+		opacity: 0.7
 		// ease: "power2"
 	});
 
 	gsap.from(".main-content", {
-		duration: 1.25,
-		scale: 1.025,
-		// NOT WORKING
+		duration: 1,
+
+		// !!! THESE TO WILL BREAK MODAL IN PORTFOLIO !!!
+		// transform: "scale(0.8)",
+		// scale: 0.9,
+
 		filter: "grayscale(50%)",
 		opacity: 0.1,
 		ease: "power1"
@@ -436,23 +439,7 @@ if (window.innerWidth > 768) {
 	})
 
 		.setTween(textAndIconsFooter)
-		// .setPin("footer")
 		.addTo(controller);
-
-
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".footer-info-container-1",
-	// 	// duration: "400px",
-	// 	duration: "100%",
-	// 	triggerHook: 0.6,
-	// 	// offset: "-90px"
-
-	// })
-	// 	.setPin("footer")
-	// 	.addTo(controller);
-
-
-
 
 
 	// ROCKS SLIDE:
