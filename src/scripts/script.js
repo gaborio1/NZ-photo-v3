@@ -324,46 +324,53 @@ for (link of pageLinks) {
 // !!!!! PARALLAX HAS TO BE UP TOP !!!!!
 // PARALLAX IS NOW DONE WITH parallax.js
 
-// ============================================================================
 
-// ========== ANIMATE "photography" IN TITLE DIV ==========
 
-const enzeeLetters = document.getElementsByClassName("enzee__letter");
-const photoLetters = document.getElementsByClassName("photography__letter");
+// =====================================================================
+// ========== ANIMATE  "Enzee" AND "photography" IN TITLE DIV ==========
+// =====================================================================
+// ======= ! NOT IN USE, BEING REPLACED BY GSAP IN parallax.js ! =======
+// =====================================================================
 
-window.addEventListener("load", function () {
-	// console.log("page is loaded");
-	// console.log(letters);
-	fadeInSequence(enzeeLetters);
-	fadeInSequence(photoLetters);
-});
 
-const fadeInSequence = (arr) => {
-	// const photoLetters = arr;
-	// INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
-	// SEE LINE 73
-	let delay = 0;
-	for (let i = 0; i < arr.length; i++) {
-		// letters[i].classList.add("hidden");
-		setTimeout(() => {
-		arr[i].classList.remove("opacityZero");
-		arr[i].style.display = "inline-block";
-		// arr[i].classList.add("flash-fadein");
-		}, delay);
-		delay += 60;
-	}
-	// ADD flash-fadein TO photography ONLY
-	if (arr.length > 5) {
-		let delay = -160;
-		// let delay = 200;
-		for (let i = 0; i < arr.length; i++) {
-		// letters[i].classList.add("hidden");
-		setTimeout(() => {
-			arr[i].classList.remove("opacityZero");
-			arr[i].style.display = "inline-block";
-			arr[i].classList.add("flash-fadein");
-		}, delay);
-		delay += 40;
-		}
-	}
-};
+
+
+// const enzeeLetters = document.getElementsByClassName("enzee__letter");
+// const photoLetters = document.getElementsByClassName("photography__letter");
+
+// window.addEventListener("load", () => {
+// 	// console.log("page is loaded");
+// 	// console.log(letters);
+// 	fadeInSequence(enzeeLetters);
+// 	fadeInSequence(photoLetters);
+// });
+
+// const fadeInSequence = (arr) => {
+// 	// const photoLetters = arr;
+// 	// INITIAL DELAY TO GET AROUND EXPANDING NAVBAR ANIMATION BUG WHEN PAGE LOADS
+// 	// SEE LINE 73
+// 	let delay = 0;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		// letters[i].classList.add("hidden");
+// 		setTimeout(() => {
+// 		arr[i].classList.remove("opacityZero");
+// 		arr[i].style.display = "inline-block";
+// 		// arr[i].classList.add("flash-fadein");
+// 		}, delay);
+// 		delay += 60;
+// 	}
+// 	// ADD flash-fadein TO photography ONLY
+// 	if (arr.length > 5) {
+// 		let delay = -160;
+// 		// let delay = 200;
+// 		for (let i = 0; i < arr.length; i++) {
+// 		// letters[i].classList.add("hidden");
+// 		setTimeout(() => {
+// 			arr[i].classList.remove("opacityZero");
+// 			arr[i].style.display = "inline-block";
+// 			arr[i].classList.add("flash-fadein");
+// 		}, delay);
+// 		delay += 40;
+// 		}
+// 	}
+// };

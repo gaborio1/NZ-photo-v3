@@ -182,10 +182,14 @@
 		/* font-size: 12vw; */
 		letter-spacing: 0.4rem;
 
-		/* ANIMATING Enzee at once */
-		animation: fadeInAnimation ease-out 3s;
+
+		/* !!! NOT IN USE !!! */
+		/* ANIMATING Enzee AT ONCE: */
+
+		/* animation: fadeInAnimation ease-out 3s;
 		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
+
 		/* border: 1px solid red; */
     }
 
@@ -225,9 +229,6 @@
 		/* border: 1px solid orange; */
     }
 
-    .opacityZero {
-      	opacity: 0;
-    }
 
     h3.photography__letter {
 		/* text-transform: uppercase; */
@@ -238,10 +239,14 @@
 		/* border: 1px solid lime; */
     }
 
-    .flash-fadein {
+	/* !!! NOT IN USE !!! */
+	/* .opacityZero {
+		opacity: 0;
+  	} */
+
+	/* .flash-fadein {
 		animation: flashAnimation ease 0.75s;
-		/* animation: fadeInAnimation ease 2s; */
-    }
+    } */
 
 	/* FADE IN p h o t o g r a p h y IN SEQUENCE WITH CSS */
     /* THIS IS NOW DONE BY JS */

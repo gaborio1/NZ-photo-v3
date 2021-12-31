@@ -20,48 +20,66 @@ if (window.innerWidth <= 768) {
 		// REVEAL NAVBAR ON SCROLL display: none -> flex
 		// .to("header", 1, { display: "flex" })
 		// .fromTo("header", 1, { opacity: 0 }, { opacity: 1 }, "-=1");
-		.fromTo("header", 1, { background: "rgba(0, 0, 0, 0.05)" }, { background: "rgba(0, 0, 0, 0.95)" }, "-=0");
-
-	// NOT WORKING AS INTENDED
-
-	// 	.fromTo(
-	// 		".logo-container",
-	// 		1,
-	// 		{ opacity: "1" },
-	// 		{ opacity: "0.55" },
-	// 		"-=0"
-	//    );
+		.fromTo(
+			"header",
+			1,
+			{ background: "rgba(0, 0, 0, 0.05)" },
+			{ background: "rgba(0, 0, 0, 0.95)" }
+		)
 
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "50%",
-		// offset: 20,
 		triggerHook: 0,
 	})
 		.setTween(timelineNav)
 		.addTo(controller);
 
-	// MOUNTAIN LAYERS
-	let timelineMountain = new TimelineMax()
-		.to(".mountain-crop-1", 10, { y: -600 })
-		.to(".mountain-crop-2", 10, { y: -400 }, "-=10")
-		.to(".mountain-crop-3", 10, { y: -250 }, "-=10")
-		.to(".mountain-crop-4", 10, { y: -75 }, "-=10")
-		.to(".mountain-crop-5", 10, { y: -20 }, "-=10")
-		.to(".mountain-full", 10, { y: 5 }, "-=10")
 
-		.to(".title-div", 10, { top: "-200px" }, "-=20")
-		// .to(".title-div", 10, { top: "0px" }, "0")
-		// MAIN CONTENT SLIDES ON TOP
-		// .to(".main-content", 12, { top: "-20px" }, "-=20");
-		.to(".main-content", 10, { top: "-20px" }, "-=20");
-	new ScrollMagic.Scene({
-		triggerElement: ".image-container",
-		duration: "300%",
-		triggerHook: 0,
-	})
-		.setTween(timelineMountain)
-		.addTo(controller);
+	// Enzee FADE IN
+	gsap.from(
+		".enzee__letter ", {
+		opacity: 0,
+		duration: 1,
+		stagger: 0.1,
+		// stagger: 0.2,
+		ease: "power2"
+	});
+
+	// photography FADE IN
+	gsap.from(
+		".photography__letter", {
+		delay: 0.5,
+		color: "##fdcf63",
+		textShadow: "1px 1px 5px #fdae81, -1px -1px 5px #fdae81",
+		opacity: 0,
+		duration: 2,
+		// stagger: 0.1,
+		// repeat: 1,
+		// yoyo: true
+	});
+
+
+
+
+	// MOUNTAIN LAYERS
+	// let timelineMountain = new TimelineMax()
+	// 	.to(".mountain-crop-1", 10, { y: -600 })
+	// 	.to(".mountain-crop-2", 10, { y: -400 }, "-=10")
+	// 	.to(".mountain-crop-3", 10, { y: -250 }, "-=10")
+	// 	.to(".mountain-crop-4", 10, { y: -75 }, "-=10")
+	// 	.to(".mountain-crop-5", 10, { y: -20 }, "-=10")
+	// 	.to(".mountain-full", 10, { y: 5 }, "-=10")
+
+	// 	.to(".title-div", 10, { top: "-200px" }, "-=20")
+	// 	.to(".main-content", 10, { top: "-20px" }, "-=20");
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".image-container",
+	// 	duration: "300%",
+	// 	triggerHook: 0,
+	// })
+	// 	.setTween(timelineMountain)
+	// 	.addTo(controller);
 
 	// ========== ANIMATING CATEGORIES ONE BY ONE WITHOUT TIMELINE ==========
 

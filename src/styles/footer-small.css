@@ -39,18 +39,24 @@
 	} */
 
 	.footer-top-parallax-container {
-		/* z-index: -1; */
+		/* z-index: 1; */
 		background-image: url("../../images/footer-img-crop-1.jpg");
 		position: relative;
 		background-size: cover;
 		width: var(--max-width);
-		height: 350px;
+
+		/* height:350px; */
+
+		/* !!! CHECK THIS !!! */
+		height: calc(100vh - 100px);
+
 		/* overflow: hidden; */
 		/* border: 3px solid red; */
 	}
 
 
 	.footer-top-img-cover {
+		/* z-index: 33; */
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -244,6 +250,7 @@
 
 @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 767px) {
 
+
 	.footer {
 		/* !!!!! FIX THIS !!!!! */
 		/* position: relative; */
@@ -253,22 +260,23 @@
 		width: 100vw;
 		height: calc(100vh - 50px);
 		background: rgba(0, 0, 0, 0.95);
+		/* background: rgba(224, 7, 7, 0.95); */
 		color: white;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
-		/* border: 3px solid orange; */
+		/* border: 1px solid orange; */
 	}
 
 	.footer-top-img {
-		background-image: url("../../images/footer-img-crop-1.jpg");
+		/* background-image: url("../../images/footer-img-crop-1.jpg"); */
 		background-size: cover;
 		width: var(--max-width);
 		/* height: 475px; */
 		/* height: 400px; */
 		height: 350px;
-		height: calc(100vh - 100px);
+		/* height: calc(100vh - 100px); */
 		/* border: 2px solid red; */
 	}
 
@@ -279,6 +287,7 @@
 		justify-content: space-around;
 		width: var(--max-width);
 		height: inherit;
+		height: calc(100vh - 100px);
 		/* background: rgba(0, 0, 0, 0.457); */
 		/* background: rgba(0, 0, 0, 0.129); */
 
@@ -341,6 +350,16 @@
 	/* .footer {
 		border: 3px solid fuchsia;
 	} */
+
+
+	/* !!! CHECK THIS !!! */
+	.non-mobile-size.footer-parallax {
+		display: none;
+	}
+
+
+
+	
 
 	/* Need a good photographer? */
 	.footer-info-container-1 h2 {

@@ -12,7 +12,12 @@ if (window.innerWidth > 768) {
 		// REVEAL NAVBAR ON SCROLL display: none -> flex
 		// .to("header", 1, { display: "flex" })
 		// .fromTo("header", 1, { opacity: 0 }, { opacity: 1 }, "-=1")
-		.fromTo("header", 1, { background: "rgba(0, 0, 0, 0.85)" }, { background: "rgba(0, 0, 0, 0.95)" });
+		.fromTo(
+			"header",
+			1,
+			{ background: "rgba(0, 0, 0, 0.85)" },
+			{ background: "rgba(0, 0, 0, 0.95)" }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: ".image-container",
 		duration: "250%",
@@ -21,10 +26,22 @@ if (window.innerWidth > 768) {
 		.setTween(timelineNav)
 		.addTo(controller);
 
+
+	// ===== WHEN PAGE LOADS: =====
+
 	// NAVBAR SLIDES DOWN 
-	gsap.from("header", { duration: 1.25, y: -45, opacity: 0.5, ease: "power4" });
+	gsap.from(
+		"header",
+		{ duration: 1.25, y: -45, opacity: 0.5, ease: "power4" }
+	);
+
 	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
-	gsap.from(".navbar-fadein", { duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" });
+	gsap.from(
+		".navbar-fadein",
+		{ duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" }
+	);
+
+	// MOUNTAIN FADE IN	
 	gsap.from(".mountain-parallax", {
 		duration: 1,
 		// FLICKERING EDGE WITH SCALE
@@ -36,6 +53,7 @@ if (window.innerWidth > 768) {
 		// ease: "power2"
 	});
 
+	// MAIN CONTENT FADE IN
 	gsap.from(".main-content", {
 		duration: 1,
 
@@ -47,6 +65,37 @@ if (window.innerWidth > 768) {
 		opacity: 0.1,
 		ease: "power1"
 	});
+
+
+	// Enzee FADE IN
+	gsap.from(
+		".enzee__letter ", {
+		// x: -300,
+		opacity: 0,
+		duration: 0.5,
+		// stagger: -0.2,
+		// stagger: 0.2,
+		ease: "power2"
+	});
+
+	// photography FADE IN
+	gsap.from(
+		".photography__letter", {
+		delay: 0.5,
+		color: "##fdcf63",
+		textShadow: "1px 1px 5px #fdae81, -1px -1px 5px #fdae81",
+		// x: -300,
+		opacity: 0,
+		duration: 0.75,
+		// stagger: -0.2,
+		stagger: 0.1,
+		// repeat: 1,
+		// yoyo: true
+	});
+
+
+
+
 
 	// NOT WORKING TOGETHER WITH from
 	// gsap.fromTo(".mountain-parallax", { filter: "brightness(0%)" }, { duration: 3, filter: "brightness(100%)" });
