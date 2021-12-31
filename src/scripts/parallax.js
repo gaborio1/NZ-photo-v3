@@ -32,13 +32,24 @@ if (window.innerWidth > 768) {
 	// NAVBAR SLIDES DOWN 
 	gsap.from(
 		"header",
-		{ duration: 1.25, y: -45, opacity: 0.5, ease: "power4" }
+		{
+			duration: 1.25,
+			y: -45,
+			opacity: 0.5,
+			ease: "power4"
+		}
 	);
 
 	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
 	gsap.from(
 		".navbar-fadein",
-		{ duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" }
+		{
+			duration: 0.2,
+			opacity: 0,
+			delay: 0.5,
+			stagger: 0.1,
+			ease: "linear"
+		}
 	);
 
 	// MOUNTAIN FADE IN	
@@ -92,9 +103,6 @@ if (window.innerWidth > 768) {
 		// repeat: 1,
 		// yoyo: true
 	});
-
-
-
 
 
 	// NOT WORKING TOGETHER WITH from
@@ -181,7 +189,13 @@ if (window.innerWidth > 768) {
 		.to(
 			"#title-div",
 			7,
-			{ y: 0, scale: 1, filter: "blur(10px)", opacity: 0, ease: "easein" },
+			{
+				y: 0,
+				scale: 1,
+				filter: "blur(10px)",
+				opacity: 0,
+				ease: "easein"
+			},
 			"-=1");
 	new ScrollMagic.Scene({
 		triggerElement: "#title-div",
@@ -192,183 +206,113 @@ if (window.innerWidth > 768) {
 		.addTo(controller);
 
 
-
-
-	//==========================================
-	// MASTER VERSION
-	//==========================================
-
-	// MOUNTAIN LAYERS:
-
-	// let timelineMountain = new TimelineMax()
-
-
-	// // .to("#mountain-crop-1", 3, { y: -800 }, "-=30")
-	// .to("#mountain-crop-1", 1, { y: -1000 })
-	// // .to("#mountain-crop-2", 3, { y: -500 }, "-=30")
-	// .to("#mountain-crop-2", 1, { y: -600 }, "-=1")
-	// // .to("#mountain-crop-3", 3, { y: -250 }, "-=30")
-	// .to("#mountain-crop-3", 1, { y: -250 }, "-=1")
-	// // .to("#mountain-crop-4", 3, { y: -115 }, "-=30")
-	// .to("#mountain-crop-4", 1, { y: -115 }, "-=1")
-	// // .to("#mountain-crop-5", 3, { y: -30 }, "-=30")
-	// .to("#mountain-crop-5", 1, { y: -30 }, "-=1")
-	// // .to("#mountain-crop-6", 3, { y: -10 }, "-=30");
-	// .to("#mountain-crop-6", 1, { y: 20 }, "-=1")
-
-
-
-	// .to("#mountain-full", 3, { y: 100 }, "-=1");
-	// new ScrollMagic.Scene({
-	// triggerElement: ".image-container",
-	// duration: "250%",
-	// // duration: "100%",
-	// triggerHook: 0,
-	// })
-	// .setTween(timelineMountain)
-	// .addTo(controller);
-
-	// // TITLE-DIV AND MAIN CONTENT:
-	// let timelineContentAndTitle = new TimelineMax()
-	// // .to("#title-div", 3, { top: "-120%" }, "-=30")
-	// .to("#title-div", 4, { top: "-130%" }, "-=20")
-	// // MAIN CONTENT SLIDES ON TOP
-	// // .to(".main-content", 3, { top: "0%" }, "-=30");
-	// .to(".main-content", 4, { top: "-5%" }, "-=20");
-	// new ScrollMagic.Scene({
-	// triggerElement: ".image-container",
-	// // duration: "1000%",
-	// duration: "500%",
-	// triggerHook: 0,
-	// })
-	// .setTween(timelineContentAndTitle)
-	// // .setPin(".image-container")
-	// .addTo(controller);
-
-
-	// // ========== ZOOMING IN ON MOUNTAIN LAYERS AT DIFFERENT SPEEDS ==========
-
-
-	// let zoomSequence = new TimelineMax()
-	// .to("#mountain-crop-1", 1, { scale: 2, opacity: 1, ease: Linear.easeNone }, "-=10")
-	// .to("#mountain-crop-2", 2, { scale: 1.8, opacity: 1, ease: Linear.easeNone }, "-=10")
-	// .to("#mountain-crop-3", 3, { scale: 1.3, opacity: 1, ease: Linear.easeNone }, "-=10")
-	// .to("#mountain-crop-4", 3, { scale: 1.2, opacity: 1, ease: Linear.easeNone }, "-=10")
-	// .to("#mountain-crop-5", 3, { scale: 1.1, opacity: 1, ease: Linear.easeNone }, "-=10");
-	// new ScrollMagic.Scene({
-	// triggerElement: ".image-container",
-	// duration: "500%",
-	// // duration: "100%",
-	// triggerHook: 0,
-	// })
-	// .setTween(zoomSequence)
-	// .addTo(controller);
-
-
-	// let titleDivFadeOut = new TimelineMax()
-	// // Enzee
-	// .fromTo(
-	// 	".title-div__enzee-container",
-	// 	1,
-	// 	{ x: 0, filter: "blur(0px)", opacity: 1 },
-	// 	{ x: -100, filter: "blur(0px)", opacity: 0 },
-	// )
-	// // photography
-	// .fromTo(".photography__letter",
-	// 	1,
-	// 	{ x: 0, y: 0, opacity: 1 },
-	// 	{ x: 100, y: 0, opacity: 0, delay: 0, stagger: 0 },
-	// 	"-=1")
-	// // CLEAR DIV
-	// .fromTo(
-	// 	"#title-div",
-	// 	7,
-	// 	{ y: 0, scale: 1, filter: "blur(0px)", opacity: 1 },
-	// 	{ y: 0, scale: 1, filter: "blur(10px)", opacity: 0, ease: "easein" },
-	// 	"-=1");
-	// new ScrollMagic.Scene({
-	// triggerElement: "#title-div",
-	// duration: "100%",
-	// triggerHook: 0.1
-	// })
-	// .setTween(titleDivFadeOut)
-	// .addTo(controller);
-
-	//===========================================
-	//==========================================
-
-
 	// ========== ANIMATING CATEGORIES ONE BY ONE WITHOUT TIMELINE ==========
 
 	// ===== MODEL =====
-	const timelineModel = new TimelineMax()
-		.from("#model-img-container", 1, { y: "10vh", opacity: 0 })
+	const modelImg = new TimelineMax()
+		.from(
+			"#model-img-container",
+			1,
+			{ y: "10vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#model-img-trigger",
 		duration: "70%",
 		triggerHook: 1
 	})
-		.setTween(timelineModel)
+		.setTween(modelImg)
 		.addTo(controller);
 
-	const timelineModelText = new TimelineMax()
-		.from("#model-text-container", 1, { y: "5vh", opacity: 0 })
+	const modelText = new TimelineMax()
+		.from(
+			"#model-text-container",
+			1,
+			{ y: "5vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#model-text-trigger",
 		duration: "20%",
 		triggerHook: 1
 	})
-		.setTween(timelineModelText)
+		.setTween(modelText)
 		.addTo(controller);
 
 	// ===== STREET =====
-	const timelineStreetText = new TimelineMax()
-		.from("#street-text-container", 1, { y: "5vh", opacity: 0 })
+	const streetText = new TimelineMax()
+		.from(
+			"#street-text-container",
+			1,
+			{ y: "5vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#street-text-trigger",
 		duration: "20%",
 		triggerHook: 1
 	})
-		.setTween(timelineStreetText)
+		.setTween(streetText)
 		.addTo(controller);
 
-	const timelineStreet = new TimelineMax()
-		.from("#street-img-container", 1, { x: "5vw", y: "10vh", opacity: 0 })
+	const streetImg = new TimelineMax()
+		.from(
+			"#street-img-container",
+			1,
+			{ x: "5vw", y: "10vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#street-img-trigger",
 		duration: "50%",
 		triggerHook: 1
 	})
-		.setTween(timelineStreet)
+		.setTween(streetImg)
 		.addTo(controller);
 
 	// ===== MOTION =====
-	const timelineMotion = new TimelineMax()
-		.from("#motion-img-container", 1, { x: "-5vw", y: "-20vh", opacity: 0 })
+	const motionImg = new TimelineMax()
+		.from(
+			"#motion-img-container",
+			1,
+			{ x: "-5vw", y: "-20vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-img-trigger",
 		duration: "100%",
 		triggerHook: 1
 	})
-		.setTween(timelineMotion)
+		.setTween(motionImg)
 		.addTo(controller);
 
-	const timelineMotionText = new TimelineMax()
-		.from("#motion-text-container", 1, { x: "5vw", y: "-10vh", opacity: 0 })
+	const motionText = new TimelineMax()
+		.from(
+			"#motion-text-container",
+			1,
+			{ x: "5vw", y: "-10vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#motion-text-trigger",
 		duration: "40%",
 		triggerHook: 1
 	})
-		.setTween(timelineMotionText)
+		.setTween(motionText)
 		.addTo(controller);
 
 
 
 	// ===== MOSAIC DIVIDER CONTAINER =====
 	const timelineMosaicContainer = new TimelineMax()
-		.fromTo("#mosaic-container", 1, { y: "-10vh" }, { y: "-2vh", ease: "linear" }, "-=1")
-		.fromTo("#mosaic-container", 0.5, { opacity: 0 }, { opacity: 1 }, "-=1");
+		.fromTo(
+			"#mosaic-container",
+			1,
+			{ y: "-10vh" },
+			{ y: "-2vh", ease: "linear" },
+			"-=1"
+		)
+		.fromTo(
+			"#mosaic-container",
+			0.5,
+			{ opacity: 0 },
+			{ opacity: 1 },
+			"-=1"
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#mosaic-trigger",
 		duration: "150%",
@@ -379,9 +323,26 @@ if (window.innerWidth > 768) {
 
 	//===== MOSAIC SLICES =====
 	const timelineMosaicSlices = new TimelineMax()
-		.fromTo(".mosaic-slice-container-1", 1, { x: "5vw" }, { x: "-5vw", ease: "linear" })
-		.fromTo(".mosaic-slice-container-2", 1, { x: "3vw" }, { x: "-3vw", ease: "linear" }, "-=1")
-		.fromTo(".mosaic-slice-container-3", 1, { x: "1.5vw" }, { x: "-1.5vw", ease: "linear" }, "-=1");
+		.fromTo(
+			".mosaic-slice-container-1",
+			1,
+			{ x: "5vw" },
+			{ x: "-5vw", ease: "linear" }
+		)
+		.fromTo(
+			".mosaic-slice-container-2",
+			1,
+			{ x: "3vw" },
+			{ x: "-3vw", ease: "linear" },
+			"-=1"
+		)
+		.fromTo(
+			".mosaic-slice-container-3",
+			1,
+			{ x: "1.5vw" },
+			{ x: "-1.5vw", ease: "linear" },
+			"-=1"
+		);
 	new ScrollMagic.Scene({
 		triggerElement: ".mosaic-slice-container-1",
 		duration: "150%",
@@ -393,69 +354,93 @@ if (window.innerWidth > 768) {
 
 	// ===== PORTRAIT =====
 
-	const timelinePortrait = new TimelineMax()
-		.from("#portrait-img-container", 1, { y: "10vh", opacity: 0 })
+	const portraitImg = new TimelineMax()
+		.from(
+			"#portrait-img-container",
+			1,
+			{ y: "10vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#portrait-img-trigger",
 		duration: "70%",
 		triggerHook: 1
 	})
-		.setTween(timelinePortrait)
+		.setTween(portraitImg)
 		.addTo(controller);
 
-	const timelinePortraitText = new TimelineMax()
-		.from("#portrait-text-container", 1, { y: "5vh", opacity: 0 })
+	const portraitText = new TimelineMax()
+		.from(
+			"#portrait-text-container",
+			1,
+			{ y: "5vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#portrait-text-trigger",
 		duration: "20%",
 		triggerHook: 1
 	})
-		.setTween(timelinePortraitText)
+		.setTween(portraitText)
 		.addTo(controller);
 
 	// ===== ABSTRACT =====
 
-	const timelineAbstractText = new TimelineMax()
-		.from("#abstract-text-container", 1, { y: "5vh", opacity: 0 })
+	const abstractText = new TimelineMax()
+		.from(
+			"#abstract-text-container",
+			1,
+			{ y: "5vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#abstract-text-trigger",
 		duration: "20%",
 		triggerHook: 1
 	})
-		.setTween(timelineAbstractText)
+		.setTween(abstractText)
 		.addTo(controller);
 
-	const timelineAbstract = new TimelineMax()
-		.from("#abstract-img-container", 1, { x: "5vw", y: "10vh", opacity: 0 })
+	const abstractImg = new TimelineMax()
+		.from(
+			"#abstract-img-container",
+			1,
+			{ x: "5vw", y: "10vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#abstract-img-trigger",
 		duration: "50%",
 		triggerHook: 1
 	})
-		.setTween(timelineAbstract)
+		.setTween(abstractImg)
 		.addTo(controller);
 
 
 	// ===== NATURE =====
 
-	const timelineNature = new TimelineMax()
-		.from("#nature-img-container", 1, { x: "-5vw", y: "-20vh", opacity: 0 })
+	const natureImg = new TimelineMax()
+		.from(
+			"#nature-img-container",
+			1,
+			{ x: "-5vw", y: "-20vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-img-trigger",
 		duration: "100%",
 		triggerHook: 1
 	})
-		.setTween(timelineNature)
+		.setTween(natureImg)
 		.addTo(controller);
 
-	const timelineNatureText = new TimelineMax()
-		.from("#nature-text-container", 1, { x: "5vw", y: "-10vh", opacity: 0 })
+	const natureText = new TimelineMax()
+		.from(
+			"#nature-text-container",
+			1,
+			{ x: "5vw", y: "-10vh", opacity: 0 }
+		);
 	new ScrollMagic.Scene({
 		triggerElement: "#nature-text-trigger",
 		duration: "40%",
 		triggerHook: 1
 	})
-		.setTween(timelineNatureText)
+		.setTween(natureText)
 		.addTo(controller);
 
 
@@ -469,17 +454,38 @@ if (window.innerWidth > 768) {
 		.from(
 			".footer-info-content",
 			7,
-			{ x: -300, y: -70, scale: 0.5, filter: "blur(10px)", opacity: 0, delay: 50, stagger: 10 })
+			{
+				x: -300,
+				y: -70,
+				scale: 0.5,
+				filter: "blur(10px)",
+				opacity: 0,
+				delay: 50,
+				stagger: 10
+			}
+		)
 
 		// SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
 		.from(
 			".full-width-2",
 			7,
-			{ y: 45, scale: 1, filter: "blur(10px)", opacity: 0 })
+			{
+				y: 45,
+				scale: 1,
+				filter: "blur(10px)",
+				opacity: 0
+			})
 
 		.from(".social-media-icon",
 			5,
-			{ x: 200, opacity: 0, delay: 1, stagger: 1 }, "-=8");
+			{
+				x: 200,
+				opacity: 0,
+				delay: 1,
+				stagger: 1
+			},
+			"-=8"
+		);
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
 		// duration: "100%",
@@ -493,8 +499,18 @@ if (window.innerWidth > 768) {
 
 	// ROCKS SLIDE:
 	const rockSlideFooter = new TimelineMax()
-		.from("#footer-crop-rock-left", 5, { x: -100, filter: "blur(2px)" }, 1)
-		.from("#footer-crop-rock-right", 5, { x: 100, filter: "blur(2px)" }, 0.75)
+		.from(
+			"#footer-crop-rock-left",
+			5,
+			{ x: -100, filter: "blur(2px)" },
+			1
+		)
+		.from(
+			"#footer-crop-rock-right",
+			5,
+			{ x: 100, filter: "blur(2px)" },
+			0.75
+		)
 	new ScrollMagic.Scene({
 		triggerElement: ".footer-info-container-1",
 		// duration: "100%",
