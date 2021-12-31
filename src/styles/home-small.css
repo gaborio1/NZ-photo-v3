@@ -224,7 +224,6 @@
 
 	.flash-fadein {
 		animation: flashAnimation ease 0.5s;
-		/* animation: fadeInAnimation ease 2s; */
 	}
 
 	/* THIS IS NOW DONE BY JS */

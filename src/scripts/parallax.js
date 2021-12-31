@@ -33,13 +33,13 @@ if (window.innerWidth > 768) {
 	gsap.from(
 		"header",
 		{ duration: 1.25, y: -45, opacity: 0.5, ease: "power4" }
-		);
+	);
 
 	// LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
 	gsap.from(
 		".navbar-fadein",
 		{ duration: 0.2, opacity: 0, delay: 0.5, stagger: 0.1, ease: "linear" }
-		);
+	);
 
 	// MOUNTAIN FADE IN	
 	gsap.from(".mountain-parallax", {
@@ -66,31 +66,34 @@ if (window.innerWidth > 768) {
 		ease: "power1"
 	});
 
+
+	// Enzee FADE IN
 	gsap.from(
 		".enzee__letter ", {
-			// x: -300,
-			opacity: 0,
-			duration: 0.5,
-			// stagger: -0.2,
-			// stagger: 0.2,
-			ease: "power2"
+		// x: -300,
+		opacity: 0,
+		duration: 0.5,
+		// stagger: -0.2,
+		// stagger: 0.2,
+		ease: "power2"
 	});
 
+	// photography FADE IN
 	gsap.from(
 		".photography__letter", {
-			delay: 0.5,
-			color: "##fdcf63",
-			textShadow: "1px 1px 5px #fdae81, -1px -1px 5px #fdae81",
-			// x: -300,
-			opacity: 0,
-			duration: 0.75,
-			// stagger: -0.2,
-			stagger: 0.1,
-			// repeat: 1,
-			// yoyo: true
+		delay: 0.5,
+		color: "##fdcf63",
+		textShadow: "1px 1px 5px #fdae81, -1px -1px 5px #fdae81",
+		// x: -300,
+		opacity: 0,
+		duration: 0.75,
+		// stagger: -0.2,
+		stagger: 0.1,
+		// repeat: 1,
+		// yoyo: true
 	});
-	
-	
+
+
 
 
 
