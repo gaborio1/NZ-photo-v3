@@ -67,18 +67,35 @@ if (window.innerWidth > 768) {
 		// ease: "power2"
 	});
 
-	// MAIN CONTENT FADE IN
-	gsap.from(".main-content", {
-		duration: 1,
+	// MAIN CONTENT SLIDE/FADE IN ALL TXT PAGES  
+	const currentUrl = window.location.href;
+	if (
+		currentUrl.includes("about") ||
+		currentUrl.includes("products") ||
+		currentUrl.includes("contact")
+	) {
+		gsap.from(".main-content", {
+			duration: 0.75,
+			// !!! THESE TO WILL BREAK MODAL IN PORTFOLIO !!!
+			// transform: "scale(0.8)",
+			// scale: 0.9,
 
-		// !!! THESE TO WILL BREAK MODAL IN PORTFOLIO !!!
-		// transform: "scale(0.8)",
-		// scale: 0.9,
+			// y: "100%",
+			x: "-100%",
+			filter: "grayscale(50%)",
+			opacity: 0,
+			ease: "power4"
+		});
+		// NO SLIDE ON IMAGE PAGES
+	} else {
+		gsap.from(".main-content", {
+			duration: 0.75,
+			filter: "grayscale(50%)",
+			opacity: 0,
+			ease: "power4"
+		});
+	}
 
-		filter: "grayscale(50%)",
-		opacity: 0.1,
-		ease: "power1"
-	});
 
 
 	// Enzee FADE IN
@@ -572,7 +589,7 @@ if (window.innerWidth > 768) {
 				proxy.skew = skew;
 				gsap.to(proxy, {
 					skew: 0,
-					duration: 1,
+					duration: 0.5,
 					ease: "power3",
 					overwrite: true,
 					onUpdate: () => skewSetter(proxy.skew)
