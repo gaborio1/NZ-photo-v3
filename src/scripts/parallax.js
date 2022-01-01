@@ -29,6 +29,9 @@ if (window.innerWidth > 768) {
 
 	// ===== WHEN PAGE LOADS: =====
 
+	// gsap.from(".modal", 5, { duration: 10, x: 200 });
+
+
 	// NAVBAR SLIDES DOWN 
 	gsap.from(
 		"header",

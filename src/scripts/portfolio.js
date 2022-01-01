@@ -4,11 +4,40 @@ console.log("portfolio.js");
 // OPEN MODAL
 const openModal = () => {
 	document.getElementById("modal").style.display = "flex";
+	// SLIDE IN AND ENLARGE
+	gsap.fromTo(
+		".modal",
+		{
+			x: "-100%",
+			scale: 0.3,
+		},
+		{
+			x: "0%",
+			scale: 1,
+			duration: 1,
+			ease: "power4"
+		}
+	);
 };
 
 // CLOSE MODAL
 const closeModal = () => {
 	const modal = document.getElementById("modal");
+	// SLIDE OUT AND SHRINK
+	gsap.fromTo(
+		".modal",
+		{
+			x: "0%",
+			scale: 1,
+		},
+		{
+			x: "100%",
+			scale: 0.3,
+			duration: 2,
+			ease: "power4"
+		}
+	);
+
 	modal.classList.add("fade-out");
 	// FADE OUT AND HIDE WHEN TRANSPARENT
 	setTimeout(function () {
