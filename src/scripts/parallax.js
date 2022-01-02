@@ -89,10 +89,10 @@ if (window.innerWidth > 768) {
 		// NO SLIDE ON IMAGE PAGES
 	} else {
 		gsap.from(".main-content", {
-			duration: 0.75,
+			duration: 1,
 			filter: "grayscale(50%)",
 			opacity: 0,
-			ease: "power4"
+			ease: "linear"
 		});
 	}
 
@@ -466,30 +466,45 @@ if (window.innerWidth > 768) {
 
 	// ========== FOOTER PARALLAX: ==========
 
-	let textAndIconsFooter = new TimelineMax()
+	let textAndButtonFooter = new TimelineMax()
 		// SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
 
 		// SLOGAN SENTENCES/BUTTON IN SEQUENCE:
 
 		.from(
 			".footer-info-content",
-			7,
+			1,
 			{
 				x: -300,
 				y: -70,
 				scale: 0.5,
 				filter: "blur(10px)",
 				opacity: 0,
-				delay: 50,
-				stagger: 10
+				// delay: 50,
+				stagger: 1
 			}
 		)
+
+	new ScrollMagic.Scene({
+		triggerElement: ".footer-info-container-1",
+		// duration: "100%",
+		duration: 300,
+		triggerHook: 1,
+	})
+
+		.setTween(textAndButtonFooter)
+		.addTo(controller);
+
+
+
+	let socialMediaFooter = new TimelineMax()
 
 		// SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
 		.from(
 			".full-width-2",
 			7,
 			{
+				// duration: 1,
 				y: 45,
 				scale: 1,
 				filter: "blur(10px)",
@@ -507,14 +522,15 @@ if (window.innerWidth > 768) {
 			"-=8"
 		);
 	new ScrollMagic.Scene({
-		triggerElement: ".footer-info-container-1",
+		triggerElement: ".full-width-2",
 		// duration: "100%",
-		duration: 470,
+		duration: 200,
 		triggerHook: 1,
 	})
 
-		.setTween(textAndIconsFooter)
+		.setTween(socialMediaFooter)
 		.addTo(controller);
+
 
 
 	// ROCKS SLIDE:
@@ -597,6 +613,11 @@ if (window.innerWidth > 768) {
 			}
 		}
 	});
+
+	// NOT WORKING: 
+
+	// const sliders = document.querySelectorAll(".slider");
+	gsap.fromTo(".slider-title", 10, { x: "-500px" }, { x: "0px", duration: 10, delay: 3 });
 
 }
 
