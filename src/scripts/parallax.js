@@ -31,14 +31,16 @@ if (window.innerWidth > 768) {
     // gsap.from(".modal", 5, { duration: 10, x: 200 });
 
     // NAVBAR SLIDES DOWN
+    /*
     gsap.from("header", {
         duration: 1.25,
         y: -45,
         opacity: 0.5,
         ease: "power4",
     });
-
+    */
     // LOGO, NAV-LINKS AND MAGNIFIER FADE IN SEQUENCE
+    /*
     gsap.from(".navbar-fadein", {
         duration: 0.2,
         opacity: 0,
@@ -46,19 +48,20 @@ if (window.innerWidth > 768) {
         stagger: 0.1,
         ease: "linear",
     });
-
+    */
     // MOUNTAIN FADE IN
+    /*
     gsap.from(".mountain-parallax", {
-        duration: 1,
+        duration: 0.5,
         // FLICKERING EDGE WITH SCALE
         // scale: 1.1,
-        filter: "blur(10px)",
+        filter: "blur(3px)",
         // NOT WORKING
         // filter: "brightness(100%)",
         opacity: 0.7,
         // ease: "power2"
     });
-
+    */
     // MAIN CONTENT SLIDE/FADE IN ALL TXT PAGES
     const currentUrl = window.location.href;
     if (
@@ -255,8 +258,12 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     const streetImg = new TimelineMax().from("#street-img-container", 1, {
-        x: "5vw",
-        y: "10vh",
+        // x: "5vw",
+        // y: "10vh",
+        x: "2.5vw",
+        y: "5vh",
+        // x: "20px",
+        // y: "40px",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -269,8 +276,10 @@ if (window.innerWidth > 768) {
 
     // ===== MOTION =====
     const motionImg = new TimelineMax().from("#motion-img-container", 1, {
-        x: "-5vw",
-        y: "-20vh",
+        // x: "-5vw",
+        // y: "-20vh",
+        x: "-1vw",
+        y: "-4vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -282,8 +291,10 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     const motionText = new TimelineMax().from("#motion-text-container", 1, {
-        x: "5vw",
-        y: "-10vh",
+        // x: "5vw",
+        // y: "-10vh",
+        x: "2.5vw",
+        y: "-5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -306,7 +317,7 @@ if (window.innerWidth > 768) {
         .fromTo(
             "#mosaic-container",
             0.5,
-            { opacity: 0 },
+            { opacity: 0.5 },
             { opacity: 1 },
             "-=1"
         );
@@ -319,25 +330,26 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     //===== MOSAIC SLICES =====
+    /*
     const timelineMosaicSlices = new TimelineMax()
         .fromTo(
             ".mosaic-slice-container-1",
             1,
-            { x: "5vw" },
-            { x: "-5vw", ease: "linear" }
+            { x: "3vw" },
+            { x: "-3vw", ease: "linear" }
         )
         .fromTo(
             ".mosaic-slice-container-2",
             1,
-            { x: "3vw" },
-            { x: "-3vw", ease: "linear" },
+            { x: "2vw" },
+            { x: "-2vw", ease: "linear" },
             "-=1"
         )
         .fromTo(
             ".mosaic-slice-container-3",
             1,
-            { x: "1.5vw" },
-            { x: "-1.5vw", ease: "linear" },
+            { x: "0.5vw" },
+            { x: "-0.5vw", ease: "linear" },
             "-=1"
         );
     new ScrollMagic.Scene({
@@ -347,7 +359,7 @@ if (window.innerWidth > 768) {
     })
         .setTween(timelineMosaicSlices)
         .addTo(controller);
-
+    */
     // ===== PORTRAIT =====
 
     const portraitImg = new TimelineMax().from("#portrait-img-container", 1, {
@@ -389,8 +401,10 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     const abstractImg = new TimelineMax().from("#abstract-img-container", 1, {
-        x: "5vw",
-        y: "10vh",
+        // x: "5vw",
+        // y: "10vh",
+        x: "2.5vw",
+        y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -404,8 +418,10 @@ if (window.innerWidth > 768) {
     // ===== NATURE =====
 
     const natureImg = new TimelineMax().from("#nature-img-container", 1, {
-        x: "-5vw",
-        y: "-20vh",
+        // x: "-5vw",
+        // y: "-20vh",
+        x: "-1vw",
+        y: "-4vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -417,8 +433,10 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     const natureText = new TimelineMax().from("#nature-text-container", 1, {
-        x: "5vw",
-        y: "-10vh",
+        // x: "5vw",
+        // y: "-10vh",
+        x: "2.5vw",
+        y: "-5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -542,12 +560,13 @@ if (window.innerWidth > 768) {
     // NOT NEEDED:
     // gsap.registerPlugin(ScrollTrigger);
 
+    /*
     const skewSetter = gsap.quickSetter(".hover-shadow", "skewY", "deg");
     const proxy = { skew: 0 };
 
     ScrollTrigger.create({
         onUpdate: (self) => {
-            const skew = self.getVelocity() / -800;
+            const skew = self.getVelocity() / -2000;
             // console.log(skew);
             if (Math.abs(skew) > Math.abs(proxy.skew)) {
                 proxy.skew = skew;
@@ -561,14 +580,18 @@ if (window.innerWidth > 768) {
             }
         },
     });
-
+    */
     // NOT WORKING:
 
     // const sliders = document.querySelectorAll(".slider");
+
+    // PAGE TITLES (before/after)
+    /*
     gsap.fromTo(
         ".slider-title",
         10,
         { x: "-500px" },
         { x: "0px", duration: 10, delay: 3 }
     );
+    */
 }
