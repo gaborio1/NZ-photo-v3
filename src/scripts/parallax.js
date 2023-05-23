@@ -132,6 +132,7 @@ if (window.innerWidth > 768) {
     // gsap.to("#title-div", 5, { top: "-130%" })
     // gsap.to(".main-content", 5, { top: "-5%" });
 
+    /*
     const timelineMountain = new TimelineMax()
 
         // SLIDE
@@ -176,7 +177,7 @@ if (window.innerWidth > 768) {
     // timelineMountain.timeScale(0.5);
     // const tween = TimelineMax.to("#mountain-crop-1", 1, { y: "-90vh" });
     // tween.timeScale(3);
-
+    */
     const titleDivFadeOut = new TimelineMax()
 
         // Enzee
@@ -430,6 +431,7 @@ if (window.innerWidth > 768) {
 
     // ========== FOOTER PARALLAX: ==========
 
+    /*
     let textAndButtonFooter = new TimelineMax()
         // SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
 
@@ -519,7 +521,7 @@ if (window.innerWidth > 768) {
     })
         .setTween(zoomCameraFooter)
         .addTo(controller);
-
+    */
     // NOT IN USE AS ICONS SLIDE IN ONE BY ONE !!!
     // SOCIAL MEDIA ICON CONTAINER (ALL ICONS SLIDE WITH CONTAINER)
 
