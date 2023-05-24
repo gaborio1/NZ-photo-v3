@@ -453,20 +453,19 @@ if (window.innerWidth > 768) {
 
     // ========== FOOTER PARALLAX: ==========
 
-    /*
     let textAndButtonFooter = new TimelineMax()
         // SLOGAN AND CONTACT BUTTON FADEIN/SLIDE
 
         // SLOGAN SENTENCES/BUTTON IN SEQUENCE:
 
         .from(".footer-info-content", 1, {
-            x: -300,
-            y: -70,
-            scale: 0.5,
-            filter: "blur(10px)",
+            // SLIDE IN FROM LEFT
+            // x: -300,
+            y: -50,
+            scale: 0.95,
+            filter: "blur(5px)",
             opacity: 0,
-            // delay: 50,
-            stagger: 1,
+            stagger: 0.5,
         });
 
     new ScrollMagic.Scene({
@@ -484,7 +483,7 @@ if (window.innerWidth > 768) {
         // SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
         .from(".full-width-2", 7, {
             // duration: 1,
-            y: 45,
+            y: -20,
             scale: 1,
             filter: "blur(10px)",
             opacity: 0,
@@ -497,7 +496,7 @@ if (window.innerWidth > 768) {
                 x: 200,
                 opacity: 0,
                 delay: 1,
-                stagger: 1,
+                // stagger: 1,
             },
             "-=8"
         );
@@ -512,6 +511,7 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     // ROCKS SLIDE:
+    /*
     const rockSlideFooter = new TimelineMax()
         .from("#footer-crop-rock-left", 5, { x: -100, filter: "blur(2px)" }, 1)
         .from(
@@ -528,8 +528,9 @@ if (window.innerWidth > 768) {
     })
         .setTween(rockSlideFooter)
         .addTo(controller);
-
+    */
     //  CAMERA ZOOM IN:
+    /*
     const zoomCameraFooter = new TimelineMax().from(
         "#footer-crop-rock-camera",
         1,
@@ -543,7 +544,7 @@ if (window.innerWidth > 768) {
     })
         .setTween(zoomCameraFooter)
         .addTo(controller);
-    */
+        */
     // NOT IN USE AS ICONS SLIDE IN ONE BY ONE !!!
     // SOCIAL MEDIA ICON CONTAINER (ALL ICONS SLIDE WITH CONTAINER)
 
