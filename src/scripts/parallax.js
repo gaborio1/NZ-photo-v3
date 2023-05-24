@@ -138,34 +138,36 @@ if (window.innerWidth > 768) {
     // /*
     const timelineMountain = new TimelineMax()
 
-        // SLIDE
-        // .to("#mountain-crop-1", 1, { y: "-90vh" })
+    // SLIDE
+    // .to("#mountain-crop-1", 1, { y: "-90vh" })
 
-        // .to("#mountain-crop-2", 1, { y: "-60vh" }, "-=1")
+    // .to("#mountain-crop-2", 1, { y: "-60vh" }, "-=1")
 
-        // .to("#mountain-crop-3", 1, { y: "-25vh" }, "-=1")
+    // .to("#mountain-crop-3", 1, { y: "-25vh" }, "-=1")
 
-        // .to("#mountain-crop-4", 1, { y: "-5vh" }, "-=1")
+    // .to("#mountain-crop-4", 1, { y: "-5vh" }, "-=1")
 
-        // .to("#mountain-crop-5", 1, { y: "30vh" }, "-=1")
+    // .to("#mountain-crop-5", 1, { y: "30vh" }, "-=1")
 
-        // .to("#mountain-crop-6", 1, { y: "40vh" }, "-=1")
+    // .to("#mountain-crop-6", 1, { y: "40vh" }, "-=1")
 
-        // PINNED:
-        // .to("#mountain-full", 1, { y: "60vh" }, "-=1")
+    // PINNED:
+    // .to("#mountain-full", 1, { y: "60vh" }, "-=1")
 
-        // ZOOM
-        .to("#mountain-crop-1", 1, { scale: 1.3 }, "-=1")
-        .to("#mountain-crop-2", 1, { scale: 1.2 }, "-=1")
-        .to("#mountain-crop-3", 1, { scale: 1.1 }, "-=1")
-        // .to("#mountain-crop-4", 1, { scale: 1 }, "-=1")
-        // .to("#mountain-crop-4", 1, { scale: 1.05 }, "-=1")
+    // ZOOM
+    // .to("#mountain-crop-1", 1, { scale: 1.3 }, "-=1")
+    // .to("#mountain-crop-2", 1, { scale: 1.2 }, "-=1")
+    // .to("#mountain-crop-3", 1, { scale: 1.1 }, "-=1")
+    // NOT IN USE
+    // .to("#mountain-crop-4", 1, { scale: 1 }, "-=1")
+    // .to("#mountain-crop-4", 1, { scale: 1.05 }, "-=1")
 
-        // SLIDE
-        // .to("#title-div", 1, { top: "-130%" }, "-=1")
-        .to("#title-div", 1, { top: "-400%" }, "-=1")
-        // .to(".main-content", 1, { top: "-5%" }, "-=1");
-        .to(".main-content", 1, { top: "-140%" }, "-=1");
+    // SLIDE
+    // .to("#title-div", 1, { top: "-130%" }, "-=1")
+    // .to(".main-content", 1, { top: "-5%" }, "-=1");
+
+    // .to("#title-div", 1, { top: "-400%" }, "-=1")
+    // .to(".main-content", 1, { top: "-140%" }, "-=1");
 
     new ScrollMagic.Scene({
         triggerElement: ".image-container",
@@ -189,7 +191,7 @@ if (window.innerWidth > 768) {
 
         // Enzee
         .to(".title-div__enzee-container", 1, {
-            x: -100,
+            // x: -100,
             filter: "blur(0px)",
             opacity: 0,
         })
@@ -197,7 +199,10 @@ if (window.innerWidth > 768) {
         .to(
             ".photography__letter",
             1,
-            { x: 200, y: 0, opacity: 0, delay: 0, stagger: 0.0 },
+            {
+                // x: 200,
+                y: 0, opacity: 0, delay: 0, stagger: 0.0
+            },
             "-=1"
         )
         // CLEAR DIV
@@ -225,7 +230,7 @@ if (window.innerWidth > 768) {
 
     // ===== MODEL =====
     const modelImg = new TimelineMax().from("#model-img-container", 1, {
-        y: "10vh",
+        // y: "10vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -237,7 +242,7 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     const modelText = new TimelineMax().from("#model-text-container", 1, {
-        y: "5vh",
+        // y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -250,7 +255,7 @@ if (window.innerWidth > 768) {
 
     // ===== STREET =====
     const streetText = new TimelineMax().from("#street-text-container", 1, {
-        y: "5vh",
+        // y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -264,10 +269,8 @@ if (window.innerWidth > 768) {
     const streetImg = new TimelineMax().from("#street-img-container", 1, {
         // x: "5vw",
         // y: "10vh",
-        x: "2.5vw",
-        y: "5vh",
-        // x: "20px",
-        // y: "40px",
+        // x: "2.5vw",
+        // y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -282,8 +285,8 @@ if (window.innerWidth > 768) {
     const motionImg = new TimelineMax().from("#motion-img-container", 1, {
         // x: "-5vw",
         // y: "-20vh",
-        x: "-1vw",
-        y: "-4vh",
+        // x: "-1vw",
+        // y: "-4vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -297,8 +300,8 @@ if (window.innerWidth > 768) {
     const motionText = new TimelineMax().from("#motion-text-container", 1, {
         // x: "5vw",
         // y: "-10vh",
-        x: "2.5vw",
-        y: "-5vh",
+        // x: "2.5vw",
+        // y: "-5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -310,14 +313,15 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     // ===== MOSAIC DIVIDER CONTAINER =====
+    // /*
     const timelineMosaicContainer = new TimelineMax()
-        .fromTo(
-            "#mosaic-container",
-            1,
-            { y: "-10vh" },
-            { y: "-2vh", ease: "linear" },
-            "-=1"
-        )
+        // .fromTo(
+        //     "#mosaic-container",
+        //     1,
+        //     { y: "-10vh" },
+        //     { y: "-2vh", ease: "linear" },
+        //     "-=1"
+        // )
         .fromTo(
             "#mosaic-container",
             0.5,
@@ -332,7 +336,7 @@ if (window.innerWidth > 768) {
     })
         .setTween(timelineMosaicContainer)
         .addTo(controller);
-
+    // */
     //===== MOSAIC SLICES =====
     /*
     const timelineMosaicSlices = new TimelineMax()
@@ -367,7 +371,7 @@ if (window.innerWidth > 768) {
     // ===== PORTRAIT =====
 
     const portraitImg = new TimelineMax().from("#portrait-img-container", 1, {
-        y: "10vh",
+        // y: "10vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -379,7 +383,7 @@ if (window.innerWidth > 768) {
         .addTo(controller);
 
     const portraitText = new TimelineMax().from("#portrait-text-container", 1, {
-        y: "5vh",
+        // y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -393,7 +397,7 @@ if (window.innerWidth > 768) {
     // ===== ABSTRACT =====
 
     const abstractText = new TimelineMax().from("#abstract-text-container", 1, {
-        y: "5vh",
+        // y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -407,8 +411,8 @@ if (window.innerWidth > 768) {
     const abstractImg = new TimelineMax().from("#abstract-img-container", 1, {
         // x: "5vw",
         // y: "10vh",
-        x: "2.5vw",
-        y: "5vh",
+        // x: "2.5vw",
+        // y: "5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -424,8 +428,8 @@ if (window.innerWidth > 768) {
     const natureImg = new TimelineMax().from("#nature-img-container", 1, {
         // x: "-5vw",
         // y: "-20vh",
-        x: "-1vw",
-        y: "-4vh",
+        // x: "-1vw",
+        // y: "-4vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -439,8 +443,8 @@ if (window.innerWidth > 768) {
     const natureText = new TimelineMax().from("#nature-text-container", 1, {
         // x: "5vw",
         // y: "-10vh",
-        x: "2.5vw",
-        y: "-5vh",
+        // x: "2.5vw",
+        // y: "-5vh",
         opacity: 0,
     });
     new ScrollMagic.Scene({
@@ -461,8 +465,10 @@ if (window.innerWidth > 768) {
         .from(".footer-info-content", 1, {
             // SLIDE IN FROM LEFT
             // x: -300,
-            y: -50,
-            scale: 0.95,
+            // y: -50,
+            // MAGNIFYING EFFECT
+            // scale: 0.5,
+            scale: 1,
             filter: "blur(5px)",
             opacity: 0,
             stagger: 0.5,
@@ -483,7 +489,7 @@ if (window.innerWidth > 768) {
         // SOCIAL MEDIA ICONS FADEIN/SLIDE (SEQUENCE: stagger)
         .from(".full-width-2", 7, {
             // duration: 1,
-            y: -20,
+            // y: -20,
             scale: 1,
             filter: "blur(10px)",
             opacity: 0,
@@ -493,7 +499,7 @@ if (window.innerWidth > 768) {
             ".social-media-icon",
             5,
             {
-                x: 200,
+                // x: 200,
                 opacity: 0,
                 delay: 1,
                 // stagger: 1,
