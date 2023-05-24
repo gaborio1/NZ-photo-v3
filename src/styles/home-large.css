@@ -443,8 +443,9 @@
 		background-size: cover;
 		/* width: 100vw; */
 		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
-		width: 120vw;
-		height: 55vh;
+		/* DISABLED WIDTH AND HEIGHT DUE TO DISABLED PARALLAX (MOSAIC AND PORTRAIT DISTANCE) */
+		/* width: 120vw; */
+		/* height: 55vh; */
 		filter: grayscale(0.5) contrast(150%);
 		border-top: 45px solid grey;
 		border-bottom: 5px solid grey;

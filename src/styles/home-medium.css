@@ -1,4 +1,5 @@
 @media only screen and (min-width: 768px) and (max-width: 1399px) {
+
 	/* ===== PARALLAX IMAGE LAYERS ===== */
 	.image-container {
 		height: 100vh;
@@ -6,56 +7,56 @@
 		overflow: hidden;
 	}
 
-    img.mountain-mobile-size {
-      	display: none;
-    }
-	
-/* !!! CONTAINER RELATIVE !!! */
-.parallax-layers-container {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	/* border: 5px solid aqua; */
-}
+	img.mountain-mobile-size {
+		display: none;
+	}
 
-/* !!! ALL LAYERS ABSOLUTE !!! */
-    img.mountain-parallax {
+	/* !!! CONTAINER RELATIVE !!! */
+	.parallax-layers-container {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		/* border: 5px solid aqua; */
+	}
+
+	/* !!! ALL LAYERS ABSOLUTE !!! */
+	img.mountain-parallax {
 		/* ABSOLUTE ON ALL LAYERS */
 		position: absolute;
 		width: 100%;
 		height: 100vh;
 		object-fit: cover;
-    }
-
-    /* INDIVIDUAL LAYERS */
-    img.mountain-crop-1 {
-      	z-index: -1;
-    }
-
-    img.mountain-crop-2 {
-      	z-index: -2;
-    }
-
-    img.mountain-crop-3 {
-      	z-index: -3;
-    }
-
-    img.mountain-crop-4 {
-      	z-index: -4;
-    }
-
-    img.mountain-crop-5 {
-		z-index: -5;
-  	}
-
-  	img.mountain-crop-6 {
-	  		z-index: -6;
 	}
 
-  	img.mountain-full {
-	  	z-index: -7;
-  	}
+	/* INDIVIDUAL LAYERS */
+	img.mountain-crop-1 {
+		z-index: -1;
+	}
+
+	img.mountain-crop-2 {
+		z-index: -2;
+	}
+
+	img.mountain-crop-3 {
+		z-index: -3;
+	}
+
+	img.mountain-crop-4 {
+		z-index: -4;
+	}
+
+	img.mountain-crop-5 {
+		z-index: -5;
+	}
+
+	img.mountain-crop-6 {
+		z-index: -6;
+	}
+
+	img.mountain-full {
+		z-index: -7;
+	}
 
 
 
@@ -66,18 +67,18 @@
 		/* filter: grayscale(0.25) blur(1px) opacity(0.75); */
 	}
 
-	
+
 
 	/* TITLE DIV */
 
 	/* FADE IN ON LOAD */
 	@keyframes fadeInAnimation {
 		0% {
-		opacity: 0;
+			opacity: 0;
 		}
 
 		100% {
-		opacity: 1;
+			opacity: 1;
 		}
 	}
 
@@ -85,26 +86,26 @@
 	/* FOR .flash-fadein, NOW ADDED WITH JS */
 	@keyframes flashAnimation {
 		0% {
-		opacity: 0;
+			opacity: 0;
 		}
 
 		50% {
-		opacity: 0.05;
+			opacity: 0.05;
 		}
 
 		75% {
-		opacity: 0.75;
-		text-shadow: 1px 1px 2px var(--sub-title-orange),
-			-1px -1px 2px var(--sub-title-orange);
+			opacity: 0.75;
+			text-shadow: 1px 1px 2px var(--sub-title-orange),
+				-1px -1px 2px var(--sub-title-orange);
 		}
 
 		90% {
-		text-shadow: none;
+			text-shadow: none;
 		}
 
 		100% {
-		opacity: 1;
-		/* text-shadow: none; */
+			opacity: 1;
+			/* text-shadow: none; */
 		}
 	}
 
@@ -191,7 +192,7 @@
 
 	/* FADE IN p h o t o g r a p h y IN SEQUENCE WITH CSS */
 	/* THIS IS NOW DONE BY JS */
-	
+
 
 	/* ========== MAIN CONTENT ========== */
 
@@ -386,8 +387,9 @@
 		background-size: cover;
 		/* width: 100vw; */
 		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
-		width: 120vw;
-		height: 52.5vh;
+		/* DISABLED WIDTH AND HEIGHT DUE TO DISABLED PARALLAX (MOSAIC AND PORTRAIT DISTANCE) */
+		/* width: 120vw; */
+		/* height: 52.5vh; */
 		filter: grayscale(0.5) contrast(150%);
 		border-top: 45px solid grey;
 		border-bottom: 5px solid grey;
@@ -450,17 +452,16 @@
 		position: relative;
 		top: -300px;
 		left: -215px;
-	
-		background: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 0.622),
-		rgba(0, 0, 0, 0.272),
-		rgba(0, 0, 0, 0),
-		rgba(0, 0, 0, 0)
-		);
+
+		background: linear-gradient(to right,
+				rgba(0, 0, 0, 0.622),
+				rgba(0, 0, 0, 0.272),
+				rgba(0, 0, 0, 0),
+				rgba(0, 0, 0, 0));
 		border-radius: 5px;
 
-		-ms-transform: rotate(-90deg); /* IE 9 */
+		-ms-transform: rotate(-90deg);
+		/* IE 9 */
 		transform: rotate(-90deg);
 
 		/* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
@@ -481,7 +482,7 @@
 
 	/* ========== FOOTER ========== */
 
-	
+
 }
 
 /* iPhoneX LANDSCAPE ADJUSTMENTS  */
@@ -491,4 +492,3 @@
 		border-top: 5px solid grey;
 	}
 }
-
