@@ -1,494 +1,489 @@
 @media only screen and (min-width: 768px) and (max-width: 1399px) {
+    /* ===== PARALLAX IMAGE LAYERS ===== */
+    .image-container {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
 
-	/* ===== PARALLAX IMAGE LAYERS ===== */
-	.image-container {
-		height: 100vh;
-		width: 100%;
-		overflow: hidden;
-	}
+    img.mountain-mobile-size {
+        display: none;
+    }
 
-	img.mountain-mobile-size {
-		display: none;
-	}
+    /* !!! CONTAINER RELATIVE !!! */
+    .parallax-layers-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        /* border: 5px solid aqua; */
+    }
 
-	/* !!! CONTAINER RELATIVE !!! */
-	.parallax-layers-container {
-		position: relative;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		/* border: 5px solid aqua; */
-	}
+    /* !!! ALL LAYERS ABSOLUTE !!! */
+    img.mountain-parallax {
+        /* ABSOLUTE ON ALL LAYERS */
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
 
-	/* !!! ALL LAYERS ABSOLUTE !!! */
-	img.mountain-parallax {
-		/* ABSOLUTE ON ALL LAYERS */
-		position: absolute;
-		width: 100%;
-		height: 100vh;
-		object-fit: cover;
-	}
+    /* INDIVIDUAL LAYERS */
+    img.mountain-crop-1 {
+        z-index: -1;
+    }
 
-	/* INDIVIDUAL LAYERS */
-	img.mountain-crop-1 {
-		z-index: -1;
-	}
+    img.mountain-crop-2 {
+        z-index: -2;
+    }
 
-	img.mountain-crop-2 {
-		z-index: -2;
-	}
+    img.mountain-crop-3 {
+        z-index: -3;
+    }
 
-	img.mountain-crop-3 {
-		z-index: -3;
-	}
+    img.mountain-crop-4 {
+        z-index: -4;
+    }
 
-	img.mountain-crop-4 {
-		z-index: -4;
-	}
+    img.mountain-crop-5 {
+        z-index: -5;
+    }
 
-	img.mountain-crop-5 {
-		z-index: -5;
-	}
+    img.mountain-crop-6 {
+        z-index: -6;
+    }
 
-	img.mountain-crop-6 {
-		z-index: -6;
-	}
+    img.mountain-full {
+        z-index: -7;
+    }
 
-	img.mountain-full {
-		z-index: -7;
-	}
+    /* !!! BLUR HOMEPAGE EXCEPT NAVBAR WHEN SEARCH BAR IS ACTIVE !!! */
+    /* GRAYSCALE + BLUR */
+    .blurred {
+        filter: grayscale(0.3) blur(1px);
+        /* filter: grayscale(0.25) blur(1px) opacity(0.75); */
+    }
 
+    /* TITLE DIV */
 
+    /* FADE IN ON LOAD */
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
 
-	/* !!! BLUR HOMEPAGE EXCEPT NAVBAR WHEN SEARCH BAR IS ACTIVE !!! */
-	/* GRAYSCALE + BLUR */
-	.blurred {
-		filter: grayscale(0.3) blur(1px);
-		/* filter: grayscale(0.25) blur(1px) opacity(0.75); */
-	}
+        100% {
+            opacity: 1;
+        }
+    }
 
+    /* FLASH IN p h o t o g r a p h y WITH SAME COLOR SHADOW */
+    /* FOR .flash-fadein, NOW ADDED WITH JS */
+    @keyframes flashAnimation {
+        0% {
+            opacity: 0;
+        }
 
+        50% {
+            opacity: 0.05;
+        }
 
-	/* TITLE DIV */
+        75% {
+            opacity: 0.75;
+            text-shadow: 1px 1px 2px var(--sub-title-orange),
+                -1px -1px 2px var(--sub-title-orange);
+        }
 
-	/* FADE IN ON LOAD */
-	@keyframes fadeInAnimation {
-		0% {
-			opacity: 0;
-		}
+        90% {
+            text-shadow: none;
+        }
 
-		100% {
-			opacity: 1;
-		}
-	}
+        100% {
+            opacity: 1;
+            /* text-shadow: none; */
+        }
+    }
 
-	/* FLASH IN p h o t o g r a p h y WITH SAME COLOR SHADOW */
-	/* FOR .flash-fadein, NOW ADDED WITH JS */
-	@keyframes flashAnimation {
-		0% {
-			opacity: 0;
-		}
+    .title-div {
+        z-index: 0;
+        position: absolute;
+        bottom: 45px;
+        /* bottom: 5%; */
+        width: var(--max-width);
+        height: 135px;
+        margin: auto;
+        overflow: hidden;
 
-		50% {
-			opacity: 0.05;
-		}
+        background: rgba(0, 0, 0, 0.192);
+        /* background: #56d2e213; */
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)); */
+        /* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.601), rgba(0, 0, 0, 0.8), rgb(0, 0, 0)); */
 
-		75% {
-			opacity: 0.75;
-			text-shadow: 1px 1px 2px var(--sub-title-orange),
-				-1px -1px 2px var(--sub-title-orange);
-		}
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
 
-		90% {
-			text-shadow: none;
-		}
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
 
-		100% {
-			opacity: 1;
-			/* text-shadow: none; */
-		}
-	}
+        border-top: 1px solid rgba(255, 255, 255, 0.519);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.519);
 
-	.title-div {
-		z-index: 0;
-		position: absolute;
-		bottom: 45px;
-		/* bottom: 5%; */
-		width: var(--max-width);
-		height: 135px;
-		margin: auto;
-		overflow: hidden;
+        /* FADE IN ON LOAD */
+        animation: fadeInAnimation ease 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
 
-		background: rgba(0, 0, 0, 0.192);
-		/* background: #56d2e213; */
-		/* background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)); */
-		/* background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.101), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.601), rgba(0, 0, 0, 0.8), rgb(0, 0, 0)); */
+    .title-div-content {
+        width: 95%;
+        height: inherit;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        /* border: 3px solid orange; */
+    }
 
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
+    .title-div__enzee-container {
+        display: flex;
+        /* margin-top: 6px; */
+        /* border: 1px solid orange; */
+    }
 
-		border-top: 2px solid black;
-		border-bottom: 2px solid black;
+    h1.enzee__letter {
+        /* RESPONSIVE TEXT */
+        /* font-size: 12vw; */
+        letter-spacing: 0.2rem;
 
-		border-top: 1px solid rgba(255, 255, 255, 0.519);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.519);
+        /* ANIMATING Enzee at once */
+        animation: fadeInAnimation ease-out 3s;
+        /* border: 1px solid red; */
+    }
 
-		/* FADE IN ON LOAD */
-		animation: fadeInAnimation ease 0.5s;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-	}
+    h1.enzee__letter:nth-of-type(1) {
+        text-transform: uppercase;
+    }
 
-	.title-div-content {
-		width: 95%;
-		height: inherit;
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		/* border: 3px solid orange; */
-	}
+    .title-div__photography-container {
+        display: flex;
+        width: fit-content;
+        /* border: 1px solid orange; */
+    }
 
-	.title-div__enzee-container {
-		display: flex;
-		/* margin-top: 6px; */
-		/* border: 1px solid orange; */
-	}
+    .opacityZero {
+        opacity: 0;
+    }
 
-	h1.enzee__letter {
-		/* RESPONSIVE TEXT */
-		/* font-size: 12vw; */
-		letter-spacing: 0.2rem;
+    h3.photography__letter {
+        /* text-transform: uppercase; */
+        letter-spacing: 1.1rem;
+        margin: 90px 0px 0px 0px;
+        /* border: 1px solid lime; */
+    }
 
-		/* ANIMATING Enzee at once */
-		animation: fadeInAnimation ease-out 3s;
-		/* border: 1px solid red; */
-	}
+    .flash-fadein {
+        animation: flashAnimation ease 0.75s;
+    }
 
-	h1.enzee__letter:nth-of-type(1) {
-		text-transform: uppercase;
-	}
+    /* FADE IN p h o t o g r a p h y IN SEQUENCE WITH CSS */
+    /* THIS IS NOW DONE BY JS */
 
-	.title-div__photography-container {
-		display: flex;
-		width: fit-content;
-		/* border: 1px solid orange; */
-	}
+    /* ========== MAIN CONTENT ========== */
 
-	.opacityZero {
-		opacity: 0;
-	}
+    /* !!!!! overflow: hidden PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
+    .main-content {
+        z-index: 2;
+        position: absolute;
 
-	h3.photography__letter {
-		/* text-transform: uppercase; */
-		letter-spacing: 1.1rem;
-		margin: 90px 0px 0px 0px;
-		/* border: 1px solid lime; */
-	}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: var(--max-width);
+        background: white;
+        overflow: hidden;
+        /* border: 3px solid red; */
+    }
 
-	.flash-fadein {
-		animation: flashAnimation ease 0.75s;
-	}
+    .main-coloumn {
+        width: 90%;
+        max-width: var(--main-content-1400);
 
-	/* FADE IN p h o t o g r a p h y IN SEQUENCE WITH CSS */
-	/* THIS IS NOW DONE BY JS */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 50px;
+        /* border: 3px solid orange; */
+    }
 
+    /* DIV WITH NO HEIGHT, TRIGGERS SCROLL ANIMATION ON ITS SIBLING */
+    .spacer-trigger {
+        width: 100%;
+        /* border: 3px solid rgb(1, 84, 95); */
+    }
 
-	/* ========== MAIN CONTENT ========== */
+    .portrait-container {
+        width: var(--max-width);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px;
+        /* border: 3px solid rgb(19, 104, 110); */
+    }
 
-	/* !!!!! overflow: hidden PREVENTS LANDING PAGE FROM BEING PUSHED SIDEWAYS WHEN CATEGORY DIVS X POSITION OVERFLOWS !!!!!   */
-	.main-content {
-		z-index: 2;
-		position: absolute;
+    /* width CONTROLS CATEGORY IMG WIDTH */
+    .portrait-column {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 5px 150px 5px;
+        /* border: 3px solid olive; */
+    }
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: var(--max-width);
-		background: white;
-		overflow: hidden;
-		/* border: 3px solid red; */
-	}
+    /* RIGHT HAND SIDE PORTRAIT STYLE COLUMN */
+    .portrait-column--reverse {
+        flex-direction: column-reverse;
+        margin: 150px 5px 10px 5px;
+        /* border: 3px solid aqua; */
+    }
 
-	.main-coloumn {
-		width: 90%;
-		max-width: var(--main-content-1400);
+    /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
+    .portrait-img-container {
+        width: 100%;
+        /* border: 3px solid yellow; */
+    }
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		margin-top: 50px;
-		/* border: 3px solid orange; */
-	}
+    /* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
+    /* [1] The container */
+    .img-hover-zoom {
+        border-radius: 3px;
+        /* [1.2] Hide the overflowing of child elements */
+        overflow: hidden;
+        /* border: 3px solid tomato; */
+    }
 
-	/* DIV WITH NO HEIGHT, TRIGGERS SCROLL ANIMATION ON ITS SIBLING */
-	.spacer-trigger {
-		width: 100%;
-		/* border: 3px solid rgb(1, 84, 95); */
-	}
+    .img-hover-zoom--portrait {
+        width: 100%;
+        max-width: 500px;
+        max-height: 600px;
+    }
 
-	.portrait-container {
-		width: var(--max-width);
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;
-		margin: 20px;
-		/* border: 3px solid rgb(19, 104, 110); */
-	}
+    /* [2] Transition property for smooth transformation of images */
+    .img-hover-zoom img {
+        transition: transform 1s ease;
+    }
 
-	/* width CONTROLS CATEGORY IMG WIDTH */
-	.portrait-column {
-		width: 35%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin: 10px 5px 150px 5px;
-		/* border: 3px solid olive; */
-	}
-
-	/* RIGHT HAND SIDE PORTRAIT STYLE COLUMN */
-	.portrait-column--reverse {
-		flex-direction: column-reverse;
-		margin: 150px 5px 10px 5px;
-		/* border: 3px solid aqua; */
-	}
-
-	/* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
-	.portrait-img-container {
-		width: 100%;
-		/* border: 3px solid yellow; */
-	}
-
-	/* ===== CATEGORY IMGS HOVER-ZOOM  ===== */
-	/* [1] The container */
-	.img-hover-zoom {
-		border-radius: 3px;
-		/* [1.2] Hide the overflowing of child elements */
-		overflow: hidden;
-		/* border: 3px solid tomato; */
-	}
-
-	.img-hover-zoom--portrait {
-		width: 100%;
-		max-width: 500px;
-		max-height: 600px;
-	}
-
-	/* [2] Transition property for smooth transformation of images */
-	.img-hover-zoom img {
-		transition: transform 1s ease;
-	}
-
-	/* [3] Finally, transforming the image when container gets hovered */
-	/* THIS INCLUDES IMAGE + INFO DIV */
-	/* .portrait-img-container:hover img {
+    /* [3] Finally, transforming the image when container gets hovered */
+    /* THIS INCLUDES IMAGE + INFO DIV */
+    /* .portrait-img-container:hover img {
 		transform: scale(1.02);
 	} */
 
-	/* CATEGORY TEXT CONTAINERS */
+    /* CATEGORY TEXT CONTAINERS */
 
-	.category-text-container {
-		text-align: left;
-		color: rgba(0, 0, 0, 0.724);
-		padding-left: 1rem;
-		border-left: 2px solid rgba(0, 0, 0, 0.272);
-	}
+    .category-text-container {
+        text-align: left;
+        color: rgba(0, 0, 0, 0.724);
+        padding-left: 1rem;
+        border-left: 2px solid rgba(0, 0, 0, 0.272);
+    }
 
-	.portrait-text-container {
-		width: 90%;
-		margin-top: 2rem;
-		/* border: 3px solid burlywood; */
-	}
+    .portrait-text-container {
+        width: 90%;
+        margin-top: 2rem;
+        /* border: 3px solid burlywood; */
+    }
 
-	.landscape-text-container {
-		width: 30%;
-		margin-top: 8rem;
-		/* border: 3px solid burlywood; */
-	}
+    .landscape-text-container {
+        width: 30%;
+        margin-top: 8rem;
+        /* border: 3px solid burlywood; */
+    }
 
-	.portrait-column--reverse .portrait-text-container {
-		margin-bottom: 4rem;
-	}
+    .portrait-column--reverse .portrait-text-container {
+        margin-bottom: 4rem;
+    }
 
-	p.category-info-text {
-		font-weight: 300;
-		color: rgba(0, 0, 0, 0.724);
-	}
+    p.category-info-text {
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.724);
+    }
 
-	/* FIRST 3 CATEGORIES */
-	h3.category-info-title {
-		color: var(--sub-title-orange);
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-	}
+    /* FIRST 3 CATEGORIES */
+    h3.category-info-title {
+        color: var(--sub-title-orange);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
 
-	/* LAST 3 CATEGORIES */
-	h4.category-info-title {
-		color: var(--sub-title-orange);
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-	}
+    /* LAST 3 CATEGORIES */
+    h4.category-info-title {
+        color: var(--sub-title-orange);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
 
-	img.portrait-style {
-		width: var(--max-width);
-		border-radius: 3px;
-		/* border: 1px solid rgba(0, 0, 0, 0.286); */
-	}
+    img.portrait-style {
+        width: var(--max-width);
+        border-radius: 3px;
+        /* border: 1px solid rgba(0, 0, 0, 0.286); */
+    }
 
-	.portrait-reverse .portrait-img-container {
-		margin-top: 100px;
-	}
+    .portrait-reverse .portrait-img-container {
+        margin-top: 100px;
+    }
 
-	/* LANDSCAPE CONTAINER */
-	.landscape-container {
-		width: var(--max-width);
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		margin: 75px;
-		margin-top: 100px;
-		padding: 5%;
-		/* border: 3px solid rgb(59, 72, 190); */
-	}
+    /* LANDSCAPE CONTAINER */
+    .landscape-container {
+        width: var(--max-width);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 75px;
+        margin-top: 100px;
+        padding: 5%;
+        /* border: 3px solid rgb(59, 72, 190); */
+    }
 
-	/* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
-	/* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
-	.landscape-img-container {
-		width: 60%;
-		width: 65%;
-		max-height: 530px;
-		/* border: 3px solid yellow; */
-	}
+    /* width CONTROLS LANDSCAPE CATEGORY IMG WIDTH */
+    /* !!! ALLOW AN EXTRA 40PX HEIGHT TO CONTAIN TITLE DIV SO IT WON'T STICK OUT OF CONTAINER / MESS WITH INFO DIV HOVER !!! */
+    .landscape-img-container {
+        width: 60%;
+        width: 65%;
+        max-height: 530px;
+        /* border: 3px solid yellow; */
+    }
 
-	/* THIS INCLUDES IMAGE + INFO DIV */
-	/* .landscape-img-container:hover img {
+    /* THIS INCLUDES IMAGE + INFO DIV */
+    /* .landscape-img-container:hover img {
 		transform: scale(1.02);
 	} */
 
-	.img-hover-zoom--landscape {
-		width: 100%;
-		max-height: 490px;
-		/* border: 3px solid red; */
-	}
+    .img-hover-zoom--landscape {
+        width: 100%;
+        max-height: 490px;
+        /* border: 3px solid red; */
+    }
 
-	img.landscape-style {
-		width: var(--max-width);
-		border-radius: 3px;
-		/* border: 3px solid rgb(106, 235, 8); */
-	}
+    img.landscape-style {
+        width: var(--max-width);
+        border-radius: 3px;
+        /* border: 3px solid rgb(106, 235, 8); */
+    }
 
-	/* MOSAIC CONTAINER */
+    /* MOSAIC CONTAINER */
 
-	.mosaic-container {
-		/* background-image: url("./images/mosaic-wide.png"); */
-		background-size: cover;
-		/* width: 100vw; */
-		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
-		/* DISABLED WIDTH AND HEIGHT DUE TO DISABLED PARALLAX (MOSAIC AND PORTRAIT DISTANCE) */
-		/* width: 120vw; */
-		/* height: 52.5vh; */
-		filter: grayscale(0.5) contrast(150%);
-		border-top: 45px solid grey;
-		border-bottom: 5px solid grey;
-		margin: 90px 0px 135px 0px;
-	}
+    .mosaic-container {
+        /* background-image: url("./images/mosaic-wide.png"); */
+        background-size: cover;
+        /* width: 100vw; */
+        /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+        /* DISABLED WIDTH AND HEIGHT DUE TO DISABLED PARALLAX (MOSAIC AND PORTRAIT DISTANCE) */
+        /* width: 120vw; */
+        /* height: 52.5vh; */
+        filter: grayscale(0.5) contrast(150%);
+        border-top: 45px solid grey;
+        border-bottom: 5px solid grey;
+        margin: 90px 0px 135px 0px;
+    }
 
-	/* MOSAIC SLICES */
+    /* MOSAIC SLICES */
 
-	.mosaic-slice-container-1 {
-		background-image: url("../../images/mosaic-wide-slice-1.png");
-		background-size: cover;
-		/* width: 100vw; */
-		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
-		width: 120vw;
-		height: 33.33%;
-	}
+    .mosaic-slice-container-1 {
+        background-image: url("../../images/mosaic-wide-slice-1.png");
+        background-size: cover;
+        /* width: 100vw; */
+        /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+        width: 120vw;
+        height: 33.33%;
+    }
 
-	.mosaic-slice-container-2 {
-		background-image: url("../../images/mosaic-wide-slice-2.png");
-		background-size: cover;
-		/* width: 100vw; */
-		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
-		width: 120vw;
-		height: 33.33%;
-	}
+    .mosaic-slice-container-2 {
+        background-image: url("../../images/mosaic-wide-slice-2.png");
+        background-size: cover;
+        /* width: 100vw; */
+        /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+        width: 120vw;
+        height: 33.33%;
+    }
 
-	.mosaic-slice-container-3 {
-		background-image: url("../../images/mosaic-wide-slice-3.png");
-		background-size: cover;
-		/* width: 100vw; */
-		/* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
-		width: 120vw;
-		height: 33.33%;
-	}
+    .mosaic-slice-container-3 {
+        background-image: url("../../images/mosaic-wide-slice-3.png");
+        background-size: cover;
+        /* width: 100vw; */
+        /* !!! MAKE IT WIDER FOR X SLIDE ANIMATION !!! */
+        width: 120vw;
+        height: 33.33%;
+    }
 
-	.category-img {
-		filter: grayscale(0.2) blur(0.05px) opacity(1);
-	}
+    .category-img {
+        filter: grayscale(0.2) blur(0.05px) opacity(1);
+    }
 
-	.category-img-container:hover .category-img {
-		filter: grayscale(0) blur(0px) opacity(1);
-	}
+    .category-img-container:hover .category-img {
+        filter: grayscale(0) blur(0px) opacity(1);
+    }
 
-	/* FADE OUT / SLIDE INFO DIV */
-	.category-img-container:hover .info-div {
-		opacity: 0;
-		/* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
-		width: 500px;
-	}
+    /* FADE OUT / SLIDE INFO DIV */
+    .category-img-container:hover .info-div {
+        opacity: 0;
+        /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+        /* width: 500px; */
+    }
 
-	.category-img-container:hover .info-div--landscape {
-		/* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
-		width: 400px;
-	}
+    /* .category-img-container:hover .info-div--landscape { */
+    /* !!! ANIMATING WIDTH WILL CAUSE A COOL translateX EFFECT !!! */
+    /* width: 400px; */
+    /* } */
 
-	/* CATEGORY INFO DIVS */
-	.info-div {
-		width: 600px;
-		height: 65px;
-		position: relative;
-		top: -300px;
-		left: -215px;
+    /* CATEGORY INFO DIVS */
+    .info-div {
+        width: 600px;
+        height: 65px;
+        position: relative;
+        top: -300px;
+        left: -215px;
 
-		background: linear-gradient(to right,
-				rgba(0, 0, 0, 0.622),
-				rgba(0, 0, 0, 0.272),
-				rgba(0, 0, 0, 0),
-				rgba(0, 0, 0, 0));
-		border-radius: 5px;
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.622),
+            rgba(0, 0, 0, 0.272),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+        );
+        border-radius: 5px;
 
-		-ms-transform: rotate(-90deg);
-		/* IE 9 */
-		transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        transform: rotate(-90deg);
 
-		/* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
-		transition: opacity 0.5s ease-in, width ease-in 0.5s;
-		/* border: 1px solid rgba(255, 166, 0, 0.861); */
-	}
+        /* FADE OUT/SLIDE WHEN IMAGE IS HOVERED  */
+        /* transition: opacity 0.5s ease-in, width ease-in 0.5s; */
+        transition: opacity 0.75s ease-in-out, width ease-in 0.5s;
+        /* border: 1px solid rgba(255, 166, 0, 0.861); */
+    }
 
-	.landscape-img-container .info-div {
-		width: 500px;
-		top: -250px;
-		left: -165px;
-	}
+    .landscape-img-container .info-div {
+        width: 500px;
+        top: -250px;
+        left: -165px;
+    }
 
-	.info-div-content h2.category {
-		margin-left: 2rem;
-		margin-right: 1rem;
-	}
+    .info-div-content h2.category {
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
 
-	/* ========== FOOTER ========== */
-
-
+    /* ========== FOOTER ========== */
 }
 
 /* iPhoneX LANDSCAPE ADJUSTMENTS  */
 @media only screen and (orientation: landscape) and (min-width: 812px) and (max-width: 1399px) and (max-height: 375px) {
-	.mosaic-container {
-		height: calc(100vh - 50px);
-		border-top: 5px solid grey;
-	}
+    .mosaic-container {
+        height: calc(100vh - 50px);
+        border-top: 5px solid grey;
+    }
 }

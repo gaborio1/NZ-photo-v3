@@ -138,33 +138,33 @@ if (window.innerWidth > 768) {
     // /*
     const timelineMountain = new TimelineMax()
 
-    // SLIDE
-    // .to("#mountain-crop-1", 1, { y: "-90vh" })
+        // SLIDE
+        // .to("#mountain-crop-1", 1, { y: "-90vh" })
 
-    // .to("#mountain-crop-2", 1, { y: "-60vh" }, "-=1")
+        // .to("#mountain-crop-2", 1, { y: "-60vh" }, "-=1")
 
-    // .to("#mountain-crop-3", 1, { y: "-25vh" }, "-=1")
+        // .to("#mountain-crop-3", 1, { y: "-25vh" }, "-=1")
 
-    // .to("#mountain-crop-4", 1, { y: "-5vh" }, "-=1")
+        // .to("#mountain-crop-4", 1, { y: "-5vh" }, "-=1")
 
-    // .to("#mountain-crop-5", 1, { y: "30vh" }, "-=1")
+        // .to("#mountain-crop-5", 1, { y: "30vh" }, "-=1")
 
-    // .to("#mountain-crop-6", 1, { y: "40vh" }, "-=1")
+        // .to("#mountain-crop-6", 1, { y: "40vh" }, "-=1")
 
-    // PINNED:
-    // .to("#mountain-full", 1, { y: "60vh" }, "-=1")
+        // PINNED:
+        // .to("#mountain-full", 1, { y: "60vh" }, "-=1")
 
-    // ZOOM
-    // .to("#mountain-crop-1", 1, { scale: 1.3 }, "-=1")
-    // .to("#mountain-crop-2", 1, { scale: 1.2 }, "-=1")
-    // .to("#mountain-crop-3", 1, { scale: 1.1 }, "-=1")
-    // NOT IN USE
-    // .to("#mountain-crop-4", 1, { scale: 1 }, "-=1")
-    // .to("#mountain-crop-4", 1, { scale: 1.05 }, "-=1")
+        // ZOOM
+        // .to("#mountain-crop-1", 1, { scale: 1.3 }, "-=1")
+        // .to("#mountain-crop-2", 1, { scale: 1.2 }, "-=1")
+        // .to("#mountain-crop-3", 1, { scale: 1.1 }, "-=1")
+        // NOT IN USE
+        // .to("#mountain-crop-4", 1, { scale: 1 }, "-=1")
+        // .to("#mountain-crop-4", 1, { scale: 1.05 }, "-=1")
 
-    // SLIDE
-    // .to("#title-div", 1, { top: "-130%" }, "-=1")
-    // .to(".main-content", 1, { top: "-5%" }, "-=1");
+        // SLIDE
+        .to("#title-div", 1, { top: "-130%" }, "-=1")
+        .to(".main-content", 1, { top: "-5%" }, "-=1");
 
     // .to("#title-div", 1, { top: "-400%" }, "-=1")
     // .to(".main-content", 1, { top: "-140%" }, "-=1");
@@ -174,7 +174,7 @@ if (window.innerWidth > 768) {
         // duration: "800%",
 
         // !!! DURATION WILL AFFECT SMOOTHNESS !!!
-        duration: "3000%",
+        duration: "2500%",
         triggerHook: 0,
     })
         .setTween(timelineMountain)
@@ -201,7 +201,10 @@ if (window.innerWidth > 768) {
             1,
             {
                 // x: 200,
-                y: 0, opacity: 0, delay: 0, stagger: 0.0
+                y: 0,
+                opacity: 0,
+                delay: 0,
+                stagger: 0.0,
             },
             "-=1"
         )
@@ -220,8 +223,8 @@ if (window.innerWidth > 768) {
         );
     new ScrollMagic.Scene({
         triggerElement: "#title-div",
-        duration: "100%",
-        triggerHook: 0.1,
+        duration: "300%",
+        triggerHook: 0.3,
     })
         .setTween(titleDivFadeOut)
         .addTo(controller);
@@ -325,14 +328,15 @@ if (window.innerWidth > 768) {
         .fromTo(
             "#mosaic-container",
             0.5,
-            { opacity: 0.5 },
+            { opacity: 0 },
             { opacity: 1 },
             "-=1"
         );
     new ScrollMagic.Scene({
         triggerElement: "#mosaic-trigger",
-        duration: "150%",
-        triggerHook: 0.95,
+        offset: "-50px",
+        duration: "100%",
+        triggerHook: 1,
     })
         .setTween(timelineMosaicContainer)
         .addTo(controller);
@@ -471,14 +475,14 @@ if (window.innerWidth > 768) {
             scale: 1,
             filter: "blur(5px)",
             opacity: 0,
-            stagger: 0.5,
+            stagger: 0.3,
         });
 
     new ScrollMagic.Scene({
         triggerElement: ".footer-info-container-1",
         // duration: "100%",
-        duration: 300,
-        triggerHook: 1,
+        duration: 200,
+        triggerHook: 0.85,
     })
 
         .setTween(textAndButtonFooter)
@@ -509,7 +513,7 @@ if (window.innerWidth > 768) {
     new ScrollMagic.Scene({
         triggerElement: ".full-width-2",
         // duration: "100%",
-        duration: 200,
+        duration: 150,
         triggerHook: 1,
     })
 
