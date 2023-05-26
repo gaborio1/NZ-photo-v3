@@ -105,14 +105,18 @@ if (window.innerWidth > 768) {
 
     // photography FADE IN
     gsap.from(".photography__letter", {
-        delay: 0.5,
+        // delay: 0.5,
+        delay: 0.15,
         color: "##fdcf63",
         textShadow: "1px 1px 5px #fdae81, -1px -1px 5px #fdae81",
         // x: -300,
         opacity: 0,
         duration: 0.75,
+        // REVERSE SEQUENCE
         // stagger: -0.2,
-        stagger: 0.1,
+        // SEQUENCE
+        // stagger: 0.01,
+        // stagger: 0.1,
         // repeat: 1,
         // yoyo: true,
     });
